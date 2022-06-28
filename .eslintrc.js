@@ -13,8 +13,8 @@ module.exports = {
   },
   plugins: ['@typescript-eslint', 'prettier'],
   rules: {
-    "linebreak-style": ["off", "windows"],
-    "no-mixed-spaces-and-tabs": ["off", "windows"],
-    "no-consol": "off"
+    'linebreak-style': ['off', 'windows'],
+    'no-mixed-spaces-and-tabs': ['off', 'windows'],
+    'no-consol': 'off'
   }
 }
