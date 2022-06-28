@@ -2,9 +2,7 @@
 
 <p align="center">
   <a href="https://vitejs.dev" target="_blank" rel="noopener noreferrer">
-      <img width="180" src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/1228ad0e4cf948a3a3190041b0b469ef~tplv-k3u1fbpfcp-zoom-1.image" alt="Vite logo">
-    <img width="39" src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/90315daa69674f4fa3315e04832a3352~tplv-k3u1fbpfcp-zoom-1.image" alt="Vite logo">
-    <img width="180" style="border-radius: 10px" src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/857714d0f68c4146a63f50d85ea6003f~tplv-k3u1fbpfcp-zoom-1.image" alt="Vite logo">
+      <img width="180" src="https://jzzx-docs.netlify.app/assets/CLI.4d10a8a7.png" alt="Vite logo">
   </a>
 </p>
 <br/>
