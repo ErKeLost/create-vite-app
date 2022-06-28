@@ -28,10 +28,13 @@
     "cz-conventional-changelog": "^3.3.0",
     "cz-customizable": "^6.6.0",
     "eslint": "^8.18.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.1.0",
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
     "prettier": "latest",
-    "turbo": "latest"
+    "turbo": "latest",
+    "typescript": "^4.7.4"
   },
   "engines": {
     "npm": ">=7.0.0",
