@@ -1,0 +1,31 @@
+{
+  "name": "vite-cli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^5.0.1",
+    "chalk-animation": "^2.0.2",
+    "commander": "^9.3.0",
+    "download-git-repo": "^3.0.2",
+    "ejs": "^3.1.8",
+    "figlet": "^1.5.2",
+    "fs-extra": "^10.1.0",
+    "globby": "^13.1.2",
+    "gradient-string": "^2.0.1",
+    "handlebars": "^4.7.7",
+    "inquirer": "^9.0.0",
+    "log-symbols": "^5.1.0",
+    "nanospinner": "^1.1.0",
+    "ora": "^6.1.2",
+    "pacote": "^13.6.1",
+    "shelljs": "^0.8.5",
+    "update-notifier": "^6.0.2"
+  }
+}
