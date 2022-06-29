@@ -2,7 +2,7 @@
 module.exports = {
   types: [
     { value: '✨ feat', name: '新增:    新的内容' },
-    { value: '🐛 fix', name: '修复:    修复一个Bug' },
+    { value: '🎨 fix', name: '修复:    修复一个Bug' },
     { value: '📝 docs', name: '文档:    变更的只有文档' },
     { value: '💄 style', name: '格式:    空格, 分号等格式修复' },
     { value: '♻️ refactor', name: '重构:    代码重构，注意和特性、修复区分开' },
