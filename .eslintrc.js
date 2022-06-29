@@ -24,7 +24,6 @@ module.exports = {
     'space-before-function-paren': 0, // 在函数左括号的前面是否有空格
     'eol-last': 0, // 不检测新文件末尾是否有空行
     semi: ['error', 'never'], // 在语句后面加分号
-    quotes: ['error', 'single'], // 字符串使用单双引号,double,single
     'no-console': ['error', { allow: ['log', 'warn'] }], // 允许使用console.log()
     'arrow-parens': 0,
     'no-new': 0, //允许使用 new 关键字
