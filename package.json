@@ -15,7 +15,7 @@
     "prettier-watch": "onchange '**/*.js' -- prettier --write {{changed}}",
     "eslint": "eslint . --ext .ts,.vue,.js,.tsx",
     "prepare": "husky install",
-    "commit": "cz",
+    "commit": "git add . && cz",
     "preinstall": "npx only-allow pnpm"
   },
   "devDependencies": {
