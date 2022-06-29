@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="https://vitejs.dev" target="_blank" rel="noopener noreferrer">
-      <img width="300" src="https://jzzx-docs.netlify.app/assets/CLI.29e4809b.png" alt="Vite logo">
+      <img width="220" src="https://jzzx-docs.netlify.app/assets/CLI.29e4809b.png" alt="Vite logo">
   </a>
 </p>
 <br/>
