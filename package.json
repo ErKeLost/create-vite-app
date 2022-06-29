@@ -8,6 +8,11 @@
   ],
   "scripts": {
     "build": "turbo run build",
+    "build:docs": "pnpm build --filter docs",
+    "build:cli": "pnpm build --filter vite-cli",
+    "clear": "rimraf 'packages/*/{lib,node_modules}' && rimraf node_modules",
+    "changeset": "changeset",
+    "version-packages": "changeset version",
     "dev": "turbo run dev --parallel",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
@@ -19,6 +24,7 @@
     "preinstall": "npx only-allow pnpm"
   },
   "devDependencies": {
+    "@changesets/cli": "^2.23.0",
     "@commitlint/config-conventional": "^17.0.3",
     "@typescript-eslint/eslint-plugin": "^5.30.0",
     "@typescript-eslint/parser": "^5.30.0",
