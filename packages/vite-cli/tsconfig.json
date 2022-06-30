@@ -85,12 +85,13 @@
     "noEmit": false,
     "noEmitHelpers": false,
     "importHelpers": false,
+    "resolveJsonModule": true,
     "strictNullChecks": false,
     "allowUnreachableCode": true,
     // "declaration": true,
     "lib": ["es6", "DOM"],
     "typeRoots": ["./node_modules/@types"],
-    "outDir": "dist", // 重定向输出目录
+    "outDir": "./dist", // 重定向输出目录
     "rootDir": "./src" // 仅用来控制输出的目录结构
   },
   "exclude": [

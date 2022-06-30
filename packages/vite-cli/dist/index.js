@@ -1,10 +1,7 @@
 #!/usr/bin/env node
 "use strict";
-exports.__esModule = true;
-exports.a = void 0;
-var chalk_1 = require("chalk");
-console.log((0, chalk_1.red)('12312313213132'));
-var a = 123;
-exports.a = a;
-console.log(a);
-console.log(a + 1);
+Object.defineProperty(exports, "__esModule", { value: true });
+const program_1 = require("./core/program");
+const command_1 = require("./core/command");
+(0, command_1.default)();
+program_1.default.parse(process.argv);
