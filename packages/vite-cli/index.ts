@@ -19,7 +19,7 @@ import {
 console.log(redColor('12312313213132'))
 
 const a: string = 123
-ghjghjgjh
+const w = 123132132
 console.log(a + 2)
 console.log(a + 1)
 export { a }
