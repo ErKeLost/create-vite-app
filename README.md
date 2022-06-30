@@ -7,7 +7,7 @@
 </p>
 <p align="center">
   <a href="https://vitejs.dev" target="_blank" rel="noopener noreferrer">
-      <img width="220" src="https://jzzx-docs.netlify.app/assets/vite.6c15df5a.png" alt="Vite logo">
+      <img width="390" src="https://jzzx-docs.netlify.app/assets/vite.6c15df5a.png" alt="Vite logo">
   </a>
 </p>
 
