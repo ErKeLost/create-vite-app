@@ -18,7 +18,7 @@ import {
 } from 'chalk'
 console.log(redColor('12312313213132'))
 
-const a = 123
-console.log(a)
+const a: string = 123
+console.log(a + 2)
 console.log(a + 1)
 export { a }
