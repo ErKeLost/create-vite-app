@@ -15,7 +15,7 @@ export const VALUE_ONLINE =
     whitespaceBreak: true
   })
 
-export const VERSION = `\n\t\t\t🌱🌱Published${PKG.version}Build @ VITE-CLI.com`
-export const BUILD_DATE = `\n\t\t\t🌱🌱Build date: ${new Date().getFullYear()}-${
+export const VERSION = `\n\t\t🌱🌱 Published${PKG.version}Build @ VITE-CLI.com 🌱🌱`
+export const BUILD_DATE = `\n\t\t\t🌱🌱 Build last date: ${new Date().getFullYear()}-${
   new Date().getMonth() + 1
-}-${new Date().getDate()}-VITE-CLI`
+}-${new Date().getDate()} 🌱🌱`

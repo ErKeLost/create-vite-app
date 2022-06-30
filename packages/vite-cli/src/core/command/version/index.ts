@@ -13,6 +13,10 @@ const createVersionCommand = () => {
   program
     .version(color(JZZX_VERSION), '-v --version')
     .usage('<command> [options]')
-    .action(() => magenta(VALUE_ONLINE, VERSION, BUILD_DATE))
+    .action(() => {
+      magenta(VALUE_ONLINE)
+      magenta(VERSION)
+      magenta(BUILD_DATE)
+    })
 }
 export default createVersionCommand

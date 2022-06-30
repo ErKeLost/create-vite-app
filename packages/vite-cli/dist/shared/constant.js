@@ -16,5 +16,5 @@ exports.VALUE_ONLINE = '\r\n' +
         width: 200,
         whitespaceBreak: true
     });
-exports.VERSION = `\n\t\t\t🌱🌱Published${exports.PKG.version}Build @ VITE-CLI.com`;
-exports.BUILD_DATE = `\n\t\t\t🌱🌱Build date: ${new Date().getFullYear()}-${new Date().getMonth() + 1}-${new Date().getDate()}-VITE-CLI`;
+exports.VERSION = `\n\t\t🌱🌱 Published${exports.PKG.version}Build @ VITE-CLI.com 🌱🌱`;
+exports.BUILD_DATE = `\n\t\t\t🌱🌱 Build last date: ${new Date().getFullYear()}-${new Date().getMonth() + 1}-${new Date().getDate()} 🌱🌱`;
