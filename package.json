@@ -15,6 +15,7 @@
     "version-packages": "changeset version",
     "dev": "turbo run dev --parallel",
     "lint": "turbo run lint",
+    "lint:fix": "eslint --fix --ext .js .",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "prettier": "prettier --write .",
     "prettier-watch": "onchange '**/*.js' -- prettier --write {{changed}}",
