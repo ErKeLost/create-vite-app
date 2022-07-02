@@ -6,12 +6,12 @@ import { magenta } from '../../../utils/log'
 import {
   VALUE_ONLINE,
   VERSION,
-  JZZX_VERSION,
+  VITE_CLI_VERSION,
   BUILD_DATE
 } from '../../../shared/constant'
 const createVersionCommand = () => {
   program
-    .version(color(JZZX_VERSION), '-v --version')
+    .version(color(VITE_CLI_VERSION), '-v --version')
     .usage('<command> [options]')
     .action(() => {
       magenta(VALUE_ONLINE)
