@@ -1,12 +1,12 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.BUILD_DATE = exports.VERSION = exports.VALUE_ONLINE = exports.JZZX_NAME = exports.JZZX_VERSION = exports.PKG = void 0;
+exports.BUILD_DATE = exports.VERSION = exports.VALUE_ONLINE = exports.JZZX_NAME = exports.VITE_CLI_VERSION = exports.PKG = void 0;
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const figlet = require('figlet');
 // import figlet from 'figlet'
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 exports.PKG = require('../../package.json');
-exports.JZZX_VERSION = exports.PKG.version;
+exports.VITE_CLI_VERSION = exports.PKG.version;
 exports.JZZX_NAME = exports.PKG.name;
 exports.VALUE_ONLINE = '\r\n' +
     figlet.textSync('VITE CLI', {

@@ -6,7 +6,6 @@ importers:
     specifiers:
       '@changesets/cli': ^2.23.0
       '@commitlint/config-conventional': ^17.0.3
-      '@types/node': ^18.0.0
       '@typescript-eslint/eslint-plugin': ^5.30.0
       '@typescript-eslint/parser': ^5.30.0
       commitizen: ^4.2.4
@@ -25,7 +24,6 @@ importers:
     devDependencies:
       '@changesets/cli': 2.23.0
       '@commitlint/config-conventional': 17.0.3
-      '@types/node': 18.0.0
       '@typescript-eslint/eslint-plugin': 5.30.0_5mtqsiui4sk53pmkx7i7ue45wm
       '@typescript-eslint/parser': 5.30.0_b5e7v2qnwxfo6hmiq56u52mz3e
       commitizen: 4.2.4
@@ -64,7 +62,6 @@ importers:
       nanospinner: ^1.1.0
       ora: 5.4.1
       pacote: ^13.6.1
-      readline: ^1.3.0
       shelljs: ^0.8.5
       update-notifier: ^6.0.2
     dependencies:
@@ -84,7 +81,6 @@ importers:
       nanospinner: 1.1.0
       ora: 5.4.1
       pacote: 13.6.1
-      readline: 1.3.0
       shelljs: 0.8.5
       update-notifier: 6.0.2
     devDependencies:
@@ -4587,10 +4583,6 @@ packages:
       inherits: 2.0.4
       string_decoder: 1.3.0
       util-deprecate: 1.0.2
-
-  /readline/1.3.0:
-    resolution: {integrity: sha512-k2d6ACCkiNYz222Fs/iNze30rRJ1iIicW7JuX/7/cozvih6YCkFZH+J6mAFDVgv0dRBaAyr4jDqC95R2y4IADg==}
-    dev: false
 
   /rechoir/0.6.2:
     resolution: {integrity: sha512-HFM8rkZ+i3zrV+4LQjwQ0W+ez98pApMGM3HUrN04j3CqzPOzl9nmP15Y8YXNm8QHGv/eacOVEjqhmWpkRV0NAw==}
