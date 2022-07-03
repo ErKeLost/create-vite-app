@@ -11,6 +11,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:out": "tsc index.ts -outDir dist",
+    "build:tsc": "tsc --project tsconfig.json && tsc-alias -p tsconfig.json",
     "build": "tsc"
   },
   "keywords": [],
@@ -37,6 +38,7 @@
     "update-notifier": "^6.0.2"
   },
   "devDependencies": {
-    "@types/node": "^18.0.0"
+    "@types/node": "^18.0.0",
+    "ts-node-dev": "^2.0.0"
   }
 }
