@@ -1,0 +1,36 @@
+module.exports = {
+  presets: [
+    '@vue/cli-plugin-babel/preset',
+  ],
+  plugins: [
+    <% if (components === 'element') { -%>
+    [
+      "import",
+      {
+        libraryName: 'element-plus',
+        customStyleName: (name) => `element-plus/lib/theme-chalk/${name}.css`,
+      },
+    ],
+    <% } -%>
+    <% if (components === 'antd') { -%>
+      [
+        "import",
+        {
+          libraryName: 'ant-design-vue',
+          libraryDirectory: 'es',
+          style:'css'
+        },
+      ],
+      <% } -%>
+      <% if (components === 'vant') { -%>
+        [
+        "import",
+        {
+          "libraryName": "vant",
+          "libraryDirectory": "es",
+          "style": true
+        }
+      ]
+        <% } -%>
+  ],
+};

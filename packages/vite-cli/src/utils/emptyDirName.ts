@@ -10,6 +10,7 @@ export default async function (name: string): Promise<boolean> {
     red(
       `The ${name} folder already exists in the current directory. Please try to use another project name!`
     )
+    red(`${name} 文件夹已经存在当前目录. 请使用其他名称命名!`)
     process.exit(1)
   } catch {
     return true

@@ -8,6 +8,6 @@ export default async function createCommand() {
     .action(async (name) => {
       console.log(name)
       await emptyDirName(name)
-      createProject()
+      createProject(name)
     })
 }
