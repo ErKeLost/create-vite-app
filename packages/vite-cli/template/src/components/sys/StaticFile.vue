@@ -35,14 +35,10 @@ function videoAutoPlay() {
 }
 
 // 自动播放视频
-onMounted(() => {
-  videoAutoPlay();
-});
+onMounted(() => { videoAutoPlay();});
 // 监听视频 src，如果存在则自动播放
 
-watch(envSrc, () => {
-  if (videoRef.value) videoRef.value.play();
-});
+watch(envSrc, () => { if (videoRef.value) videoRef.value.play(); });
 </script>
 
 <script lang="ts">

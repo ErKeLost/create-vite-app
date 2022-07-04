@@ -4,4 +4,5 @@
   </div>
 </template>
 
-<script lang="ts" setup name="BlankLayout"></script>
+<script lang="ts" setup name="BlankLayout">
+</script>

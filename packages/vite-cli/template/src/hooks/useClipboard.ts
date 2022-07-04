@@ -1,6 +1,6 @@
 export type useClipboardResult = {
   copyText: (text: string) => void;
-};
+}
 
 const createElement = () => {
   const el = document.createElement('div');
