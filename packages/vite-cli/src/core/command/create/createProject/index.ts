@@ -49,14 +49,14 @@ export default async function (name: string) {
   // 依赖安装
   console.log(`> 正在自动安装依赖，请稍等...`)
   console.log('')
-  await cmdInherit('npm', ['install'])
+  // await cmdInherit('npm', ['install'])
+  // await cmdInherit('yarn', ['install'])
+  await cmdInherit('pnpm', ['install'])
 
   clearConsole('cyan', `VITE_CLI v${VITE_CLI_VERSION}`)
   endTime = new Date().getTime()
   const usageTime = (endTime - startTime) / 1000
-  cyan(
-    `> 项目已经创建成功，用时${usageTime}s，请输入以下命令继续...`
-  )
+  cyan(`> 项目已经创建成功，用时${usageTime}s，请输入以下命令继续...`)
   console.log('')
   cyan(`cd ${name}`)
   cyan('npm run dev')

@@ -8,4 +8,4 @@ lib/
 _site/
 dist/
 pnpm-lock.yaml
-template/
+template
