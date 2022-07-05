@@ -8,6 +8,7 @@ interface Options {
   plugins?: string[]
   allPackages?: any[]
   precss?: 'less' | 'scss' | ''
+  package?: 'pnpm' | 'npm' | 'yarn'
 }
 
 const options: Options = {}

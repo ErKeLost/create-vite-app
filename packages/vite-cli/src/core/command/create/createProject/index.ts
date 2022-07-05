@@ -27,6 +27,8 @@ export default async function (name: string) {
   const cmdInherit = createSpawnCmd(dest, 'inherit')
   clearConsole('cyan', `🎨  🎨   VITE_CLI V-${VITE_CLI_VERSION}   🎨  🎨`)
   await createProjectQuestions()
+  console.log(options)
+
   // 开始记录用时
   startTime = new Date().getTime()
   // 拷贝基础模板文件
@@ -51,7 +53,7 @@ export default async function (name: string) {
   console.log('')
   // await cmdInherit('npm', ['install'])
   // await cmdInherit('yarn', ['install'])
-  await cmdInherit('pnpm', ['install'])
+  await cmdInherit(options.package, ['install'])
 
   clearConsole('cyan', `VITE_CLI v${VITE_CLI_VERSION}`)
   endTime = new Date().getTime()

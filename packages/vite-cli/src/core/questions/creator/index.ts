@@ -2,6 +2,7 @@ import { prompt, QuestionCollection } from 'inquirer'
 import options from '../../../shared/options'
 import precss from './precss'
 import components from './components'
+import PackageDevice from './packageDevice'
 
 async function createQuestion(quesiton) {
   const result: QuestionCollection = await prompt([quesiton])
@@ -10,6 +11,7 @@ async function createQuestion(quesiton) {
 }
 
 async function createProjectQuestions(): Promise<void> {
+  await createQuestion(PackageDevice)
   await createQuestion(components)
   await createQuestion(precss)
   console.log(options)
