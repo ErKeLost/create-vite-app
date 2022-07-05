@@ -51,7 +51,7 @@ export default async function (name: string) {
   console.log('')
   await cmdInherit('npm', ['install'])
 
-  clearConsole('cyan', `X-BUILD v${VITE_CLI_VERSION}`)
+  clearConsole('cyan', `VITE_CLI v${VITE_CLI_VERSION}`)
   endTime = new Date().getTime()
   const usageTime = (endTime - startTime) / 1000
   cyan(
