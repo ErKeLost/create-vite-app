@@ -4,4 +4,4 @@ module.exports = {
     'postcss-viewport-height-correction': {},
     autoprefixer: {},
   },
-}
+};

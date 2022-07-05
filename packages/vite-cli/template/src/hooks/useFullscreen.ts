@@ -29,6 +29,9 @@ export default function useFullscreen() {
     }
   }
   return {
-    screenfullActive, toggleScreenfull, openScreenfull, closeScreenfull,
+    screenfullActive,
+    toggleScreenfull,
+    openScreenfull,
+    closeScreenfull,
   };
 }

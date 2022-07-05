@@ -2,5 +2,4 @@
   <footer></footer>
 </template>
 
-<script lang="ts" setup name="DefaultFooter">
-</script>
+<script lang="ts" setup name="DefaultFooter"></script>
