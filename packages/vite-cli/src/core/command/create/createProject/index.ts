@@ -43,7 +43,7 @@ export default async function (name: string) {
   // Git 初始化
   await cmdIgnore('git', ['init'])
   await cmdIgnore('git', ['add .'])
-  await cmdIgnore('git', ['commit -m "Initialize by X-BUILD"'])
+  await cmdIgnore('git', ['commit -m "Initialize by VITE_CLI"'])
   console.log(`> 成功初始化 Git 仓库`)
 
   // 依赖安装
@@ -54,13 +54,11 @@ export default async function (name: string) {
   clearConsole('cyan', `X-BUILD v${VITE_CLI_VERSION}`)
   endTime = new Date().getTime()
   const usageTime = (endTime - startTime) / 1000
-  console.log(
-    `> 项目已经创建成功，用时${cyan(usageTime)}s，请输入以下命令继续...`
+  cyan(
+    `> 项目已经创建成功，用时${usageTime}s，请输入以下命令继续...`
   )
   console.log('')
-  cyan(' $ ')
   cyan(`cd ${name}`)
-  cyan(' $ ')
   cyan('npm run dev')
   console.log('创建项目成功')
 }

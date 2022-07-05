@@ -101,7 +101,8 @@
     "**/*.test.ts",
     "temp",
     "scripts",
-    "./src/__tests__"
+    "./src/__tests__",
+    "template"
   ],
   "esModuleInterop": true,
   "allowSyntheticDefaultImports": true,
