@@ -34,14 +34,14 @@ export default async function (name: string) {
   // 拷贝基础模板文件
   await fs.copy(templatePath, dest)
   // 编译 ejs 模板文件
-  // await Promise.all(fetchTemplateFiles().map((file) => ejsRender(file, name)))
+  await Promise.all(fetchTemplateFiles().map((file) => ejsRender(file, name)))
   yellow(`> 项目模板生成于目录： ${dest}`)
   // 生成 gitignore
-  // await fs.move(
-  //   path.resolve(dest, '.gitignore.ejs'),
-  //   path.resolve(dest, '.gitignore'),
-  //   { overwrite: true }
-  // )
+  await fs.move(
+    path.resolve(dest, '.gitignore.ejs'),
+    path.resolve(dest, '.gitignore'),
+    { overwrite: true }
+  )
   // Git 初始化
   await cmdIgnore('git', ['init'])
   await cmdIgnore('git', ['add .'])

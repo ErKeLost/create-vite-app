@@ -1,9 +1,3 @@
 export function fetchTemplateFiles(): string[] {
-  return [
-    'package.json',
-    'babel.config.js',
-    '.stylelintrc.js',
-    'vite.config.ts',
-    'src/main.ts'
-  ]
+  return ['package.json', 'vite.config.ts', 'src/main.ts']
 }
