@@ -1,5 +1,5 @@
 import { defineConfig } from 'vitepress'
-
+import path from 'path'
 const ogDescription = 'Next Generation Frontend Tooling'
 const ogImage = 'https://main.vitejs.dev/og-image.png'
 const ogTitle = 'Vite'
@@ -8,7 +8,18 @@ const ogUrl = 'https://main.vitejs.dev'
 export default defineConfig({
   title: 'Vite',
   description: 'Next Generation Frontend Tooling',
-
+  vite: {
+    build: {
+      minify: false
+    },
+    resolve: {
+      alias: {
+        '@': path.resolve(__dirname, '../../src'),
+        '@vue/theme': path.join(__dirname, '../../src'),
+        assets: path.join(__dirname, '../../assets')
+      }
+    }
+  },
   head: [
     ['link', { rel: 'icon', type: 'image/svg+xml', href: '/logo.svg' }],
     ['meta', { property: 'og:type', content: 'website' }],
@@ -27,7 +38,7 @@ export default defineConfig({
   },
 
   themeConfig: {
-    logo: '/logo.svg',
+    // logo: '/logo.svg',
 
     editLink: {
       pattern: 'https://github.com/vitejs/vite/edit/main/docs/:path',
