@@ -5,12 +5,6 @@
       <img width="220" src="https://jzzx-docs.netlify.app/assets/CLI.29e4809b.png" alt="Vite logo">
   </a>
 </p>
-<p align="center">
-  <a href="https://vitejs.dev" target="_blank" rel="noopener noreferrer">
-      <img width="390" src="https://jzzx-docs.netlify.app/assets/vite.6c15df5a.png" alt="Vite logo">
-  </a>
-</p>
-
 <br/>
 <p align="center">
   <a href="https://npmjs.com/package/vite"><img src="https://img.shields.io/npm/v/vite.svg" alt="npm package"></a>
