@@ -20,7 +20,7 @@ hero:
       link: /guide/why
     - theme: alt
       text: View on GitHub
-      link: https://github.com/vitejs/vite
+      link: https://github.com/ErKeLost/vite-cli
 
 features:
   - icon: 📦
