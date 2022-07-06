@@ -7,6 +7,7 @@
     "packages/*"
   ],
   "scripts": {
+    "docs": "pnpm dev:docs --filter docs",
     "build": "turbo run build",
     "build:docs": "pnpm build --filter docs",
     "build:cli": "pnpm build --filter vite-cli",
