@@ -19,6 +19,7 @@ importers:
       husky: ^8.0.1
       inquirer: 8.1.1
       lint-staged: ^13.0.3
+      pnpm: 7.3.0
       prettier: latest
       ts-node-dev: ^2.0.0
       tsc-alias: ^1.6.11
@@ -40,6 +41,7 @@ importers:
       husky: 8.0.1
       inquirer: 8.1.1
       lint-staged: 13.0.3
+      pnpm: 7.3.0
       prettier: 2.7.1
       ts-node-dev: 2.0.0_typescript@4.7.4
       tsc-alias: 1.6.11
@@ -4928,6 +4930,12 @@ packages:
     resolution: {integrity: sha512-ce/kfCHFJ2sIK1IuSnXfVBxoMaIwuAF9J5NjFwxng1j+r8XguGxXMK87dBSODQfY+se2Raj/grpx5EAK9kapEA==}
     dependencies:
       queue-lit: 1.2.8
+    dev: true
+
+  /pnpm/7.3.0:
+    resolution: {integrity: sha512-HOXT6V+AznAyjL2Ay3TuuJQucsEguUiKjqyQq4WPPwOpaaILhkKvu8Nn1/OQWGi9V6T7OciyrctAKeYyCha6Ow==}
+    engines: {node: '>=14.6'}
+    hasBin: true
     dev: true
 
   /postcss/8.4.14:
