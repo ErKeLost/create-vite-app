@@ -43,24 +43,24 @@ export default async function (name: string) {
     { overwrite: true }
   )
   // Git 初始化
-  await cmdIgnore('git', ['init'])
-  await cmdIgnore('git', ['add .'])
-  await cmdIgnore('git', ['commit -m "Initialize by VITE_CLI"'])
-  console.log(`> 成功初始化 Git 仓库`)
+  // await cmdIgnore('git', ['init'])
+  // await cmdIgnore('git', ['add .'])
+  // await cmdIgnore('git', ['commit -m "Initialize by VITE_CLI"'])
+  // console.log(`> 成功初始化 Git 仓库`)
 
-  // 依赖安装
-  console.log(`> 正在自动安装依赖，请稍等...`)
-  console.log('')
-  // await cmdInherit('npm', ['install'])
-  // await cmdInherit('yarn', ['install'])
-  await cmdInherit(options.package, ['install'])
+  // // 依赖安装
+  // console.log(`> 正在自动安装依赖，请稍等...`)
+  // console.log('')
+  // // await cmdInherit('npm', ['install'])
+  // // await cmdInherit('yarn', ['install'])
+  // await cmdInherit(options.package, ['install'])
 
-  clearConsole('cyan', `VITE_CLI v${VITE_CLI_VERSION}`)
-  endTime = new Date().getTime()
-  const usageTime = (endTime - startTime) / 1000
-  cyan(`> 项目已经创建成功，用时${usageTime}s，请输入以下命令继续...`)
-  console.log('')
-  cyan(`cd ${name}`)
-  cyan('npm run dev')
-  console.log('创建项目成功')
+  // clearConsole('cyan', `VITE_CLI v${VITE_CLI_VERSION}`)
+  // endTime = new Date().getTime()
+  // const usageTime = (endTime - startTime) / 1000
+  // cyan(`> 项目已经创建成功，用时${usageTime}s，请输入以下命令继续...`)
+  // console.log('')
+  // cyan(`cd ${name}`)
+  // cyan('npm run dev')
+  // console.log('创建项目成功')
 }
