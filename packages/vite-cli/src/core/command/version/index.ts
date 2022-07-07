@@ -1,5 +1,4 @@
 import { magenta as color } from 'chalk'
-
 import program from '../../program'
 
 import { magenta } from '../../../utils/log'

@@ -1,6 +1,6 @@
 {
   "name": "vite-cli",
-  "version": "0.0.5-alpha",
+  "version": "0.0.7-alpha",
   "description": "",
   "main": "index.js",
   "bin": {
@@ -29,13 +29,13 @@
     "globby": "^13.1.2",
     "gradient-string": "^2.0.1",
     "handlebars": "^4.7.7",
+    "inquirer": "8.1.1",
     "log-symbols": "^5.1.0",
     "nanospinner": "^1.1.0",
     "ora": "5.4.1",
     "pacote": "^13.6.1",
     "shelljs": "^0.8.5",
-    "update-notifier": "^6.0.2",
-    "inquirer": "8.1.1"
+    "update-notifier": "^6.0.2"
   },
   "devDependencies": {
     "@types/node": "^18.0.0",
