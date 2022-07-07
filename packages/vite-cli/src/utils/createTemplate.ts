@@ -8,6 +8,7 @@ export async function ejsRender(filePath: string, name): Promise<void> {
   const file = path.parse(filePath)
   const dest = path.resolve(process.cwd(), name)
   const readFilePath = path.resolve(dest, file.dir, `${file.name}.ejs`)
+  console.log(readFilePath)
 
   const outputFilePath = path.resolve(dest, filePath)
 

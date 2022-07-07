@@ -33,6 +33,7 @@ export default async function (name: string) {
   )
   await createProjectQuestions()
   console.log(options)
+  console.log(name)
 
   // 开始记录用时
   startTime = new Date().getTime()
