@@ -6,7 +6,7 @@ titleTemplate: Next Generation Frontend Tooling
 
 hero:
   name: Vite CLI
-  text: 开箱即用vite模板
+  text: 开箱即用高度可定制化vite模板
   tagline: Vite template out of the box.
   image:
     src: /cli.png
