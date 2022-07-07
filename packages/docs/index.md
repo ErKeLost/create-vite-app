@@ -9,7 +9,7 @@ hero:
   text: 开箱即用vite模板
   tagline: Vite template out of the box.
   image:
-    src: /logo-with-shadow.png
+    src: /cli.png
     alt: Vite
   actions:
     - theme: brand

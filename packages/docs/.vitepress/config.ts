@@ -26,7 +26,7 @@ export default defineConfig({
   },
 
   themeConfig: {
-    // logo: '/logo.svg',
+    logo: '/cli.png',
 
     editLink: {
       pattern: 'https://github.com/vitejs/vite/edit/main/docs/:path',
@@ -34,9 +34,8 @@ export default defineConfig({
     },
 
     socialLinks: [
-      { icon: 'twitter', link: 'https://twitter.com/vite_js' },
-      { icon: 'discord', link: 'https://chat.vitejs.dev' },
-      { icon: 'github', link: 'https://github.com/vitejs/vite' }
+      { icon: 'discord', link: 'https://jzzx-docs.netlify.app/' },
+      { icon: 'github', link: 'https://github.com/ErKeLost/vite-cli' }
     ],
 
     algolia: {
