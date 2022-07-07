@@ -118,3 +118,6 @@
     background-position: 100% 0px;
   }
 }
+.VPNavBarTitle{
+  diplay: none;
+}

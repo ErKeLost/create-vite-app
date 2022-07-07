@@ -1,8 +1,9 @@
-import { h } from 'vue'
 import Theme from 'vitepress/theme'
-import './styles/vars.css'
-import HomeSponsors from './components/HomeSponsors.vue'
+import { h } from 'vue'
 import AsideSponsors from './components/AsideSponsors.vue'
+import HomeSponsors from './components/HomeSponsors.vue'
+import './styles/vars.css'
+console.log(Theme)
 
 export default {
   ...Theme,
