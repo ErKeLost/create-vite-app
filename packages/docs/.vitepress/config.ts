@@ -62,7 +62,7 @@ export default defineConfig({
 
     footer: {
       message: 'Released under the MIT License.',
-      copyright: 'Copyright © 2019-present Evan You & Vite Contributors'
+      copyright: 'Copyright © 2022-present ERKELOST & Vite CLI Contributors'
     },
 
     nav: [
@@ -97,16 +97,16 @@ export default defineConfig({
             link: 'https://github.com/vitejs/vite/blob/main/packages/vite/CHANGELOG.md'
           }
         ]
-      },
-      {
-        text: 'v3 (next)',
-        items: [
-          {
-            text: 'v2.x (stable)',
-            link: 'https://v2.vitejs.dev'
-          }
-        ]
       }
+      // {
+      //   text: 'v3 (next)',
+      //   items: [
+      //     {
+      //       text: 'v2.x (stable)',
+      //       link: 'https://v2.vitejs.dev'
+      //     }
+      //   ]
+      // }
     ],
 
     sidebar: {
