@@ -3,7 +3,6 @@ import { h } from 'vue'
 import AsideSponsors from './components/AsideSponsors.vue'
 import HomeSponsors from './components/HomeSponsors.vue'
 import './styles/vars.css'
-console.log(Theme)
 
 export default {
   ...Theme,

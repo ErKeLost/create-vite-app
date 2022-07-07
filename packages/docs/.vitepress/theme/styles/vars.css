@@ -124,19 +124,3 @@
 .DocSearch {
   --docsearch-primary-color: var(--vp-c-brand) !important;
 }
-.image-bg {
-  animation: move 4s linear infinite;
-  -webkit-animation: move 4s linear infinite;
-  -moz-animation: move 4s linear infinite;
-}
-@keyframes move {
-  0% {
-    background-position: 0px 100%;
-  }
-  100% {
-    background-position: 100% 0px;
-  }
-}
-.VPNavBarTitle {
-  diplay: none;
-}
