@@ -21,7 +21,7 @@ const title = `🌱 面向未来 价值在线前端生态 The build will be comp
 </script>
 
 <template>
-  <div class="banner" v-if="open">{{title}}</div>
+  <div class="banner" v-if="open">{{ title }}</div>
 </template>
 
 <style>

@@ -30,7 +30,7 @@ features:
     title: Support various component libraries
     details: Customization supports loading of different component libraries.
   - icon: ⚙️
-    title: Custom composition plugin
+    title: Custom composition plugin with more setup
     details: Plugin can plug in any custom.
   - icon: 🎨
     title: Built in themed international layout
