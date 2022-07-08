@@ -1,6 +1,6 @@
 {
   "name": "vite-cli",
-  "version": "0.0.0-alpha0.1",
+  "version": "0.0.9-alpha",
   "private": true,
   "workspaces": [
     "apps/*",
@@ -39,7 +39,6 @@
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.1.0",
     "husky": "^8.0.1",
-    "inquirer": "8.1.1",
     "lint-staged": "^13.0.3",
     "prettier": "latest",
     "ts-node-dev": "^2.0.0",

@@ -5,7 +5,7 @@ title: Vite-CLI
 titleTemplate: Next Generation Frontend Tooling
 
 hero:
-  name: Vite CLI
+  name: Vite CLI Version 0.0.9-alpha
   text: 开箱即用高度可定制化vite模板
   tagline: Vite template out of the box.
   image:
