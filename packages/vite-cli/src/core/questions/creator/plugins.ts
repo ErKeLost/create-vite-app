@@ -14,12 +14,6 @@ export default {
     },
     { name: 'AutoImport 自动引入Api', value: 'auto-import' },
     { name: 'Unocss 即时的按需原子 CSS 引擎', value: 'unocss' },
-    {
-      name: 'unplugin-vue-components 自动按需导入Vue组件',
-      value: 'vue-components'
-    },
-    { name: 'AutoImport 自动引入Api', value: 'auto-import' },
-    { name: 'Unocss 即时的按需原子 CSS 引擎', value: 'unocss' },
     { name: 'vite-plugin-pwa 零配置 PWA', value: 'pwa' },
     {
       name: 'vite-plugin-inspect 模块运行时依赖可视化',
