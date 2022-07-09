@@ -4,43 +4,22 @@ import precss from './precss'
 import components from './components'
 import PackageDevice from './packageDevice'
 import Plugins from './plugins'
-import Router from './router'
-import Pinia from './pinia'
+import future from './feature'
 // import prompts from 'prompts'
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const prompts = require('prompts')
-async function createQuestion(quesiton) {
-  const result: QuestionCollection = await prompt([quesiton])
+async function createQuestion(util, question) {
+  const result: QuestionCollection = await util(question)
   Object.assign(options, result)
   return Promise.resolve()
 }
 
 async function createProjectQuestions(): Promise<void> {
-  await createQuestion(PackageDevice)
-  await createQuestion(Router)
-  await createQuestion(Pinia)
-  const res = await prompts([
-    {
-      name: 'needsRouter',
-      type: () => 'toggle',
-      message: 'Add Vue Router for Single Page Application development?',
-      initial: false,
-      active: 'Yes',
-      inactive: 'No'
-    },
-    {
-      name: 'needsPinia',
-      type: () => 'toggle',
-      message: 'Add Pinia for state management?',
-      initial: false,
-      active: 'Yes',
-      inactive: 'No'
-    }
-  ])
-  await createQuestion(components)
-  await createQuestion(Plugins)
-  await createQuestion(precss)
-  Object.assign(options, res)
+  await createQuestion(prompt, PackageDevice)
+  await createQuestion(prompts, future)
+  await createQuestion(prompt, components)
+  await createQuestion(prompt, Plugins)
+  await createQuestion(prompt, precss)
   console.log(options)
 
   return Promise.resolve()
