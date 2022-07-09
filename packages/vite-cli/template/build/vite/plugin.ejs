@@ -22,15 +22,12 @@ import vue from "@vitejs/plugin-vue";
 <% if (plugins.indexOf('inspect') !== '-1') { -%>
   import Inspect from "vite-plugin-inspect";
 <% } -%>
-<% if (plugins.indexOf('auto-import') !== '-1') { -%>
-  import AutoImport from "unplugin-auto-import/vite";
-<% } -%>
 import {
   <% if (components === 'element-plus') { -%>
     ElementPlusResolver
   <% } -%>
   <% if (components === 'ant-design') { -%>
-    AntDesignResolver
+    AntDesignVueResolver
   <% } -%>
   <% if (components === 'naive-ui') { -%>
     NaiveUiResolver
@@ -58,7 +55,7 @@ export function createVitePlugins(viteEnv, isDev: boolean) {
           ElementPlusResolver()
         <% } -%>
         <% if (components === 'ant-design') { -%>
-          AntDesignResolver()
+          AntDesignVueResolver()
         <% } -%>
         <% if (components === 'naive-ui') { -%>
           NaiveUiResolver()
@@ -93,7 +90,7 @@ export function createVitePlugins(viteEnv, isDev: boolean) {
           ElementPlusResolver()
         <% } -%>
         <% if (components === 'ant-design') { -%>
-          AntDesignResolver()
+          AntDesignVueResolver()
         <% } -%>
         <% if (components === 'naive-ui') { -%>
           NaiveUiResolver()

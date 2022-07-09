@@ -19,24 +19,24 @@ console.log(RouterLink)
 
       <nav>
         <RouterLink to="/">
-          <%= if (components === 'ant-design') { -%>
+          <% if (components === 'ant-design') { -%>
             <a-button type="primary">Home</a-button>
           <% } -%>
-          <%= if (components === 'element-plus') { -%>
+          <% if (components === 'element-plus') { -%>
             <el-button type="primary">Home</el-button>
           <% } -%>
-          <%= if (components === 'naive-ui') { -%>
+          <% if (components === 'naive-ui') { -%>
             <n-button type="primary">Home</n-button>
           <% } -%>
         </RouterLink>
         <RouterLink to="/about">
-          <%= if (components === 'ant-design') { -%>
+          <% if (components === 'ant-design') { -%>
             <a-button type="primary">About</a-button>
           <% } -%>
-          <%= if (components === 'element-plus') { -%>
+          <% if (components === 'element-plus') { -%>
             <el-button  type="primary">About</el-button>
           <% } -%>
-          <%= if (components === 'naive-ui') { -%>
+          <% if (components === 'naive-ui') { -%>
             <n-button type="primary">About</n-button>
           <% } -%>
         </RouterLink>
