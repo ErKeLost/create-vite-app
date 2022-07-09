@@ -3,6 +3,7 @@ export function fetchTemplateFiles(): string[] {
     'package.json',
     'vite.config.ts',
     'src/main.ts',
-    'build/vite/plugin.ts'
+    'build/vite/plugin.ts',
+    'src/components/Welcome.vue'
   ]
 }

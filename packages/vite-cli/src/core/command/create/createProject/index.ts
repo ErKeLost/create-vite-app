@@ -20,10 +20,8 @@ export default async function (name: string) {
   options.dest = path.resolve(process.cwd(), name)
   // 模板路径
   const templatePath = path.resolve(__dirname, '../../../../../template')
-  console.log(templatePath)
   // 目录
   const dest = path.resolve(process.cwd(), name)
-  console.log(dest)
 
   const cmdIgnore = createSpawnCmd(dest, 'ignore')
   const cmdInherit = createSpawnCmd(dest, 'inherit')
@@ -32,12 +30,18 @@ export default async function (name: string) {
     gradient('cyan', 'purple')('\n🚀 Welcome To Create Template for Vite!\n')
   )
   await createProjectQuestions()
-  console.log(options)
-
+  function filterQuestion() {
+    return true
+  }
   // 开始记录用时
   startTime = new Date().getTime()
   // 拷贝基础模板文件
-  await fs.copy(templatePath, dest)
+  await fs.copy(templatePath, dest, { filter: filterQuestion })
+  // await fs.copy(templatePath, dest)
+  console.log(templatePath)
+  console.log(dest)
+  console.log(options.components)
+
   // 编译 ejs 模板文件
   await Promise.all(fetchTemplateFiles().map((file) => ejsRender(file, name)))
   yellow(`> 项目模板生成于目录： ${dest}`)
