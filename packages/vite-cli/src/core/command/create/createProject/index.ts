@@ -1,6 +1,7 @@
 import { cyan, yellow } from '../../../../utils/log'
 import { ejsRender } from '../../../../utils/createTemplate'
 import createSpawnCmd from '../../../../utils/createSpawnCmd'
+import { readdirSync } from 'fs'
 import fs = require('fs-extra')
 import { fetchTemplateFiles } from '../../../../shared/templateFile'
 import createProjectQuestions from '../../../questions/creator'
@@ -29,8 +30,20 @@ export default async function (name: string) {
   console.log(
     gradient('cyan', 'purple')('\n🚀 Welcome To Create Template for Vite!\n')
   )
+  const assets = readdirSync(`${templatePath}/src/assets`).filter(
+    (item) => !item.includes('logo')
+  )
   await createProjectQuestions()
   function filterQuestion() {
+    const res = assets.filter(
+      (item) => item.split('.')[0] !== options.components
+    )
+    res.forEach((item) => {
+      fs.remove(`${dest}/src/assets/${item}`)
+    })
+    if (!options.Router) {
+      fs.remove(`${dest}/src/router`)
+    }
     return true
   }
   // 开始记录用时

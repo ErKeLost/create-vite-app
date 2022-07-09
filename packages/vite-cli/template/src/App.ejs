@@ -1,15 +1,21 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
-console.log(RouterLink)
+<% if (!Router) { -%>
+import HelloWorld from '@/components/HelloWorld.vue'
+<% } -%>
 </script>
 
 <template>
   <Welcome />
+  <% if (!Router) { -%>
+  <HelloWorld />
+  <% } -%>
+  <% if (Router) { -%>
   <RouterView />
+  <% } -%>
 </template>
 
 <style>
-@import '@/assets/base.css';
+@import '@/styles/base.css';
 
 #app {
   max-width: 1280px;

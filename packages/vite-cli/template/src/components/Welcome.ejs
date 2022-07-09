@@ -1,13 +1,14 @@
 <script setup lang="ts">
+<% if (Router) { -%>
 import { RouterLink, RouterView } from 'vue-router'
+<% } -%>
 import HelloWorld from '@/components/HelloWorld.vue'
-console.log(RouterLink)
 </script>
 
 <template>
   <header>
     <img
-      alt="ElementPlus logo"
+      alt="<%= components %> logo"
       class="logo"
       src="@/assets/<%= components %>.svg"
       width="125"
@@ -18,7 +19,9 @@ console.log(RouterLink)
       <HelloWorld msg="You did it!" />
 
       <nav>
-        <RouterLink to="/">
+        <% if (Router) { -%>
+          <RouterLink to="/">
+        <% } -%>
           <% if (components === 'ant-design') { -%>
             <a-button type="primary">Home</a-button>
           <% } -%>
@@ -28,8 +31,12 @@ console.log(RouterLink)
           <% if (components === 'naive-ui') { -%>
             <n-button type="primary">Home</n-button>
           <% } -%>
+        <% if (Router) { -%>
         </RouterLink>
-        <RouterLink to="/about">
+        <% } -%>
+        <% if (Router) { -%>
+          <RouterLink to="/about">
+        <% } -%>
           <% if (components === 'ant-design') { -%>
             <a-button type="primary">About</a-button>
           <% } -%>
@@ -39,7 +46,9 @@ console.log(RouterLink)
           <% if (components === 'naive-ui') { -%>
             <n-button type="primary">About</n-button>
           <% } -%>
-        </RouterLink>
+        <% if (Router) { -%>
+          </RouterLink>
+        <% } -%>
       </nav>
     </div>
   </header>

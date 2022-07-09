@@ -1,4 +1,6 @@
 interface Options {
+  Router?: boolean
+  Pinia?: boolean
   name?: string
   version?: string
   src?: string

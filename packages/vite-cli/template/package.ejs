@@ -8,8 +8,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "vue": "^3.2.25",
     "@vueuse/core": "^8.9.1",
+    "@vueuse/head": "^0.7.6",
+    "axios": "^0.27.2",
+    <% if (Router) { -%>
+      "vue-router": "^4.1.1",
+    <% } -%>
     <% if (components === 'element-plus') { -%>
       "element-plus": "^2.2.5",
     <% } -%>
@@ -19,7 +23,11 @@
     <% if (components === 'ant-design') { -%>
       "ant-design-vue": "3.2.1",
     <% } -%>
-    "vue-router": "^4.1.1"
+    "vue": "^3.2.25",
+    <% if (Pinia) { -%>
+      "pinia": "^2.0.14",
+      "pinia-plugin-persist": "^1.0.0"
+    <% } -%>
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^2.3.3",
