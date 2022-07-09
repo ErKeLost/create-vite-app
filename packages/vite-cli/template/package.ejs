@@ -10,7 +10,13 @@
   "dependencies": {
     "vue": "^3.2.25",
     <% if (components === 'element-plus') { -%>
-      "element-plus": "2.2.5",
+      "element-plus": "^2.2.5",
+    <% } -%>
+    <% if (components === 'naive-ui') { -%>
+      "naive-ui": "^2.31.0",
+    <% } -%>
+    <% if (components === 'ant-design') { -%>
+      "ant-design": "3.2.10",
     <% } -%>
     "vue-router": "^4.1.1"
   },

@@ -1,14 +1,41 @@
 import type { Plugin } from 'vite'
 import vue from "@vitejs/plugin-vue";
-import VueJsx from "@vitejs/plugin-vue-jsx";
-import legacy from "@vitejs/plugin-legacy";
-import Components from "unplugin-vue-components/vite";
-import AutoImport from "unplugin-auto-import/vite";
-import Icons from "unplugin-icons/vite";
-import Unocss from "unocss/vite";
-import Inspect from "vite-plugin-inspect";
-import IconsResolver from "unplugin-icons/resolver";
-import { ElementPlusResolver } from "unplugin-vue-components/resolvers";
+<% if (plugins.indexOf('jsx') !== '-1') { -%>
+  import VueJsx from "@vitejs/plugin-vue-jsx";
+<% } -%>
+<% if (plugins.indexOf('legacy') !== '-1') { -%>
+  import legacy from "@vitejs/plugin-legacy";
+<% } -%>
+<% if (plugins.indexOf('vue-components') !== '-1') { -%>
+  import Components from "unplugin-vue-components/vite";
+<% } -%>
+<% if (plugins.indexOf('auto-import') !== '-1') { -%>
+  import AutoImport from "unplugin-auto-import/vite";
+<% } -%>
+<% if (plugins.indexOf('icons') !== '-1') { -%>
+  import Icons from "unplugin-icons/vite";
+  import IconsResolver from "unplugin-icons/resolver";
+<% } -%>
+<% if (plugins.indexOf('unocss') !== '-1') { -%>
+  import Unocss from "unocss/vite";
+<% } -%>
+<% if (plugins.indexOf('inspect') !== '-1') { -%>
+  import Inspect from "vite-plugin-inspect";
+<% } -%>
+<% if (plugins.indexOf('auto-import') !== '-1') { -%>
+  import AutoImport from "unplugin-auto-import/vite";
+<% } -%>
+import {
+  <% if (components === 'element-plus') { -%>
+    ElementPlusResolver
+  <% } -%>
+  <% if (components === 'ant-design') { -%>
+    AntDesignResolver
+  <% } -%>
+  <% if (components === 'naive-ui') { -%>
+    NaiveUiResolver
+  <% } -%>
+ } from "unplugin-vue-components/resolvers";
 export function createVitePlugins(viteEnv, isDev: boolean) {
   const vitePlugins: (Plugin | Plugin[]) = [
     vue({
@@ -27,9 +54,15 @@ export function createVitePlugins(viteEnv, isDev: boolean) {
       include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
       dirs: ["src/components/", "src/layout/", "src/views", "src/assets"],
       resolvers: [
-        ElementPlusResolver({
-          importStyle: "sass",
-        }),
+        <% if (components === 'element-plus') { -%>
+          ElementPlusResolver()
+        <% } -%>
+        <% if (components === 'ant-design') { -%>
+          AntDesignResolver()
+        <% } -%>
+        <% if (components === 'naive-ui') { -%>
+          NaiveUiResolver()
+        <% } -%>
       ],
       dts: "src/types/components.d.ts",
     }),
@@ -53,11 +86,18 @@ export function createVitePlugins(viteEnv, isDev: boolean) {
         filepath: "./.eslintrc-auto-import.json", // Default `./.eslintrc-auto-import.json`
         globalsPropValue: true, // Default `true`, (true | false | 'readonly' | 'readable' | 'writable' | 'writeable')
       },
-      // resolvers: [ElementPlusResolver()]
       // Auto import functions from Element Plus, e.g. ElMessage, ElMessageBox... (with style)
       // 自动导入 Element Plus 相关函数，如：ElMessage, ElMessageBox... (带样式)
       resolvers: [
-        ElementPlusResolver(),
+        <% if (components === 'element-plus') { -%>
+          ElementPlusResolver()
+        <% } -%>
+        <% if (components === 'ant-design') { -%>
+          AntDesignResolver()
+        <% } -%>
+        <% if (components === 'naive-ui') { -%>
+          NaiveUiResolver()
+        <% } -%>,
         // Auto import icon components
         // 自动导入图标组件
         IconsResolver({
