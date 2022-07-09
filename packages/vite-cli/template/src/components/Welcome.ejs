@@ -18,8 +18,28 @@ console.log(RouterLink)
       <HelloWorld msg="You did it!" />
 
       <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
+        <RouterLink to="/">
+          <%= if (components === 'ant-design') { -%>
+            <a-button type="primary">Home</a-button>
+          <% } -%>
+          <%= if (components === 'element-plus') { -%>
+            <el-button type="primary">Home</el-button>
+          <% } -%>
+          <%= if (components === 'naive-ui') { -%>
+            <n-button type="primary">Home</n-button>
+          <% } -%>
+        </RouterLink>
+        <RouterLink to="/about">
+          <%= if (components === 'ant-design') { -%>
+            <a-button type="primary">About</a-button>
+          <% } -%>
+          <%= if (components === 'element-plus') { -%>
+            <el-button  type="primary">About</el-button>
+          <% } -%>
+          <%= if (components === 'naive-ui') { -%>
+            <n-button type="primary">About</n-button>
+          <% } -%>
+        </RouterLink>
       </nav>
     </div>
   </header>
