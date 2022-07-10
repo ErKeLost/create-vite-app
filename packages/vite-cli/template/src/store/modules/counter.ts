@@ -1,15 +1,12 @@
-export const useCounterStore = defineStore(
-  'counter-store',
-  () => {
-    const counter = $ref<number>(0)
-    function increment() {
-      counter++
-    }
-    return {}
-  },
-  {
-    persist: {
-      enabled: true
-    }
+export const useCounterStore = defineStore('useCounterStore', () => {
+  const count = ref<number>(1)
+  function increment() {
+    count.value++
   }
-)
+
+  function doubleCount() {
+    return count.value * 2
+  }
+
+  return { count, increment, doubleCount }
+})

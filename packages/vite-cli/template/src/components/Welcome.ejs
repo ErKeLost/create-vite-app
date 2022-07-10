@@ -1,14 +1,20 @@
 <script setup lang="ts">
+import HelloWorld from '@/components/HelloWorld.vue'
 <% if (Router) { -%>
 import { RouterLink, RouterView } from 'vue-router'
 <% } -%>
-import HelloWorld from '@/components/HelloWorld.vue'
-import { useCounterStore } from "@/store";
+<% if (Pinia) { -%>
+import { useCounterStore } from '@/store';
+const counterStore = useCounterStore();
+const { count } = storeToRefs(counterStore);
+<% } -%>
 </script>
 
 <template>
   <header>
-    {{useCounterStore().counter}}
+    <% if (Pinia) { -%>
+      {{ count }}
+    <% } -%>
     <img
       alt="<%= components %> logo"
       class="logo"
