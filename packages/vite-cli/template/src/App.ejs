@@ -1,13 +1,13 @@
 <script setup lang="ts">
 <% if (!Router) { -%>
-import HelloWorld from '@/components/HelloWorld.vue'
+import HomeView from '@/views/HomeView.vue'
 <% } -%>
 </script>
 
 <template>
   <Welcome />
   <% if (!Router) { -%>
-  <HelloWorld />
+  <HomeView />
   <% } -%>
   <% if (Router) { -%>
   <RouterView />

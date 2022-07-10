@@ -21,7 +21,6 @@ import HelloWorld from '@/components/HelloWorld.vue'
       <nav>
         <% if (Router) { -%>
           <RouterLink to="/">
-        <% } -%>
           <% if (components === 'ant-design') { -%>
             <a-button type="primary">Home</a-button>
           <% } -%>
@@ -31,12 +30,10 @@ import HelloWorld from '@/components/HelloWorld.vue'
           <% if (components === 'naive-ui') { -%>
             <n-button type="primary">Home</n-button>
           <% } -%>
-        <% if (Router) { -%>
         </RouterLink>
         <% } -%>
         <% if (Router) { -%>
           <RouterLink to="/about">
-        <% } -%>
           <% if (components === 'ant-design') { -%>
             <a-button type="primary">About</a-button>
           <% } -%>
@@ -46,7 +43,6 @@ import HelloWorld from '@/components/HelloWorld.vue'
           <% if (components === 'naive-ui') { -%>
             <n-button type="primary">About</n-button>
           <% } -%>
-        <% if (Router) { -%>
           </RouterLink>
         <% } -%>
       </nav>

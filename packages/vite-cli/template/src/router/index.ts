@@ -20,4 +20,11 @@ const router = createRouter({
   ]
 })
 
+export async function setupRouter(app: App) {
+  app.use(router)
+  // 创建路由守卫
+  // 路由准备就绪后挂载APP实例
+  await router.isReady()
+}
+
 export default router

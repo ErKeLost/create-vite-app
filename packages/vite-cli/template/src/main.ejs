@@ -1,11 +1,48 @@
-import { createApp } from "vue";
-import App from "./App.vue";
-<% if (Router) { -%>
-  import router from "./router";
-<% } -%>
 import "uno.css";
 const app = createApp(App);
 <% if (Router) { -%>
   app.use(router);
 <% } -%>
-app.mount("#app");
+import { createApp } from 'vue'
+<% if (Router) { -%>
+  import { setupRouter } from '@/router'
+<% } -%>
+<% if (Pinia) { -%>
+  import { setupStore } from '@/store'
+<% } -%>
+import {
+  setupCustomComponents,
+  setupGlobalMethods,
+  setupDirectives,
+  setupAssets
+} from '@/plugins'
+import App from './App.vue'
+async function bootStrap() {
+  // 设置样式加载
+  setupAssets()
+
+  // 创建vue
+  const app = createApp(App)
+
+  // 注册全局常用的 组件
+  setupCustomComponents(app)
+
+  // 注册全局方法
+  setupGlobalMethods(app)
+
+  // 注册全局自定义指令
+  // setupDirectives(app)
+
+  // 挂载状态管理
+  <% if (Pinia) { -%>
+    await setupStore(app)
+  <% } -%>
+
+  // 挂载路由
+  <% if (Router) { -%>
+    await setupRouter(app)
+  <% } -%>
+
+  app.mount('#app')
+}
+bootStrap()
