@@ -15,7 +15,6 @@
   <a href="https://chat.vitejs.dev"><img src="https://img.shields.io/badge/chat-discord-blue?style=flat&logo=discord" alt="discord chat"></a>
 </p>
 <br/>
-# 快速开始
 
 - 推荐使用 Pnpm 安装 Vite-CLI .
 
