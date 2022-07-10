@@ -18,6 +18,10 @@ Vite-CLI 帮助你快速搭建开箱即用模板 目前 alpha 版本 基于 Vite
 
 - 输入 `vite create 'project name'` vite create 加上您的项目名称
 
+```ts
+ vite create template
+```
+
 - Step1 选择需要创建的包管理器
 
 ```js
