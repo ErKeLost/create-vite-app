@@ -3,10 +3,12 @@
 import { RouterLink, RouterView } from 'vue-router'
 <% } -%>
 import HelloWorld from '@/components/HelloWorld.vue'
+import { useCounterStore } from "@/store";
 </script>
 
 <template>
   <header>
+    {{useCounterStore().counter}}
     <img
       alt="<%= components %> logo"
       class="logo"
