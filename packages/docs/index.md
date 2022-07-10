@@ -16,9 +16,6 @@ hero:
       text: Get Started
       link: /guide/
     - theme: alt
-      text: Pnpm install vite-create-app -g
-      link: /guide/why
-    - theme: alt
       text: View on GitHub
       link: https://github.com/ErKeLost/vite-cli
 
