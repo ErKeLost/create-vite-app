@@ -91,7 +91,11 @@
     "lib": ["es6", "DOM"],
     "typeRoots": ["./node_modules/@types"],
     "outDir": "./dist", // 重定向输出目录
-    "rootDir": "./src" // 仅用来控制输出的目录结构
+    "rootDir": "./src",  // 仅用来控制输出的目录结构,
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
   },
   "exclude": [
     // 不参与打包的目录

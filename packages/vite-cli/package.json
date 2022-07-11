@@ -1,6 +1,6 @@
 {
   "name": "vite-create-app",
-  "version": "0.1.0-alpha",
+  "version": "0.1.1-alpha",
   "description": "",
   "main": "index.js",
   "bin": {
@@ -12,13 +12,12 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:out": "tsc index.ts -outDir dist",
     "build:tsc": "tsc --project tsconfig.json && tsc-alias -p tsconfig.json",
-    "build": "tsc"
+    "build": "tsc && tsc-alias"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "prettier": "latest",
     "chalk": "4.1.0",
     "chalk-animation": "^2.0.2",
     "child_process": "^1.0.2",
@@ -35,13 +34,15 @@
     "nanospinner": "^1.1.0",
     "ora": "5.4.1",
     "pacote": "^13.6.1",
+    "prettier": "latest",
     "prompts": "^2.4.2",
     "shelljs": "^0.8.5",
     "update-notifier": "^6.0.2"
   },
   "devDependencies": {
     "@types/node": "^18.0.0",
-    "ts-node-dev": "^2.0.0"
+    "ts-node-dev": "^2.0.0",
+    "tsc-alias": "^1.6.11"
   },
   "publishConfig": {
     "access": "public",

@@ -1,4 +1,4 @@
-import { cyan, yellow } from '../../../../utils/log'
+import { cyan, yellow } from '@/utils/log'
 import { ejsRender } from '../../../../utils/createTemplate'
 import createSpawnCmd from '../../../../utils/createSpawnCmd'
 import { readdirSync } from 'fs'
