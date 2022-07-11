@@ -13,7 +13,7 @@ import { createApp } from 'vue'
     import ElementPlus from 'element-plus'
     import 'element-plus/dist/index.css'
   <% } -%>
-  <% if (components === 'ant-design-vue') { -%>
+  <% if (components === 'ant-design') { -%>
     import Antd from 'ant-design-vue'
     import 'ant-design-vue/dist/antd.css'
   <% } -%>
@@ -32,16 +32,15 @@ async function bootStrap() {
   // 创建vue
   const app = createApp(App)
   // 全局加载
-  app.use(Antd)
   <% if (plugins.indexOf('vue-components') === -1) { -%>
+    <% if (components === 'ant-design') { -%>
+      app.use(Antd)
+    <% } -%>
     <% if (components === 'naive-ui') { -%>
       app.use(naive)
     <% } -%>
     <% if (components === 'element-plus') { -%>
       app.use(ElementPlus)
-    <% } -%>
-    <% if (components === 'ant-design-vue') { -%>
-      app.use(Antd)
     <% } -%>
   <% } -%>
   // 注册全局常用的 组件

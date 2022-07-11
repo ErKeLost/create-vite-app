@@ -6,6 +6,7 @@ import HelloWorld from '@/components/HelloWorld.vue'
 import { RouterLink, RouterView } from 'vue-router'
 <% } -%>
 <% if (Pinia) { -%>
+import { storeToRefs } from 'pinia'
 import { useCounterStore } from '@/store';
 const counterStore = useCounterStore();
 const { count } = storeToRefs(counterStore);
@@ -14,9 +15,6 @@ const { count } = storeToRefs(counterStore);
 
 <template>
   <header>
-    <% if (Pinia) { -%>
-      {{ count }}
-    <% } -%>
     <img
       alt="<%= components %> logo"
       class="logo"
