@@ -1,117 +1,136 @@
 import type { Plugin } from 'vite'
-import vue from "@vitejs/plugin-vue";
-<% if (plugins.indexOf('jsx') !== '-1') { -%>
-  import VueJsx from "@vitejs/plugin-vue-jsx";
+import vue from "@vitejs/plugin-vue"
+<% if (plugins.indexOf('jsx') !== -1) { -%>
+  import VueJsx from "@vitejs/plugin-vue-jsx"
 <% } -%>
-<% if (plugins.indexOf('legacy') !== '-1') { -%>
-  import legacy from "@vitejs/plugin-legacy";
+<% if (plugins.indexOf('legacy') !== -1) { -%>
+  import legacy from "@vitejs/plugin-legacy"
 <% } -%>
-<% if (plugins.indexOf('vue-components') !== '-1') { -%>
-  import Components from "unplugin-vue-components/vite";
+<% if (plugins.indexOf('vue-components') !== -1) { -%>
+  import Components from "unplugin-vue-components/vite"
 <% } -%>
-<% if (plugins.indexOf('auto-import') !== '-1') { -%>
-  import AutoImport from "unplugin-auto-import/vite";
+<% if (plugins.indexOf('auto-import') !== -1) { -%>
+  import AutoImport from "unplugin-auto-import/vite"
 <% } -%>
-<% if (plugins.indexOf('icons') !== '-1') { -%>
-  import Icons from "unplugin-icons/vite";
-  import IconsResolver from "unplugin-icons/resolver";
+<% if (plugins.indexOf('icons') !== -1) { -%>
+  import Icons from "unplugin-icons/vite"
+  import IconsResolver from "unplugin-icons/resolver"
 <% } -%>
-<% if (plugins.indexOf('unocss') !== '-1') { -%>
-  import Unocss from "unocss/vite";
+<% if (plugins.indexOf('unocss') !== -1) { -%>
+  import Unocss from "unocss/vite"
 <% } -%>
-<% if (plugins.indexOf('inspect') !== '-1') { -%>
-  import Inspect from "vite-plugin-inspect";
+<% if (plugins.indexOf('inspect') !== -1) { -%>
+  import Inspect from "vite-plugin-inspect"
 <% } -%>
-import {
-  <% if (components === 'element-plus') { -%>
-    ElementPlusResolver
-  <% } -%>
-  <% if (components === 'ant-design') { -%>
-    AntDesignVueResolver
-  <% } -%>
-  <% if (components === 'naive-ui') { -%>
-    NaiveUiResolver
-  <% } -%>
- } from "unplugin-vue-components/resolvers";
+<% if (plugins.indexOf('vue-components') !== -1) { -%>
+  import {
+    <% if (components === 'element-plus') { -%>
+      ElementPlusResolver
+    <% } -%>
+    <% if (components === 'ant-design') { -%>
+      AntDesignVueResolver
+    <% } -%>
+    <% if (components === 'naive-ui') { -%>
+      NaiveUiResolver
+    <% } -%>
+   } from "unplugin-vue-components/resolvers"
+<% } -%>
 export function createVitePlugins(viteEnv, isDev: boolean) {
   const vitePlugins: (Plugin | Plugin[]) = [
     vue({
-      reactivityTransform: true,
+      reactivityTransform: true
     }),
-    VueJsx(),
-    legacy({
-      targets: ["ie >= 11"],
-      additionalLegacyPolyfills: ["regenerator-runtime/runtime"],
-    }),
-    Inspect(),
-    Components({
-      // allow auto load markdown components under `./src/components/`
-      extensions: ["vue", "md"],
-      // allow auto import and register components used in markdown
-      include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
-      dirs: ["src/components/", "src/layout/", "src/views", "src/assets"],
-      resolvers: [
-        <% if (components === 'element-plus') { -%>
-          ElementPlusResolver()
-        <% } -%>
-        <% if (components === 'ant-design') { -%>
-          AntDesignVueResolver()
-        <% } -%>
-        <% if (components === 'naive-ui') { -%>
-          NaiveUiResolver()
-        <% } -%>
-      ],
-      dts: "src/types/components.d.ts",
-    }),
-    AutoImport({
-      dts: "src/types/auto-imports.d.ts",
-      // imports: ['vue', '@vueuse/core'],
-      // Generate corresponding .eslintrc-auto-import.json file.
-      // eslint globals Docs - https://eslint.org/docs/user-guide/configuring/language-options#specifying-globals
-      imports: ["vue", "vue/macros", "vue-router", "pinia", "@vueuse/core"],
-      dirs: ["src/composables", "src/utils"],
-      // Auto import for all module exports under directories
-      // dirs: [
-      //   // './hooks',
-      //   // './composables'
-      //   // ...
-      // ],
-
-      eslintrc: {
-        // enabled: true, // Default `false`
-        enabled: false, // Default `false`
-        filepath: "./.eslintrc-auto-import.json", // Default `./.eslintrc-auto-import.json`
-        globalsPropValue: true, // Default `true`, (true | false | 'readonly' | 'readable' | 'writable' | 'writeable')
-      },
-      // Auto import functions from Element Plus, e.g. ElMessage, ElMessageBox... (with style)
-      // 自动导入 Element Plus 相关函数，如：ElMessage, ElMessageBox... (带样式)
-      resolvers: [
-        <% if (components === 'element-plus') { -%>
-          ElementPlusResolver()
-        <% } -%>
-        <% if (components === 'ant-design') { -%>
-          AntDesignVueResolver()
-        <% } -%>
-        <% if (components === 'naive-ui') { -%>
-          NaiveUiResolver()
-        <% } -%>,
-        // Auto import icon components
-        // 自动导入图标组件
-        IconsResolver({
-          prefix: "Icon",
-        }),
-      ],
-    }),
-    Icons({
-      compiler: 'vue3',
-      customCollections: {
-        // custom: FileSystemIconLoader(`${vitePath.src}/assets/svg`)
-      },
-      scale: 1,
-      defaultClass: 'inline-block',
-      autoInstall: true
-    }),
-    Unocss()
+    <% if (plugins.indexOf('jsx') !== -1) { -%>
+      VueJsx(),
+    <% } -%>
+    <% if (plugins.indexOf('legacy') !== -1) { -%>
+      legacy({
+        targets: ["ie >= 11"],
+        additionalLegacyPolyfills: ["regenerator-runtime/runtime"],
+      }),
+    <% } -%>
+    <% if (plugins.indexOf('inspect') !== -1) { -%>
+      Inspect(),
+    <% } -%>
+    <% if (plugins.indexOf('vue-components') !== -1) { -%>
+      Components({
+        // allow auto load markdown components under `./src/components/`
+        extensions: ["vue", "md"],
+        // allow auto import and register components used in markdown
+        include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
+        dirs: ["src/components/", "src/layout/", "src/views", "src/assets"],
+        resolvers: [
+          <% if (components === 'element-plus') { -%>
+            ElementPlusResolver()
+          <% } -%>
+          <% if (components === 'ant-design') { -%>
+            AntDesignVueResolver()
+          <% } -%>
+          <% if (components === 'naive-ui') { -%>
+            NaiveUiResolver()
+          <% } -%>
+        ]
+        dts: "src/types/components.d.ts"
+      })
+    <% } -%>
+    <% if (plugins.indexOf('auto-import') !== -1) { -%>
+      AutoImport({
+        dts: "src/types/auto-imports.d.ts",
+        // imports: ['vue', '@vueuse/core'],
+        // Generate corresponding .eslintrc-auto-import.json file.
+        // eslint globals Docs - https://eslint.org/docs/user-guide/configuring/language-options#specifying-globals
+        imports: ["vue", "vue/macros", "vue-router", "pinia", "@vueuse/core"],
+        dirs: ["src/composables", "src/utils"],
+        // Auto import for all module exports under directories
+        // dirs: [
+        //   // './hooks',
+        //   // './composables'
+        //   // ...
+        // ],
+        eslintrc: {
+          // enabled: true, // Default `false`
+          enabled: false, // Default `false`
+          filepath: "./.eslintrc-auto-import.json", // Default `./.eslintrc-auto-import.json`
+          globalsPropValue: true, // Default `true`, (true | false | 'readonly' | 'readable' | 'writable' | 'writeable')
+        },
+        // Auto import functions from Element Plus, e.g. ElMessage, ElMessageBox... (with style)
+        // 自动导入 Element Plus 相关函数，如：ElMessage, ElMessageBox... (带样式)
+        resolvers: [
+          <% if (plugins.indexOf('vue-components') !== -1) { -%>
+            <% if (components === 'element-plus') { -%>
+              ElementPlusResolver()
+            <% } -%>
+            <% if (components === 'ant-design') { -%>
+              AntDesignVueResolver()
+            <% } -%>
+            <% if (components === 'naive-ui') { -%>
+              NaiveUiResolver()
+            <% } -%>
+          <% } -%>
+          // Auto import icon components
+          // 自动导入图标组件
+          <% if (plugins.indexOf('icons') !== -1) { -%>
+            IconsResolver({
+              prefix: "Icon"
+            })
+          <% } -%>
+        ]
+      })
+    <% } -%>
+    <% if (plugins.indexOf('icons') !== -1) { -%>
+      Icons({
+        compiler: 'vue3',
+        customCollections: {
+          // custom: FileSystemIconLoader(`${vitePath.src}/assets/svg`)
+        },
+        scale: 1,
+        defaultClass: 'inline-block',
+        autoInstall: true
+      }),
+    <% } -%>
+    <% if (plugins.indexOf('unocss') !== -1) { -%>
+      Unocss(),
+    <% } -%>
   ]
   return vitePlugins
 }

@@ -1,17 +1,11 @@
-<script setup lang="ts">
-  defineProps<{
-    msg: string
-  }>()
-</script>
-
 <template>
   <div class="greetings">
     <h1 class="green">{{ msg }}</h1>
     <h3>
       You’ve successfully created a project with
       <a target="_blank" href="https://vitejs.dev/">Vite</a> +
-      <a target="_blank" href="https://vuejs.org/">Vue 3</a> +
-      <% if (components === 'ant-design') { -%>
+      <a target="_blank" href="https://vuejs.org/">Vue 3</a> + <% if (components
+      === 'ant-design') { -%>
       <a target="_blank" href="https://www.antdv.com/docs/vue/introduce-cn/"
         >Ant-design</a
       >
@@ -27,7 +21,11 @@
     </h3>
   </div>
 </template>
-
+<script setup lang="ts">
+  defineProps<{
+    msg: string
+  }>()
+</script>
 <style scoped>
   h1 {
     font-weight: 500;

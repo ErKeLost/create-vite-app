@@ -5,6 +5,19 @@ import { createApp } from 'vue'
 <% if (Pinia) { -%>
   import { setupStore } from '@/store'
 <% } -%>
+<% if (plugins.indexOf('vue-components') === -1) { -%>
+  <% if (components === 'naive-ui') { -%>
+    import naive from 'naive-ui'
+  <% } -%>
+  <% if (components === 'element-plus') { -%>
+    import ElementPlus from 'element-plus'
+    import 'element-plus/dist/index.css'
+  <% } -%>
+  <% if (components === 'ant-design-vue') { -%>
+    import Antd from 'ant-design-vue'
+    import 'ant-design-vue/dist/antd.css'
+  <% } -%>
+<% } -%>
 import {
   setupCustomComponents,
   setupGlobalMethods,
@@ -18,7 +31,19 @@ async function bootStrap() {
 
   // 创建vue
   const app = createApp(App)
-
+  // 全局加载
+  app.use(Antd)
+  <% if (plugins.indexOf('vue-components') === -1) { -%>
+    <% if (components === 'naive-ui') { -%>
+      app.use(naive)
+    <% } -%>
+    <% if (components === 'element-plus') { -%>
+      app.use(ElementPlus)
+    <% } -%>
+    <% if (components === 'ant-design-vue') { -%>
+      app.use(Antd)
+    <% } -%>
+  <% } -%>
   // 注册全局常用的 组件
   setupCustomComponents(app)
 

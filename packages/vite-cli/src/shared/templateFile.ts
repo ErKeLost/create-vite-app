@@ -6,6 +6,8 @@ export function fetchTemplateFiles(): string[] {
     'build/vite/plugin.ts',
     'src/components/Welcome.vue',
     'src/components/HelloWorld.vue',
-    'src/App.vue'
+    'src/App.vue',
+    'src/plugins/assets.ts',
+    'src/store/modules/counter.ts'
   ]
 }

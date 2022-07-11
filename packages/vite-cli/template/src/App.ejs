@@ -1,4 +1,7 @@
 <script setup lang="ts">
+<% if (plugins.indexOf('vue-components') === -1) { -%>
+import Welcome from "@/components/Welcome.vue"
+<% } -%>
 <% if (!Router) { -%>
 import HomeView from '@/views/HomeView.vue'
 <% } -%>

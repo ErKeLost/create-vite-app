@@ -1,5 +1,7 @@
 <script setup lang="ts">
+<% if (plugins.indexOf('vue-components') === -1) { -%>
 import HelloWorld from '@/components/HelloWorld.vue'
+<% } -%>
 <% if (Router) { -%>
 import { RouterLink, RouterView } from 'vue-router'
 <% } -%>
