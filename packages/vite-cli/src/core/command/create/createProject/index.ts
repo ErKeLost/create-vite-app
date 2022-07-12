@@ -73,8 +73,6 @@ export default async function (name: string) {
   // 依赖安装
   console.log(`> 正在自动安装依赖，请稍等...`)
   console.log('')
-  // await cmdInherit('npm', ['install'])
-  // await cmdInherit('yarn', ['install'])
   await cmdInherit(options.package, ['install'])
 
   clearConsole('cyan', `VITE_CLI v${VITE_CLI_VERSION}`)

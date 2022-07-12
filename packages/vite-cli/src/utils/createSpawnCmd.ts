@@ -1,7 +1,7 @@
 import { spawn, StdioOptions } from 'child_process'
 
 function createSpawnCmd(dest: string, stdio: StdioOptions = 'inherit') {
-  return function (cmd: string, args?: string[]): Promise<boolean> {
+  return function (cmd: string, args?: string[]): Promise<unknown> {
     const ls = spawn(cmd, args, {
       cwd: dest,
       stdio: stdio,
@@ -11,6 +11,8 @@ function createSpawnCmd(dest: string, stdio: StdioOptions = 'inherit') {
       ls.on('close', (code) => {
         code === 0 ? resolve(true) : reject(false)
       })
+    }).catch((err) => {
+      console.log(err)
     })
   }
 }
