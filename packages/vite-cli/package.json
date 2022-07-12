@@ -1,6 +1,6 @@
 {
   "name": "vite-create-app",
-  "version": "0.1.1-alpha",
+  "version": "0.1.2-alpha",
   "description": "",
   "main": "index.js",
   "bin": {
@@ -49,6 +49,7 @@
     "registry": "https://registry.npmjs.org/"
   },
   "files": [
-    "dist"
+    "dist",
+    "template"
   ]
 }
