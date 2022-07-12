@@ -1,13 +1,13 @@
 import { cyan, yellow } from '@/utils/log'
-import { ejsRender } from '../../../../utils/createTemplate'
-import createSpawnCmd from '../../../../utils/createSpawnCmd'
+import { ejsRender } from '@/utils/createTemplate'
+import createSpawnCmd from '@/utils/createSpawnCmd'
 import { readdirSync } from 'fs'
 import fs = require('fs-extra')
-import { fetchTemplateFiles } from '../../../../shared/templateFile'
-import createProjectQuestions from '../../../questions/creator'
-import clearConsole from '../../../../utils/clearConsole'
-import { VITE_CLI_VERSION } from '../../../../shared/constant'
-import options from '../../../../shared/options'
+import { fetchTemplateFiles } from '@/shared/templateFile'
+import createProjectQuestions from '@/core/questions/creator'
+import clearConsole from '@/utils/clearConsole'
+import { VITE_CLI_VERSION } from '@/shared/constant'
+import options from '@/shared/options'
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const gradient = require('gradient-string')
 // eslint-disable-next-line @typescript-eslint/no-var-requires

@@ -2,7 +2,7 @@ import path = require('path')
 import { readdir } from 'fs/promises'
 import fs = require('fs-extra')
 import { prompt, QuestionCollection } from 'inquirer'
-import options from '../../shared/options'
+import options from '@/shared/options'
 
 async function createQuestion(quesiton) {
   const result: QuestionCollection = await prompt([quesiton])
