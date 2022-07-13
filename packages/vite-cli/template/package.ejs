@@ -37,6 +37,12 @@
     <% if (precss === 'scss') { -%>
       "sass": "1.50.1",
     <% } -%>
+    <% if (Eslint) { -%>
+      "eslint": "^8.18.0",
+    <% } -%>
+    <% if (Prettier) { -%>
+      "prettier": "^2.7.1",
+    <% } -%>
     <% if (plugins.indexOf('jsx') !== -1) { -%>
       "@vitejs/plugin-vue-jsx": "^1.3.10",
     <% } -%>

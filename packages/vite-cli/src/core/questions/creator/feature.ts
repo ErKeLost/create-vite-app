@@ -16,7 +16,7 @@ const future = [
     inactive: 'No'
   },
   {
-    name: 'needsEslint',
+    name: 'Eslint',
     type: () => 'toggle',
     message: 'Add ESLint for code quality?',
     initial: false,
@@ -24,7 +24,7 @@ const future = [
     inactive: 'No'
   },
   {
-    name: 'needsPrettier',
+    name: 'Prettier',
     type: () => 'toggle',
     message: 'Add Prettier for code formatting?',
     initial: false,

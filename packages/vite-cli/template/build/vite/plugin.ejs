@@ -69,9 +69,9 @@ export function createVitePlugins(viteEnv, isDev: boolean) {
           <% if (components === 'naive-ui') { -%>
             NaiveUiResolver()
           <% } -%>
-        ]
+        ],
         dts: "src/types/components.d.ts"
-      })
+      }),
     <% } -%>
     <% if (plugins.indexOf('auto-import') !== -1) { -%>
       AutoImport({
@@ -98,13 +98,13 @@ export function createVitePlugins(viteEnv, isDev: boolean) {
         resolvers: [
           <% if (plugins.indexOf('vue-components') !== -1) { -%>
             <% if (components === 'element-plus') { -%>
-              ElementPlusResolver()
+              ElementPlusResolver(),
             <% } -%>
             <% if (components === 'ant-design') { -%>
-              AntDesignVueResolver()
+              AntDesignVueResolver(),
             <% } -%>
             <% if (components === 'naive-ui') { -%>
-              NaiveUiResolver()
+              NaiveUiResolver(),
             <% } -%>
           <% } -%>
           // Auto import icon components
@@ -115,7 +115,7 @@ export function createVitePlugins(viteEnv, isDev: boolean) {
             })
           <% } -%>
         ]
-      })
+      }),
     <% } -%>
     <% if (plugins.indexOf('icons') !== -1) { -%>
       Icons({
