@@ -1,10 +1,10 @@
 export default {
   name: 'package',
-  type: 'list',
-  message: '选择您的包管理器',
+  type: 'select',
+  message: 'Select your package manager (选择您的包管理器)',
   choices: [
-    { name: 'Pnpm', value: 'pnpm' },
-    { name: 'Yarn', value: 'yarn' },
-    { name: 'Npm', value: 'npm' }
+    { title: 'Pnpm', value: 'pnpm' },
+    { title: 'Yarn', value: 'yarn' },
+    { title: 'Npm', value: 'npm' }
   ]
 }

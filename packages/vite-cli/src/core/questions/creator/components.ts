@@ -1,12 +1,12 @@
 export default {
-  name: 'components',
-  type: 'list',
-  message: '选择 UI 框架',
+  type: 'select', // select
+  name: 'components', //
+  message: 'choose UI frameWork (选择您的 UI 框架)',
   choices: [
-    { name: 'Vuetify3 Beta', value: 'vuetify' },
-    { name: 'Element Plus', value: 'element-plus' },
-    { name: 'Ant Design Vue 2.x', value: 'ant-design' },
-    { name: 'Naive UI', value: 'naive-ui' },
-    { name: 'Vant 3.x', value: 'vant' }
+    { title: 'Vuetify3 Beta', value: 'vuetify' },
+    { title: 'Element Plus', value: 'element-plus' },
+    { title: 'Ant Design Vue 2.x', value: 'ant-design' },
+    { title: 'Naive UI', value: 'naive-ui' },
+    { title: 'Vant 3.x', value: 'vant' }
   ]
 }
