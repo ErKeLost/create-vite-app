@@ -9,7 +9,9 @@ module.exports = {
     'plugin:vue/vue3-essential',
     'plugin:@typescript-eslint/recommended',
     // last config prettier
+    <% if (Prettier)  {%>
     'plugin:prettier/recommended'
+    <% } %>
   ],
   parserOptions: {
     ecmaVersion: 'latest',

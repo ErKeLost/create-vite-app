@@ -8,6 +8,7 @@ export function fetchTemplateFiles(): string[] {
     'src/components/HelloWorld.vue',
     'src/App.vue',
     'src/plugins/assets.ts',
-    'src/store/modules/counter.ts'
+    'src/store/modules/counter.ts',
+    '.eslintrc.js'
   ]
 }
