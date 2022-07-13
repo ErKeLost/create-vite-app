@@ -1,6 +1,8 @@
 interface Options {
   Router?: boolean
   Pinia?: boolean
+  Eslint?: boolean
+  Prettier?: boolean
   name?: string
   version?: string
   src?: string

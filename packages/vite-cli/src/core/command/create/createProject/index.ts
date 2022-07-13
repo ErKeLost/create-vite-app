@@ -44,6 +44,12 @@ export default async function (name: string) {
     if (!options.Router) {
       fs.remove(`${dest}/src/router`)
     }
+    if (!options.Eslint) {
+      fs.remove(`${dest}/.prettierrc.js`)
+    }
+    if (!options.Prettier) {
+      fs.remove(`${dest}/.eslintrc.js`)
+    }
     return true
   }
   // 开始记录用时
