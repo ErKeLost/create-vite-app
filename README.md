@@ -19,7 +19,7 @@
 - 推荐使用 Pnpm 安装 Vite-CLI .
 
 ```ts
-  pnpm add vite-create-app -g
+  pnpm add vite-create-app@latest -g
 ```
 
 - 命令行输入 `vite` 查看是否安装成功
