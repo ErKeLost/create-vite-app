@@ -18,7 +18,7 @@ async function createProjectQuestions(): Promise<void> {
   await createQuestion(prompts, PackageDevice)
   await createQuestion(prompts, future)
   await createQuestion(prompts, components)
-  await createQuestion(prompt, Plugins)
+  await createQuestion(prompts, Plugins)
   await createQuestion(prompts, precss)
   console.log(options)
 
