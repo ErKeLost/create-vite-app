@@ -6,16 +6,18 @@
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview",
+    "type-check": "vue-tsc --noEmit",
     <% if (Eslint) { -%>
-    "lint": "eslint . --ext .vue,.js,.ts,.jsx,.tsx --fix",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
     <% } -%>
     <% if (Prettier) { -%>
-    "format": "prettier --write ./**/*.{html,vue,ts,js,json,md}"
+    "prettier": "prettier --write ./**/*.{html,vue,ts,js,json,md}"
     <% } -%>
   },
   "dependencies": {
     "@vueuse/core": "^8.9.1",
     "@vueuse/head": "^0.7.6",
+    "@types/node": "^16.11.43",
     "axios": "^0.27.2",
     <% if (Router) { -%>
       "vue-router": "^4.1.1",
