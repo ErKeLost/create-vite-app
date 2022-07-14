@@ -57,9 +57,9 @@ export default async function (name: string) {
   // 拷贝基础模板文件
   await fs.copy(templatePath, dest, { filter: filterQuestion })
   // await fs.copy(templatePath, dest)
-  console.log(templatePath)
-  console.log(dest)
-  console.log(options.components)
+  // console.log(templatePath)
+  // console.log(dest)
+  // console.log(options.components)
 
   // 编译 ejs 模板文件
   await Promise.all(fetchTemplateFiles().map((file) => ejsRender(file, name)))

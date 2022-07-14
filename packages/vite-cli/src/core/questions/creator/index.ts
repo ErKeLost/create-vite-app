@@ -21,7 +21,6 @@ async function createProjectQuestions(): Promise<void> {
   await createQuestion(prompts, Plugins)
   await createQuestion(prompts, precss)
   console.log(options)
-
   return Promise.resolve()
 }
 
