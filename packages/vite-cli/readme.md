@@ -16,6 +16,10 @@
 </p>
 <br/>
 
+# Build highly customized scaffold out of the box based on vite3
+
+<br/>
+
 - 推荐使用 Pnpm 安装 Vite-CLI .
 
 ```ts
@@ -112,4 +116,4 @@ The supported template presets are:
 - 4. 支持 Nuxt 模板
 - 5. 支持更多组件库， 插件自定义搭建
 - 6. 主题化 布局化 根据不同组件库 动态搭建不同主题配置， 布局配置
-- 7. eslint， prettier， husky， commitlint
+- 7. husky， commitlint
