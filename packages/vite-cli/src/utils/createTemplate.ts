@@ -1,7 +1,7 @@
 import ejs = require('ejs')
 import fs = require('fs-extra')
 import path = require('path')
-// import prettier = require('prettier')
+import prettier = require('prettier')
 import options from '../shared/options'
 export async function ejsRender(filePath: string, name): Promise<void> {
   // 根目录template 绝对路径
@@ -20,41 +20,32 @@ export async function ejsRender(filePath: string, name): Promise<void> {
   const code = ejs.render(templateCode.toString(), options)
   // 获取后缀
   const extname = path.extname(filePath).replace(/[.]/g, '')
-  console.log(1, templatePath)
-  console.log(2, file)
-  console.log(3, dest)
-  console.log(4, readFilePath)
-  console.log(5, outputFilePath)
-  console.log(6, templateCode)
-  // console.log(code)
-  console.log(extname)
-  // let prettierCode: string
-  // await prettier
-  //   .resolveConfig(templatePath)
-  //   .then((opts) => {
-  //     switch (extname) {
-  //       case 'ts':
-  //         prettierCode = prettier.format(code, { parser: 'babel', ...opts })
-  //         break
-  //       case 'js':
-  //         prettierCode = prettier.format(code, { parser: 'babel', ...opts })
-  //         break
-  //       case 'vue':
-  //         prettierCode = prettier.format(
-  //           code,
-  //           Object.assign(opts, { parser: extname })
-  //         )
-  //         break
-  //       default:
-  //         prettierCode = prettier.format(code, { parser: extname })
-  //         break
-  //     }
-  //   })
-  //   .catch((err) => {
-  //     console.log(err)
-  //   })
+  let prettierCode: string
+  await prettier
+    .resolveConfig(templatePath)
+    .then((opts) => {
+      switch (extname) {
+        case 'ts':
+          prettierCode = prettier.format(code, { parser: 'babel', ...opts })
+          break
+        case 'js':
+          prettierCode = prettier.format(code, { parser: 'babel', ...opts })
+          break
+        case 'vue':
+          prettierCode = prettier.format(
+            code,
+            Object.assign(opts, { parser: 'babel' })
+          )
+          break
+        default:
+          prettierCode = prettier.format(code, { parser: extname })
+          break
+      }
+    })
+    .catch((err) => {
+      console.log(err)
+    })
 
-  await fs.outputFile(outputFilePath, code)
-  // 删除 ejs
+  await fs.outputFile(outputFilePath, prettierCode)
   await fs.remove(readFilePath)
 }
