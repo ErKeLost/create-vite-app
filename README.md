@@ -92,6 +92,24 @@ The supported template presets are:
 | rollup-plugin-visualizer |            打包后包体积分析            |
 |      unplugin-icons      |             按需加载图标库             |
 
+| Feature / Version       | Nuxt 2     | Nuxt Bridge    | Nuxt 3          |
+| ----------------------- | ---------- | -------------- | --------------- |
+| Vue                     | 2          | 2              | 3               |
+| Stability               | 😊 Stable  | 😌 Semi-stable | 😬 Unstable     |
+| Performance             | 🏎 Fast     | ✈️ Faster      | 🚀 Fastest      |
+| Nitro Engine            | ❌         | ✅             | ✅              |
+| ESM support             | 🌙 Partial | 👍 Better      | ✅              |
+| TypeScript              | ☑️ Opt-in  | 🚧 Partial     | ✅              |
+| Composition API         | ❌         | 🚧 Partial     | ✅              |
+| Options API             | ✅         | ✅             | ✅              |
+| Components Auto Import  | ✅         | ✅             | ✅              |
+| `<script setup>` syntax | ❌         | 🚧 Partial     | ✅              |
+| Auto Imports            | ❌         | ✅             | ✅              |
+| Webpack                 | 4          | 4              | 5               |
+| Vite                    | ⚠️ Partial | 🚧 Partial     | ✅              |
+| Nuxi CLI                | ❌ Old     | ✅ nuxi        | ✅ nuxi         |
+| Static sites            | ✅         | ✅             | 🚧 Experimental |
+
 ### 安装成功后 执行 dev 举例如下
 
 - Naive UI
