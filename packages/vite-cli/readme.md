@@ -16,27 +16,25 @@
 </p>
 <br/>
 
-# Build highly customized scaffold out of the box based on vite3
+# 🚧🚧 Build highly customized scaffold out of the box based on vite3
 
-<br/>
-
-- 推荐使用 Pnpm 安装 Vite-CLI .
+- Recommended to use pnpm to install ViteCLI .
 
 ```ts
   pnpm add vite-create-app@latest -g
 ```
 
-- 命令行输入 `vite` 查看是否安装成功
+- Enter 'vite' on the command line to check whether the installation is successful
 
 ![image.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ee03e671a0164f38b7617680f66b3475~tplv-k3u1fbpfcp-watermark.image?)
 
-- 输入 `vite create 'project name'` vite create 加上您的项目名称
+- Enter 'vite create'project name' ` vite create plus your project name
 
 ```ts
  vite create template
 ```
 
-- Step1 选择需要创建的包管理器 ，推荐使用 Pnpm 创建项目
+- Step1 Select the package manager that needs to be created. It is recommended to use pnpm to create projects
 
 ```js
 🎨  🎨   VITE_CLI V-0.0.9-alpha   🎨  🎨
@@ -49,7 +47,7 @@
   Npm
 ```
 
-- Step2 选择 需要 添加项目的依赖
+- Step2 Select the dependency to add the project
 
 ```ts
 √ Add Vue Router for Single Page Application development? ... No / Yes
@@ -64,9 +62,7 @@
   Vant 3.x
 ```
 
-> 目前 0.1.0-alpha 版本组件库 可以使用 Element-plus, Ant-Design-vue, Naive-UI, Vuetify 目前还处于 **Beta 状态**
-
-- Step3 选择自定义引入 Vite 插件
+- Step3 Select custom import vite plugin
 
 ```ts
 ? Custorm Plugins (自定义你的插件) (Press <space> to select, <a> to toggle all, <i> to invert selection)
@@ -79,22 +75,39 @@
  ( ) Unocss 即时的按需原子 CSS 引擎
 ```
 
-目前模板支持插件如下，
+Currently, the template supports the following plugins
 The supported template presets are:
 
-|        presets 包        |               vite 插件                |
-| :----------------------: | :------------------------------------: |
-|  @vitejs/plugin-vue-jsx  |          提供 Vue 3 JSX 支持           |
-|  @vitejs/plugin-legacy   | 为打包后的文件提供传统浏览器兼容性支持 |
-|   vite-plugin-inspect    |          模块运行时依赖可视化          |
-|     vite-plugin-pwa      |               零配置 PWA               |
-| unplugin-vue-components  |         自动按需导入 Vue 组件          |
-|   unplugin-auto-import   |            自动按需引入 Api            |
-|          Unocss          |        即时的按需原子 CSS 引擎         |
-| rollup-plugin-visualizer |            打包后包体积分析            |
-|      unplugin-icons      |             按需加载图标库             |
+| FrameWork     | finish |
+| ------------- | ------ |
+| Vite3 Vue3    | 🚧✅   |
+| Vite3 React18 | 🚧❌   |
+| Nuxt          | 🚧❌   |
 
-### 安装成功后 执行 dev 举例如下
+| Feature / Version | finish | UI Library     | finish |
+| ----------------- | ------ | -------------- | ------ |
+| Vue-Router 4.x    | ✅     | Element-Plus   | ✅     |
+| Pinia 2.x         | ✅     | Naive-UI       | ✅     |
+| Eslint 8.x        | ✅     | DevUI          | 🚧❌   |
+| Prettier 2.7.x    | ✅     | Ant-design-vue | ✅     |
+| TypeScript 4.7.x  | ✅     | Varlet         | 🚧❌   |
+| husky             | 🚧❌   | Vant           | 🚧❌   |
+
+| Feature / Version        | finish |
+| ------------------------ | ------ |
+| Vue                      | v3.2.x |
+| Vite                     | v3.0.0 |
+| @vitejs/plugin-vue-jsx   | ✅     |
+| @vitejs/plugin-legacy    | ✅     |
+| vite-plugin-inspect      | ✅     |
+| vite-plugin-pwa          | ✅     |
+| unplugin-vue-components  | ✅     |
+| unplugin-auto-import     | ✅     |
+| Unocss                   | ✅     |
+| rollup-plugin-visualizer | ✅     |
+| unplugin-icons           | ✅     |
+
+### An example of executing dev after successful installation is as follows
 
 - Naive UI
 
@@ -107,13 +120,3 @@ The supported template presets are:
 - Element Plus
 
 ![c74c77d05a9008e88dee87640ce06e3.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/be5b047d16024f8fa1251798a46de28a~tplv-k3u1fbpfcp-watermark.image?)
-
-> 后期支持如下
-
-- 1. 是否使用 Typescript
-- 2. 支持 Vue2.7
-- 3. 支持 React
-- 4. 支持 Nuxt 模板
-- 5. 支持更多组件库， 插件自定义搭建
-- 6. 主题化 布局化 根据不同组件库 动态搭建不同主题配置， 布局配置
-- 7. husky， commitlint
