@@ -17,6 +17,9 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "homepage": "https://github.com/ErKeLost/vite-cli#readme",
+  "repository": "https://github.com/ErKeLost/vite-cli",
+  "bugs": "https://github.com/ErKeLost/vite-cli/issues",
   "dependencies": {
     "chalk": "4.1.0",
     "chalk-animation": "^2.0.2",
