@@ -31,12 +31,9 @@ export async function ejsRender(filePath: string, name): Promise<void> {
         case 'js':
           prettierCode = prettier.format(code, { parser: 'babel', ...opts })
           break
-        case 'vue':
-          prettierCode = prettier.format(
-            code,
-            Object.assign(opts, { parser: 'babel' })
-          )
-          break
+        // case 'vue':
+        //   prettierCode = prettier.format(code, { parser: 'babel', ...opts })
+        //   break
         default:
           prettierCode = prettier.format(code, { parser: extname })
           break

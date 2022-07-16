@@ -6,12 +6,12 @@ module.exports = {
   },
   parser: 'vue-eslint-parser',
   extends: [
-    'eslint:recommended',
     'plugin:vue/vue3-essential',
     'plugin:@typescript-eslint/recommended',
     <% if (Prettier)  {%>
     'plugin:prettier/recommended'
-    <% } %>
+    <% } %>,
+    'eslint:recommended'
   ],
   parserOptions: {
     ecmaVersion: 'latest',

@@ -1,9 +1,9 @@
 export default {
   name: 'device',
-  type: 'list',
-  message: '选择目标设备',
+  type: 'select', // select
+  message: 'choose Your Device (选择目标设备)',
   choices: [
-    { name: 'PC', value: 'pc' },
-    { name: '移动端', value: 'mobile' }
+    { title: 'PC', value: 'pc' },
+    { title: '移动端', value: 'mobile' }
   ]
 }
