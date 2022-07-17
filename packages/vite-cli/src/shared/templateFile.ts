@@ -9,6 +9,7 @@ export function fetchTemplateFiles(): string[] {
     'src/App.vue',
     'src/plugins/assets.ts',
     'src/store/modules/counter.ts',
-    '.eslintrc.js'
+    '.eslintrc.js',
+    'index.html'
   ]
 }

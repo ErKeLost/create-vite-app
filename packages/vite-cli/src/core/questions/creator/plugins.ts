@@ -9,6 +9,10 @@ export default {
       value: 'legacy'
     },
     {
+      title: 'vite-plugin-html 构建您的index.html',
+      value: 'html'
+    },
+    {
       title: 'unplugin-vue-components 自动按需导入Vue组件',
       value: 'vue-components'
     },
