@@ -92,8 +92,8 @@ export default async function (name: string) {
   cyan(`cd ${name}`)
   cyan(
     options.package === 'npm'
-      ? `${options.package} run dev`
-      : `${options.package} dev`
+      ? `✨✨ ${options.package} run dev`
+      : `⚙️⚙️ ${options.package} dev`
   )
   console.log('创建项目成功')
 }

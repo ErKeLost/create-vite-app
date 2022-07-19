@@ -4,7 +4,7 @@ import createProject from './createProject'
 export default async function createCommand() {
   program
     .command('create <project-name>')
-    .description('初始化Vue3 + Vite3 + Typescript 项目   📑  📑')
+    .description('init Vue3 + Vite3 + Typescript project   📑  📑')
     .action(async (name) => {
       await emptyDirName(name)
       createProject(name)

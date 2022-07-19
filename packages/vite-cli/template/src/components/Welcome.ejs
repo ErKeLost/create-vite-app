@@ -38,6 +38,9 @@ const { count } = storeToRefs(counterStore);
           <% if (components === 'naive-ui') { -%>
             <n-button type="primary">Home</n-button>
           <% } -%>
+          <% if (components === 'arco') { -%>
+            <a-button type="primary">Home</a-button>
+          <% } -%>
         </RouterLink>
         <% } -%>
         <% if (Router) { -%>
@@ -50,6 +53,9 @@ const { count } = storeToRefs(counterStore);
           <% } -%>
           <% if (components === 'naive-ui') { -%>
             <n-button type="primary">About</n-button>
+          <% } -%>
+          <% if (components === 'arco') { -%>
+            <a-button type="primary">About</a-button>
           <% } -%>
           </RouterLink>
         <% } -%>

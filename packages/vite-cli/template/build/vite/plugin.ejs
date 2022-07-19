@@ -33,6 +33,9 @@ import vue from "@vitejs/plugin-vue"
     <% if (components === 'naive-ui') { -%>
       NaiveUiResolver
     <% } -%>
+    <% if (components === 'arco') { -%>
+      ArcoResolver
+    <% } -%>
    } from "unplugin-vue-components/resolvers"
 <% } -%>
 export function createVitePlugins(viteEnv, isDev: boolean) {
@@ -68,6 +71,9 @@ export function createVitePlugins(viteEnv, isDev: boolean) {
           <% } -%>
           <% if (components === 'naive-ui') { -%>
             NaiveUiResolver()
+          <% } -%>
+          <% if (components === 'arco') { -%>
+            ArcoResolver()
           <% } -%>
         ],
         dts: "src/types/components.d.ts"
@@ -105,6 +111,9 @@ export function createVitePlugins(viteEnv, isDev: boolean) {
             <% } -%>
             <% if (components === 'naive-ui') { -%>
               NaiveUiResolver(),
+            <% } -%>
+            <% if (components === 'arco') { -%>
+              ArcoResolver(),
             <% } -%>
           <% } -%>
           // Auto import icon components

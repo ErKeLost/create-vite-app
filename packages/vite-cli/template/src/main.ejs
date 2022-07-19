@@ -17,6 +17,10 @@ import { createApp } from 'vue'
     import Antd from 'ant-design-vue'
     import 'ant-design-vue/dist/antd.css'
   <% } -%>
+  <% if (components === 'arco') { -%>
+    import ArcoVue from '@arco-design/web-vue';
+    import '@arco-design/web-vue/dist/arco.css';
+  <% } -%>
 <% } -%>
 import {
   setupCustomComponents,
@@ -41,6 +45,12 @@ async function bootStrap() {
     <% } -%>
     <% if (components === 'element-plus') { -%>
       app.use(ElementPlus)
+    <% } -%>
+    <% if (components === 'arco') { -%>
+      app.use(ArcoVue, {
+        // 用于改变使用组件时的前缀名称
+        componentPrefix: 'arco'
+      });
     <% } -%>
   <% } -%>
   // 注册全局常用的 组件
