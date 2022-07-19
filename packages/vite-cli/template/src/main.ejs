@@ -18,8 +18,16 @@ import { createApp } from 'vue'
     import 'ant-design-vue/dist/antd.css'
   <% } -%>
   <% if (components === 'arco') { -%>
-    import ArcoVue from '@arco-design/web-vue';
-    import '@arco-design/web-vue/dist/arco.css';
+    import ArcoVue from '@arco-design/web-vue'
+    import '@arco-design/web-vue/dist/arco.css'
+  <% } -%>
+  <% if (components === 'devui') { -%>
+    import DevUI from 'vue-devui'
+    import 'vue-devui/style.css'
+  <% } -%>
+  <% if (components === 'tencent') { -%>
+    import TDesign from 'tdesign-vue-next'
+    import 'tdesign-vue-next/es/style/index.css'
   <% } -%>
 <% } -%>
 import {
@@ -45,6 +53,12 @@ async function bootStrap() {
     <% } -%>
     <% if (components === 'element-plus') { -%>
       app.use(ElementPlus)
+    <% } -%>
+    <% if (components === 'tencent') { -%>
+      app.use(TDesign)
+    <% } -%>
+    <% if (components === 'devui') { -%>
+      app.use(DevUI)
     <% } -%>
     <% if (components === 'arco') { -%>
       app.use(ArcoVue, {

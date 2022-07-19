@@ -36,6 +36,12 @@ import vue from "@vitejs/plugin-vue"
     <% if (components === 'arco') { -%>
       ArcoResolver
     <% } -%>
+    <% if (components === 'devui') { -%>
+      NaiveUiResolver
+    <% } -%>
+    <% if (components === 'tencent') { -%>
+      TDesignResolver
+    <% } -%>
    } from "unplugin-vue-components/resolvers"
 <% } -%>
 export function createVitePlugins(viteEnv, isDev: boolean) {
@@ -74,6 +80,14 @@ export function createVitePlugins(viteEnv, isDev: boolean) {
           <% } -%>
           <% if (components === 'arco') { -%>
             ArcoResolver()
+          <% } -%>
+          <% if (components === 'devui') { -%>
+            Resolver(),
+          <% } -%>
+          <% if (components === 'tencent') { -%>
+            TDesignResolver({
+              library: 'vue-next'
+            }),
           <% } -%>
         ],
         dts: "src/types/components.d.ts"
@@ -114,6 +128,14 @@ export function createVitePlugins(viteEnv, isDev: boolean) {
             <% } -%>
             <% if (components === 'arco') { -%>
               ArcoResolver(),
+            <% } -%>
+            <% if (components === 'devui') { -%>
+              Resolver(),
+            <% } -%>
+            <% if (components === 'tencent') { -%>
+              TDesignResolver({
+                library: 'vue-next'
+              }),
             <% } -%>
           <% } -%>
           // Auto import icon components
