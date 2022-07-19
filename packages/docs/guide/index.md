@@ -71,6 +71,41 @@ Vite-CLI 帮助你快速搭建开箱即用模板 目前 alpha 版本 基于 Vite
  ( ) Unocss 即时的按需原子 CSS 引擎
 ```
 
+Currently, the template supports the following plugins
+The supported template presets are:
+
+| FrameWork     | finish |
+| ------------- | ------ |
+| Vite3 Vue3    | 🚧✅   |
+| Vite3 React18 | 🚧❌   |
+| Nuxt          | 🚧❌   |
+
+| Feature / Version | finish | UI Library         | finish |
+| ----------------- | ------ | ------------------ | ------ |
+| Vue-Router 4.x    | ✅     | Element-Plus       | ✅     |
+| Pinia 2.x         | ✅     | Naive-UI           | ✅     |
+| Eslint 8.x        | ✅     | DevUI              | 🚧❌   |
+| Prettier 2.7.x    | ✅     | Ant-design-vue     | ✅     |
+| TypeScript 4.7.x  | ✅     | arco-design        | 🚧❌   |
+| husky             | 🚧❌   | TDesign            | 🚧❌   |
+|                   |        | Varlet             | 🚧❌   |
+|                   |        | tdesign-mobile-vue | 🚧❌   |
+|                   |        | Vant               | 🚧❌   |
+
+| Feature / Version        | finish |
+| ------------------------ | ------ |
+| Vue                      | v3.2.x |
+| Vite                     | v3.0.0 |
+| @vitejs/plugin-vue-jsx   | ✅     |
+| @vitejs/plugin-legacy    | ✅     |
+| vite-plugin-inspect      | ✅     |
+| vite-plugin-pwa          | ✅     |
+| unplugin-vue-components  | ✅     |
+| unplugin-auto-import     | ✅     |
+| Unocss                   | ✅     |
+| rollup-plugin-visualizer | ✅     |
+| unplugin-icons           | ✅     |
+
 目前模板支持插件如下，
 The supported template presets are:
 

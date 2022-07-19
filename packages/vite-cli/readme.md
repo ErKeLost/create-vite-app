@@ -84,14 +84,17 @@ The supported template presets are:
 | Vite3 React18 | 🚧❌   |
 | Nuxt          | 🚧❌   |
 
-| Feature / Version | finish | UI Library     | finish |
-| ----------------- | ------ | -------------- | ------ |
-| Vue-Router 4.x    | ✅     | Element-Plus   | ✅     |
-| Pinia 2.x         | ✅     | Naive-UI       | ✅     |
-| Eslint 8.x        | ✅     | DevUI          | 🚧❌   |
-| Prettier 2.7.x    | ✅     | Ant-design-vue | ✅     |
-| TypeScript 4.7.x  | ✅     | Varlet         | 🚧❌   |
-| husky             | 🚧❌   | Vant           | 🚧❌   |
+| Feature / Version | finish | UI Library         | finish |
+| ----------------- | ------ | ------------------ | ------ |
+| Vue-Router 4.x    | ✅     | Element-Plus       | ✅     |
+| Pinia 2.x         | ✅     | Naive-UI           | ✅     |
+| Eslint 8.x        | ✅     | DevUI              | 🚧❌   |
+| Prettier 2.7.x    | ✅     | Ant-design-vue     | ✅     |
+| TypeScript 4.7.x  | ✅     | arco-design        | 🚧❌   |
+| husky             | 🚧❌   | TDesign            | 🚧❌   |
+|                   |        | Varlet             | 🚧❌   |
+|                   |        | tdesign-mobile-vue | 🚧❌   |
+|                   |        | Vant               | 🚧❌   |
 
 | Feature / Version        | finish |
 | ------------------------ | ------ |
