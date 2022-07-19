@@ -1,8 +1,7 @@
 {
-  "name": "test",
+  "name": "vite-template",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
@@ -77,6 +76,9 @@
     <% } -%>
     <% if (plugins.indexOf('visualizer') !== -1) { -%>
       "rollup-plugin-visualizer": "^5.6.0",
+    <% } -%>
+    <% if (plugins.indexOf('html') !== -1) { -%>
+      "vite-plugin-html": "^3.2.0",
     <% } -%>
     <% if (plugins.indexOf('icons') !== -1) { -%>
       "unplugin-icons": "^0.14.7",

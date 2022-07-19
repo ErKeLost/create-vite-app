@@ -5,6 +5,7 @@ import components from './components'
 import PackageDevice from './packageDevice'
 import Plugins from './plugins'
 import future from './feature'
+import device from './device'
 // import prompts from 'prompts'
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const prompts = require('prompts')
@@ -17,6 +18,7 @@ async function createQuestion(util, question) {
 async function createProjectQuestions(): Promise<void> {
   await createQuestion(prompts, PackageDevice)
   await createQuestion(prompts, future)
+  await createQuestion(prompts, device)
   await createQuestion(prompts, components)
   await createQuestion(prompts, Plugins)
   await createQuestion(prompts, precss)

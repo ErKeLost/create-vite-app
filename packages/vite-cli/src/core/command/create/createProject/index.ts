@@ -50,6 +50,9 @@ export default async function (name: string) {
     if (!options.Prettier) {
       fs.remove(`${dest}/.eslintrc.js`)
     }
+    if (!options.plugins.includes('html')) {
+      fs.remove(`${dest}/build/vite/html.ts`)
+    }
     return true
   }
   // 开始记录用时
