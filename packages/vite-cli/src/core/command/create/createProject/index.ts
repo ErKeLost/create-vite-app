@@ -89,11 +89,11 @@ export default async function (name: string) {
   const usageTime = (endTime - startTime) / 1000
   cyan(`> 项目已经创建成功，用时${usageTime}s，请输入以下命令继续...`)
   console.log('')
-  cyan(`cd ${name}`)
+  cyan(`✨✨ cd ${name}`)
   cyan(
     options.package === 'npm'
       ? `✨✨ ${options.package} run dev`
-      : `⚙️⚙️ ${options.package} dev`
+      : `✨✨ ${options.package} dev`
   )
   console.log('创建项目成功')
 }

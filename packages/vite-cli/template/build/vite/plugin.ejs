@@ -22,6 +22,10 @@ import vue from "@vitejs/plugin-vue"
 <% if (plugins.indexOf('inspect') !== -1) { -%>
   import Inspect from "vite-plugin-inspect"
 <% } -%>
+<% if (components === 'vuetify') { -%>
+  import vuetify from 'vite-plugin-vuetify'
+<% } -%>
+
 <% if (plugins.indexOf('vue-components') !== -1) { -%>
   import {
     <% if (components === 'element-plus') { -%>
@@ -37,7 +41,7 @@ import vue from "@vitejs/plugin-vue"
       ArcoResolver
     <% } -%>
     <% if (components === 'devui') { -%>
-      NaiveUiResolver
+      DevUiResolver
     <% } -%>
     <% if (components === 'tencent') { -%>
       TDesignResolver
@@ -82,7 +86,7 @@ export function createVitePlugins(viteEnv, isDev: boolean) {
             ArcoResolver()
           <% } -%>
           <% if (components === 'devui') { -%>
-            Resolver(),
+            DevUiResolver(),
           <% } -%>
           <% if (components === 'tencent') { -%>
             TDesignResolver({
@@ -130,7 +134,7 @@ export function createVitePlugins(viteEnv, isDev: boolean) {
               ArcoResolver(),
             <% } -%>
             <% if (components === 'devui') { -%>
-              Resolver(),
+              DevUiResolver(),
             <% } -%>
             <% if (components === 'tencent') { -%>
               TDesignResolver({
@@ -147,6 +151,9 @@ export function createVitePlugins(viteEnv, isDev: boolean) {
           <% } -%>
         ]
       }),
+    <% } -%>
+    <% if (components === 'vuetify') { -%>
+      vuetify({ autoImport: true }),
     <% } -%>
     <% if (plugins.indexOf('icons') !== -1) { -%>
       Icons({
