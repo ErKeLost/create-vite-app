@@ -47,11 +47,16 @@ Vite-CLI 帮助你快速搭建开箱即用模板 目前 alpha 版本 基于 Vite
 √ Add ESLint for code quality? ... No / Yes
 √ Add Prettier for code formatting? ... No / Yes
 ? 选择 UI 框架 (Use arrow keys)
-> Vuetify3 Beta
-  Element Plus
-  Ant Design Vue 2.x
-  Naive UI
-  Vant 3.x
+>   Element Plus
+    Vuetify3 Beta
+    Naive UI
+    Ant Design Vue 2.x
+    DevUI
+    arco-design
+    TDesign
+    Varlet
+    Vant 3.x
+    tdesign-mobile-vue
 ```
 
 :::tip
@@ -62,13 +67,16 @@ Vite-CLI 帮助你快速搭建开箱即用模板 目前 alpha 版本 基于 Vite
 
 ```ts
 ? Custorm Plugins (自定义你的插件) (Press <space> to select, <a> to toggle all, <i> to invert selection)
- ( ) rollup-plugin-visualizer 打包后包体积分析
- ( ) unplugin-icons 按需加载图标库
- ( ) @vitejs/plugin-vue-jsx 提供 Vue 3 JSX 支持
->( ) @vitejs/plugin-legacy 为打包后的文件提供传统浏览器兼容性支持
- ( ) unplugin-vue-components 自动按需导入Vue组件
- ( ) AutoImport 自动引入Api
- ( ) Unocss 即时的按需原子 CSS 引擎
+( )   @vitejs/plugin-vue-jsx 提供 Vue 3 JSX 支持
+( )   @vitejs/plugin-legacy 为打包后的文件提供传统浏览器兼容性支持
+( )   vite-plugin-html 构建您的index.html
+( )   unplugin-vue-components 自动按需导入Vue组件
+( )   unplugin-auto-import 自动引入Api
+( )   Unocss 即时的按需原子 CSS 引擎
+( )   vite-plugin-pwa 零配置 PWA
+( )   vite-plugin-inspect 模块运行时依赖可视化
+( )   rollup-plugin-visualizer 打包后包体积分析
+( )   unplugin-icons 按需加载图标库
 ```
 
 Currently, the template supports the following plugins
@@ -152,3 +160,7 @@ The supported template presets are:
 - Vuetify
 
 ![image.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a5ea5124b6284c68b8b9948c9fdf803b~tplv-k3u1fbpfcp-watermark.image?)
+
+- Varlet
+
+![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f8f31a99cab645d4a5fb5cf0c4000ef6~tplv-k3u1fbpfcp-watermark.image?)

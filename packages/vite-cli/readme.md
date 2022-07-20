@@ -1,4 +1,4 @@
-# ViteCLI
+# ViteCLI (refactor 重构 核心逻辑中 🚧🚧🚧🚧🚧🚧🚧🚧 stop 0.15.0-alpha 可用)
 
 <p align="center">
   <a href="https://vitejs.dev" target="_blank" rel="noopener noreferrer">
@@ -54,25 +54,36 @@
 √ Add Pinia for state management? ... No / Yes
 √ Add ESLint for code quality? ... No / Yes
 √ Add Prettier for code formatting? ... No / Yes
-? 选择 UI 框架 (Use arrow keys)
-> Vuetify3 Beta
-  Element Plus
-  Ant Design Vue 2.x
-  Naive UI
-  Vant 3.x
+? choose Your Device (选择目标设备) » - Use arrow-keys. Return to submit.
+>   PC
+    移动端
+? choose UI frameWork (选择您的 UI 框架) » - Use arrow-keys. Return to submit.
+>   Element Plus
+    Vuetify3 Beta
+    Naive UI
+    Ant Design Vue 2.x
+    DevUI
+    arco-design
+    TDesign
+    Varlet
+    Vant 3.x
+    tdesign-mobile-vue
 ```
 
 - Step3 Select custom import vite plugin
 
 ```ts
 ? Custorm Plugins (自定义你的插件) (Press <space> to select, <a> to toggle all, <i> to invert selection)
- ( ) rollup-plugin-visualizer 打包后包体积分析
- ( ) unplugin-icons 按需加载图标库
- ( ) @vitejs/plugin-vue-jsx 提供 Vue 3 JSX 支持
->( ) @vitejs/plugin-legacy 为打包后的文件提供传统浏览器兼容性支持
- ( ) unplugin-vue-components 自动按需导入Vue组件
- ( ) AutoImport 自动引入Api
- ( ) Unocss 即时的按需原子 CSS 引擎
+( )   @vitejs/plugin-vue-jsx 提供 Vue 3 JSX 支持
+( )   @vitejs/plugin-legacy 为打包后的文件提供传统浏览器兼容性支持
+( )   vite-plugin-html 构建您的index.html
+( )   unplugin-vue-components 自动按需导入Vue组件
+( )   unplugin-auto-import 自动引入Api
+( )   Unocss 即时的按需原子 CSS 引擎
+( )   vite-plugin-pwa 零配置 PWA
+( )   vite-plugin-inspect 模块运行时依赖可视化
+( )   rollup-plugin-visualizer 打包后包体积分析
+( )   unplugin-icons 按需加载图标库
 ```
 
 Currently, the template supports the following plugins
@@ -93,7 +104,7 @@ The supported template presets are:
 | Prettier 2.7.x    | ✅     | Ant-design-vue     | ✅     |
 | TypeScript 4.7.x  | ✅     | arco-design        | ✅     |
 | husky             | 🚧❌   | TDesign            | ✅     |
-|                   |        | Varlet             | 🚧❌   |
+| PWA               | 🚧❌   | Varlet             | ✅     |
 |                   |        | tdesign-mobile-vue | 🚧❌   |
 |                   |        | Vant               | 🚧❌   |
 
@@ -132,7 +143,7 @@ The supported template presets are:
 
 - DevUI
 
-![image.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/5b6b15040dcd4fcaaac326285d374a91~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9d0ed5a6340c4a62b35f72ac7b490077~tplv-k3u1fbpfcp-watermark.image?)
 
 - T-Design
 
@@ -141,3 +152,7 @@ The supported template presets are:
 - Vuetify
 
 ![image.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a5ea5124b6284c68b8b9948c9fdf803b~tplv-k3u1fbpfcp-watermark.image?)
+
+- Varlet
+
+![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f8f31a99cab645d4a5fb5cf0c4000ef6~tplv-k3u1fbpfcp-watermark.image?)
