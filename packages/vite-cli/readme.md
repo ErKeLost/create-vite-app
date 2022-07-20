@@ -88,27 +88,29 @@ The supported template presets are:
 | ----------------- | ------ | ------------------ | ------ |
 | Vue-Router 4.x    | ✅     | Element-Plus       | ✅     |
 | Pinia 2.x         | ✅     | Naive-UI           | ✅     |
-| Eslint 8.x        | ✅     | DevUI              | 🚧❌   |
+|                   |        | Vuetify-beta5      | ✅     |
+| Eslint 8.x        | ✅     | DevUI              | ✅     |
 | Prettier 2.7.x    | ✅     | Ant-design-vue     | ✅     |
-| TypeScript 4.7.x  | ✅     | arco-design        | 🚧❌   |
-| husky             | 🚧❌   | TDesign            | 🚧❌   |
+| TypeScript 4.7.x  | ✅     | arco-design        | ✅     |
+| husky             | 🚧❌   | TDesign            | ✅     |
 |                   |        | Varlet             | 🚧❌   |
 |                   |        | tdesign-mobile-vue | 🚧❌   |
 |                   |        | Vant               | 🚧❌   |
 
-| Feature / Version        | finish |
-| ------------------------ | ------ |
-| Vue                      | v3.2.x |
-| Vite                     | v3.0.0 |
-| @vitejs/plugin-vue-jsx   | ✅     |
-| @vitejs/plugin-legacy    | ✅     |
-| vite-plugin-inspect      | ✅     |
-| vite-plugin-pwa          | ✅     |
-| unplugin-vue-components  | ✅     |
-| unplugin-auto-import     | ✅     |
-| Unocss                   | ✅     |
-| rollup-plugin-visualizer | ✅     |
-| unplugin-icons           | ✅     |
+| Feature / Version        | finish     |
+| ------------------------ | ---------- |
+| Vue                      | v3.2.x     |
+| Vite                     | v3.0.0     |
+| @vitejs/plugin-vue-jsx   | ✅         |
+| @vitejs/plugin-legacy    | ✅         |
+| vite-plugin-inspect      | ✅         |
+| vite-plugin-pwa          | ✅         |
+| unplugin-vue-components  | ✅         |
+| unplugin-auto-import     | ✅         |
+| Unocss                   | ✅         |
+| rollup-plugin-visualizer | ✅         |
+| unplugin-icons           | ✅         |
+| Vite-plugin-html         | ✅ new add |
 
 ### An example of executing dev after successful installation is as follows
 
@@ -123,3 +125,19 @@ The supported template presets are:
 - Element Plus
 
 ![c74c77d05a9008e88dee87640ce06e3.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/be5b047d16024f8fa1251798a46de28a~tplv-k3u1fbpfcp-watermark.image?)
+
+- Arco Design
+
+![image.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/b27ce1dd7d344170b59be4f2ccd39211~tplv-k3u1fbpfcp-watermark.image?)
+
+- DevUI
+
+![image.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/5b6b15040dcd4fcaaac326285d374a91~tplv-k3u1fbpfcp-watermark.image?)
+
+- T-Design
+
+![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/fa8e5b68f8b9481fac9cf4809ac50fbe~tplv-k3u1fbpfcp-watermark.image?)
+
+- Vuetify
+
+![image.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a5ea5124b6284c68b8b9948c9fdf803b~tplv-k3u1fbpfcp-watermark.image?)
