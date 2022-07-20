@@ -20,7 +20,7 @@
 
 ## Log
 
-- 0.15.1-alpha Refactor Map mapping refactoring EJS
+- 0.15.1-alpha Refactor Map mapping refactoring EJS 2022.7.21
 
 ## Start 📦📦
 
