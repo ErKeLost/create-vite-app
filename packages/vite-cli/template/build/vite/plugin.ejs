@@ -43,6 +43,9 @@ import vue from "@vitejs/plugin-vue"
     <% if (components === 'devui') { -%>
       DevUiResolver
     <% } -%>
+    <% if (components === 'varlet') { -%>
+      VarletUIResolver
+    <% } -%>
     <% if (components === 'tencent') { -%>
       TDesignResolver
     <% } -%>
@@ -87,6 +90,9 @@ export function createVitePlugins(viteEnv, isDev: boolean) {
           <% } -%>
           <% if (components === 'devui') { -%>
             DevUiResolver(),
+          <% } -%>
+          <% if (components === 'varlet') { -%>
+            VarletUIResolver(),
           <% } -%>
           <% if (components === 'tencent') { -%>
             TDesignResolver({
@@ -135,6 +141,9 @@ export function createVitePlugins(viteEnv, isDev: boolean) {
             <% } -%>
             <% if (components === 'devui') { -%>
               DevUiResolver(),
+            <% } -%>
+            <% if (components === 'varlet') { -%>
+              VarletUIResolver(),
             <% } -%>
             <% if (components === 'tencent') { -%>
               TDesignResolver({

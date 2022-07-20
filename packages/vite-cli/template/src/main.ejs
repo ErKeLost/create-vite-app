@@ -33,6 +33,10 @@ import { createApp } from 'vue'
     import TDesign from 'tdesign-vue-next'
     import 'tdesign-vue-next/es/style/index.css'
   <% } -%>
+  <% if (components === 'varlet') { -%>
+    import Varlet from '@varlet/ui'
+    import '@varlet/ui/es/style.js'
+  <% } -%>
 <% } -%>
 import {
   setupCustomComponents,
@@ -67,6 +71,9 @@ async function bootStrap() {
     <% } -%>
     <% if (components === 'devui') { -%>
       app.use(DevUI)
+    <% } -%>
+    <% if (components === 'varlet') { -%>
+      app.use(Varlet)
     <% } -%>
     <% if (components === 'arco') { -%>
       app.use(ArcoVue, {

@@ -93,7 +93,7 @@ The supported template presets are:
 | Prettier 2.7.x    | ✅     | Ant-design-vue     | ✅     |
 | TypeScript 4.7.x  | ✅     | arco-design        | ✅     |
 | husky             | 🚧❌   | TDesign            | ✅     |
-|                   |        | Varlet             | 🚧❌   |
+|                   |        | Varlet             | ✅     |
 |                   |        | tdesign-mobile-vue | 🚧❌   |
 |                   |        | Vant               | 🚧❌   |
 
@@ -141,3 +141,7 @@ The supported template presets are:
 - Vuetify
 
 ![image.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a5ea5124b6284c68b8b9948c9fdf803b~tplv-k3u1fbpfcp-watermark.image?)
+
+- Varlet
+
+![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f8f31a99cab645d4a5fb5cf0c4000ef6~tplv-k3u1fbpfcp-watermark.image?)

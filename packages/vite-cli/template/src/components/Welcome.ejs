@@ -54,6 +54,9 @@ const { count } = storeToRefs(counterStore);
           <% if (components === 'devui') { -%>
             <d-button variant="solid">Home</d-button>
           <% } -%>
+          <% if (components === 'varlet') { -%>
+            <var-button type="primary">Home</var-button>
+          <% } -%>
         </RouterLink>
         <% } -%>
         <% if (Router) { -%>
@@ -72,6 +75,9 @@ const { count } = storeToRefs(counterStore);
           <% } -%>
           <% if (components === 'tencent') { -%>
             <t-button theme="primary">About</t-button>
+          <% } -%>
+          <% if (components === 'varlet') { -%>
+            <var-button type="primary">About</var-button>
           <% } -%>
           <% if (components === 'vuetify') { -%>
             <v-btn
