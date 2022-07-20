@@ -22,7 +22,9 @@
 
 - 0.15.1-alpha Refactor Map mapping refactoring EJS
 
-- 📦📦 Recommended to use pnpm to install ViteCLI .
+## Start 📦📦
+
+- Recommended to use pnpm to install ViteCLI .
 
 ```ts
   pnpm add vite-create-app@latest -g
