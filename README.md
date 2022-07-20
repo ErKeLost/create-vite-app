@@ -18,7 +18,11 @@
 
 # 🚧🚧 Build highly customized scaffold out of the box based on vite3
 
-- Recommended to use pnpm to install ViteCLI .
+## Log
+
+- 0.15.1-alpha Refactor Map mapping refactoring EJS
+
+- 📦📦 Recommended to use pnpm to install ViteCLI .
 
 ```ts
   pnpm add vite-create-app@latest -g
