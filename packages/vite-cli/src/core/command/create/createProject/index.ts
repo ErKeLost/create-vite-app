@@ -66,34 +66,34 @@ export default async function (name: string) {
 
   // 编译 ejs 模板文件
   await Promise.all(fetchTemplateFiles().map((file) => ejsRender(file, name)))
-  yellow(`> 项目模板生成于目录： ${dest}`)
-  // 生成 gitignore
-  await fs.move(
-    path.resolve(dest, '.gitignore.ejs'),
-    path.resolve(dest, '.gitignore'),
-    { overwrite: true }
-  )
-  // // Git 初始化
-  await cmdIgnore('git', ['init'])
-  await cmdIgnore('git', ['add .'])
-  await cmdIgnore('git', ['commit -m "Initialize by VITE_CLI"'])
-  console.log(`> 成功初始化 Git 仓库`)
+  // yellow(`> 项目模板生成于目录： ${dest}`)
+  // // 生成 gitignore
+  // await fs.move(
+  //   path.resolve(dest, '.gitignore.ejs'),
+  //   path.resolve(dest, '.gitignore'),
+  //   { overwrite: true }
+  // )
+  // // // Git 初始化
+  // await cmdIgnore('git', ['init'])
+  // await cmdIgnore('git', ['add .'])
+  // await cmdIgnore('git', ['commit -m "Initialize by VITE_CLI"'])
+  // console.log(`> 成功初始化 Git 仓库`)
 
-  // 依赖安装
-  console.log(`> 正在自动安装依赖，请稍等...`)
-  console.log('')
-  await cmdInherit(options.package, ['install'])
+  // // 依赖安装
+  // console.log(`> 正在自动安装依赖，请稍等...`)
+  // console.log('')
+  // await cmdInherit(options.package, ['install'])
 
-  clearConsole('cyan', `VITE_CLI v${VITE_CLI_VERSION}`)
-  endTime = new Date().getTime()
-  const usageTime = (endTime - startTime) / 1000
-  cyan(`> 项目已经创建成功，用时${usageTime}s，请输入以下命令继续...`)
-  console.log('')
-  cyan(`✨✨ cd ${name}`)
-  cyan(
-    options.package === 'npm'
-      ? `✨✨ ${options.package} run dev`
-      : `✨✨ ${options.package} dev`
-  )
-  console.log('创建项目成功')
+  // clearConsole('cyan', `VITE_CLI v${VITE_CLI_VERSION}`)
+  // endTime = new Date().getTime()
+  // const usageTime = (endTime - startTime) / 1000
+  // cyan(`> 项目已经创建成功，用时${usageTime}s，请输入以下命令继续...`)
+  // console.log('')
+  // cyan(`✨✨ cd ${name}`)
+  // cyan(
+  //   options.package === 'npm'
+  //     ? `✨✨ ${options.package} run dev`
+  //     : `✨✨ ${options.package} dev`
+  // )
+  // console.log('创建项目成功')
 }

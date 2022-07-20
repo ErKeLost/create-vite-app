@@ -12,7 +12,9 @@ const prompts = require('prompts')
 async function createQuestion(util, question) {
   const result: QuestionCollection = await util(question)
   Object.assign(options, result)
-  return Promise.resolve()
+  console.log(result, 'result')
+  //  在 回答问题得时候 map 映射 每一个 库 版本 问题 要不要考虑
+  return Promise.resolve(true)
 }
 
 async function createProjectQuestions(): Promise<void> {
