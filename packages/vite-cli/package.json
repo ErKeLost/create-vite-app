@@ -1,6 +1,6 @@
 {
   "name": "vite-create-app",
-  "version": "0.13.9-alpha",
+  "version": "0.15.0-alpha",
   "description": "",
   "main": "index.js",
   "bin": {
