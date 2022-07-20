@@ -25,10 +25,6 @@ import { createApp } from 'vue'
     import ArcoVue from '@arco-design/web-vue'
     import '@arco-design/web-vue/dist/arco.css'
   <% } -%>
-  <% if (components === 'devui') { -%>
-    import DevUI from 'vue-devui'
-    import 'vue-devui/style.css'
-  <% } -%>
   <% if (components === 'tencent') { -%>
     import TDesign from 'tdesign-vue-next'
     import 'tdesign-vue-next/es/style/index.css'
@@ -37,6 +33,10 @@ import { createApp } from 'vue'
     import Varlet from '@varlet/ui'
     import '@varlet/ui/es/style.js'
   <% } -%>
+<% } -%>
+<% if (components === 'devui') { -%>
+  import DevUI from 'vue-devui'
+  import 'vue-devui/style.css'
 <% } -%>
 import {
   setupCustomComponents,
@@ -69,9 +69,6 @@ async function bootStrap() {
     <% if (components === 'tencent') { -%>
       app.use(TDesign)
     <% } -%>
-    <% if (components === 'devui') { -%>
-      app.use(DevUI)
-    <% } -%>
     <% if (components === 'varlet') { -%>
       app.use(Varlet)
     <% } -%>
@@ -81,6 +78,9 @@ async function bootStrap() {
         componentPrefix: 'arco'
       });
     <% } -%>
+  <% } -%>
+  <% if (components === 'devui') { -%>
+    app.use(DevUI)
   <% } -%>
   // 注册全局常用的 组件
   setupCustomComponents(app)
