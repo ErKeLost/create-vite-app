@@ -6,6 +6,7 @@ import PackageDevice from './packageDevice'
 import Plugins from './plugins'
 import future from './feature'
 import device from './device'
+import frame from './frame'
 import { componentsMap, futureMap, lintMap, pluginMap } from './ejsMapConstant'
 // import prompts from 'prompts'
 // eslint-disable-next-line @typescript-eslint/no-var-requires
@@ -20,6 +21,8 @@ async function createQuestion(util, question) {
 }
 
 async function createProjectQuestions(): Promise<void> {
+  // 选择框架
+  await createQuestion(prompts, frame)
   // 包管理器版本
   await createQuestion(prompts, PackageDevice)
   // 新特性 新预设
@@ -40,8 +43,8 @@ async function createProjectQuestions(): Promise<void> {
   const Prettier = lintMap.get('Prettier')
   const Router = futureMap.get('Router')
   const Pinia = futureMap.get('Pinia')
-  console.log(Eslint)
-  console.log(Prettier)
+  // console.log(Eslint)
+  // console.log(Prettier)
 
   // 获取整个map
   // console.log(componentsMap, 'map')

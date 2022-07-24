@@ -22,6 +22,7 @@ interface Options {
   PrettierScript?: string
   EslintWithPrettierScript?: string
   pluginList?: string
+  frame?: string
 }
 
 const options: Options = {}
