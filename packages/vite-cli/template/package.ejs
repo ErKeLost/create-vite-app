@@ -7,11 +7,11 @@
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview",
     "type-check": "vue-tsc --noEmit",
-    <% if (Eslint) { -%>
-    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
+    <% if (useEslint) { -%>
+    Eslint
     <% } -%>
-    <% if (Prettier) { -%>
-    "prettier": "prettier --write ./**/*.{html,vue,ts,js,json,md}"
+    <% if (usePrettier) { -%>
+    Prettier
     <% } -%>
   },
   "dependencies": {
@@ -19,37 +19,13 @@
     "@vueuse/head": "^0.7.6",
     "@types/node": "^16.11.43",
     "axios": "^0.27.2",
-    <% if (Router) { -%>
-      "vue-router": "^4.1.1",
+    <% if (useRouter) { -%>
+      Router
     <% } -%>
-    <% if (components === 'element-plus') { -%>
-      "element-plus": "^2.2.5",
-    <% } -%>
-    <% if (components === 'naive-ui') { -%>
-      "naive-ui": "^2.31.0",
-    <% } -%>
-    <% if (components === 'ant-design') { -%>
-      "ant-design-vue": "3.2.1",
-    <% } -%>
-    <% if (components === 'devui') { -%>
-      "vue-devui": "^1.0.0-rc.14",
-    <% } -%>
-    <% if (components === 'tencent') { -%>
-      "tdesign-vue-next": "^0.18.0",
-    <% } -%>
-    <% if (components === 'vuetify') { -%>
-      "vuetify": "^3.0.0-beta.5",
-    <% } -%>
-    <% if (components === 'arco') { -%>
-      "@arco-design/web-vue": "^2.33.0",
-    <% } -%>
-    <% if (components === 'varlet') { -%>
-      "@varlet/ui": "^1.27.17",
-    <% } -%>
+    <%- ui %>
     "vue": "^3.2.25",
-    <% if (Pinia) { -%>
-      "pinia": "^2.0.14",
-      "pinia-plugin-persist": "^1.0.0"
+    <% if (usePinia) { -%>
+     Pinia
     <% } -%>
   },
   "devDependencies": {
@@ -58,7 +34,7 @@
       "sass": "1.50.1",
     <% } -%>
     <% if (components === 'vuetify') { -%>
-      "vite-plugin-vuetify": "^1.0.0-alpha.0",
+      "vite-plugin-vuetify": "^1.0.0-alpha.13",
     <% } -%>
     <% if (Eslint) { -%>
       "eslint": "^8.18.0",
@@ -66,10 +42,10 @@
       "@typescript-eslint/eslint-plugin": "^5.30.5",
       "@typescript-eslint/parser": "^5.30.5",
     <% } -%>
-    <% if (Prettier) { -%>
+    <% if (usePrettier) { -%>
       "prettier": "^2.7.1",
     <% } -%>
-    <% if (Prettier && Eslint) { -%>
+    <% if (usePrettier && useEslint) { -%>
       "eslint-config-prettier": "^8.5.0",
       "eslint-plugin-prettier": "^4.2.1",
     <% } -%>

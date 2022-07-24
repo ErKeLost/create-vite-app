@@ -1,8 +1,8 @@
 interface Options {
-  Router?: boolean
-  Pinia?: boolean
-  Eslint?: boolean
-  Prettier?: boolean
+  Router?: string
+  Pinia?: string
+  Eslint?: string
+  Prettier?: string
   name?: string
   version?: string
   src?: string
@@ -13,6 +13,11 @@ interface Options {
   allPackages?: any[]
   precss?: 'less' | 'scss' | ''
   package?: 'pnpm' | 'npm' | 'yarn'
+  ui?: any
+  useEslint: boolean
+  usePrettier: boolean
+  useRouter: boolean
+  usePinia: boolean
 }
 
 const options: Options = {}

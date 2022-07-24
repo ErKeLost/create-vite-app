@@ -59,21 +59,21 @@ export default async function (name: string) {
   startTime = new Date().getTime()
   // 拷贝基础模板文件
   await fs.copy(templatePath, dest, { filter: filterQuestion })
-  // await fs.copy(templatePath, dest)
-  // console.log(templatePath)
-  // console.log(dest)
-  // console.log(options.components)
+  await fs.copy(templatePath, dest)
+  console.log(templatePath)
+  console.log(dest)
+  console.log(options.components)
 
   // 编译 ejs 模板文件
   await Promise.all(fetchTemplateFiles().map((file) => ejsRender(file, name)))
-  // yellow(`> 项目模板生成于目录： ${dest}`)
-  // // 生成 gitignore
+  yellow(`> 项目模板生成于目录： ${dest}`)
+  // 生成 gitignore
   // await fs.move(
   //   path.resolve(dest, '.gitignore.ejs'),
   //   path.resolve(dest, '.gitignore'),
   //   { overwrite: true }
   // )
-  // // // Git 初始化
+  // // Git 初始化
   // await cmdIgnore('git', ['init'])
   // await cmdIgnore('git', ['add .'])
   // await cmdIgnore('git', ['commit -m "Initialize by VITE_CLI"'])

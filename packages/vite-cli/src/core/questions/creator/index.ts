@@ -6,7 +6,7 @@ import PackageDevice from './packageDevice'
 import Plugins from './plugins'
 import future from './feature'
 import device from './device'
-import { componentsMap } from './ejsMapConstant'
+import { componentsMap, futureMap } from './ejsMapConstant'
 // import prompts from 'prompts'
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const prompts = require('prompts')
@@ -32,10 +32,14 @@ async function createProjectQuestions(): Promise<void> {
   await createQuestion(prompts, Plugins)
   await createQuestion(prompts, precss)
   // options 对象属性 所有 属性
-  console.log(options)
   // 获取 选中 components
   // console.log(componentsMap.get(options.components))
   const currentLibrary = componentsMap.get(options.components)
+  const Eslint = futureMap.get('Eslint')
+  const Prettier = futureMap.get('Prettier')
+  console.log(Eslint)
+  console.log(Prettier)
+
   // 获取整个map
   // console.log(componentsMap, 'map')
   // map 转 对象
@@ -43,7 +47,9 @@ async function createProjectQuestions(): Promise<void> {
   // console.log(res)
   // 合并 map 对象
   // console.log(Object.assign(options, res), '合并map对象')
-  options.components = currentLibrary
+  options.ui = currentLibrary
+  options.Eslint = Eslint
+  options.Prettier = Prettier
   console.log(options)
 
   return Promise.resolve()
