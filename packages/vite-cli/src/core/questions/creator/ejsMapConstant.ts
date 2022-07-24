@@ -36,11 +36,12 @@ const lintMap = new Map([
 const pluginMap = new Map([
   ['jsx', '"@vitejs/plugin-vue-jsx": "^2.0.0",'],
   ['legacy', '"@vitejs/plugin-legacy": "^2.0.0",'],
+  ['html', '"vite-plugin-html": "^3.2.0",'],
   ['auto-import', '"unplugin-auto-import": "^0.10.0",'],
   ['vue-components', '"unplugin-vue-components": "^0.21.1",'],
   ['unocss', '"unocss": "^0.44.5",'],
+  ['visualizer', '"rollup-plugin-visualizer": "^5.7.1",'],
   ['pwa', '"vite-plugin-pwa": "^0.12.3",'],
-  ['html', '"vite-plugin-html": "^3.2.0",'],
   ['inspect', '"vite-plugin-inspect": "^0.6.0",'],
   ['icons', '"unplugin-icons": "^0.14.7","@iconify/json": "^2.1.74",']
 ])

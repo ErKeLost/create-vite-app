@@ -15,12 +15,12 @@ const path = require('path')
 let startTime: number, endTime: number
 export default async function (name: string) {
   // CLI 模板文件夹路径
-  options.src = path.resolve(__dirname, '../template')
+  options.src = path.resolve(__dirname, '../template/vue')
   // 获取基础参数
   options.name = name
   options.dest = path.resolve(process.cwd(), name)
   // 模板路径
-  const templatePath = path.resolve(__dirname, '../../../../../template')
+  const templatePath = path.resolve(__dirname, '../../../../../template/vue')
   // 目录
   const dest = path.resolve(process.cwd(), name)
 

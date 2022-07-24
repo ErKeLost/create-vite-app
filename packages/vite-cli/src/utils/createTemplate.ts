@@ -5,7 +5,7 @@ import prettier = require('prettier')
 import options from '../shared/options'
 export async function ejsRender(filePath: string, name): Promise<void> {
   // 根目录template 绝对路径
-  const templatePath = path.resolve(__dirname, '../template')
+  const templatePath = path.resolve(__dirname, '../template/vue')
   // 获取当前渲染文件的 各种 参数 such as ext
   const file = path.parse(filePath)
   // 编译根目录 创建的根目录
