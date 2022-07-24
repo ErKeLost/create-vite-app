@@ -2,17 +2,17 @@
 <% if (plugins.indexOf('vue-components') === -1) { -%>
 import Welcome from "@/components/Welcome.vue"
 <% } -%>
-<% if (!Router) { -%>
+<% if (!useRouter) { -%>
 import HomeView from '@/views/HomeView.vue'
 <% } -%>
 </script>
 
 <template>
   <Welcome />
-  <% if (!Router) { -%>
+  <% if (!useRouter) { -%>
   <HomeView />
   <% } -%>
-  <% if (Router) { -%>
+  <% if (useRouter) { -%>
   <RouterView />
   <% } -%>
 </template>

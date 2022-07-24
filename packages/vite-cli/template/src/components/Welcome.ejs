@@ -2,10 +2,10 @@
 <% if (plugins.indexOf('vue-components') === -1) { -%>
 import HelloWorld from '@/components/HelloWorld.vue'
 <% } -%>
-<% if (Router) { -%>
+<% if (useRouter) { -%>
 import { RouterLink, RouterView } from 'vue-router'
 <% } -%>
-<% if (Pinia) { -%>
+<% if (usePinia) { -%>
 import { storeToRefs } from 'pinia'
 import { useCounterStore } from '@/store';
 const counterStore = useCounterStore();
@@ -27,7 +27,7 @@ const { count } = storeToRefs(counterStore);
       <HelloWorld msg="You did it!" />
 
       <nav>
-        <% if (Router) { -%>
+        <% if (useRouter) { -%>
           <RouterLink to="/">
           <% if (components === 'ant-design') { -%>
             <a-button type="primary">Home</a-button>
@@ -59,7 +59,7 @@ const { count } = storeToRefs(counterStore);
           <% } -%>
         </RouterLink>
         <% } -%>
-        <% if (Router) { -%>
+        <% if (useRouter) { -%>
           <RouterLink to="/about">
           <% if (components === 'ant-design') { -%>
             <a-button type="primary">About</a-button>

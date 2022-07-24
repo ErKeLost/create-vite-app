@@ -9,15 +9,40 @@ componentsMap.set('ant-design', '"ant-design-vue": "3.2.1",')
 componentsMap.set('varlet', '"@varlet/ui": "^1.27.17",')
 
 const futureMap = new Map([
-  [
-    'Eslint',
-    '"lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",'
-  ],
-  [
-    'Prettier',
-    '"prettier": "prettier --write ./**/*.{html,vue,ts,js,json,md}"'
-  ],
   ['Router', '"vue-router": "^4.1.1",'],
   ['Pinia', '"pinia": "^2.0.14","pinia-plugin-persist": "^1.0.0"']
 ])
-export { componentsMap, futureMap }
+
+const lintMap = new Map([
+  [
+    'EslintScript',
+    '"lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",'
+  ],
+  [
+    'PrettierScript',
+    '"prettier": "prettier --write ./**/*.{html,vue,ts,js,json,md}"'
+  ],
+  [
+    'EslintWithPrettierScript',
+    '"eslint-config-prettier": "^8.5.0","eslint-plugin-prettier": "^4.2.1",'
+  ],
+  [
+    'Eslint',
+    '"eslint": "^8.18.0","eslint-plugin-vue": "^9.1.1","@typescript-eslint/eslint-plugin": "^5.30.5","@typescript-eslint/parser": "^5.30.5",'
+  ],
+  ['Prettier', '"prettier": "^2.7.1",']
+])
+
+const pluginMap = new Map([
+  ['jsx', '"@vitejs/plugin-vue-jsx": "^1.3.10",'],
+  ['legacy', '"@vitejs/plugin-legacy": "^1.8.2",'],
+  ['auto-import', '"unplugin-auto-import": "^0.9.2",'],
+  ['vue-components', '"unplugin-vue-components": "^0.21.1",'],
+  ['unocss', '"unocss": "^0.42.0",'],
+  ['pwa', '"vite-plugin-pwa": "^0.12.2",'],
+  ['html', '"vite-plugin-html": "^3.2.0",'],
+  ['inspect', '"vite-plugin-inspect": "^0.5.1",'],
+  ['icons', '"unplugin-icons": "^0.14.7","@iconify/json": "^2.1.74",']
+])
+
+export { componentsMap, futureMap, lintMap, pluginMap }

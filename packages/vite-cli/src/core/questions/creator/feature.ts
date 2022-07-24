@@ -1,6 +1,6 @@
 const future = [
   {
-    name: 'Router',
+    name: 'useRouter',
     type: () => 'toggle',
     message: 'Add Vue Router for Single Page Application development?',
     initial: false,
@@ -8,7 +8,7 @@ const future = [
     inactive: 'No'
   },
   {
-    name: 'Pinia',
+    name: 'usePinia',
     type: () => 'toggle',
     message: 'Add Pinia for state management?',
     initial: false,
@@ -16,7 +16,7 @@ const future = [
     inactive: 'No'
   },
   {
-    name: 'Eslint',
+    name: 'useEslint',
     type: () => 'toggle',
     message: 'Add ESLint for code quality?',
     initial: false,
@@ -24,7 +24,7 @@ const future = [
     inactive: 'No'
   },
   {
-    name: 'Prettier',
+    name: 'usePrettier',
     type: () => 'toggle',
     message: 'Add Prettier for code formatting?',
     initial: false,

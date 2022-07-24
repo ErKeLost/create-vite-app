@@ -14,10 +14,14 @@ interface Options {
   precss?: 'less' | 'scss' | ''
   package?: 'pnpm' | 'npm' | 'yarn'
   ui?: any
-  useEslint: boolean
-  usePrettier: boolean
-  useRouter: boolean
-  usePinia: boolean
+  useEslint?: boolean
+  usePrettier?: boolean
+  useRouter?: boolean
+  usePinia?: boolean
+  EslintScript?: string
+  PrettierScript?: string
+  EslintWithPrettierScript?: string
+  pluginList?: string
 }
 
 const options: Options = {}

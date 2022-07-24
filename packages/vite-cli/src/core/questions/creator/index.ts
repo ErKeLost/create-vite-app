@@ -6,7 +6,7 @@ import PackageDevice from './packageDevice'
 import Plugins from './plugins'
 import future from './feature'
 import device from './device'
-import { componentsMap, futureMap } from './ejsMapConstant'
+import { componentsMap, futureMap, lintMap, pluginMap } from './ejsMapConstant'
 // import prompts from 'prompts'
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const prompts = require('prompts')
@@ -30,13 +30,16 @@ async function createProjectQuestions(): Promise<void> {
   await createQuestion(prompts, components)
   // vite plugins
   await createQuestion(prompts, Plugins)
+  // css
   await createQuestion(prompts, precss)
   // options 对象属性 所有 属性
   // 获取 选中 components
   // console.log(componentsMap.get(options.components))
   const currentLibrary = componentsMap.get(options.components)
-  const Eslint = futureMap.get('Eslint')
-  const Prettier = futureMap.get('Prettier')
+  const Eslint = lintMap.get('Eslint')
+  const Prettier = lintMap.get('Prettier')
+  const Router = futureMap.get('Router')
+  const Pinia = futureMap.get('Pinia')
   console.log(Eslint)
   console.log(Prettier)
 
@@ -48,10 +51,24 @@ async function createProjectQuestions(): Promise<void> {
   // 合并 map 对象
   // console.log(Object.assign(options, res), '合并map对象')
   options.ui = currentLibrary
+  options.EslintScript = lintMap.get('EslintScript')
+  options.PrettierScript = lintMap.get('PrettierScript')
+  options.EslintWithPrettierScript = lintMap.get('EslintWithPrettierScript')
   options.Eslint = Eslint
   options.Prettier = Prettier
+  options.Router = Router
+  options.Pinia = Pinia
   console.log(options)
-
+  // console.log(options.plugins)
+  // console.log(pluginMap)
+  let pluginString = ''
+  options.plugins.forEach((item) => {
+    // console.log(pluginMap.get(prev))
+    return (pluginString += pluginMap.get(item))
+    // return pluginMap.get(prev) + pluginMap.get(next)
+  })
+  options.pluginList = pluginString
+  // console.log(pluginString)
   return Promise.resolve()
 }
 

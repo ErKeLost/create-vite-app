@@ -1,8 +1,8 @@
 import { createApp } from 'vue'
-<% if (Router) { -%>
+<% if (useRouter) { -%>
   import { setupRouter } from '@/router'
 <% } -%>
-<% if (Pinia) { -%>
+<% if (usePinia) { -%>
   import { setupStore } from '@/store'
 <% } -%>
 <% if (components === 'vuetify') { -%>
@@ -92,12 +92,12 @@ async function bootStrap() {
   // setupDirectives(app)
 
   // 挂载状态管理
-  <% if (Pinia) { -%>
+  <% if (usePinia) { -%>
     await setupStore(app)
   <% } -%>
 
   // 挂载路由
-  <% if (Router) { -%>
+  <% if (useRouter) { -%>
     await setupRouter(app)
   <% } -%>
 
