@@ -4,7 +4,7 @@ export default {
   message: 'Choose your framework (选择您需要使用的框架)',
   choices: [
     { title: 'Vue', value: 'vue' },
-    { title: 'React', value: 'react' },
+    { title: 'React', value: 'react', disabled: true },
     { title: 'Nuxt', value: 'nuxt' }
   ]
 }
