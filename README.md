@@ -1,4 +1,4 @@
-# ViteCLI (refactor 重构 核心逻辑中 🚧🚧🚧🚧🚧🚧🚧🚧 stop 0.15.0-alpha 可用)
+# ViteCLI 🚧🚧🚧🚧🚧🚧🚧🚧
 
 <p align="center">
   <a href="https://vitejs.dev" target="_blank" rel="noopener noreferrer">
