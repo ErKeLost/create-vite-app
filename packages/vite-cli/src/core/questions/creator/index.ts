@@ -7,7 +7,13 @@ import Plugins from './plugins'
 import future from './feature'
 import device from './device'
 import frame from './frame'
-import { componentsMap, futureMap, lintMap, pluginMap } from './ejsMapConstant'
+import {
+  componentsMap,
+  futureMap,
+  lintMap,
+  pluginMap,
+  pluginImportStatement
+} from './ejsMapConstant'
 // import prompts from 'prompts'
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const prompts = require('prompts')
@@ -71,6 +77,13 @@ async function createProjectQuestions(): Promise<void> {
     // return pluginMap.get(prev) + pluginMap.get(next)
   })
   options.pluginList = pluginString
+  let pluginImportStatementString = ''
+  options.plugins.forEach((item) => {
+    // console.log(pluginMap.get(prev))
+    return (pluginImportStatementString += pluginImportStatement.get(item))
+    // return pluginMap.get(prev) + pluginMap.get(next)
+  })
+  options.pluginImportStatement = pluginImportStatementString
   // console.log(pluginString)
   return Promise.resolve()
 }

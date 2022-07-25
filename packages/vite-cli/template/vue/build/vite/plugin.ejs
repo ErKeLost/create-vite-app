@@ -1,27 +1,6 @@
 import type { Plugin } from 'vite'
 import vue from "@vitejs/plugin-vue"
-<% if (plugins.indexOf('jsx') !== -1) { -%>
-  import VueJsx from "@vitejs/plugin-vue-jsx"
-<% } -%>
-<% if (plugins.indexOf('legacy') !== -1) { -%>
-  import legacy from "@vitejs/plugin-legacy"
-<% } -%>
-<% if (plugins.indexOf('vue-components') !== -1) { -%>
-  import Components from "unplugin-vue-components/vite"
-<% } -%>
-<% if (plugins.indexOf('auto-import') !== -1) { -%>
-  import AutoImport from "unplugin-auto-import/vite"
-<% } -%>
-<% if (plugins.indexOf('icons') !== -1) { -%>
-  import Icons from "unplugin-icons/vite"
-  import IconsResolver from "unplugin-icons/resolver"
-<% } -%>
-<% if (plugins.indexOf('unocss') !== -1) { -%>
-  import Unocss from "unocss/vite"
-<% } -%>
-<% if (plugins.indexOf('inspect') !== -1) { -%>
-  import Inspect from "vite-plugin-inspect"
-<% } -%>
+<%- pluginImportStatement %>
 <% if (components === 'vuetify') { -%>
   import vuetify from 'vite-plugin-vuetify'
 <% } -%>

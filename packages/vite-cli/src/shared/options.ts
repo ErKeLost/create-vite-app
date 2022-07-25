@@ -23,6 +23,7 @@ interface Options {
   EslintWithPrettierScript?: string
   pluginList?: string
   frame?: string
+  pluginImportStatement?: string
 }
 
 const options: Options = {}

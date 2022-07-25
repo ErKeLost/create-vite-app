@@ -46,4 +46,18 @@ const pluginMap = new Map([
   ['icons', '"unplugin-icons": "^0.14.7","@iconify/json": "^2.1.74",']
 ])
 
-export { componentsMap, futureMap, lintMap, pluginMap }
+const pluginImportStatement = new Map([
+  ['jsx', 'import VueJsx from "@vitejs/plugin-vue-jsx"'],
+  ['legacy', 'import legacy from "@vitejs/plugin-legacy"'],
+  ['html', '"vite-plugin-html": "^3.2.0",'],
+  ['auto-import', 'import AutoImport from "unplugin-auto-import/vite"'],
+  ['vue-components', 'import Components from "unplugin-vue-components/vite"'],
+  ['unocss', 'import Unocss from "unocss/vite"'],
+  ['inspect', 'import Inspect from "vite-plugin-inspect"'],
+  [
+    'icons',
+    'import Icons from "unplugin-icons/vite"import IconsResolver from "unplugin-icons/resolver"'
+  ]
+])
+
+export { componentsMap, futureMap, lintMap, pluginMap, pluginImportStatement }
