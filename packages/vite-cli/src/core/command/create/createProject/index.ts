@@ -30,7 +30,12 @@ export default async function (name: string) {
     gradient('cyan', 'purple')('\n🚀 Welcome To Create Template for Vite!\n')
   )
 
-  await createProjectQuestions()
+  try {
+    await createProjectQuestions()
+  } catch (error) {
+    cyan('\n ✖ Goodbye Exit!')
+    return
+  }
   // 模板路径
   const templatePath = path.resolve(
     __dirname,
