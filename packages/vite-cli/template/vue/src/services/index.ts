@@ -7,11 +7,11 @@ const serviceModules = import.meta.glob('./**/*.ts', { eager: true })
 const serviceGlobalFiles = getGlobalFileExport(serviceModules)
 
 const { VITE_SERVICE_TIME_OUT, VITE_GLOB_API_URL_PREFIX } = import.meta.env
-const stockRequest = new StockRequest({
+const request = new Request({
   baseURL: VITE_GLOB_API_URL_PREFIX,
   timeout: VITE_SERVICE_TIME_OUT,
   interceptors: {
-    requestInterceptor: (config) => {
+    requestInterceptor: (config: any) => {
       // 携带token的拦截
       const token = localCache.getCache('token')
       // console.log(token)
@@ -21,17 +21,17 @@ const stockRequest = new StockRequest({
       }
       return config
     },
-    requestInterceptorCatch: (err) => {
+    requestInterceptorCatch: (err: any) => {
       return err
     },
-    responseInterceptor: (res) => {
+    responseInterceptor: (res: any) => {
       return res
     },
-    responseInterceptorCatch: (err) => {
+    responseInterceptorCatch: (err: any) => {
       return err
     }
   }
 })
 
-export { Request }
+export { Request, request }
 export default serviceGlobalFiles
