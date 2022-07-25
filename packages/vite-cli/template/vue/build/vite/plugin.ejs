@@ -7,27 +7,7 @@ import vue from "@vitejs/plugin-vue"
 
 <% if (plugins.indexOf('vue-components') !== -1) { -%>
   import {
-    <% if (components === 'element-plus') { -%>
-      ElementPlusResolver
-    <% } -%>
-    <% if (components === 'ant-design') { -%>
-      AntDesignVueResolver
-    <% } -%>
-    <% if (components === 'naive-ui') { -%>
-      NaiveUiResolver
-    <% } -%>
-    <% if (components === 'arco') { -%>
-      ArcoResolver
-    <% } -%>
-    <% if (components === 'devui') { -%>
-      DevUiResolver
-    <% } -%>
-    <% if (components === 'varlet') { -%>
-      VarletUIResolver
-    <% } -%>
-    <% if (components === 'tencent') { -%>
-      TDesignResolver
-    <% } -%>
+    <%- ComponentResolver %>
    } from "unplugin-vue-components/resolvers"
 <% } -%>
 export function createVitePlugins(viteEnv, isDev: boolean) {
@@ -55,29 +35,7 @@ export function createVitePlugins(viteEnv, isDev: boolean) {
         include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
         dirs: ["src/components/", "src/layout/", "src/views", "src/assets"],
         resolvers: [
-          <% if (components === 'element-plus') { -%>
-            ElementPlusResolver()
-          <% } -%>
-          <% if (components === 'ant-design') { -%>
-            AntDesignVueResolver()
-          <% } -%>
-          <% if (components === 'naive-ui') { -%>
-            NaiveUiResolver()
-          <% } -%>
-          <% if (components === 'arco') { -%>
-            ArcoResolver()
-          <% } -%>
-          <% if (components === 'devui') { -%>
-            DevUiResolver(),
-          <% } -%>
-          <% if (components === 'varlet') { -%>
-            VarletUIResolver(),
-          <% } -%>
-          <% if (components === 'tencent') { -%>
-            TDesignResolver({
-              library: 'vue-next'
-            }),
-          <% } -%>
+          <%- ComponentResolver %>()
         ],
         dts: "src/types/components.d.ts"
       }),
@@ -105,38 +63,14 @@ export function createVitePlugins(viteEnv, isDev: boolean) {
         // Auto import functions from Element Plus, e.g. ElMessage, ElMessageBox... (with style)
         // 自动导入 Element Plus 相关函数，如：ElMessage, ElMessageBox... (带样式)
         resolvers: [
-          <% if (plugins.indexOf('vue-components') !== -1) { -%>
-            <% if (components === 'element-plus') { -%>
-              ElementPlusResolver(),
-            <% } -%>
-            <% if (components === 'ant-design') { -%>
-              AntDesignVueResolver(),
-            <% } -%>
-            <% if (components === 'naive-ui') { -%>
-              NaiveUiResolver(),
-            <% } -%>
-            <% if (components === 'arco') { -%>
-              ArcoResolver(),
-            <% } -%>
-            <% if (components === 'devui') { -%>
-              DevUiResolver(),
-            <% } -%>
-            <% if (components === 'varlet') { -%>
-              VarletUIResolver(),
-            <% } -%>
-            <% if (components === 'tencent') { -%>
-              TDesignResolver({
-                library: 'vue-next'
-              }),
-            <% } -%>
-          <% } -%>
           // Auto import icon components
           // 自动导入图标组件
           <% if (plugins.indexOf('icons') !== -1) { -%>
             IconsResolver({
               prefix: "Icon"
-            })
+            }),
           <% } -%>
+          <%- ComponentResolver %>()
         ]
       }),
     <% } -%>

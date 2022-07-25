@@ -3,6 +3,7 @@ const componentsMap = new Map()
 componentsMap.set('element-plus', '"element-plus": "^2.2.5",')
 componentsMap.set('arco', '"@arco-design/web-vue": "^2.33.0",')
 componentsMap.set('vuetify', '"vuetify": "^3.0.0-beta.5",')
+componentsMap.set('naive-ui', '"naive-ui": "^2.31.0",')
 componentsMap.set('tencent', '"tdesign-vue-next": "^0.18.0",')
 componentsMap.set('devui', '"vue-devui": "^1.0.0-rc.14",')
 componentsMap.set('ant-design', '"ant-design-vue": "3.2.1",')
@@ -47,17 +48,35 @@ const pluginMap = new Map([
 ])
 
 const pluginImportStatement = new Map([
-  ['jsx', 'import VueJsx from "@vitejs/plugin-vue-jsx"'],
-  ['legacy', 'import legacy from "@vitejs/plugin-legacy"'],
-  ['html', '"vite-plugin-html": "^3.2.0",'],
-  ['auto-import', 'import AutoImport from "unplugin-auto-import/vite"'],
-  ['vue-components', 'import Components from "unplugin-vue-components/vite"'],
-  ['unocss', 'import Unocss from "unocss/vite"'],
-  ['inspect', 'import Inspect from "vite-plugin-inspect"'],
+  ['jsx', 'import VueJsx from "@vitejs/plugin-vue-jsx";'],
+  ['legacy', 'import legacy from "@vitejs/plugin-legacy";'],
+  ['html', 'import html from "vite-plugin-html";'],
+  ['unocss', 'import Unocss from "unocss/vite";'],
+  ['auto-import', 'import AutoImport from "unplugin-auto-import/vite";'],
+  ['vue-components', 'import Components from "unplugin-vue-components/vite";'],
+  ['inspect', 'import Inspect from "vite-plugin-inspect";'],
+  ['pwa', 'import pwa from "vite-plugin-pwa";'],
+  ['visualizer', 'import visualizer from "rollup-plugin-visualizer";'],
   [
     'icons',
-    'import Icons from "unplugin-icons/vite"import IconsResolver from "unplugin-icons/resolver"'
+    'import Icons from "unplugin-icons/vite"; import IconsResolver from "unplugin-icons/resolver";'
   ]
 ])
+const componentResolverMap = new Map([
+  ['element-plus', 'ElementPlusResolver'],
+  ['arco', 'ArcoResolver'],
+  ['naive-ui', 'NaiveUiResolver'],
+  ['tencent', 'TDesignResolver'],
+  ['devui', 'DevUiResolver'],
+  ['ant-design', 'AntDesignVueResolver'],
+  ['varlet', 'VarletUIResolver']
+])
 
-export { componentsMap, futureMap, lintMap, pluginMap, pluginImportStatement }
+export {
+  componentsMap,
+  futureMap,
+  lintMap,
+  pluginMap,
+  componentResolverMap,
+  pluginImportStatement
+}

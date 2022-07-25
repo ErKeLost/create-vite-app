@@ -24,6 +24,8 @@ interface Options {
   pluginList?: string
   frame?: string
   pluginImportStatement?: string
+  // vue-components-import
+  ComponentResolver?: string
 }
 
 const options: Options = {}

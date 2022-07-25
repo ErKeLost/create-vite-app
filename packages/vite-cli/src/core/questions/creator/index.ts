@@ -12,7 +12,8 @@ import {
   futureMap,
   lintMap,
   pluginMap,
-  pluginImportStatement
+  pluginImportStatement,
+  componentResolverMap
 } from './ejsMapConstant'
 // import prompts from 'prompts'
 // eslint-disable-next-line @typescript-eslint/no-var-requires
@@ -49,6 +50,7 @@ async function createProjectQuestions(): Promise<void> {
   const Prettier = lintMap.get('Prettier')
   const Router = futureMap.get('Router')
   const Pinia = futureMap.get('Pinia')
+  const currentComponentResolver = componentResolverMap.get(options.components)
   // console.log(Eslint)
   // console.log(Prettier)
 
@@ -60,6 +62,7 @@ async function createProjectQuestions(): Promise<void> {
   // 合并 map 对象
   // console.log(Object.assign(options, res), '合并map对象')
   options.ui = currentLibrary
+  options.ComponentResolver = currentComponentResolver
   options.EslintScript = lintMap.get('EslintScript')
   options.PrettierScript = lintMap.get('PrettierScript')
   options.EslintWithPrettierScript = lintMap.get('EslintWithPrettierScript')
@@ -67,7 +70,6 @@ async function createProjectQuestions(): Promise<void> {
   options.Prettier = Prettier
   options.Router = Router
   options.Pinia = Pinia
-  console.log(options)
   // console.log(options.plugins)
   // console.log(pluginMap)
   let pluginString = ''
@@ -84,7 +86,7 @@ async function createProjectQuestions(): Promise<void> {
     // return pluginMap.get(prev) + pluginMap.get(next)
   })
   options.pluginImportStatement = pluginImportStatementString
-  // console.log(pluginString)
+  console.log(options)
   return Promise.resolve()
 }
 
