@@ -45,8 +45,6 @@ export default async function (name: string) {
   const assets = readdirSync(`${templatePath}/src/assets`).filter(
     (item) => !item.includes('logo')
   )
-  console.log(assets)
-
   function filterQuestion() {
     const res = assets.filter(
       (item) => item.split('.')[0] !== options.components
@@ -73,10 +71,6 @@ export default async function (name: string) {
   // 拷贝基础模板文件
   await fs.copy(templatePath, dest, { filter: filterQuestion })
   await fs.copy(templatePath, dest)
-  console.log(templatePath)
-  console.log(dest)
-  console.log(options.components)
-
   // 编译 ejs 模板文件
   await Promise.all(fetchTemplateFiles().map((file) => ejsRender(file, name)))
   yellow(`> 项目模板生成于目录： ${dest}`)
@@ -108,5 +102,5 @@ export default async function (name: string) {
       ? `✨✨ ${options.package} run dev`
       : `✨✨ ${options.package} dev`
   )
-  console.log('创建项目成功')
+  cyan('创建项目成功')
 }
