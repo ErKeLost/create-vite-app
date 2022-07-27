@@ -42,6 +42,7 @@ export function createVitePlugins(viteEnv, isDev: boolean) {
     <% } -%>
     <% if (plugins.indexOf('auto-import') !== -1) { -%>
       AutoImport({
+        // dts: path.resolve(pathSrc, 'typings', 'auto-imports.d.ts'),
         dts: "src/types/auto-imports.d.ts",
         // imports: ['vue', '@vueuse/core'],
         // Generate corresponding .eslintrc-auto-import.json file.
