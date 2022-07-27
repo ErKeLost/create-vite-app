@@ -31,6 +31,7 @@
 
 ```ts
   pnpm add vite-create-app@latest -g
+  or
   npx vite-create-app@latest
 ```
 
