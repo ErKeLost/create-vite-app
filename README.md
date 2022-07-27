@@ -31,6 +31,7 @@
 
 ```ts
   pnpm add vite-create-app@latest -g
+  npx vite-create-app@latest
 ```
 
 - Enter 'vite' on the command line to check whether the installation is successful
