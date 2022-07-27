@@ -7,6 +7,7 @@ import Plugins from './plugins'
 import future from './feature'
 import device from './device'
 import frame from './frame'
+import projectName from './projectName'
 import {
   componentsMap,
   futureMap,
@@ -26,6 +27,8 @@ async function createQuestion(util, question) {
 }
 
 async function createProjectQuestions(): Promise<void> {
+  // 项目名
+  await createQuestion(prompts, projectName)
   // 选择框架
   await createQuestion(prompts, frame)
   // 包管理器版本

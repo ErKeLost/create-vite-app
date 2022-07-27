@@ -13,18 +13,7 @@ const gradient = require('gradient-string')
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const path = require('path')
 let startTime: number, endTime: number
-export default async function (name: string) {
-  // CLI 模板文件夹路径
-  options.src = path.resolve(__dirname, `../template/${options.frame}`)
-  // 获取基础参数
-  options.name = name
-  options.dest = path.resolve(process.cwd(), name)
-
-  // 目录
-  const dest = path.resolve(process.cwd(), name)
-
-  const cmdIgnore = createSpawnCmd(dest, 'ignore')
-  const cmdInherit = createSpawnCmd(dest, 'inherit')
+export default async function () {
   clearConsole('cyan', `🎨  🎨   VITE_CLI V-${VITE_CLI_VERSION}   🎨  🎨`)
   console.log(
     gradient('cyan', 'purple')('\n🚀 Welcome To Create Template for Vite!\n')
@@ -36,6 +25,19 @@ export default async function (name: string) {
     cyan('\n ✖ Goodbye Exit!')
     return
   }
+  console.log(options.name, '🎨  🎨🎨  🎨')
+
+  // CLI 模板文件夹路径
+  options.src = path.resolve(__dirname, `../template/${options.frame}`)
+  // 获取基础参数
+  // options.name = name
+  options.dest = path.resolve(process.cwd(), options.name)
+
+  // 目录
+  const dest = path.resolve(process.cwd(), options.name)
+
+  const cmdIgnore = createSpawnCmd(dest, 'ignore')
+  const cmdInherit = createSpawnCmd(dest, 'inherit')
   // 模板路径
   const templatePath = path.resolve(
     __dirname,
@@ -72,7 +74,9 @@ export default async function (name: string) {
   await fs.copy(templatePath, dest, { filter: filterQuestion })
   await fs.copy(templatePath, dest)
   // 编译 ejs 模板文件
-  await Promise.all(fetchTemplateFiles().map((file) => ejsRender(file, name)))
+  await Promise.all(
+    fetchTemplateFiles().map((file) => ejsRender(file, options.name))
+  )
   yellow(`> 项目模板生成于目录： ${dest}`)
   // 生成 gitignore
   await fs.move(
@@ -96,7 +100,7 @@ export default async function (name: string) {
   const usageTime = (endTime - startTime) / 1000
   cyan(`> 项目已经创建成功，用时${usageTime}s，请输入以下命令继续...`)
   console.log('')
-  cyan(`✨✨ cd ${name}`)
+  cyan(`✨✨ cd ${options.name}`)
   cyan(
     options.package === 'npm'
       ? `✨✨ ${options.package} run dev`
