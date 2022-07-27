@@ -21,8 +21,6 @@ const prompts = require('prompts')
 async function createQuestion(util, question) {
   const result: QuestionCollection = await util(question)
   Object.assign(options, result)
-  console.log(result, 'result')
-
   //  在 回答问题得时候 map 映射 每一个 库 版本 问题 要不要考虑
   return Promise.resolve(true)
 }
@@ -51,16 +49,6 @@ async function createProjectQuestions(): Promise<void> {
   const Router = futureMap.get('Router')
   const Pinia = futureMap.get('Pinia')
   const currentComponentResolver = componentResolverMap.get(options.components)
-  // console.log(Eslint)
-  // console.log(Prettier)
-
-  // 获取整个map
-  // console.log(componentsMap, 'map')
-  // map 转 对象
-  // const res = strMapToObj(componentsMap)
-  // console.log(res)
-  // 合并 map 对象
-  // console.log(Object.assign(options, res), '合并map对象')
   options.ui = currentLibrary
   options.ComponentResolver = currentComponentResolver
   options.EslintScript = lintMap.get('EslintScript')
@@ -70,31 +58,19 @@ async function createProjectQuestions(): Promise<void> {
   options.Prettier = Prettier
   options.Router = Router
   options.Pinia = Pinia
-  // console.log(options.plugins)
-  // console.log(pluginMap)
-  let pluginString = ''
-  options.plugins.forEach((item) => {
-    // console.log(pluginMap.get(prev))
-    return (pluginString += pluginMap.get(item))
-    // return pluginMap.get(prev) + pluginMap.get(next)
-  })
-  options.pluginList = pluginString
-  let pluginImportStatementString = ''
-  options.plugins.forEach((item) => {
-    // console.log(pluginMap.get(prev))
-    return (pluginImportStatementString += pluginImportStatement.get(item))
-    // return pluginMap.get(prev) + pluginMap.get(next)
-  })
-  options.pluginImportStatement = pluginImportStatementString
+  options.pluginList = options.plugins
+    .map((item) => {
+      return pluginMap.get(item)
+    })
+    .reduce((total, next) => total + next, '')
+
+  options.pluginImportStatement = options.plugins
+    .map((item) => {
+      return pluginImportStatement.get(item)
+    })
+    .reduce((total, next) => total + next, '')
   console.log(options)
   return Promise.resolve()
 }
 
 export default createProjectQuestions
-function strMapToObj(strMap) {
-  const obj = Object.create(null) //创建空的对象
-  for (const [k, v] of strMap) {
-    obj[k] = v
-  }
-  return obj
-}
