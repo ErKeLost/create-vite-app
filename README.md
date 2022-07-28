@@ -25,6 +25,12 @@
 
 - 0.15.1-alpha Refactor Map mapping refactoring EJS 2022.7.21
 
+- 0.15.2-alpha Refactor refactor Ejs render way 2022.7.25
+
+- 0.15.5-alpha Refactoring command line architecture supports npx creation 2022.7.27
+
+- 0.15.6-alpha Refactoring npx creation Success 2022.7.27
+
 ## Start 📦📦
 
 - Recommended to use pnpm to install ViteCLI .
