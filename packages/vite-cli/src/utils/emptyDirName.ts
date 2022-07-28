@@ -7,10 +7,11 @@ export default async function (name: string): Promise<boolean> {
   // name 为指定目录 或者 文件 没有 返回null
   try {
     await access(name, constants.R_OK | constants.W_OK)
-    cyan(
-      ` ️🚨 Oops, "${name}" already exists. Please try again with a different directory.`
-    )
-    process.exit(1)
+    // cyan(
+    //   ` ️🚨 Oops, "${name}" already exists. Please try again with a different directory.`
+    // )
+    // process.exit(1)
+    return false
   } catch {
     return true
   }
