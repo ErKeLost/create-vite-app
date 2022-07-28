@@ -30,8 +30,6 @@
 - Recommended to use pnpm to install ViteCLI .
 
 ```ts
-  pnpm add vite-create-app@latest -g
-  or
   npx vite-create-app@latest
 ```
 
@@ -39,11 +37,11 @@
 
 ![image.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ee03e671a0164f38b7617680f66b3475~tplv-k3u1fbpfcp-watermark.image?)
 
-- Enter 'vite create'project name' ` vite create plus your project name
+<!-- - Enter 'vite create'project name' ` vite create plus your project name
 
 ```ts
  vite create template
-```
+``` -->
 
 - Step1 Select the package manager that needs to be created. It is recommended to use pnpm to create projects
 
