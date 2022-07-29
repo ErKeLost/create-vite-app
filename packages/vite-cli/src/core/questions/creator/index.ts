@@ -43,6 +43,12 @@ async function createProjectQuestions(): Promise<void> {
   await createQuestion(prompts, Plugins)
   // css
   await createQuestion(prompts, precss)
+  // cancel
+  await createQuestion(prompts, {
+    onCancel: () => {
+      throw new Error('🎨🎨' + ' Operation cancelled')
+    }
+  })
   // options 对象属性 所有 属性
   // 获取 选中 components
   // console.log(componentsMap.get(options.components))

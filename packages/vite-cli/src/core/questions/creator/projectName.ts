@@ -1,6 +1,5 @@
 import options from '@/shared/options'
 import emptyDirName from '@/utils/emptyDirName'
-import { red } from '@/utils/log'
 const defaultProjectName = 'project-name'
 
 const packageName = [
@@ -14,7 +13,7 @@ const packageName = [
     }
   },
   {
-    name: 'shouldOverwrite',
+    name: 'overwrite',
     type: async () => ((await emptyDirName(options.name)) ? null : 'toggle'),
     initial: false,
     message: async () => {
@@ -22,11 +21,11 @@ const packageName = [
     }
   },
   {
-    name: 'shouldOverwrite',
+    name: 'overwrite',
     type: (prev, values) => {
       console.log(values.shouldOverwrite)
       if (values.shouldOverwrite === false) {
-        throw new Error(red('✖') + ' Operation cancelled')
+        throw new Error(' Operation cancelled')
       }
       return null
     }

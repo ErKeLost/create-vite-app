@@ -23,6 +23,7 @@ export default async function () {
     await createProjectQuestions()
   } catch (error) {
     cyan('\n ✖ Goodbye Exit!')
+    process.exit(1)
     return
   }
   console.log(options.name, '🎨  🎨🎨  🎨')
