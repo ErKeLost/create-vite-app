@@ -31,6 +31,8 @@
 
 - 0.15.6-alpha Refactoring npx creation Success 2022.7.27 🌈 🌈
 
+- 0.15.8-alpha Fix file already and some bug 2022.7.30 🌈 🌈
+
 ## Start 📦📦
 
 - Recommended to use pnpm to install ViteCLI .

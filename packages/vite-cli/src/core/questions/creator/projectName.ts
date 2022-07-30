@@ -10,7 +10,9 @@ const packageName = [
     initial: defaultProjectName,
     onState: (state) => {
       options.name = state.value
-    }
+    },
+    active: 'Yes',
+    inactive: 'No'
   },
   {
     name: 'overwrite',
