@@ -34,9 +34,11 @@ export function createVitePlugins(viteEnv, isDev: boolean) {
         // allow auto import and register components used in markdown
         include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
         dirs: ["src/components/", "src/layout/", "src/views", "src/assets"],
-        resolvers: [
-          <%- ComponentResolver %>()
-        ],
+        <% if (components !== 'vuetify') { -%>
+          resolvers: [
+            <%- ComponentResolver %>()
+          ],
+        <% } -%>
         dts: "src/types/components.d.ts"
       }),
     <% } -%>
@@ -71,7 +73,9 @@ export function createVitePlugins(viteEnv, isDev: boolean) {
               prefix: "Icon"
             }),
           <% } -%>
-          <%- ComponentResolver %>()
+          <% if (components !== 'vuetify') { -%>
+            <%- ComponentResolver %>()
+          <% } -%>
         ]
       }),
     <% } -%>
