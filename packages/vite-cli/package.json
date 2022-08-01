@@ -1,6 +1,6 @@
 {
   "name": "vite-create-app",
-  "version": "0.15.9-alpha",
+  "version": "0.16.0-alpha",
   "description": "",
   "main": "index.js",
   "bin": {
@@ -26,14 +26,15 @@
     "figlet": "^1.5.2",
     "fs-extra": "^10.1.0",
     "gradient-string": "^2.0.1",
-    "kolorist": "^1.5.1",
     "prettier": "latest",
     "prompts": "^2.4.2"
   },
   "devDependencies": {
     "@types/node": "^18.0.0",
     "ts-node-dev": "^2.0.0",
-    "tsc-alias": "^1.6.11"
+    "tsc-alias": "^1.6.11",
+    "prompts": "^2.4.2",
+    "kolorist": "^1.5.1"
   },
   "publishConfig": {
     "access": "public",
