@@ -61,8 +61,8 @@
 🚀 Welcome To Create Template for Vite!
 
 ? 选择您的包管理器 (Use arrow keys)
-> Pnpm
-  Yarn
+> Pnpm (pnpm not install)
+  Yarn (yarn not install)
   Npm
 ```
 
