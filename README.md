@@ -33,6 +33,8 @@
 
 - 0.15.8-alpha Fix file already and some bug 2022.7.30 🌈 🌈
 
+- Big Break 0.15.9-alpha Reconstruct production dependence 2022.8.1 📦📦
+
 ## Start 📦📦
 
 - Recommended to use pnpm to install ViteCLI .
