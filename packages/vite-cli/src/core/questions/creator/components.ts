@@ -6,7 +6,7 @@ export default {
     { title: 'Element Plus', value: 'element-plus' },
     { title: 'Vuetify3 Beta', value: 'vuetify' },
     { title: 'Naive UI', value: 'naive-ui' },
-    { title: 'Ant Design Vue 2.x', value: 'ant-design' },
+    { title: 'Ant Design Vue 3.x', value: 'ant-design' },
     { title: 'DevUI', value: 'devui' },
     { title: 'arco-design', value: 'arco' },
     { title: 'TDesign', value: 'tencent' },

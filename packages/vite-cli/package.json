@@ -22,26 +22,14 @@
   "bugs": "https://github.com/ErKeLost/vite-cli/issues",
   "dependencies": {
     "chalk": "4.1.0",
-    "chalk-animation": "^2.0.2",
-    "child_process": "^1.0.2",
     "commander": "^9.3.0",
-    "download-git-repo": "^3.0.2",
     "ejs": "^3.1.8",
     "figlet": "^1.5.2",
     "fs-extra": "^10.1.0",
-    "globby": "^13.1.2",
     "gradient-string": "^2.0.1",
-    "handlebars": "^4.7.7",
-    "inquirer": "8.1.1",
     "kolorist": "^1.5.1",
-    "log-symbols": "^5.1.0",
-    "nanospinner": "^1.1.0",
-    "ora": "5.4.1",
-    "pacote": "^13.6.1",
     "prettier": "latest",
-    "prompts": "^2.4.2",
-    "shelljs": "^0.8.5",
-    "update-notifier": "^6.0.2"
+    "prompts": "^2.4.2"
   },
   "devDependencies": {
     "@types/node": "^18.0.0",
