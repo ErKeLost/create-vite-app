@@ -1,4 +1,4 @@
-# ViteCLI (refactor 重构 核心逻辑中 🚧🚧🚧🚧🚧🚧🚧🚧 stop 0.15.0-alpha 可用)
+# ViteCLI 🚧🚧
 
 <p align="center">
   <a href="https://vitejs.dev" target="_blank" rel="noopener noreferrer">
@@ -7,32 +7,51 @@
 </p>
 <br/>
 <p align="center">
-  <a href="https://npmjs.com/package/vite"><img src="https://img.shields.io/npm/v/vite.svg" alt="npm package"></a>
-  <a href="https://nodejs.org/en/about/releases/"><img src="https://img.shields.io/node/v/vite.svg" alt="node compatibility"></a>
-  <a href="https://github.com/vitejs/vite/actions/workflows/ci.yml"><img src="https://github.com/vitejs/vite/actions/workflows/ci.yml/badge.svg?branch=main" alt="build status"></a>
-  <a href="https://chat.vitejs.dev"><img src="https://img.shields.io/badge/chat-discord-blue?style=flat&logo=discord" alt="discord chat"></a>
-  <a href="https://chat.vitejs.dev"><img src="https://img.shields.io/badge/chat-discord-blue?style=flat&logo=discord" alt="discord chat"></a>
-  <a href="https://chat.vitejs.dev"><img src="https://img.shields.io/badge/chat-discord-blue?style=flat&logo=discord" alt="discord chat"></a>
+
+[![OSCS Status](https://www.oscs1024.com/platform/badge/ErKeLost/vite-cli.svg?size=small)](https://www.oscs1024.com/project/ErKeLost/vite-cli?ref=badge_small)
+<a href="https://npmjs.com/package/vite"><img src="https://img.shields.io/npm/v/vite.svg" alt="npm package"></a>
+<a href="https://nodejs.org/en/about/releases/"><img src="https://img.shields.io/node/v/vite.svg" alt="node compatibility"></a>
+<a href="https://github.com/vitejs/vite/actions/workflows/ci.yml"><img src="https://github.com/vitejs/vite/actions/workflows/ci.yml/badge.svg?branch=main" alt="build status"></a>
+<a href="https://chat.vitejs.dev"><img src="https://img.shields.io/badge/chat-discord-blue?style=flat&logo=discord" alt="discord chat"></a>
+<a href="https://chat.vitejs.dev"><img src="https://img.shields.io/badge/chat-discord-blue?style=flat&logo=discord" alt="discord chat"></a>
+<a href="https://chat.vitejs.dev"><img src="https://img.shields.io/badge/chat-discord-blue?style=flat&logo=discord" alt="discord chat"></a>
+
 </p>
 <br/>
 
 # 🚧🚧 Build highly customized scaffold out of the box based on vite3
 
+## Log
+
+- 0.15.1-alpha Refactor Map mapping refactoring EJS 2022.7.21 📦📦
+
+- 0.15.2-alpha Refactor refactor Ejs render way 2022.7.25 🌈 🌈
+
+- 0.15.5-alpha Refactoring command line architecture supports npx creation 2022.7.27 🌈 🌈
+
+- 0.15.6-alpha Refactoring npx creation Success 2022.7.27 🌈 🌈
+
+- 0.15.8-alpha Fix file already and some bug 2022.7.30 🌈 🌈
+
+- Big Break 0.15.9-alpha Reconstruct production dependence 2022.8.1 📦📦
+
+## Start 📦📦
+
 - Recommended to use pnpm to install ViteCLI .
 
 ```ts
-  pnpm add vite-create-app@latest -g
+  npx vite-create-app@latest
 ```
 
 - Enter 'vite' on the command line to check whether the installation is successful
 
 ![image.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ee03e671a0164f38b7617680f66b3475~tplv-k3u1fbpfcp-watermark.image?)
 
-- Enter 'vite create'project name' ` vite create plus your project name
+<!-- - Enter 'vite create'project name' ` vite create plus your project name
 
 ```ts
  vite create template
-```
+``` -->
 
 - Step1 Select the package manager that needs to be created. It is recommended to use pnpm to create projects
 
