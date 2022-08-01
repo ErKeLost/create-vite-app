@@ -19,13 +19,7 @@ export default async function () {
     gradient('cyan', 'purple')('\n🚀 Welcome To Create Template for Vite!\n')
   )
 
-  try {
-    await createProjectQuestions()
-  } catch (error) {
-    cyan('\n ✖ Goodbye Exit!')
-    process.exit(1)
-    return
-  }
+  await createProjectQuestions()
   console.log(options.name, '🎨  🎨🎨  🎨')
 
   // CLI 模板文件夹路径

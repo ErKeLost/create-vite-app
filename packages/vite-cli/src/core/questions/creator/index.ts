@@ -20,7 +20,11 @@ import {
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const prompts = require('prompts')
 async function createQuestion(util, question) {
-  const result: QuestionCollection = await util(question)
+  const result: QuestionCollection = await util(question, {
+    onCancel: () => {
+      throw new Error('🎨🎨' + ' Operation cancelled')
+    }
+  })
   Object.assign(options, result)
   //  在 回答问题得时候 map 映射 每一个 库 版本 问题 要不要考虑
   return Promise.resolve(true)
@@ -28,27 +32,27 @@ async function createQuestion(util, question) {
 
 async function createProjectQuestions(): Promise<void> {
   // 项目名
-  await createQuestion(prompts, projectName)
-  // 选择框架
-  await createQuestion(prompts, frame)
-  // 包管理器版本
-  await createQuestion(prompts, PackageDevice)
-  // 新特性 新预设
-  await createQuestion(prompts, future)
-  // pc or mobile
-  await createQuestion(prompts, device)
-  // ui library
-  await createQuestion(prompts, components)
-  // vite plugins
-  await createQuestion(prompts, Plugins)
-  // css
-  await createQuestion(prompts, precss)
-  // cancel
-  await createQuestion(prompts, {
-    onCancel: () => {
-      throw new Error('🎨🎨' + ' Operation cancelled')
-    }
-  })
+  try {
+    await createQuestion(prompts, projectName)
+    // 选择框架
+    await createQuestion(prompts, frame)
+    // 包管理器版本
+    await createQuestion(prompts, PackageDevice)
+    // 新特性 新预设
+    await createQuestion(prompts, future)
+    // pc or mobile
+    await createQuestion(prompts, device)
+    // ui library
+    await createQuestion(prompts, components)
+    // vite plugins
+    await createQuestion(prompts, Plugins)
+    // css
+    await createQuestion(prompts, precss)
+    // cancel
+  } catch (cancelled) {
+    console.log(cancelled.message)
+    process.exit(1)
+  }
   // options 对象属性 所有 属性
   // 获取 选中 components
   // console.log(componentsMap.get(options.components))
