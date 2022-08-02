@@ -1,0 +1,146 @@
+{
+  "followSystemTheme": true,
+  "darkMode": false,
+  "layout": {
+    "minWidth": 900,
+    "mode": "horizontal",
+    "modeList": [
+      {
+        "value": "vertical",
+        "label": "左侧菜单模式"
+      },
+      {
+        "value": "vertical-mix",
+        "label": "左侧菜单混合模式"
+      },
+      {
+        "value": "horizontal",
+        "label": "顶部菜单模式"
+      },
+      {
+        "value": "horizontal-mix",
+        "label": "顶部菜单混合模式"
+      }
+    ]
+  },
+  "themeColor": "#1890FF",
+  "themeColorList": [
+    "#1890FF",
+    "#409EFF",
+    "#2D8CF0",
+    "#007AFF",
+    "#5AC8FA",
+    "#5856D6",
+    "#536DFE",
+    "#9C27B0",
+    "#AF52DE",
+    "#0096C7",
+    "#00C1D4",
+    "#34C759",
+    "#43A047",
+    "#7CB342",
+    "#C0CA33",
+    "#78DEC7",
+    "#E53935",
+    "#D81B60",
+    "#F4511E",
+    "#FB8C00",
+    "#FFB300",
+    "#FDD835",
+    "#6D4C41",
+    "#546E7A"
+  ],
+  "otherColor": {
+    "info": "#0099ad",
+    "success": "#52c41a",
+    "warning": "#faad14",
+    "error": "#f5222d"
+  },
+  "isCustomizeInfoColor": false,
+  "fixedHeaderAndTab": true,
+  "showReload": true,
+  "header": {
+    "inverted": false,
+    "height": 56,
+    "visible": true,
+    "crumb": {
+      "visible": true,
+      "showIcon": true
+    }
+  },
+  "tab": {
+    "visible": true,
+    "height": 44,
+    "isCache": true,
+    "tabMoveable": false
+  },
+  "sider": {
+    "visible": true,
+    "inverted": false,
+    "width": 220,
+    "collapsedWidth": 64,
+    "mixWidth": 80,
+    "mixCollapsedWidth": 48,
+    "mixChildMenuWidth": 200
+  },
+  "menu": {
+    "horizontalPosition": "flex-start",
+    "horizontalPositionList": [
+      {
+        "value": "flex-start",
+        "label": "居左"
+      },
+      {
+        "value": "center",
+        "label": "居中"
+      },
+      {
+        "value": "flex-end",
+        "label": "居右"
+      }
+    ]
+  },
+  "footer": {
+    "visible": true,
+    "fixed": false,
+    "height": 48
+  },
+  "page": {
+    "animate": true,
+    "animateMode": "bounceInRight",
+    "animateModeList": [
+      {
+        "value": "fade-slide",
+        "label": "滑动"
+      },
+      {
+        "value": "fade",
+        "label": "消退"
+      },
+      {
+        "value": "fade-bottom",
+        "label": "底部消退"
+      },
+      {
+        "value": "fade-scale",
+        "label": "缩放消退"
+      },
+      {
+        "value": "zoom-fade",
+        "label": "渐变"
+      },
+      {
+        "value": "zoom-out",
+        "label": "闪现"
+      },
+      { "value": "bounceInUp", "label": "由内向上" },
+      { "value": "bounceInDown", "label": "由内向下" },
+      { "value": "bounceInLeft", "label": "由内向左" },
+      { "value": "bounceInRight", "label": "由内向右" },
+      { "value": "backInRight", "label": "向右返回弹跳" },
+      { "value": "backInLeft", "label": "向左返回弹跳" },
+      { "value": "backInDown", "label": "向下返回弹跳" },
+      { "value": "backInUp", "label": "向上返回弹跳" }
+    ]
+  }
+}
