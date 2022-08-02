@@ -1,6 +1,6 @@
 {
   "name": "vite-create-app",
-  "version": "0.16.6-alpha",
+  "version": "0.16.8-alpha",
   "description": "",
   "main": "index.js",
   "bin": {
@@ -26,12 +26,12 @@
     "figlet": "^1.5.2",
     "fs-extra": "^10.1.0",
     "gradient-string": "^2.0.1",
-    "prettier": "latest"
+    "prettier": "latest",
+    "prompts": "^2.4.2",
+    "kolorist": "^1.5.1"
   },
   "devDependencies": {
     "@types/node": "^18.0.0",
-    "kolorist": "^1.5.1",
-    "prompts": "^2.4.2",
     "ts-node-dev": "^2.0.0",
     "tsc-alias": "^1.6.11"
   },
