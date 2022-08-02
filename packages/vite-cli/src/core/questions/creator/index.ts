@@ -7,6 +7,8 @@ import Plugins from './plugins'
 import future from './feature'
 import device from './device'
 import frame from './frame'
+import theme from './theme'
+import layout from './layout'
 import projectName from './projectName'
 import {
   componentsMap,
@@ -44,6 +46,10 @@ async function createProjectQuestions(): Promise<void> {
     await createQuestion(prompts, device)
     // ui library
     await createQuestion(prompts, components)
+    // theme
+    await createQuestion(prompts, theme)
+    // layout
+    await createQuestion(prompts, layout)
     // vite plugins
     await createQuestion(prompts, Plugins)
     // css

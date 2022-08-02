@@ -68,5 +68,8 @@
         "@types/react"
       ]
     }
+  },
+  "dependencies": {
+    "vite-create-app": "^0.16.8-alpha"
   }
 }

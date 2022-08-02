@@ -25,6 +25,7 @@ importers:
       tsc-alias: ^1.6.11
       turbo: latest
       typescript: ^4.7.4
+      vite-create-app: ^0.16.8-alpha
     devDependencies:
       '@changesets/cli': 2.23.0
       '@commitlint/config-conventional': 17.0.3
