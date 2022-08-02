@@ -95,7 +95,7 @@
     "baseUrl": "./",
     "paths": {
       "@/*": ["./src/*"]
-    }
+    },
   },
   "exclude": [
     // 不参与打包的目录
@@ -105,7 +105,8 @@
     "temp",
     "scripts",
     "./src/__tests__",
-    "template"
+    "template",
+    "theme"
   ],
   "esModuleInterop": true,
   "allowSyntheticDefaultImports": true,
