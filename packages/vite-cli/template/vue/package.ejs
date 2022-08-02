@@ -19,17 +19,25 @@
     "@vueuse/head": "^0.7.6",
     "@types/node": "^16.11.43",
     "axios": "^0.27.2",
+    <% if (useTheme) { -%>
+    "@erkelost/layout": "2.9.3",
+    "@erkelost/utils": "^1.0.2",
+    "css-color-function": "^1.3.3",
+    <% } -%>
     <% if (useRouter) { -%>
     <%-  Router %>
     <% } -%>
     <%- ui %>
     "vue": "^3.2.27",
-    <% if (usePinia) { -%>
+    <% if (usePinia || useTheme) { -%>
     <%- Pinia %>
     <% } -%>
   },
   "devDependencies": {
-    "vite": "^3.0.3",
+    <% if (useTheme) { -%>
+      "@pureadmin/theme": "^2.0.0",
+    <% } -%>
+    "vite": "^3.0.4",
     <% if (precss === 'scss') { -%>
       "sass": "1.53.0",
     <% } -%>
