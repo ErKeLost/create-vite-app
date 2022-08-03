@@ -34,11 +34,17 @@ export function createVitePlugins(viteEnv, isDev: boolean) {
         // allow auto import and register components used in markdown
         include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
         dirs: ["src/components/", "src/layout/", "src/views", "src/assets"],
-        <% if (components !== 'vuetify') { -%>
           resolvers: [
+          // 自动导入图标组件
+            <% if (plugins.indexOf('icons') !== -1) { -%>
+              IconsResolver({
+                prefix: "Icon"
+              }),
+            <% } -%>
+            <% if (components !== 'vuetify') { -%>
             <%- ComponentResolver %>()
+            <% } -%>
           ],
-        <% } -%>
         dts: "src/types/components.d.ts"
       }),
     <% } -%>
@@ -67,12 +73,6 @@ export function createVitePlugins(viteEnv, isDev: boolean) {
         // 自动导入 Element Plus 相关函数，如：ElMessage, ElMessageBox... (带样式)
         resolvers: [
           // Auto import icon components
-          // 自动导入图标组件
-          <% if (plugins.indexOf('icons') !== -1) { -%>
-            IconsResolver({
-              prefix: "Icon"
-            }),
-          <% } -%>
           <% if (components !== 'vuetify') { -%>
             <%- ComponentResolver %>()
           <% } -%>
