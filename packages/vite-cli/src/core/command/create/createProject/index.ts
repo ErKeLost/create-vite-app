@@ -67,7 +67,7 @@ export default async function () {
   startTime = new Date().getTime()
   // 拷贝基础模板文件
   await fs.copy(templatePath, dest, { filter: filterQuestion })
-  await fs.copy(templatePath, dest)
+  // await fs.copy(templatePath, dest)
   // 编译 ejs 模板文件
   await Promise.all(
     fetchTemplateFiles().map((file) => ejsRender(file, options.name))
