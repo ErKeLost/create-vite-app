@@ -1,14 +1,10 @@
 // import { prompt, QuestionCollection } from 'inquirer'
 import options from '../../../shared/options'
-import precss from './precss'
-import components from './components'
-import PackageDevice from './packageManager'
-import Plugins from './plugins'
-import future from './feature'
 import device from './device'
+import PackageDevice from './packageManager'
 import frame from './frame'
-import theme from './theme'
 import projectName from './projectName'
+import { frameQuestions } from '@/shared/frameQuestions'
 import {
   componentsMap,
   futureMap,
@@ -16,7 +12,7 @@ import {
   pluginMap,
   pluginImportStatement,
   componentResolverMap
-} from './ejsMapConstant'
+} from '@/shared/vueEjsMapConstant'
 // import prompts from 'prompts'
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const prompts = require('prompts')
@@ -39,18 +35,12 @@ async function createProjectQuestions(): Promise<void> {
     await createQuestion(prompts, frame)
     // 包管理器版本
     await createQuestion(prompts, PackageDevice)
-    // 新特性 新预设
-    await createQuestion(prompts, future)
     // pc or mobile
     await createQuestion(prompts, device)
-    // ui library
-    await createQuestion(prompts, components)
-    // theme
-    await createQuestion(prompts, theme)
-    // vite plugins
-    await createQuestion(prompts, Plugins)
-    // css
-    await createQuestion(prompts, precss)
+    console.log(options.frame)
+
+    await frameQuestions.get(options.frame)()
+
     // cancel
   } catch (cancelled) {
     console.log(cancelled.message)
@@ -58,7 +48,7 @@ async function createProjectQuestions(): Promise<void> {
   }
   // options 对象属性 所有 属性
   // 获取 选中 components
-  // console.log(componentsMap.get(options.components))
+  console.log(componentsMap.get(options.components))
   const currentLibrary = componentsMap.get(options.components)
   const Eslint = lintMap.get('Eslint')
   const Prettier = lintMap.get('Prettier')

@@ -42,7 +42,7 @@ export default async function () {
   const assets = readdirSync(`${templatePath}/src/assets`).filter(
     (item) => !item.includes('logo')
   )
-  function filterQuestion() {
+  function vueFilterQuestion() {
     const res = assets.filter(
       (item) => item.split('.')[0] !== options.components
     )
@@ -63,10 +63,17 @@ export default async function () {
     }
     return true
   }
+  function reactFilterQuestion() {
+    return true
+  }
+  const obj = new Map([
+    ['vue', vueFilterQuestion],
+    ['react', reactFilterQuestion]
+  ])
   // 开始记录用时
   startTime = new Date().getTime()
   // 拷贝基础模板文件
-  await fs.copy(templatePath, dest, { filter: filterQuestion })
+  await fs.copy(templatePath, dest, { filter: obj.get(options.frame) })
   // await fs.copy(templatePath, dest)
   // 编译 ejs 模板文件
   await Promise.all(
