@@ -1,4 +1,7 @@
-export function fetchTemplateFiles(): string[] {
+const templateFilesMap = new Map()
+templateFilesMap.set('vue', vueFetchTemplateFiles)
+templateFilesMap.set('react', vueFetchTemplateFiles)
+export function vueFetchTemplateFiles(): string[] {
   return [
     'package.json',
     'vite.config.ts',
@@ -13,3 +16,4 @@ export function fetchTemplateFiles(): string[] {
     'index.html'
   ]
 }
+export { templateFilesMap }

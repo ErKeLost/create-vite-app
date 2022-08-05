@@ -1,36 +1,35 @@
 import { cyan, yellow } from '@/utils/log'
 import { ejsRender } from '@/utils/createTemplate'
 import createSpawnCmd from '@/utils/createSpawnCmd'
-import { readdirSync } from 'fs'
 import fs = require('fs-extra')
-import { fetchTemplateFiles } from '@/shared/templateFile'
+import { templateFilesMap } from '@/shared/templateFile'
 import createProjectQuestions from '@/core/questions/creator'
 import clearConsole from '@/utils/clearConsole'
 import { VITE_CLI_VERSION } from '@/shared/constant'
 import options from '@/shared/options'
+import { getFilterFile } from '@/shared/frameQuestions'
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const gradient = require('gradient-string')
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const path = require('path')
 let startTime: number, endTime: number
 export default async function () {
-  clearConsole('cyan', `🎨  🎨   VITE_CLI V-${VITE_CLI_VERSION}   🎨  🎨`)
+  clearConsole('cyan', `🎨🎨   VITE_CLI V-${VITE_CLI_VERSION}   🎨🎨`)
   console.log(
     gradient('cyan', 'purple')('\n🚀 Welcome To Create Template for Vite!\n')
   )
 
   await createProjectQuestions()
-  console.log(options.name, '🎨  🎨🎨  🎨')
+  console.log(options.name, '🎨🎨🎨🎨')
 
   // CLI 模板文件夹路径
   options.src = path.resolve(__dirname, `../template/${options.frame}`)
   // 获取基础参数
   // options.name = name
-  options.dest = path.resolve(process.cwd(), options.name)
-
-  // 目录
   const dest = path.resolve(process.cwd(), options.name)
 
+  options.dest = dest
+  // 目录
   const cmdIgnore = createSpawnCmd(dest, 'ignore')
   const cmdInherit = createSpawnCmd(dest, 'inherit')
   // 模板路径
@@ -38,46 +37,18 @@ export default async function () {
     __dirname,
     `../../../../../template/${options.frame}`
   )
-  // 修复 frame work bug
-  const assets = readdirSync(`${templatePath}/src/assets`).filter(
-    (item) => !item.includes('logo')
-  )
-  function vueFilterQuestion() {
-    const res = assets.filter(
-      (item) => item.split('.')[0] !== options.components
-    )
-    res.forEach((item) => {
-      fs.remove(`${dest}/src/assets/${item}`)
-    })
-    if (!options.Router) {
-      fs.remove(`${dest}/src/router`)
-    }
-    if (!options.Eslint) {
-      fs.remove(`${dest}/.prettierrc.js`)
-    }
-    if (!options.Prettier) {
-      fs.remove(`${dest}/.eslintrc.js`)
-    }
-    if (!options.plugins.includes('html')) {
-      fs.remove(`${dest}/build/vite/html.ts`)
-    }
-    return true
-  }
-  function reactFilterQuestion() {
-    return true
-  }
-  const obj = new Map([
-    ['vue', vueFilterQuestion],
-    ['react', reactFilterQuestion]
-  ])
+  options.templatePath = templatePath
+
   // 开始记录用时
   startTime = new Date().getTime()
+  const res = await getFilterFile()
   // 拷贝基础模板文件
-  await fs.copy(templatePath, dest, { filter: obj.get(options.frame) })
-  // await fs.copy(templatePath, dest)
+  await fs.copy(templatePath, dest, { filter: res })
   // 编译 ejs 模板文件
   await Promise.all(
-    fetchTemplateFiles().map((file) => ejsRender(file, options.name))
+    templateFilesMap
+      .get(options.frame)()
+      .map((file) => ejsRender(file, options.name))
   )
   yellow(`> 项目模板生成于目录： ${dest}`)
   // 生成 gitignore

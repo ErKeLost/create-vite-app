@@ -1,4 +1,5 @@
 interface Options {
+  templatePath?: string
   Router?: string
   Pinia?: string
   Eslint?: string
