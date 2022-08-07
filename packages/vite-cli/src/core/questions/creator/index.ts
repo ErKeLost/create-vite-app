@@ -26,28 +26,7 @@ async function createQuestion(util, question) {
   //  在 回答问题得时候 map 映射 每一个 库 版本 问题 要不要考虑
   return Promise.resolve(true)
 }
-
-async function createProjectQuestions(): Promise<void> {
-  // 项目名
-  try {
-    await createQuestion(prompts, projectName)
-    // 选择框架
-    await createQuestion(prompts, frame)
-    // 包管理器版本
-    await createQuestion(prompts, PackageDevice)
-    // pc or mobile
-    await createQuestion(prompts, device)
-    console.log(options.frame)
-
-    await frameQuestions.get(options.frame)()
-
-    // cancel
-  } catch (cancelled) {
-    console.log(cancelled.message)
-    process.exit(1)
-  }
-  // options 对象属性 所有 属性
-  // 获取 选中 components
+async function getProperty() {
   console.log(componentsMap.get(options.components))
   const currentLibrary = componentsMap.get(options.components)
   const Eslint = lintMap.get('Eslint')
@@ -75,6 +54,31 @@ async function createProjectQuestions(): Promise<void> {
       return pluginImportStatement.get(item)
     })
     .reduce((total, next) => total + next, '')
+  return Promise.resolve(true)
+}
+async function createProjectQuestions(): Promise<void> {
+  // 项目名
+  try {
+    await createQuestion(prompts, projectName)
+    // 选择框架
+    await createQuestion(prompts, frame)
+    // 包管理器版本
+    await createQuestion(prompts, PackageDevice)
+    // pc or mobile
+    await createQuestion(prompts, device)
+    console.log(options.frame)
+
+    await frameQuestions.get(options.frame)()
+
+    // cancel
+  } catch (cancelled) {
+    console.log(cancelled.message)
+    process.exit(1)
+  }
+  // options 对象属性 所有 属性
+  // 获取 选中 components
+  options.frame !== 'react' && await getProperty()
+    
   console.log(options)
   return Promise.resolve()
 }

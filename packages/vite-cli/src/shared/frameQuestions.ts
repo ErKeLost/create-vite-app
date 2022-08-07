@@ -1,10 +1,12 @@
 import { runVueQuestions } from '@/core/questions/vue'
+import { runReactQuestions } from '@/core/questions/react'
 import { readdirSync } from 'fs'
 import options from '@/shared/options'
 import fs = require('fs-extra')
 const frameQuestions = new Map()
 const filterQuestions = new Map()
 frameQuestions.set('vue', runVueQuestions)
+frameQuestions.set('react', runReactQuestions)
 // filterQuestions.set('vue', runFilterQuestions)
 export async function getFilterFile() {
   // 修复 frame work bug
