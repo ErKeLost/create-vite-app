@@ -4,15 +4,15 @@
   "description": "",
   "main": "index.js",
   "bin": {
-    "vite": "./dist/index.js",
-    "v": "./dist/index.js",
-    "vite-cli": "./dist/index.js"
+    "vite": "./outfile.cjs",
+    "v": "./outfile.cjs",
+    "vite-cli": "./outfile.cjs"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:out": "tsc index.ts -outDir dist",
     "build:tsc": "tsc --project tsconfig.json && tsc-alias -p tsconfig.json",
-    "build": "tsc && tsc-alias"
+    "build": "zx scripts/build.mjs"
   },
   "keywords": [],
   "author": "",
@@ -40,7 +40,7 @@
     "registry": "https://registry.npmjs.org/"
   },
   "files": [
-    "dist",
+    "outfile.cjs",
     "template",
     "theme"
   ]

@@ -45,8 +45,11 @@ export default async function () {
   // 开始记录用时
   startTime = new Date().getTime()
   const res = await getFilterFile()
+  console.log(process.cwd())
+  console.log(dest)
+
   // 拷贝基础模板文件
-  await fs.copy(templatePath, dest, { filter: res })
+  await fs.copy(`${__dirname}/template/${options.frame}`, dest, { filter: res })
   // 编译 ejs 模板文件
   await Promise.all(
     templateFilesMap
