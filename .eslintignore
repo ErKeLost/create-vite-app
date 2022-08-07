@@ -9,4 +9,6 @@ _site/
 dist/
 pnpm-lock.yaml
 packages/vite-cli/template/
+packages/vite-cli/template/vue
+packages/vite-cli/template/react
 packages/vite-cli/theme/

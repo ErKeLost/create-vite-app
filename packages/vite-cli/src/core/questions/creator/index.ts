@@ -77,8 +77,8 @@ async function createProjectQuestions(): Promise<void> {
   }
   // options 对象属性 所有 属性
   // 获取 选中 components
-  options.frame !== 'react' && await getProperty()
-    
+  options.frame !== 'react' && (await getProperty())
+
   console.log(options)
   return Promise.resolve()
 }
