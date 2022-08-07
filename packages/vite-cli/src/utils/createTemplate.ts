@@ -43,7 +43,7 @@ export async function ejsRender(filePath: string, name): Promise<void> {
       .catch((err) => {
         console.log(err)
       })
-
+    console.log(prettierCode)
     await fs.outputFile(outputFilePath, prettierCode)
     await fs.remove(readFilePath)
   } catch (error) {

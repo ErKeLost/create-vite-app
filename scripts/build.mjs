@@ -30,6 +30,7 @@ await esbuild.build({
   outfile: 'packages/vite-cli/outfile.cjs',
   format: 'cjs',
   platform: 'node',
+  external: ['prettier'],
   target: 'node14'
 
   // plugins: [
