@@ -37,6 +37,9 @@ export default async function () {
     __dirname,
     `../../../../../template/${options.frame}`
   )
+  console.log(__dirname)
+  console.log(templatePath)
+
   options.templatePath = templatePath
 
   // 开始记录用时
