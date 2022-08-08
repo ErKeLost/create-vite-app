@@ -38,11 +38,17 @@ await esbuild.build({
     {
       name: 'alias',
       setup({ onResolve, resolve }) {
-        onResolve({ filter: /^prompts$/, namespace: 'file' }, async ({ importer, resolveDir }) => {
-          // we can always use non-transpiled code since we support 14.16.0+
-          const result = await resolve('prompts/lib/index.js', { importer, resolveDir })
-          return result
-        })
+        onResolve(
+          { filter: /^prompts$/, namespace: 'file' },
+          async ({ importer, resolveDir }) => {
+            // we can always use non-transpiled code since we support 14.16.0+
+            const result = await resolve('prompts/lib/index.js', {
+              importer,
+              resolveDir
+            })
+            return result
+          }
+        )
       }
     }
     // esbuildPluginLicense({
