@@ -1,10 +1,10 @@
-// import { prompt, QuestionCollection } from 'inquirer'
-import options from '../../../shared/options'
 import device from './device'
 import PackageDevice from './packageManager'
 import frame from './frame'
+import prompts from 'prompts'
 import projectName from './projectName'
 import { frameQuestions } from '@/shared/frameQuestions'
+import options from '@/shared/options'
 import {
   componentsMap,
   futureMap,
@@ -13,9 +13,9 @@ import {
   pluginImportStatement,
   componentResolverMap
 } from '@/shared/vueEjsMapConstant'
-// import prompts from 'prompts'
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const prompts = require('prompts')
+const getProperty = new Map()
+getProperty.set('vue', getVueProperty)
+getProperty.set('react', getReactProperty)
 async function createQuestion(util, question) {
   const result = await util(question, {
     onCancel: () => {
@@ -23,10 +23,10 @@ async function createQuestion(util, question) {
     }
   })
   Object.assign(options, result)
-  //  在 回答问题得时候 map 映射 每一个 库 版本 问题 要不要考虑
+  //  在questions得时候 map 映射 每一个 库 版本 问题 要不要考虑
   return Promise.resolve(true)
 }
-async function getProperty() {
+async function getVueProperty() {
   const currentLibrary = componentsMap.get(options.components)
   const Eslint = lintMap.get('Eslint')
   const Prettier = lintMap.get('Prettier')
@@ -55,6 +55,10 @@ async function getProperty() {
     .reduce((total, next) => total + next, '')
   return Promise.resolve(true)
 }
+// TODO get react options
+async function getReactProperty() {
+  return true
+}
 async function createProjectQuestions(): Promise<void> {
   // 项目名
   try {
@@ -74,7 +78,7 @@ async function createProjectQuestions(): Promise<void> {
   }
   // options 对象属性 所有 属性
   // 获取 选中 components
-  options.frame !== 'react' && (await getProperty())
+  await getProperty.get(options.frame)()
 
   console.log(options)
   return Promise.resolve()

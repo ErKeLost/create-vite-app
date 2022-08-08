@@ -1,6 +1,6 @@
 {
   "name": "vite-create-app",
-  "version": "0.17.5",
+  "version": "0.17.6",
   "description": "",
   "main": "index.js",
   "bin": {
@@ -9,10 +9,9 @@
     "vite-cli": "./outfile.cjs"
   },
   "scripts": {
+    "dev": "zx ts-node-env src/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build:out": "tsc index.ts -outDir dist",
-    "build:tsc": "tsc --project tsconfig.json && tsc-alias -p tsconfig.json",
-    "build": "zx scripts/build.mjs"
+    "build:out": "tsc index.ts -outDir dist"
   },
   "keywords": [],
   "author": "",
@@ -25,15 +24,13 @@
   },
   "devDependencies": {
     "@types/node": "^18.0.0",
-    "ts-node-dev": "^2.0.0",
-    "tsc-alias": "^1.6.11",
     "commander": "^9.3.0",
     "ejs": "^3.1.8",
     "figlet": "^1.5.2",
     "fs-extra": "^10.1.0",
     "gradient-string": "^2.0.1",
-    "prompts": "^2.4.2",
-    "kolorist": "^1.5.1"
+    "kolorist": "^1.5.1",
+    "prompts": "^2.4.2"
   },
   "publishConfig": {
     "access": "public",

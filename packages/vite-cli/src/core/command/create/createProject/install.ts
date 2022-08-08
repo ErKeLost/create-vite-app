@@ -9,14 +9,9 @@ async function installationDeps() {
   // 目录
   const cmdIgnore = createSpawnCmd(options.dest, 'ignore')
   const cmdInherit = createSpawnCmd(options.dest, 'inherit')
+  // 开始记录用时
   const startTime: number = new Date().getTime()
   yellow(`> 项目模板生成于目录： ${options.dest}`)
-  // 生成 gitignore
-  await fs.move(
-    path.resolve(options.dest, '.gitignore.ejs'),
-    path.resolve(options.dest, '.gitignore'),
-    { overwrite: true }
-  )
   // Git 初始化
   await cmdIgnore('git', ['init'])
   await cmdIgnore('git', ['add .'])

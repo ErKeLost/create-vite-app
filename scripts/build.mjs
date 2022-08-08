@@ -33,7 +33,7 @@ await esbuild.build({
   external: ['prettier'],
   target: 'node14',
   treeShaking: true,
-  minify: true,
+  // minify: true,
   plugins: [
     {
       name: 'alias',

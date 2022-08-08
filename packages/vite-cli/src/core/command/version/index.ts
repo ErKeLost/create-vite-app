@@ -3,7 +3,7 @@ import program from '../../program'
 import { magenta } from '../../../utils/log'
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 // eslint-disable-next-line @typescript-eslint/no-var-requires
-const gradient = require('gradient-string')
+import gradient from 'gradient-string'
 import {
   // VALUE_ONLINE,
   VERSION,
