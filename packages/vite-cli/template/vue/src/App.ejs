@@ -15,6 +15,9 @@ import HomeView from '@/views/HomeView.vue'
   <% if (useRouter) { -%>
   <RouterView />
   <% } -%>
+  <% if (useTheme) { -%>
+    <ThemeSetting />
+  <% } -%>
 </template>
 
 <style>

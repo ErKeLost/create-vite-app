@@ -1,6 +1,4 @@
 import options from '@/shared/options'
-import fs from 'fs-extra'
-import path from 'node:path'
 import { cyan, yellow } from '@/utils/log'
 import createSpawnCmd from '@/utils/createSpawnCmd'
 import clearConsole from '@/utils/clearConsole'

@@ -32,6 +32,9 @@ export async function getFilterFile() {
     if (!options.plugins.includes('html')) {
       fs.remove(`${options.dest}/build/vite/html.ts`)
     }
+    if (!options.plugins.includes('unocss')) {
+      fs.remove(`${options.dest}/unocss.config.ts`)
+    }
     return true
   }
   function reactFilterQuestion() {

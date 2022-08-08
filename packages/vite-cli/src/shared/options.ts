@@ -1,4 +1,5 @@
 interface Options {
+  useTheme?: boolean
   templatePath?: string
   Router?: string
   Pinia?: string

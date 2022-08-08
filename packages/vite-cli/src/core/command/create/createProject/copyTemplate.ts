@@ -18,15 +18,19 @@ async function copyTemplate() {
     `../../../../../template/${options.frame}`
   )
   options.templatePath = templatePath
+  // 拷贝基础模板文件
+  const res = await getFilterFile()
+  await fs.copy(`${__dirname}/template/${options.frame}`, dest, { filter: res })
   // 生成 gitignore
   await fs.move(
     path.resolve(options.dest, '.gitignore.ejs'),
     path.resolve(options.dest, '.gitignore'),
     { overwrite: true }
   )
-  // 拷贝基础模板文件
-  const res = await getFilterFile()
-  await fs.copy(`${__dirname}/template/${options.frame}`, dest, { filter: res })
+  console.log(options)
+  if (options.useTheme) {
+    await fs.copy(`${__dirname}/theme/${options.components}`, `${dest}/src`)
+  }
   // 编译 ejs 模板文件
   await Promise.all(
     templateFilesMap

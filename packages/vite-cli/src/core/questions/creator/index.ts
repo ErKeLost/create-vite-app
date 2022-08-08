@@ -25,7 +25,6 @@ async function createProjectQuestions(): Promise<void> {
   }
   // options 对象属性 所有 属性
   // 获取 选中 components
-  console.log(options)
   return Promise.resolve()
 }
 

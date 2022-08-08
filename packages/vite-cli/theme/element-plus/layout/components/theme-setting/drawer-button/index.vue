@@ -26,6 +26,7 @@ const app = useAppStore()
 .el-button {
   height: 42px !important;
 }
+
 .size {
   font-size: 1.5rem;
   line-height: 2rem;

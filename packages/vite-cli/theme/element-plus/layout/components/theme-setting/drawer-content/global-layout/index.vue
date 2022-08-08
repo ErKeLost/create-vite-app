@@ -7,8 +7,6 @@
     active-color="#000"
     inactive-color="#000"
     border-color="#fff"
-    :active-icon="sunIcon"
-    :inactive-icon="moonIcon"
   />
   <el-divider title-placement="center">深色菜单 & 浅色菜单</el-divider>
   <el-switch
@@ -18,8 +16,6 @@
     active-color="#000"
     inactive-color="#000"
     border-color="#fff"
-    :active-icon="sunIcon"
-    :inactive-icon="moonIcon"
   />
   <el-divider title-placement="center">布局模式</el-divider>
   <el-space justify="space-between">
@@ -36,9 +32,10 @@
 
 <script setup lang="ts">
 import { useThemeStore } from '@/store'
-import sunIcon from '@/assets/svg/sun.svg?component'
-import moonIcon from '@/assets/svg/moon.svg?component'
+// import sunIcon from '@/assets/svg/sun.svg?component'
+// import moonIcon from '@/assets/svg/moon.svg?component'
 const theme = useThemeStore()
+console.log(theme)
 </script>
 <style scoped lang="scss">
 :deep(.el-switch__core) {

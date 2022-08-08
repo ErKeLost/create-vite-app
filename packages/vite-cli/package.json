@@ -1,6 +1,6 @@
 {
   "name": "vite-create-app",
-  "version": "0.17.6",
+  "version": "0.17.7",
   "description": "",
   "main": "index.js",
   "bin": {
@@ -20,10 +20,10 @@
   "repository": "https://github.com/ErKeLost/vite-cli",
   "bugs": "https://github.com/ErKeLost/vite-cli/issues",
   "dependencies": {
-    "prettier": "latest",
-    "gradient-string": "^2.0.1"
+    "prettier": "latest"
   },
   "devDependencies": {
+    "gradient-string": "^2.0.1",
     "@types/node": "^18.0.0",
     "commander": "^9.3.0",
     "ejs": "^3.1.8",

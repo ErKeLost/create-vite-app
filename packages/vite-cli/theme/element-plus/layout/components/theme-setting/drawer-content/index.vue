@@ -9,9 +9,9 @@
     :close-on-press-escape="true"
   >
     <div text-center>
-      <GlobalLayout />
+      <!-- <GlobalLayout /> -->
       <GlobalTheme />
-      <GlobalConfig />
+      <!-- <GlobalConfig /> -->
     </div>
     <GlobalCopy />
   </el-drawer>
@@ -22,13 +22,7 @@ import { useAppStore } from '@/store'
 
 const app = useAppStore()
 const handleClose = (done: () => void) => {
-  ElMessageBox.confirm('Are you sure you want to close this?')
-    .then(() => {
-      done()
-    })
-    .catch(() => {
-      // catch error
-    })
+  done()
 }
 </script>
 <style scoped lang="scss">
