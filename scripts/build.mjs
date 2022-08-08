@@ -31,57 +31,58 @@ await esbuild.build({
   format: 'cjs',
   platform: 'node',
   external: ['prettier'],
-  target: 'node14'
+  target: 'node14',
+  treeShaking: true,
+  minify: true,
+  plugins: [
+    {
+      name: 'alias',
+      setup({ onResolve, resolve }) {
+        onResolve({ filter: /^prompts$/, namespace: 'file' }, async ({ importer, resolveDir }) => {
+          // we can always use non-transpiled code since we support 14.16.0+
+          const result = await resolve('prompts/lib/index.js', { importer, resolveDir })
+          return result
+        })
+      }
+    }
+    // esbuildPluginLicense({
+    //   thirdParty: {
+    //     includePrivate: false,
+    //     output: {
+    //       file: 'LICENSE',
+    //       template(allDependencies) {
+    //         // There's a bug in the plugin that it also includes the `create-vue` package itself
+    //         const dependencies = allDependencies.filter((d) => d.packageJson.name !== 'create-vue')
+    //         const licenseText =
+    //           `# create-vue core license\n\n` +
+    //           `create-vue is released under the MIT license:\n\n` +
+    //           CORE_LICENSE +
+    //           `\n## Licenses of bundled dependencies\n\n` +
+    //           `The published create-vue artifact additionally contains code with the following licenses:\n` +
+    //           [...new Set(dependencies.map((dependency) => dependency.packageJson.license))].join(
+    //             ', '
+    //           ) +
+    //           '\n\n' +
+    //           `## Bundled dependencies\n\n` +
+    //           dependencies
+    //             .map((dependency) => {
+    //               return (
+    //                 `## ${dependency.packageJson.name}\n\n` +
+    //                 `License: ${dependency.packageJson.license}\n` +
+    //                 `By: ${dependency.packageJson.author.name}\n` +
+    //                 `Repository: ${dependency.packageJson.repository.url}\n\n` +
+    //                 dependency.licenseText
+    //                   .split('\n')
+    //                   .map((line) => (line ? `> ${line}` : '>'))
+    //                   .join('\n')
+    //               )
+    //             })
+    //             .join('\n\n')
 
-  // plugins: [
-  //   {
-  //     name: 'alias',
-  //     setup({ onResolve, resolve }) {
-  //       onResolve({ filter: /^prompts$/, namespace: 'file' }, async ({ importer, resolveDir }) => {
-  //         // we can always use non-transpiled code since we support 14.16.0+
-  //         const result = await resolve('prompts/lib/index.js', { importer, resolveDir })
-  //         return result
-  //       })
-  //     }
-  //   },
-  //   esbuildPluginLicense({
-  //     thirdParty: {
-  //       includePrivate: false,
-  //       output: {
-  //         file: 'LICENSE',
-  //         template(allDependencies) {
-  //           // There's a bug in the plugin that it also includes the `create-vue` package itself
-  //           const dependencies = allDependencies.filter((d) => d.packageJson.name !== 'create-vue')
-  //           const licenseText =
-  //             `# create-vue core license\n\n` +
-  //             `create-vue is released under the MIT license:\n\n` +
-  //             CORE_LICENSE +
-  //             `\n## Licenses of bundled dependencies\n\n` +
-  //             `The published create-vue artifact additionally contains code with the following licenses:\n` +
-  //             [...new Set(dependencies.map((dependency) => dependency.packageJson.license))].join(
-  //               ', '
-  //             ) +
-  //             '\n\n' +
-  //             `## Bundled dependencies\n\n` +
-  //             dependencies
-  //               .map((dependency) => {
-  //                 return (
-  //                   `## ${dependency.packageJson.name}\n\n` +
-  //                   `License: ${dependency.packageJson.license}\n` +
-  //                   `By: ${dependency.packageJson.author.name}\n` +
-  //                   `Repository: ${dependency.packageJson.repository.url}\n\n` +
-  //                   dependency.licenseText
-  //                     .split('\n')
-  //                     .map((line) => (line ? `> ${line}` : '>'))
-  //                     .join('\n')
-  //                 )
-  //               })
-  //               .join('\n\n')
-
-  //           return licenseText
-  //         }
-  //       }
-  //     }
-  //   })
-  // ]
+    //         return licenseText
+    //       }
+    //     }
+    //   }
+    // })
+  ]
 })
