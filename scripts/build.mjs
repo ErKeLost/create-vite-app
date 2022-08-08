@@ -30,7 +30,7 @@ await esbuild.build({
   outfile: 'packages/vite-cli/outfile.cjs',
   format: 'cjs',
   platform: 'node',
-  external: ['prettier'],
+  external: ['prettier', 'gradient-string'],
   target: 'node14',
   treeShaking: true,
   // minify: true,

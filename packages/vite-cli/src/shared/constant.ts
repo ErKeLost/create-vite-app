@@ -1,5 +1,5 @@
 // eslint-disable-next-line @typescript-eslint/no-var-requires
-const figlet = require('figlet')
+// const figlet = require('figlet')
 // import figlet from 'figlet'
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 export const PKG = require('../../package.json')

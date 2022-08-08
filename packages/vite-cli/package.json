@@ -20,15 +20,14 @@
   "repository": "https://github.com/ErKeLost/vite-cli",
   "bugs": "https://github.com/ErKeLost/vite-cli/issues",
   "dependencies": {
-    "prettier": "latest"
+    "prettier": "latest",
+    "gradient-string": "^2.0.1"
   },
   "devDependencies": {
     "@types/node": "^18.0.0",
     "commander": "^9.3.0",
     "ejs": "^3.1.8",
-    "figlet": "^1.5.2",
     "fs-extra": "^10.1.0",
-    "gradient-string": "^2.0.1",
     "kolorist": "^1.5.1",
     "prompts": "^2.4.2"
   },
