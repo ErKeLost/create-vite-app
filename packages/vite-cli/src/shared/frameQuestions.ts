@@ -10,8 +10,6 @@ frameQuestions.set('react', runReactQuestions)
 // filterQuestions.set('vue', runFilterQuestions)
 export async function getFilterFile() {
   // 修复 frame work bug
-  console.log(options.templatePath)
-
   const assets = readdirSync(
     `${__dirname}/template/${options.frame}/src/assets`
   ).filter((item) => !item.includes('logo'))

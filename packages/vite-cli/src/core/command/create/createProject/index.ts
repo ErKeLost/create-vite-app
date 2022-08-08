@@ -1,6 +1,4 @@
-import { cyan, yellow } from '@/utils/log'
 import { ejsRender } from '@/utils/createTemplate'
-import createSpawnCmd from '@/utils/createSpawnCmd'
 import fs = require('fs-extra')
 import { templateFilesMap } from '@/shared/templateFile'
 import createProjectQuestions from '@/core/questions/creator'
@@ -12,7 +10,7 @@ import { getFilterFile } from '@/shared/frameQuestions'
 const gradient = require('gradient-string')
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const path = require('path')
-let startTime: number, endTime: number
+import installationDeps from './install'
 export default async function () {
   clearConsole('cyan', `🎨🎨   VITE_CLI V-${VITE_CLI_VERSION}   🎨🎨`)
   console.log(
@@ -29,25 +27,15 @@ export default async function () {
   const dest = path.resolve(process.cwd(), options.name)
 
   options.dest = dest
-  // 目录
-  const cmdIgnore = createSpawnCmd(dest, 'ignore')
-  const cmdInherit = createSpawnCmd(dest, 'inherit')
+
   // 模板路径
   const templatePath = path.resolve(
     __dirname,
     `../../../../../template/${options.frame}`
   )
-  console.log(__dirname)
-  console.log(templatePath)
-
   options.templatePath = templatePath
-
   // 开始记录用时
-  startTime = new Date().getTime()
   const res = await getFilterFile()
-  console.log(process.cwd())
-  console.log(dest)
-
   // 拷贝基础模板文件
   await fs.copy(`${__dirname}/template/${options.frame}`, dest, { filter: res })
   // 编译 ejs 模板文件
@@ -56,34 +44,6 @@ export default async function () {
       .get(options.frame)()
       .map((file) => ejsRender(file, options.name))
   )
-  yellow(`> 项目模板生成于目录： ${dest}`)
-  // 生成 gitignore
-  await fs.move(
-    path.resolve(dest, '.gitignore.ejs'),
-    path.resolve(dest, '.gitignore'),
-    { overwrite: true }
-  )
-  // Git 初始化
-  await cmdIgnore('git', ['init'])
-  await cmdIgnore('git', ['add .'])
-  await cmdIgnore('git', ['commit -m "Initialize by VITE_CLI"'])
-  console.log(`> 成功初始化 Git 仓库`)
-
-  // 依赖安装
-  console.log(`> 正在自动安装依赖，请稍等...`)
-  console.log('')
-  await cmdInherit(options.package, ['install'])
-
-  clearConsole('cyan', `VITE_CLI v${VITE_CLI_VERSION}`)
-  endTime = new Date().getTime()
-  const usageTime = (endTime - startTime) / 1000
-  cyan(`> 项目已经创建成功，用时${usageTime}s，请输入以下命令继续...`)
-  console.log('')
-  cyan(`✨✨ cd ${options.name}`)
-  cyan(
-    options.package === 'npm'
-      ? `✨✨ ${options.package} run dev`
-      : `✨✨ ${options.package} dev`
-  )
-  cyan('创建项目成功')
+  // 安装依赖
+  await installationDeps()
 }

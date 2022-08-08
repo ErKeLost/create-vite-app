@@ -27,7 +27,6 @@ async function createQuestion(util, question) {
   return Promise.resolve(true)
 }
 async function getProperty() {
-  console.log(componentsMap.get(options.components))
   const currentLibrary = componentsMap.get(options.components)
   const Eslint = lintMap.get('Eslint')
   const Prettier = lintMap.get('Prettier')
@@ -66,8 +65,6 @@ async function createProjectQuestions(): Promise<void> {
     await createQuestion(prompts, PackageDevice)
     // pc or mobile
     await createQuestion(prompts, device)
-    console.log(options.frame)
-
     await frameQuestions.get(options.frame)()
 
     // cancel

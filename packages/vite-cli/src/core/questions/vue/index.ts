@@ -17,8 +17,6 @@ async function createQuestion(util, question) {
   return Promise.resolve(true)
 }
 export async function runVueQuestions() {
-  console.log(66666)
-
   // 新特性 新预设
   await createQuestion(prompts, future)
   // ui library
