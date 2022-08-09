@@ -9,7 +9,6 @@
     "vite-cli": "./outfile.cjs"
   },
   "scripts": {
-    "dev": "zx ts-node-env src/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:out": "tsc index.ts -outDir dist"
   },

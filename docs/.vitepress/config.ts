@@ -66,11 +66,46 @@ export default defineConfig({
     },
 
     nav: [
-      { text: 'Guide', link: '/guide/', activeMatch: '/guide/' }
+      { text: 'Guide', link: '/guide/', activeMatch: '/guide/' },
+      {
+        text: '示例',
+        items: [
+          {
+            text: 'Vue',
+            items: [
+              {
+                text: 'Element-plus (主题化测试中)',
+                link: 'https://vite-cli-element-plus.netlify.app'
+              },
+              {
+                text: 'Naive-UI',
+                link: 'https://vite-cli-element-plus.netlify.app'
+              },
+              {
+                text: 'DevUI',
+                link: 'https://vite-cli-element-plus.netlify.app'
+              },
+              {
+                text: 'Ant-Design-Vue',
+                link: 'https://vite-cli-element-plus.netlify.app'
+              }
+            ]
+          },
+          {
+            text: 'React',
+            items: [
+              {
+                text: 'Ant-Design',
+                link: 'https://twitter.com/vite_js'
+              }
+            ]
+          }
+        ]
+      }
       // { text: 'Config', link: '/config/', activeMatch: '/config/' },
       // { text: 'Plugins', link: '/plugins/', activeMatch: '/plugins/' },
       // {
-      //   text: 'Links',
+      //   text: '示例',
       //   items: [
       //     {
       //       text: 'Twitter',

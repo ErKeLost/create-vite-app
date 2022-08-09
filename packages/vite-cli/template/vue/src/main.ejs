@@ -2,7 +2,7 @@ import { createApp } from 'vue'
 <% if (useRouter) { -%>
   import { setupRouter } from '@/router'
 <% } -%>
-<% if (usePinia) { -%>
+<% if (usePinia || useTheme) { -%>
   import { setupStore } from '@/store'
 <% } -%>
 <% if (components === 'vuetify') { -%>
@@ -92,7 +92,7 @@ async function bootStrap() {
   setupDirectives(app)
 
   // 挂载状态管理
-  <% if (usePinia) { -%>
+  <% if (usePinia || useTheme) { -%>
     await setupStore(app)
   <% } -%>
 
