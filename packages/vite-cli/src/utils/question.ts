@@ -8,5 +8,5 @@ export default async function createQuestion(util, question) {
   })
   Object.assign(options, result)
   //  在 回答问题得时候 map 映射 每一个 库 版本 问题 要不要考虑
-  return Promise.resolve(result)
+  return Promise.resolve(options)
 }

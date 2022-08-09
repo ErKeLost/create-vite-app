@@ -1,6 +1,6 @@
 import options from '@/shared/options'
-console.log(12345, '测试插件selected')
 function getThemePlugins() {
+  console.log(options.useTheme)
   return options.useTheme
 }
 export default {
@@ -23,17 +23,18 @@ export default {
     {
       title: 'unplugin-vue-components 自动按需导入Vue组件',
       value: 'vue-components',
-      selected: getThemePlugins
+      selected: () => {
+        return options.useTheme ? true : false
+      }
     },
     {
       title: 'unplugin-auto-import 自动引入Api',
       value: 'auto-import',
-      selected: getThemePlugins
+      selected: true
     },
     {
       title: 'Unocss 即时的按需原子 CSS 引擎',
-      value: 'unocss',
-      selected: getThemePlugins
+      value: 'unocss'
     },
     { title: 'vite-plugin-pwa 零配置 PWA', value: 'pwa' },
     {
@@ -46,8 +47,9 @@ export default {
     },
     {
       title: 'unplugin-icons 按需加载图标库',
-      value: 'icons',
-      selected: getThemePlugins
+      value: 'icons'
     }
-  ]
+  ],
+  hint: '- Space to select. Return to submit',
+  instructions: false
 }

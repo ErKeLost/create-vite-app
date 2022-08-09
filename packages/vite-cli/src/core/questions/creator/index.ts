@@ -16,6 +16,7 @@ async function createProjectQuestions(): Promise<void> {
     await createQuestion(prompts, PackageDevice)
     // pc or mobile
     await createQuestion(prompts, device)
+
     await frameQuestions.get(options.frame)()
 
     // cancel

@@ -50,7 +50,6 @@ export async function runVueQuestions() {
   await createQuestion(prompts, components)
   // theme
   const res = await createQuestion(prompts, theme)
-  console.log(res)
 
   // vite plugins
   await createQuestion(prompts, Plugins)
