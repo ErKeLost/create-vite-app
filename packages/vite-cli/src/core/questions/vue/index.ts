@@ -49,11 +49,13 @@ export async function runVueQuestions() {
   // ui library
   await createQuestion(prompts, components)
   // theme
-  await createQuestion(prompts, theme)
+  const res = await createQuestion(prompts, theme)
+  console.log(res)
+
   // vite plugins
   await createQuestion(prompts, Plugins)
-  // css
-  await createQuestion(prompts, precss)
+  // 主题化默认暂时scss
+  !res.useTheme && (await createQuestion(prompts, precss))
   // options assign
   await getVueProperty()
 }

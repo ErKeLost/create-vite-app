@@ -30,7 +30,10 @@ interface Options {
   ComponentResolver?: string
 }
 
-const options: Options = {}
+const options: Options = {
+  plugins: [],
+  precss: ''
+}
 export default options
 
 export function fetchTemplateFiles(): string[] {
