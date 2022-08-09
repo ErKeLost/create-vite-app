@@ -1,8 +1,4 @@
-import options from '@/shared/options'
-function getThemePlugins() {
-  console.log(options.useTheme)
-  return options.useTheme
-}
+// 给select赋值是为了主题化 修改默认选中状态 不能写成动态是因为prompts的bug
 export default {
   name: 'plugins',
   type: 'multiselect',
@@ -23,18 +19,22 @@ export default {
     {
       title: 'unplugin-vue-components 自动按需导入Vue组件',
       value: 'vue-components',
-      selected: () => {
-        return options.useTheme ? true : false
-      }
+      selected: false
     },
     {
       title: 'unplugin-auto-import 自动引入Api',
       value: 'auto-import',
-      selected: true
+      selected: false
+    },
+    {
+      title: 'unplugin-icons 按需加载图标库',
+      value: 'icons',
+      selected: false
     },
     {
       title: 'Unocss 即时的按需原子 CSS 引擎',
-      value: 'unocss'
+      value: 'unocss',
+      selected: false
     },
     { title: 'vite-plugin-pwa 零配置 PWA', value: 'pwa' },
     {
@@ -44,10 +44,6 @@ export default {
     {
       title: 'rollup-plugin-visualizer 打包后包体积分析',
       value: 'visualizer'
-    },
-    {
-      title: 'unplugin-icons 按需加载图标库',
-      value: 'icons'
     }
   ],
   hint: '- Space to select. Return to submit',

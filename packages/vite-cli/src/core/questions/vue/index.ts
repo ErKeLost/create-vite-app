@@ -50,11 +50,16 @@ export async function runVueQuestions() {
   await createQuestion(prompts, components)
   // theme
   const res = await createQuestion(prompts, theme)
-
+  res.useTheme &&
+    Plugins.choices.map((item) => {
+      if (item.selected === false) {
+        item.selected = true
+      }
+    })
   // vite plugins
   await createQuestion(prompts, Plugins)
   // 主题化默认暂时scss
-  !res.useTheme && (await createQuestion(prompts, precss))
+  !options.useTheme && (await createQuestion(prompts, precss))
   // options assign
   await getVueProperty()
 }
