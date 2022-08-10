@@ -88,6 +88,14 @@ export default defineConfig({
               {
                 text: 'Ant-Design-Vue',
                 link: 'https://vite-cli-element-plus.netlify.app'
+              },
+              {
+                text: 'T-Design-Vue',
+                link: 'https://vite-cli-element-plus.netlify.app'
+              },
+              {
+                text: 'Arco-Design-Vue',
+                link: 'https://vite-cli-element-plus.netlify.app'
               }
             ]
           },
