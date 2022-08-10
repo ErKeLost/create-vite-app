@@ -1,5 +1,7 @@
 <template>
-  <el-drawer
+  <n-drawer v-model:show="app.settingDrawerVisible" :width="350">
+    <n-drawer-content>
+      <!-- <el-drawer
     :size="350"
     v-model="app.settingDrawerVisible"
     :with-header="false"
@@ -7,20 +9,23 @@
     :append-to-body="true"
     :show-close="false"
     :close-on-press-escape="true"
-  >
-    <div text-center>
-      <!-- <GlobalLayout /> -->
-      <GlobalTheme />
-      <!-- <GlobalConfig /> -->
-    </div>
-    <GlobalCopy />
-  </el-drawer>
+  > -->
+      <div text-center>
+        <!-- <GlobalLayout /> -->
+        <GlobalTheme />
+        <!-- <GlobalConfig /> -->
+      </div>
+      <!-- <GlobalCopy /> -->
+    </n-drawer-content>
+  </n-drawer>
 </template>
 
 <script lang="ts" setup>
 import { useAppStore } from '@/store'
 
 const app = useAppStore()
+console.log(app.settingDrawerVisible)
+
 const handleClose = (done: () => void) => {
   done()
 }
