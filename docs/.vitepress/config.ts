@@ -78,7 +78,7 @@ export default defineConfig({
                 link: 'https://create-vite-app-element-plus.netlify.app'
               },
               {
-                text: 'Naive-UI',
+                text: 'Naive-UI (主题化测试中)',
                 link: 'https://create-vite-app-naive-ui.netlify.app'
               },
               {
