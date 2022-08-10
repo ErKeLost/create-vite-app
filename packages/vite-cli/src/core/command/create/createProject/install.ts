@@ -24,7 +24,10 @@ async function installationDeps() {
   clearConsole('cyan', `VITE_CLI v${VITE_CLI_VERSION}`)
   const endTime: number = new Date().getTime()
   const usageTime: number = (endTime - startTime) / 1000
-  cyan(`> 项目已经创建成功，用时${usageTime}s，请输入以下命令继续...`)
+  console.log(
+    `33[42;30m DONE 33[40;32m Compiled successfully in ${usageTime}s33[0m`
+  )
+  // cyan(`> 项目已经创建成功，用时${usageTime}s，请输入以下命令继续...`)
   console.log('')
   cyan(`✨✨ cd ${options.name}`)
   cyan(
