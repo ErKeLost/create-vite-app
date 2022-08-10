@@ -1,0 +1,21 @@
+import { App } from 'vue'
+
+<% if (useTheme) { -%>
+  import AdnyLayout from '@erkelost/layout'
+  import { ColorPicker } from '@erkelost/colorpicker'
+<% } -%>
+/**
+ * 全局注册自定义组件 待完善
+ * @param app
+ */
+<% if (useTheme) { -%>
+  const registerComponents = [AdnyLayout, ColorPicker]
+<% } -%>
+<% if (!useTheme) { -%>
+  const registerComponents = []
+<% } -%>
+export function setupCustomComponents(app: App) {
+  registerComponents.forEach((component) => {
+    app.component(component.name, component)
+  })
+}

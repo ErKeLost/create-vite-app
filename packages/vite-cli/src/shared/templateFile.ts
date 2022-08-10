@@ -7,6 +7,7 @@ export function vueFetchTemplateFiles(): string[] {
     'vite.config.ts',
     'src/main.ts',
     'build/vite/plugin.ts',
+    'src/plugins/customComponents.ts',
     'src/components/Welcome.vue',
     'src/components/HelloWorld.vue',
     'src/App.vue',
