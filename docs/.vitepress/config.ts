@@ -75,11 +75,11 @@ export default defineConfig({
             items: [
               {
                 text: 'Element-plus (主题化测试中)',
-                link: 'https://vite-cli-element-plus.netlify.app'
+                link: 'https://create-vite-app-element-plus.netlify.app'
               },
               {
                 text: 'Naive-UI',
-                link: 'https://vite-cli-element-plus.netlify.app'
+                link: 'https://create-vite-app-naive-ui.netlify.app'
               },
               {
                 text: 'DevUI',

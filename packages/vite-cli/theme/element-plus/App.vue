@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import Welcome from "@/components/Welcome.vue";
-import HomeView from "@/views/HomeView.vue";
+import Welcome from '@/components/Welcome.vue'
+import HomeView from '@/views/HomeView.vue'
 </script>
 
 <template>

@@ -9,7 +9,7 @@
   "scripts": {
     "docs": "pnpm dev:docs --filter docs",
     "build": "zx ./scripts/build.mjs",
-    "build:docs": "turbo run build --filter=docs",
+    "build:docs": "pnpm build --filter docs",
     "build:cli": "pnpm build --filter vite-cli",
     "clear": "rimraf node_modules **/*/node_modules",
     "changeset": "changeset",
