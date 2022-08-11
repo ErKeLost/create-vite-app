@@ -44,6 +44,9 @@
     <% if (precss === 'scss' || useTheme) { -%>
       "sass": "^1.53.0",
     <% } -%>
+    <% if (precss === 'less' || useTheme && components === 'ant-design-vue') { -%>
+      "less": "^4.1.3",
+    <% } -%>
     <% if (components === 'vuetify') { -%>
       "vite-plugin-vuetify": "^1.0.0-alpha.13",
     <% } -%>
