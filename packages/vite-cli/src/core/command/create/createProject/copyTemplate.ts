@@ -27,7 +27,7 @@ async function copyTemplate() {
     path.resolve(options.dest, '.gitignore'),
     { overwrite: true }
   )
-  console.log(options)
+  // console.log(options)
   // 编译 ejs 模板文件
   await Promise.all(
     templateFilesMap

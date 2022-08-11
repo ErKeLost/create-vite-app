@@ -15,7 +15,7 @@ async function createProjectQuestions(): Promise<void> {
     // 包管理器版本
     await createQuestion(prompts, PackageDevice)
     // pc or mobile
-    await createQuestion(prompts, device)
+    // await createQuestion(prompts, device)
 
     await frameQuestions.get(options.frame)()
 

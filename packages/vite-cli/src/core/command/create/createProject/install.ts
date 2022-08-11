@@ -9,15 +9,19 @@ async function installationDeps() {
   const cmdInherit = createSpawnCmd(options.dest, 'inherit')
   // 开始记录用时
   const startTime: number = new Date().getTime()
-  yellow(`> 项目模板生成于目录： ${options.dest}`)
+  yellow(
+    `> The project template is generated in the directory： ${options.dest}`
+  )
   // Git 初始化
   await cmdIgnore('git', ['init'])
   await cmdIgnore('git', ['add .'])
   await cmdIgnore('git', ['commit -m "Initialize by VITE_CLI"'])
-  console.log(`> 成功初始化 Git 仓库`)
+  console.log(`> it repository initialized successfully`)
 
   // 依赖安装
-  console.log(`> 正在自动安装依赖，请稍等...`)
+  console.log(
+    `> Dependencies are being installed automatically, please wait a moment...`
+  )
   console.log('')
   await cmdInherit(options.package, ['install'])
 
@@ -35,6 +39,6 @@ async function installationDeps() {
       ? `✨✨ ${options.package} run dev`
       : `✨✨ ${options.package} dev`
   )
-  cyan('创建项目成功')
+  cyan('Project created successfully')
 }
 export default installationDeps
