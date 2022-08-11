@@ -156,15 +156,15 @@ The supported template presets are:
 
 - Naive UI
 
-![556f861a3f20322adca15fd31855381.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/e656b15c3ee74784acf302e745b95942~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a4cecfa97ba44ca6b1d6ad122d774b95~tplv-k3u1fbpfcp-watermark.image?)
 
 - Ant Design
 
-![e917270fc8fc23a3aa17b2fa831d564.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a34ca43f8d8543fab29ba38039d2d29d~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/354f40b215c64ac89b98ff27f245477f~tplv-k3u1fbpfcp-watermark.image?)
 
 - Element Plus
 
-![c74c77d05a9008e88dee87640ce06e3.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/be5b047d16024f8fa1251798a46de28a~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/682e343e8f924dbbb691811184e8428f~tplv-k3u1fbpfcp-watermark.image?)
 
 - Arco Design
 
