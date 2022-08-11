@@ -74,19 +74,19 @@ export default defineConfig({
             text: 'Vue',
             items: [
               {
-                text: 'Element-plus (主题化测试中)',
-                link: 'https://create-vite-app-element-plus.netlify.app'
-              },
-              {
                 text: 'Naive-UI (主题化测试中)',
                 link: 'https://create-vite-app-naive-ui.netlify.app'
               },
               {
-                text: 'DevUI',
-                link: 'https://vite-cli-element-plus.netlify.app'
+                text: 'Element-plus (主题化测试中)',
+                link: 'https://create-vite-app-element-plus.netlify.app'
               },
               {
-                text: 'Ant-Design-Vue',
+                text: 'Ant-Design-Vue (主题化测试中)',
+                link: 'https://vite-cli-ant-design-vue.netlify.app'
+              },
+              {
+                text: 'DevUI',
                 link: 'https://vite-cli-element-plus.netlify.app'
               },
               {
