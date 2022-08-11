@@ -41,10 +41,10 @@
       "@pureadmin/theme": "^2.0.0",
     <% } -%>
     "vite": "^3.0.4",
-    <% if (precss === 'scss' || useTheme) { -%>
+    <% if (precss === 'scss' || useTheme && components !== 'ant-design' ) { -%>
       "sass": "^1.53.0",
     <% } -%>
-    <% if (precss === 'less' || useTheme && components === 'ant-design-vue') { -%>
+    <% if (precss === 'less' || useTheme && components === 'ant-design') { -%>
       "less": "^4.1.3",
     <% } -%>
     <% if (components === 'vuetify') { -%>
