@@ -60,11 +60,12 @@ async function bootStrap() {
     const vuetify = createVuetify()  // Replaces new Vuetify(...)
     app.use(vuetify)
   <% } -%>
+  <% if (components === 'ant-design') { -%>
+    app.use(Antd)
+  <% } -%>
   // 全局加载
   <% if (plugins.indexOf('vue-components') === -1) { -%>
-    <% if (components === 'ant-design') { -%>
-      app.use(Antd)
-    <% } -%>
+
     <% if (components === 'naive-ui') { -%>
       app.use(naive)
     <% } -%>
