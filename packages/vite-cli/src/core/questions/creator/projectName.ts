@@ -25,7 +25,6 @@ const packageName = [
   {
     name: 'overwrite',
     type: (prev, values) => {
-      console.log(values.shouldOverwrite)
       if (values.shouldOverwrite === false) {
         throw new Error(' Operation cancelled')
       }

@@ -11,7 +11,8 @@ console.log(theme)
     :theme-overrides="theme.naiveThemeOverrides"
     :locale="zhCN"
     :date-locale="dateZhCN"
-    h-full
+    w-1280px
+    flex
   >
     <!-- <naive-provider> -->
     <Welcome />
