@@ -156,11 +156,11 @@ The supported template presets are:
 
 - Naive UI
 
-![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a4cecfa97ba44ca6b1d6ad122d774b95~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/84463b72894c4df2862c20d006ab240c~tplv-k3u1fbpfcp-watermark.image?)
 
 - Ant Design
 
-![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/354f40b215c64ac89b98ff27f245477f~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/06c1933b4b464c1ea220a837fa68a017~tplv-k3u1fbpfcp-watermark.image?)
 
 - Element Plus
 
