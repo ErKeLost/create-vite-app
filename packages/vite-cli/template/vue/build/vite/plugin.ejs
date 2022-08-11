@@ -41,7 +41,7 @@ export function createVitePlugins(viteEnv, isDev: boolean) {
                 prefix: "Icon"
               }),
             <% } -%>
-            <% if (components !== 'vuetify') { -%>
+            <% if (components !== 'vuetify' && components !== 'ant-design-vue') { -%>
             <%- ComponentResolver %>()
             <% } -%>
           ],
@@ -73,7 +73,7 @@ export function createVitePlugins(viteEnv, isDev: boolean) {
         // 自动导入 Element Plus 相关函数，如：ElMessage, ElMessageBox... (带样式)
         resolvers: [
           // Auto import icon components
-          <% if (components !== 'vuetify') { -%>
+          <% if (components !== 'vuetify' && components === 'element-plus') { -%>
             <%- ComponentResolver %>()
           <% } -%>
         ]

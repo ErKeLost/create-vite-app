@@ -1,11 +1,7 @@
 <template>
   <a-divider title-placement="center">颜色主题</a-divider>
   <a-row :gutter="20">
-    <a-col
-      v-for="color in theme.themeColorList"
-      :key="color"
-      flex-x-center
-    >
+    <a-col v-for="color in theme.themeColorList" :key="color" flex-x-center>
       <color-checkbox
         :color="color"
         :checked="color === theme.themeColor"

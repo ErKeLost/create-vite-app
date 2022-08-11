@@ -9,6 +9,15 @@ import { createApp } from 'vue'
   import { createVuetify } from 'vuetify'
   import 'vuetify/styles' // Global CSS has to be imported
 <% } -%>
+<% if (components === 'ant-design') { -%>
+  import Antd from 'ant-design-vue'
+  <% if (useTheme) { -%>
+  import 'ant-design-vue/dist/antd.variable.min.css'
+  <% } -%>
+  <% if (!useTheme) { -%>
+    import 'ant-design-vue/dist/antd.css'
+  <% } -%>
+<% } -%>
 <% if (plugins.indexOf('vue-components') === -1) { -%>
   <% if (components === 'naive-ui') { -%>
     import naive from 'naive-ui'
@@ -16,10 +25,6 @@ import { createApp } from 'vue'
   <% if (components === 'element-plus') { -%>
     import ElementPlus from 'element-plus'
     import 'element-plus/dist/index.css'
-  <% } -%>
-  <% if (components === 'ant-design') { -%>
-    import Antd from 'ant-design-vue'
-    import 'ant-design-vue/dist/antd.css'
   <% } -%>
   <% if (components === 'arco') { -%>
     import ArcoVue from '@arco-design/web-vue'
