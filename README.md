@@ -150,7 +150,7 @@ The supported template presets are:
 
 - Ant Design
 
-![image.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/06c1933b4b464c1ea220a837fa68a017~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/21469c6f20bd46ab8fb5df23376cfcba~tplv-k3u1fbpfcp-watermark.image?)
 
 - Element Plus
 
