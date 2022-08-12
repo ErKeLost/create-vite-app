@@ -8,6 +8,7 @@ lib/
 _site/
 dist/
 pnpm-lock.yaml
+package-lock.json
 packages/vite-cli/template/
 packages/vite-cli/template/vue
 packages/vite-cli/template/react

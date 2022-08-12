@@ -1,16 +1,19 @@
 {
   "name": "vite-create-app",
-  "version": "0.18.1",
+  "version": "0.18.3",
   "description": "",
   "main": "index.js",
   "bin": {
+    "vite-dev": "./dist/index.js",
     "vite": "./outfile.cjs",
     "v": "./outfile.cjs",
     "vite-cli": "./outfile.cjs"
   },
   "scripts": {
+    "dev": "tsc-alias && tsc --watch",
+    "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build:out": "tsc index.ts -outDir dist"
+    "build:out": "tsc src/index.ts -outDir dist"
   },
   "keywords": [],
   "author": "",
@@ -22,13 +25,14 @@
     "prettier": "latest"
   },
   "devDependencies": {
-    "gradient-string": "^2.0.1",
     "@types/node": "^18.0.0",
     "commander": "^9.3.0",
     "ejs": "^3.1.8",
     "fs-extra": "^10.1.0",
+    "gradient-string": "^2.0.1",
     "kolorist": "^1.5.1",
-    "prompts": "^2.4.2"
+    "prompts": "^2.4.2",
+    "tsc-alias": "^1.7.0"
   },
   "publishConfig": {
     "access": "public",
