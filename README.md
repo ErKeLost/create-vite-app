@@ -165,7 +165,7 @@ The supported template presets are:
 
 - [Ant-Design-Vue](https://vite-cli-ant-design-vue.netlify.app/)
 
-## An example of executing dev after successful installation is as follows
+### An example of executing dev after successful installation is as follows
 
 - Naive UI
 
@@ -201,4 +201,4 @@ The supported template presets are:
 
 🌸 Credits
 
-This project is inspired by [X-Build](https://github.com/code-device/x-build) !!!
+### This project is inspired by [X-Build](https://github.com/code-device/x-build) !!!
