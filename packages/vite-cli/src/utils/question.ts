@@ -1,7 +1,9 @@
 import options from '@/shared/options'
-
-export default async function createQuestion(util, question) {
-  const result = await util(question, {
+import prompts from 'prompts'
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const prompts = require('prompts')
+export default async function createQuestion(question) {
+  const result = await prompts(question, {
     onCancel: () => {
       throw new Error('🎨🎨' + ' Operation cancelled')
     }

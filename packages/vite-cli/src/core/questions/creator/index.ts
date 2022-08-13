@@ -1,7 +1,6 @@
-import device from './device'
+// import device from './device'
 import PackageDevice from './packageManager'
 import frame from './frame'
-import prompts from 'prompts'
 import projectName from './projectName'
 import { frameQuestions } from '@/shared/frameQuestions'
 import options from '@/shared/options'
@@ -9,11 +8,11 @@ import createQuestion from '@/utils/question'
 async function createProjectQuestions(): Promise<void> {
   // 项目名
   try {
-    await createQuestion(prompts, projectName)
+    await createQuestion(projectName)
     // 选择框架
-    await createQuestion(prompts, frame)
+    await createQuestion(frame)
     // 包管理器版本
-    await createQuestion(prompts, PackageDevice)
+    await createQuestion(PackageDevice)
     // pc or mobile
     // await createQuestion(prompts, device)
 

@@ -1,4 +1,3 @@
-import prompts from 'prompts'
 import precss from './precss'
 import components from './components'
 import Plugins from './plugins'
@@ -45,11 +44,11 @@ async function getVueProperty() {
 }
 export async function runVueQuestions() {
   // 新特性 新预设
-  await createQuestion(prompts, future)
+  await createQuestion(future)
   // ui library
-  await createQuestion(prompts, components)
+  await createQuestion(components)
   // theme
-  const res = await createQuestion(prompts, theme)
+  const res = await createQuestion(theme)
   res.useTheme &&
     Plugins.choices.map((item) => {
       if (item.selected === false) {
@@ -57,9 +56,9 @@ export async function runVueQuestions() {
       }
     })
   // vite plugins
-  await createQuestion(prompts, Plugins)
+  await createQuestion(Plugins)
   // 主题化默认暂时scss
-  !options.useTheme && (await createQuestion(prompts, precss))
+  !options.useTheme && (await createQuestion(precss))
   // options assign
   await getVueProperty()
 }

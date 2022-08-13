@@ -2,7 +2,6 @@
   "name": "vite-create-app",
   "version": "0.18.3",
   "description": "",
-  "main": "index.js",
   "bin": {
     "vite-dev": "./dist/index.js",
     "vite": "./outfile.cjs",
@@ -10,7 +9,7 @@
     "vite-cli": "./outfile.cjs"
   },
   "scripts": {
-    "dev": "tsc-alias && tsc --watch",
+    "dev": "ts-node -r tsconfig-paths/register src/index.ts",
     "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:out": "tsc src/index.ts -outDir dist"
@@ -32,7 +31,9 @@
     "gradient-string": "^2.0.1",
     "kolorist": "^1.5.1",
     "prompts": "^2.4.2",
-    "tsc-alias": "^1.7.0"
+    "ts-node": "^10.9.1",
+    "tsc-alias": "^1.7.0",
+    "tsconfig-paths": "^4.1.0"
   },
   "publishConfig": {
     "access": "public",
