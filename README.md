@@ -104,11 +104,11 @@ The supported template presets are:
 
 ### FrameWork
 
-| FrameWork     | finish |
-| ------------- | ------ |
-| Vite3 Vue3    | 🚧✅   |
-| Vite3 React18 | 🚧❌   |
-| Nuxt          | 🚧❌   |
+| FrameWork     | finish   |
+| ------------- | -------- |
+| Vite3 Vue3    | 🚧 ✅ 🆕 |
+| Vite3 React18 | 🚧 ❌ 🆕 |
+| Nuxt          | 🚧 ❌    |
 
 ### Feature
 
@@ -120,8 +120,8 @@ The supported template presets are:
 | Eslint 8.x        | ✅     |
 | Prettier 2.7.x    | ✅     |
 | TypeScript 4.7.x  | ✅     |
-| husky             | 🚧❌   |
-| PWA               | 🚧❌   |
+| husky             | 🚧 ❌  |
+| PWA               | 🚧 ❌  |
 |                   |        |
 |                   |        |
 
@@ -129,33 +129,33 @@ The supported template presets are:
 
 | UI Library         | finish |
 | ------------------ | ------ |
-| Element-Plus       | ✅     |
-| Naive-UI           | ✅     |
-| Vuetify-beta5      | ✅     |
-| DevUI              | ✅     |
-| Ant-design-vue     | ✅     |
-| arco-design        | ✅     |
+| Element-Plus       | ✅ 🆕  |
+| Naive-UI           | ✅ 🆕  |
+| Vuetify-beta5      | ✅ 🆕  |
+| DevUI              | ✅ 🆕  |
+| Ant-design-vue     | ✅ 🆕  |
+| arco-design        | ✅ 🆕  |
 | TDesign            | ✅     |
 | Varlet             | ✅     |
-| tdesign-mobile-vue | 🚧❌   |
-| Vant               | 🚧❌   |
+| tdesign-mobile-vue | 🚧 ❌  |
+| Vant               | 🚧 ❌  |
 
 ### Plugins
 
-| Feature / Version        | finish     |
-| ------------------------ | ---------- |
-| Vue                      | v3.2.x     |
-| Vite                     | v3.0.0     |
-| @vitejs/plugin-vue-jsx   | ✅         |
-| @vitejs/plugin-legacy    | ✅         |
-| vite-plugin-inspect      | ✅         |
-| vite-plugin-pwa          | ✅         |
-| unplugin-vue-components  | ✅         |
-| unplugin-auto-import     | ✅         |
-| Unocss                   | ✅         |
-| rollup-plugin-visualizer | ✅         |
-| unplugin-icons           | ✅         |
-| Vite-plugin-html         | ✅ new add |
+| Feature / Version        | finish    |
+| ------------------------ | --------- |
+| Vue                      | v3.2.x    |
+| Vite                     | v3.0.0 🆕 |
+| @vitejs/plugin-vue-jsx   | ✅        |
+| @vitejs/plugin-legacy    | ✅        |
+| vite-plugin-inspect      | ✅        |
+| vite-plugin-pwa          | ✅        |
+| unplugin-vue-components  | ✅        |
+| unplugin-auto-import     | ✅        |
+| Unocss                   | ✅        |
+| rollup-plugin-visualizer | ✅        |
+| unplugin-icons           | ✅        |
+| Vite-plugin-html         | ✅ 🆕     |
 
 ## 🛫 Example With theming
 
