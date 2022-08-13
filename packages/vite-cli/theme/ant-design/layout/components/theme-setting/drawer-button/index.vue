@@ -1,30 +1,30 @@
 <template>
-  <a-button
-    type="primary"
-    fixed
-    top-240px
-    right-14px
-    z-10000
-    w-42px
-    h-44px
-    transition-all
-    @click="app.toggleSettingDrawerVisible"
-    :class="[{ '!right-350px': app.settingDrawerVisible }]"
-  >
-    <template #icon>
-      <div m-2>
-        <CarbonClose v-if="app.settingDrawerVisible" text-2xl />
-        <CarbonSettings v-else text-2xl />
-      </div>
-    </template>
-  </a-button>
+  <div fixed top-240px right-14px z-10000 transition-all>
+    <a-button
+      w-100vh
+      type="primary"
+      @click="app.toggleSettingDrawerVisible"
+      :class="[{ '!right-350px': app.settingDrawerVisible }]"
+    >
+      <template #icon>
+        <div mt-1>
+          <CarbonClose v-if="app.settingDrawerVisible" text-2xl />
+          <CarbonSettings v-else text-2xl />
+        </div>
+      </template>
+    </a-button>
+  </div>
 </template>
 <script lang="ts" setup>
 import { useAppStore } from '@/store'
 
 const app = useAppStore()
 </script>
-<style scoped>
+<style scoped lang="less">
+.ant-btn-icon-only {
+  width: 40px;
+  height: 40px;
+}
 .el-button {
   height: 42px !important;
 }

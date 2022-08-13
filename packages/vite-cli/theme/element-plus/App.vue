@@ -5,7 +5,7 @@ import HomeView from '@/views/HomeView.vue'
 
 <template>
   <Welcome />
-  <HomeView />
+  <RouterView />
   <ThemeSetting />
 </template>
 
