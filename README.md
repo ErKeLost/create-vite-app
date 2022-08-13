@@ -21,23 +21,7 @@
 
 # 🚧🚧 Build highly customized scaffold out of the box based on vite3
 
-## Log
-
-- 0.15.1-alpha Refactor Map mapping refactoring EJS 2022.7.21 📦📦
-
-- 0.15.2-alpha Refactor refactor Ejs render way 2022.7.25 🌈 🌈
-
-- 0.15.5-alpha Refactoring command line architecture supports npx creation 2022.7.27 🌈 🌈
-
-- 0.15.6-alpha Refactoring npx creation Success 2022.7.27 🌈 🌈
-
-- 0.15.8-alpha Fix file already and some bug 2022.7.30 🌈 🌈
-
-- Big Break 0.15.9-alpha Reconstruct production dependence 2022.8.1 📦📦
-
 ## Start 📦📦
-
-- Recommended to use pnpm to install ViteCLI .
 
 ```ts
   npx vite-create-app@latest
