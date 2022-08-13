@@ -201,4 +201,4 @@ The supported template presets are:
 
 🌸 Credits
 
-This project is inspired by ![X-Build](https://github.com/code-device/x-build) !!!
+This project is inspired by [X-Build](https://github.com/code-device/x-build) !!!
