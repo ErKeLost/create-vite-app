@@ -11,7 +11,7 @@ import {
 export default {
   name: 'frame',
   type: 'select',
-  message: 'Choose your framework (选择您需要使用的框架)',
+  message: 'Choose your framework',
   choices: [
     { title: magenta('Vue'), value: 'vue' },
     { title: blue('React') + '🚧🚧', value: 'react', disabled: true },

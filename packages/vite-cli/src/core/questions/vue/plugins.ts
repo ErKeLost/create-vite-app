@@ -2,47 +2,47 @@
 export default {
   name: 'plugins',
   type: 'multiselect',
-  message: 'Custorm Your Plugins (自定义您的插件)',
+  message: 'Custorm Your Plugins',
   choices: [
     {
-      title: '@vitejs/plugin-vue-jsx 提供 Vue 3 JSX 支持',
+      title: '@vitejs/plugin-vue-jsx',
       value: 'jsx'
     },
     {
-      title: '@vitejs/plugin-legacy 为打包后的文件提供传统浏览器兼容性支持',
+      title: '@vitejs/plugin-legacy',
       value: 'legacy'
     },
     {
-      title: 'vite-plugin-html 构建您的index.html',
+      title: 'vite-plugin-html',
       value: 'html'
     },
     {
-      title: 'unplugin-vue-components 自动按需导入Vue组件',
+      title: 'unplugin-vue-components',
       value: 'vue-components',
       selected: false
     },
     {
-      title: 'unplugin-auto-import 自动引入Api',
+      title: 'unplugin-auto-import',
       value: 'auto-import',
       selected: false
     },
     {
-      title: 'unplugin-icons 按需加载图标库',
+      title: 'unplugin-icons',
       value: 'icons',
       selected: false
     },
     {
-      title: 'Unocss 即时的按需原子 CSS 引擎',
+      title: 'Unocss',
       value: 'unocss',
       selected: false
     },
-    { title: 'vite-plugin-pwa 零配置 PWA', value: 'pwa' },
+    { title: 'vite-plugin-pwa', value: 'pwa' },
     {
-      title: 'vite-plugin-inspect 模块运行时依赖可视化',
+      title: 'vite-plugin-inspect',
       value: 'inspect'
     },
     {
-      title: 'rollup-plugin-visualizer 打包后包体积分析',
+      title: 'rollup-plugin-visualizer',
       value: 'visualizer'
     }
   ],

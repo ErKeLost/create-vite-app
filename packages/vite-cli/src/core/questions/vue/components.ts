@@ -1,7 +1,7 @@
 export default {
   type: 'select', // select
   name: 'components', //
-  message: 'choose UI frameWork (选择您的 UI 框架)',
+  message: 'choose UI frameWork',
   choices: [
     { title: 'Element Plus', value: 'element-plus' },
     { title: 'Vuetify3 Beta', value: 'vuetify' },

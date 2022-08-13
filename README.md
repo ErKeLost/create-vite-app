@@ -1,5 +1,3 @@
-# Create Vite App 🚧🚧 ( Rapid iteration of the version )
-
 <p align="center">
   <a href="https://vitejs.dev" target="_blank" rel="noopener noreferrer">
       <img width="220" src="https://jzzx-docs.netlify.app/assets/vite.4d21301c.png" alt="Vite logo">
@@ -19,23 +17,33 @@
 </p>
 <br/>
 
-# 🚧🚧 Build highly customized scaffold out of the box based on vite3
+# Create Vite App
 
-## Start 📦📦
+## ( Rapid iteration of the version ) 🚧🚧
+
+## 📖 Introduction
+
+Create Vite App resolve Vite create starter template No need to configure Vite scaffolding templates quickly build vite3 development templates highly customized
+
+## 🌈 Features
+
+- ⚛️ Support for multiple framework templates
+
+- 📦 Select the out-of-the-box package manager
+
+- 🚀 Various characteristics of the corresponding framework
+
+- ✨ Selection of various Ui frameworks, Theming and layout
+
+- 🍰 A variety of out-of-the-box Vite plugin options
+
+## 📦 Installation
 
 ```ts
   npx vite-create-app@latest
 ```
 
-- Enter 'vite' on the command line to check whether the installation is successful
-
-![image.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ee03e671a0164f38b7617680f66b3475~tplv-k3u1fbpfcp-watermark.image?)
-
-<!-- - Enter 'vite create'project name' ` vite create plus your project name
-
-```ts
- vite create template
-``` -->
+## 🦄 Usage
 
 - Step1 Select the package manager that needs to be created. It is recommended to use pnpm to create projects
 
@@ -89,8 +97,12 @@
 ( )   unplugin-icons 按需加载图标库
 ```
 
+## 🤖 Feature Comparison
+
 Currently, the template supports the following plugins
 The supported template presets are:
+
+### FrameWork
 
 | FrameWork     | finish |
 | ------------- | ------ |
@@ -98,18 +110,37 @@ The supported template presets are:
 | Vite3 React18 | 🚧❌   |
 | Nuxt          | 🚧❌   |
 
-| Feature / Version | finish | UI Library         | finish |
-| ----------------- | ------ | ------------------ | ------ |
-| Vue-Router 4.x    | ✅     | Element-Plus       | ✅     |
-| Pinia 2.x         | ✅     | Naive-UI           | ✅     |
-|                   |        | Vuetify-beta5      | ✅     |
-| Eslint 8.x        | ✅     | DevUI              | ✅     |
-| Prettier 2.7.x    | ✅     | Ant-design-vue     | ✅     |
-| TypeScript 4.7.x  | ✅     | arco-design        | ✅     |
-| husky             | 🚧❌   | TDesign            | ✅     |
-| PWA               | 🚧❌   | Varlet             | ✅     |
-|                   |        | tdesign-mobile-vue | 🚧❌   |
-|                   |        | Vant               | 🚧❌   |
+### Feature
+
+| Feature / Version | finish |
+| ----------------- | ------ |
+| Vue-Router 4.x    | ✅     |
+| Pinia 2.x         | ✅     |
+|                   |        |
+| Eslint 8.x        | ✅     |
+| Prettier 2.7.x    | ✅     |
+| TypeScript 4.7.x  | ✅     |
+| husky             | 🚧❌   |
+| PWA               | 🚧❌   |
+|                   |        |
+|                   |        |
+
+### UI Library
+
+| UI Library         | finish |
+| ------------------ | ------ |
+| Element-Plus       | ✅     |
+| Naive-UI           | ✅     |
+| Vuetify-beta5      | ✅     |
+| DevUI              | ✅     |
+| Ant-design-vue     | ✅     |
+| arco-design        | ✅     |
+| TDesign            | ✅     |
+| Varlet             | ✅     |
+| tdesign-mobile-vue | 🚧❌   |
+| Vant               | 🚧❌   |
+
+### Plugins
 
 | Feature / Version        | finish     |
 | ------------------------ | ---------- |
@@ -126,7 +157,15 @@ The supported template presets are:
 | unplugin-icons           | ✅         |
 | Vite-plugin-html         | ✅ new add |
 
-### An example of executing dev after successful installation is as follows
+## 🛫 Example With theming
+
+- [Element-Plus](https://create-vite-app-naive-ui.netlify.app/)
+
+- [Naive-UI](https://create-vite-app-element-plus.netlify.app/)
+
+- [Ant-Design-Vue](https://vite-cli-ant-design-vue.netlify.app/)
+
+## An example of executing dev after successful installation is as follows
 
 - Naive UI
 
@@ -159,3 +198,7 @@ The supported template presets are:
 - Varlet
 
 ![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f8f31a99cab645d4a5fb5cf0c4000ef6~tplv-k3u1fbpfcp-watermark.image?)
+
+🌸 Credits
+
+This project is inspired by ![X-Build](https://github.com/code-device/x-build) !!!
