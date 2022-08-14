@@ -29,7 +29,7 @@ async function installationDeps() {
   const endTime: number = new Date().getTime()
   const usageTime: number = (endTime - startTime) / 1000
   cyan(
-    `> 📦📦 Usage time${usageTime} s , Please enter the following command to continue...`
+    `> 📦📦 Usage time ${usageTime}s , Please enter the following command to continue...`
   )
   console.log('')
   cyan('Project created successfully')
