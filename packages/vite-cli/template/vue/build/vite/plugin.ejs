@@ -41,8 +41,8 @@ export function createVitePlugins(viteEnv, isDev: boolean) {
                 prefix: "Icon"
               }),
             <% } -%>
-            <% if (components !== 'vuetify' || components !== 'ant-design') { -%>
-            <%- ComponentResolver %>()
+            <% if (!notComponentResolver) { -%>
+            <%- ComponentResolver + '()' %>
             <% } -%>
           ],
         dts: "src/types/components.d.ts"

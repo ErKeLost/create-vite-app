@@ -34,11 +34,11 @@ async function installationDeps() {
   console.log('')
   cyan('Project created successfully')
   console.log('')
-  cyan(` cd ${options.name}`)
+  cyan(`cd ${options.name}`)
   cyan(
     options.package === 'npm'
-      ? ` ${options.package} run dev`
-      : ` ${options.package} dev`
+      ? `${options.package} run dev`
+      : `${options.package} dev`
   )
 }
 export default installationDeps

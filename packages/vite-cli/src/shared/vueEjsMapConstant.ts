@@ -64,6 +64,7 @@ const pluginImportStatement = new Map([
 ])
 const componentResolverMap = new Map([
   ['element-plus', 'ElementPlusResolver'],
+  ['vuetify', 'VuetifyResolver'],
   ['arco', 'ArcoResolver'],
   ['naive-ui', 'NaiveUiResolver'],
   ['tencent', 'TDesignResolver'],
@@ -71,6 +72,7 @@ const componentResolverMap = new Map([
   ['ant-design', 'AntDesignVueResolver'],
   ['varlet', 'VarletUIResolver']
 ])
+const notComponentResolverMap = ['vuetify', 'ant-design']
 
 export {
   componentsMap,
@@ -78,5 +80,6 @@ export {
   lintMap,
   pluginMap,
   componentResolverMap,
+  notComponentResolverMap,
   pluginImportStatement
 }

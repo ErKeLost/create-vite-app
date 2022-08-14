@@ -28,6 +28,7 @@ interface Options {
   pluginImportStatement?: string
   // vue-components-import
   ComponentResolver?: string
+  notComponentResolver?: boolean
 }
 
 const options: Options = {

@@ -10,7 +10,8 @@ import {
   lintMap,
   pluginMap,
   pluginImportStatement,
-  componentResolverMap
+  componentResolverMap,
+  notComponentResolverMap
 } from '@/shared/vueEjsMapConstant'
 import createQuestion from '@/utils/question'
 async function getVueProperty() {
@@ -20,8 +21,12 @@ async function getVueProperty() {
   const Router = futureMap.get('Router')
   const Pinia = futureMap.get('Pinia')
   const currentComponentResolver = componentResolverMap.get(options.components)
+  const notComponentResolver = notComponentResolverMap.includes(
+    options.components
+  )
   options.ui = currentLibrary
   options.ComponentResolver = currentComponentResolver
+  options.notComponentResolver = notComponentResolver
   options.EslintScript = lintMap.get('EslintScript')
   options.PrettierScript = lintMap.get('PrettierScript')
   options.EslintWithPrettierScript = lintMap.get('EslintWithPrettierScript')
