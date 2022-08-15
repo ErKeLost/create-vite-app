@@ -1,10 +1,10 @@
+import fs from 'fs-extra'
+import path from 'node:path'
 import options from '@/shared/options'
 import { ejsRender } from '@/utils/ejsRender'
-import fs from 'fs-extra'
 import { templateFilesMap } from '@/shared/templateFile'
 import { getFilterFile } from '@/shared/frameQuestions'
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const path = require('path')
+
 async function copyTemplate() {
   // CLI 模板文件夹路径
   options.src = path.resolve(__dirname, `../template/${options.frame}`)
