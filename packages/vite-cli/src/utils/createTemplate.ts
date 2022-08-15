@@ -5,6 +5,7 @@ import prettier = require('prettier')
 import options from '../shared/options'
 export async function ejsRender(filePath: string, name): Promise<void> {
   try {
+    let prettierCode: string
     // 根目录template 绝对路径
     const templatePath = path.resolve(__dirname, `../template/${options.frame}`)
     // 获取当前渲染文件的 各种 参数 such as ext
@@ -21,28 +22,28 @@ export async function ejsRender(filePath: string, name): Promise<void> {
     const code = ejs.render(templateCode.toString(), options)
     // 获取后缀
     const extname = path.extname(filePath).replace(/[.]/g, '')
-    let prettierCode: string
-    await prettier
-      .resolveConfig(templatePath)
-      .then((opts) => {
-        switch (extname) {
-          case 'ts':
-            prettierCode = prettier.format(code, { parser: 'babel', ...opts })
-            break
-          case 'js':
-            prettierCode = prettier.format(code, { parser: 'babel', ...opts })
-            break
-          // case 'vue':
-          //   prettierCode = prettier.format(code, { parser: 'babel', ...opts })
-          //   break
-          default:
-            prettierCode = prettier.format(code, { parser: extname })
-            break
-        }
-      })
-      .catch((err) => {
-        console.log(err)
-      })
+    const opts = await prettier.resolveConfig(templatePath)
+    try {
+      switch (extname) {
+        case 'ts':
+          prettierCode = prettier.format(code, { parser: 'babel', ...opts })
+          break
+        case 'tsx':
+          prettierCode = prettier.format(code, { parser: 'babel', ...opts })
+          break
+        case 'jsx':
+          prettierCode = prettier.format(code, { parser: 'babel', ...opts })
+          break
+        case 'js':
+          prettierCode = prettier.format(code, { parser: 'babel', ...opts })
+          break
+        default:
+          prettierCode = prettier.format(code, { parser: extname })
+          break
+      }
+    } catch (err) {
+      console.log(err)
+    }
     await fs.outputFile(outputFilePath, prettierCode)
     await fs.remove(readFilePath)
   } catch (error) {
