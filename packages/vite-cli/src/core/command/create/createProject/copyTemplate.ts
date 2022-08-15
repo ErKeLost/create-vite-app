@@ -1,5 +1,5 @@
 import options from '@/shared/options'
-import { ejsRender } from '@/utils/createTemplate'
+import { ejsRender } from '@/utils/ejsRender'
 import fs from 'fs-extra'
 import { templateFilesMap } from '@/shared/templateFile'
 import { getFilterFile } from '@/shared/frameQuestions'
