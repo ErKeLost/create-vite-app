@@ -10,7 +10,7 @@
     </a-col>
   </a-row>
   <a-divider title-placement="center">其他颜色</a-divider>
-  <!-- <DColorPicker" v-model="theme.themeColor" /> -->
+  <DColorPicker v-model="theme.themeColor" />
 </template>
 <script lang="ts" setup>
 import { useThemeStore } from '@/store'

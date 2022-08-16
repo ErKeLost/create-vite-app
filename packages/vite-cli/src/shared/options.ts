@@ -33,6 +33,7 @@ interface Options {
 
 const options: Options = {
   plugins: [],
-  precss: ''
+  precss: '',
+  useTheme: false
 }
 export default options

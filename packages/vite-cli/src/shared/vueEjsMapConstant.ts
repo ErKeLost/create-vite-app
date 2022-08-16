@@ -72,6 +72,8 @@ const componentResolverMap = new Map([
   ['ant-design', 'AntDesignVueResolver'],
   ['varlet', 'VarletUIResolver']
 ])
+
+const useThemeUiMap = ['element-plus', 'ant-design', 'naive-ui']
 const notComponentResolverMap = ['vuetify', 'ant-design']
 
 export {
@@ -81,5 +83,6 @@ export {
   pluginMap,
   componentResolverMap,
   notComponentResolverMap,
-  pluginImportStatement
+  pluginImportStatement,
+  useThemeUiMap
 }
