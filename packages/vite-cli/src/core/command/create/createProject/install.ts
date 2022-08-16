@@ -1,16 +1,21 @@
 import options from '@/shared/options'
-import { cyan, yellow } from '@/utils/log'
+import { cyan } from '@/utils/log'
 import createSpawnCmd from '@/utils/createSpawnCmd'
 import clearConsole from '@/utils/clearConsole'
 import { VITE_CLI_VERSION } from '@/shared/constant'
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const gradient = require('gradient-string')
 async function installationDeps() {
   // 目录
   const cmdIgnore = createSpawnCmd(options.dest, 'ignore')
   const cmdInherit = createSpawnCmd(options.dest, 'inherit')
   // 开始记录用时
   const startTime: number = new Date().getTime()
-  yellow(
-    `> The project template is generated in the directory： ${options.dest}`
+  console.log(
+    gradient(
+      'cyan',
+      'purple'
+    )(`> The project template is generated in the directory： ${options.dest}`)
   )
   // Git 初始化
   await cmdIgnore('git', ['init'])
