@@ -88,7 +88,7 @@
     "strictNullChecks": false,
     "allowUnreachableCode": true,
     // "declaration": true,
-    "lib": ["es6", "DOM"],
+    "lib": ["esnext", "DOM"],
     "typeRoots": ["./node_modules/@types"],
     "outDir": "./dist", // 重定向输出目录
     "rootDir": "./src", // 仅用来控制输出的目录结构,

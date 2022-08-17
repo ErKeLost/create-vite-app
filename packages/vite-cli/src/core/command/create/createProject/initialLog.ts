@@ -4,7 +4,7 @@ import { VITE_CLI_VERSION } from '@/shared/constant'
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const gradient = require('gradient-string')
 async function initialLog() {
-  clearConsole('cyan', `🎨🎨   Create Vite App v${VITE_CLI_VERSION}   🎨🎨`)
+  clearConsole('cyan', `📦📦 Create Vite App v${VITE_CLI_VERSION} `)
   console.log(
     gradient('cyan', 'purple')('\n🚀 Welcome To Create Template for Vite!\n')
   )

@@ -1,14 +1,42 @@
+import * as components from '@/compile/vueComponents'
+import * as features from '@/compile/features'
+// 核心逻辑还是拼接 package.json中的字符串 模板还是写死
+function removeBlock(str: string) {
+  if (str) {
+    str = str.replace(/\[|]/g, '')
+    str = str.replace(/\{|}/g, '')
+    return str
+  }
+  throw new Error('str not string type')
+}
+// componetsUI library map
 const componentsMap = new Map()
+Object.keys(components).forEach((item) => {
+  componentsMap.set(
+    item,
+    `"${components[item].name}":"${components[item].version}",`
+  )
+})
+console.log(componentsMap)
 
-componentsMap.set('element-plus', '"element-plus": "^2.2.5",')
-componentsMap.set('arco', '"@arco-design/web-vue": "^2.33.0",')
-componentsMap.set('vuetify', '"vuetify": "^3.0.0-beta.5",')
-componentsMap.set('naive-ui', '"naive-ui": "^2.31.0",')
-componentsMap.set('tencent', '"tdesign-vue-next": "^0.18.0",')
-componentsMap.set('devui', '"vue-devui": "^1.0.0-rc.14",')
-componentsMap.set('ant-design', '"ant-design-vue": "3.2.1",')
-componentsMap.set('varlet', '"@varlet/ui": "^1.27.17",')
+// unpluginVueComponents map
+const componentResolverMap = new Map([])
+Object.keys(components).forEach((item) => {
+  componentResolverMap.set(item, `${components[item].unpluginResolver}`)
+})
 
+const featureMap = new Map()
+Object.keys(features).forEach((item) => {
+  if (Array.isArray(features[item])) {
+    featureMap.set(item, removeBlock(JSON.stringify(features[item])))
+  } else {
+    featureMap.set(
+      item,
+      `"${features[item].name}":"${features[item].version}",`
+    )
+  }
+})
+console.log(featureMap)
 const futureMap = new Map([
   ['Router', '"vue-router": "^4.1.1",'],
   ['Pinia', '"pinia": "^2.0.14","pinia-plugin-persist": "^1.0.0"']
@@ -33,6 +61,7 @@ const lintMap = new Map([
   ],
   ['Prettier', '"prettier": "^2.7.1",']
 ])
+console.log(lintMap)
 
 const pluginMap = new Map([
   ['jsx', '"@vitejs/plugin-vue-jsx": "^2.0.0",'],
@@ -61,16 +90,6 @@ const pluginImportStatement = new Map([
     'icons',
     'import Icons from "unplugin-icons/vite"; import IconsResolver from "unplugin-icons/resolver";'
   ]
-])
-const componentResolverMap = new Map([
-  ['element-plus', 'ElementPlusResolver'],
-  ['vuetify', 'VuetifyResolver'],
-  ['arco', 'ArcoResolver'],
-  ['naive-ui', 'NaiveUiResolver'],
-  ['tencent', 'TDesignResolver'],
-  ['devui', 'DevUiResolver'],
-  ['ant-design', 'AntDesignVueResolver'],
-  ['varlet', 'VarletUIResolver']
 ])
 
 const useThemeUiMap = ['element-plus', 'ant-design', 'naive-ui']
