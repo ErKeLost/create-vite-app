@@ -3,7 +3,6 @@
   "version": "0.18.8",
   "description": "",
   "bin": {
-    "vite-dev": "./dist/index.js",
     "vite": "./outfile.cjs",
     "v": "./outfile.cjs",
     "vite-cli": "./outfile.cjs"
