@@ -4,15 +4,9 @@ const router = {
   stableVersion: '4.1.1'
 }
 const pinia = {
-  name: 'pinia',
-  version: '^2.0.14',
-  stableVersion: '2.0.14'
-}
-
-const piniaPluginPersist = {
-  name: 'pinia-plugin-persist',
-  version: '^1.0.0',
-  stableVersion: '^1.0.0'
+  name: ['pinia', 'pinia-plugin-persist'],
+  version: ['^2.0.14', '^1.0.0'],
+  stableVersion: ['2.0.14', '^1.0.0']
 }
 
 const prettier = {
@@ -27,33 +21,20 @@ const eslintVue = {
   stableVersion: '^9.1.1'
 }
 
-const eslintPlugin = [
-  {
-    eslint: '^8.18.0'
-  },
-  {
-    '@typescript-eslint/eslint-plugin': '^5.30.5'
-  },
-  {
-    '@typescript-eslint/parser': '^5.30.5'
-  }
-]
-
-const eslintWithPrettier = [
-  {
-    'eslint-config-prettier': '^8.5.0'
-  },
-  {
-    'eslint-plugin-prettier': '^4.2.1'
-  }
-]
-
-export {
-  eslintWithPrettier,
-  eslintPlugin,
-  eslintVue,
-  prettier,
-  piniaPluginPersist,
-  pinia,
-  router
+const eslintPlugin = {
+  name: [
+    'eslint',
+    '@typescript-eslint/eslint-plugin',
+    '@typescript-eslint/parser'
+  ],
+  version: ['^8.18.0', '^5.30.5', '^5.30.5'],
+  stableVersion: ['^8.18.0', '^5.30.5', '^5.30.5']
 }
+
+const eslintWidthPrettier = {
+  name: ['eslint-config-prettier', 'eslint-plugin-prettier'],
+  version: ['^8.5.0', '^4.2.1'],
+  stableVersion: ['^8.5.0', '^4.2.1']
+}
+
+export { eslintWidthPrettier, eslintPlugin, eslintVue, prettier, pinia, router }

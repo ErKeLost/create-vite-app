@@ -15,8 +15,9 @@ async function createProjectQuestions(): Promise<void> {
     await createQuestion(PackageDevice)
     // pc or mobile
     // await createQuestion(prompts, device)
-
+    // 根据不同框架继续走不同任务
     await frameQuestions.get(options.frame)()
+    console.log(options)
 
     // cancel
   } catch (cancelled) {

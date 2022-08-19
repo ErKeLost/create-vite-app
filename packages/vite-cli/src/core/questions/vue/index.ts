@@ -8,6 +8,7 @@ import {
   componentsMap,
   futureMap,
   lintMap,
+  featureMap,
   pluginMap,
   pluginImportStatement,
   componentResolverMap,
@@ -16,20 +17,22 @@ import {
 import createQuestion from '@/utils/question'
 async function getVueProperty() {
   const currentLibrary = componentsMap.get(options.components)
-  const Eslint = lintMap.get('Eslint')
-  const Prettier = lintMap.get('Prettier')
-  const Router = futureMap.get('Router')
-  const Pinia = futureMap.get('Pinia')
+  const Eslint = featureMap.get('eslintPlugin')
+  const Prettier = featureMap.get('prettier')
+  const Router = featureMap.get('router')
+  const Pinia = featureMap.get('pinia')
   const currentComponentResolver = componentResolverMap.get(options.components)
   const notComponentResolver = notComponentResolverMap.includes(
     options.components
   )
+  console.log(featureMap)
+
   options.ui = currentLibrary
   options.ComponentResolver = currentComponentResolver
   options.notComponentResolver = notComponentResolver
   options.EslintScript = lintMap.get('EslintScript')
   options.PrettierScript = lintMap.get('PrettierScript')
-  options.EslintWithPrettierScript = lintMap.get('EslintWithPrettierScript')
+  options.EslintWithPrettierScript = featureMap.get('eslintWithPrettier')
   options.Eslint = Eslint
   options.Prettier = Prettier
   options.Router = Router

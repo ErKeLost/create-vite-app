@@ -27,8 +27,12 @@ Object.keys(components).forEach((item) => {
 
 const featureMap = new Map()
 Object.keys(features).forEach((item) => {
-  if (Array.isArray(features[item])) {
-    featureMap.set(item, removeBlock(JSON.stringify(features[item])))
+  if (Array.isArray(features[item].name)) {
+    let res = ''
+    features[item].name.forEach((cur, index) => {
+      res += `"${cur}":"${features[item].version[index]}",`
+    })
+    featureMap.set(item, res)
   } else {
     featureMap.set(
       item,
@@ -102,6 +106,7 @@ export {
   componentsMap,
   futureMap,
   lintMap,
+  featureMap,
   pluginMap,
   componentResolverMap,
   notComponentResolverMap,
