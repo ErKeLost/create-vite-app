@@ -72,7 +72,7 @@
 ///// --------------------------
 {
   "compilerOptions": {
-    "target": "ES2018",
+    "target": "ESNext",
     "module": "commonjs",
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,
