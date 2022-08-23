@@ -5,10 +5,10 @@ import vue from "@vitejs/plugin-vue"
   import vuetify from 'vite-plugin-vuetify'
 <% } -%>
 
-<% if (plugins.indexOf('vue-components') !== -1) { -%>
+<% if (plugins.indexOf('vueComponents') !== -1) { -%>
   import {
     <%- ComponentResolver %>
-   } from "unplugin-vue-components/resolvers"
+   } from "unplugin-vueComponents/resolvers"
 <% } -%>
 export function createVitePlugins(viteEnv, isDev: boolean) {
   const vitePlugins: (Plugin | Plugin[]) = [
@@ -27,7 +27,7 @@ export function createVitePlugins(viteEnv, isDev: boolean) {
     <% if (plugins.indexOf('inspect') !== -1) { -%>
       Inspect(),
     <% } -%>
-    <% if (plugins.indexOf('vue-components') !== -1) { -%>
+    <% if (plugins.indexOf('vueComponents') !== -1) { -%>
       Components({
         // allow auto load markdown components under `./src/components/`
         extensions: ["vue", "md"],
@@ -48,7 +48,7 @@ export function createVitePlugins(viteEnv, isDev: boolean) {
         dts: "src/types/components.d.ts"
       }),
     <% } -%>
-    <% if (plugins.indexOf('auto-import') !== -1) { -%>
+    <% if (plugins.indexOf('autoImport') !== -1) { -%>
       AutoImport({
         // dts: path.resolve(pathSrc, 'typings', 'auto-imports.d.ts'),
         dts: "src/types/auto-imports.d.ts",
@@ -73,7 +73,7 @@ export function createVitePlugins(viteEnv, isDev: boolean) {
         // 自动导入 Element Plus 相关函数，如：ElMessage, ElMessageBox... (带样式)
         resolvers: [
           // Auto import icon components
-          <% if (components !== 'vuetify' && components === 'element-plus') { -%>
+          <% if (components !== 'vuetify' && components === 'elementPlus') { -%>
             <%- ComponentResolver %>()
           <% } -%>
         ]

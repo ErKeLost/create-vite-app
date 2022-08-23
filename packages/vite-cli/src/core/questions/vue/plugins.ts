@@ -18,12 +18,12 @@ export default {
     },
     {
       title: 'unplugin-vue-components',
-      value: 'vue-components',
+      value: 'vueComponents',
       selected: false
     },
     {
       title: 'unplugin-auto-import',
-      value: 'auto-import',
+      value: 'autoImport',
       selected: false
     },
     {

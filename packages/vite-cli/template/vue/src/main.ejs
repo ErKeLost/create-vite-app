@@ -9,7 +9,7 @@ import { createApp } from 'vue'
   import { createVuetify } from 'vuetify'
   import 'vuetify/styles' // Global CSS has to be imported
 <% } -%>
-<% if (components === 'ant-design') { -%>
+<% if (components === 'antDesignVue') { -%>
   import Antd from 'ant-design-vue'
   <% if (useTheme) { -%>
   import 'ant-design-vue/dist/antd.variable.min.css'
@@ -18,11 +18,11 @@ import { createApp } from 'vue'
     import 'ant-design-vue/dist/antd.css'
   <% } -%>
 <% } -%>
-<% if (plugins.indexOf('vue-components') === -1) { -%>
-  <% if (components === 'naive-ui') { -%>
+<% if (plugins.indexOf('vueComponents') === -1) { -%>
+  <% if (components === 'naiveUI') { -%>
     import naive from 'naive-ui'
   <% } -%>
-  <% if (components === 'element-plus') { -%>
+  <% if (components === 'elementPlus') { -%>
     import ElementPlus from 'element-plus'
     import 'element-plus/dist/index.css'
   <% } -%>
@@ -39,7 +39,7 @@ import { createApp } from 'vue'
     import '@varlet/ui/es/style.js'
   <% } -%>
 <% } -%>
-<% if (components === 'devui') { -%>
+<% if (components === 'devUI') { -%>
   import DevUI from 'vue-devui'
   import 'vue-devui/style.css'
 <% } -%>
@@ -60,16 +60,16 @@ async function bootStrap() {
     const vuetify = createVuetify()  // Replaces new Vuetify(...)
     app.use(vuetify)
   <% } -%>
-  <% if (components === 'ant-design') { -%>
+  <% if (components === 'antDesignVue') { -%>
     app.use(Antd)
   <% } -%>
   // 全局加载
-  <% if (plugins.indexOf('vue-components') === -1) { -%>
+  <% if (plugins.indexOf('vueComponents') === -1) { -%>
 
-    <% if (components === 'naive-ui') { -%>
+    <% if (components === 'naiveUI') { -%>
       app.use(naive)
     <% } -%>
-    <% if (components === 'element-plus') { -%>
+    <% if (components === 'elementPlus') { -%>
       app.use(ElementPlus)
     <% } -%>
     <% if (components === 'tencent') { -%>
@@ -85,7 +85,7 @@ async function bootStrap() {
       });
     <% } -%>
   <% } -%>
-  <% if (components === 'devui') { -%>
+  <% if (components === 'devUI') { -%>
     app.use(DevUI)
   <% } -%>
   // 注册全局常用的 组件

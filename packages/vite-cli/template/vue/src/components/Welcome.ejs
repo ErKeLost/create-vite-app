@@ -1,5 +1,5 @@
 <script setup lang="ts">
-<% if (plugins.indexOf('vue-components') === -1) { -%>
+<% if (plugins.indexOf('vueComponents') === -1) { -%>
 import HelloWorld from '@/components/HelloWorld.vue'
 <% } -%>
 <% if (useRouter) { -%>
@@ -29,13 +29,13 @@ const { count } = storeToRefs(counterStore);
       <nav>
         <% if (useRouter) { -%>
           <RouterLink to="/">
-          <% if (components === 'ant-design') { -%>
+          <% if (components === 'antDesignVue') { -%>
             <a-button type="primary">Home</a-button>
           <% } -%>
-          <% if (components === 'element-plus') { -%>
+          <% if (components === 'elementPlus') { -%>
             <el-button type="primary">Home</el-button>
           <% } -%>
-          <% if (components === 'naive-ui') { -%>
+          <% if (components === 'naiveUI') { -%>
             <n-button type="primary">Home</n-button>
           <% } -%>
           <% if (components === 'arco') { -%>
@@ -51,7 +51,7 @@ const { count } = storeToRefs(counterStore);
             Home
           </v-btn>
           <% } -%>
-          <% if (components === 'devui') { -%>
+          <% if (components === 'devUI') { -%>
             <d-button variant="solid">Home</d-button>
           <% } -%>
           <% if (components === 'varlet') { -%>
@@ -61,13 +61,13 @@ const { count } = storeToRefs(counterStore);
         <% } -%>
         <% if (useRouter) { -%>
           <RouterLink to="/about">
-          <% if (components === 'ant-design') { -%>
+          <% if (components === 'antDesignVue') { -%>
             <a-button type="primary">About</a-button>
           <% } -%>
-          <% if (components === 'element-plus') { -%>
+          <% if (components === 'elementPlus') { -%>
             <el-button  type="primary">About</el-button>
           <% } -%>
-          <% if (components === 'naive-ui') { -%>
+          <% if (components === 'naiveUI') { -%>
             <n-button type="primary">About</n-button>
           <% } -%>
           <% if (components === 'arco') { -%>
@@ -86,7 +86,7 @@ const { count } = storeToRefs(counterStore);
           About
           </v-btn>
           <% } -%>
-          <% if (components === 'devui') { -%>
+          <% if (components === 'devUI') { -%>
             <d-button variant="solid">About</d-button>
           <% } -%>
           </RouterLink>

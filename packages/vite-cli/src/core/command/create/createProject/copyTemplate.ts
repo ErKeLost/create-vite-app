@@ -19,8 +19,9 @@ async function copyTemplate() {
   )
   options.templatePath = templatePath
   // 拷贝基础模板文件
-  const res = await getFilterFile()
-  await fs.copy(`${__dirname}/template/${options.frame}`, dest, { filter: res })
+  await fs.copy(`${__dirname}/template/${options.frame}`, dest, {
+    filter: getFilterFile
+  })
   // 生成 gitignore
   await fs.move(
     path.resolve(options.dest, '.gitignore.ejs'),

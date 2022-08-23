@@ -65,9 +65,10 @@ Object.keys(plugins).forEach((item) => {
     pluginImportStatement.set(item, stateMent)
   } else {
     pluginMap.set(item, `"${plugins[item].name}":"${plugins[item].version}",`)
-    pluginImportStatement.set(item, `${plugins[item].stateMent}`)
+    pluginImportStatement.set(item, `${plugins[item].stateMent};`)
   }
 })
+console.log(pluginImportStatement)
 
 // const pluginMap = new Map([
 //   ['jsx', '"@vitejs/plugin-vue-jsx": "^2.0.0",'],
