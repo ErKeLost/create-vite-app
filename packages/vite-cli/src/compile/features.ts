@@ -31,10 +31,10 @@ const eslintPlugin = {
   stableVersion: ['^8.18.0', '^5.30.5', '^5.30.5']
 }
 
-const eslintWidthPrettier = {
+const eslintWithPrettier = {
   name: ['eslint-config-prettier', 'eslint-plugin-prettier'],
   version: ['^8.5.0', '^4.2.1'],
   stableVersion: ['^8.5.0', '^4.2.1']
 }
 
-export { eslintWidthPrettier, eslintPlugin, eslintVue, prettier, pinia, router }
+export { eslintWithPrettier, eslintPlugin, eslintVue, prettier, pinia, router }

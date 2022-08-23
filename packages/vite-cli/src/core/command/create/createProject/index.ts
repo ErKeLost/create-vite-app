@@ -9,7 +9,7 @@ export default async function () {
   // 命令交互
   await createProjectQuestions() // 不共同
   // 复制模板
-  // await copyTemplate() // 共通
+  await copyTemplate() // 共通
   // 安装依赖
-  // await installationDeps() // 共通
+  await installationDeps() // 共通
 }
