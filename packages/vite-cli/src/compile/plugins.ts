@@ -66,8 +66,8 @@ const icons = {
 
 const inspect = {
   name: 'vite-plugin-inspect',
-  version: '^0.14.7',
-  stableVersion: '^0.14.7',
+  version: '^0.6.0',
+  stableVersion: '^0.6.0',
   stateMent: 'import Inspect from "vite-plugin-inspect"'
 }
 
