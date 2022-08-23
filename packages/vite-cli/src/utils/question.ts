@@ -5,7 +5,7 @@ const prompts = require('prompts')
 export default async function createQuestion(question) {
   const result = await prompts(question, {
     onCancel: () => {
-      throw new Error('🎨🎨' + ' Operation cancelled')
+      throw new Error('❌' + ' operation cancelled')
     }
   })
   Object.assign(options, result)
