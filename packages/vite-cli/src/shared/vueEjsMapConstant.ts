@@ -68,40 +68,8 @@ Object.keys(plugins).forEach((item) => {
     pluginImportStatement.set(item, `${plugins[item].stateMent};`)
   }
 })
-console.log(pluginImportStatement)
 
-// const pluginMap = new Map([
-//   ['jsx', '"@vitejs/plugin-vue-jsx": "^2.0.0",'],
-//   ['legacy', '"@vitejs/plugin-legacy": "^2.0.0",'],
-//   ['html', '"vite-plugin-html": "^3.2.0",'],
-//   ['auto-import', '"unplugin-auto-import": "^0.10.0",'],
-//   ['vue-components', '"unplugin-vue-components": "^0.21.1",'],
-//   ['unocss', '"unocss": "^0.44.5",'],
-//   ['visualizer', '"rollup-plugin-visualizer": "^5.7.1",'],
-//   ['pwa', '"vite-plugin-pwa": "^0.12.3",'],
-//   ['inspect', '"vite-plugin-inspect": "^0.6.0",'],
-//   ['icons', '"unplugin-icons": "^0.14.7","@iconify/json": "^2.1.74",']
-// ])
-// console.log(pluginMap)
-
-// const pluginImportStatement = new Map([
-//   ['jsx', 'import VueJsx from "@vitejs/plugin-vue-jsx";'],
-//   ['legacy', 'import legacy from "@vitejs/plugin-legacy";'],
-//   ['html', 'import html from "vite-plugin-html";'],
-//   ['unocss', 'import Unocss from "unocss/vite";'],
-//   ['auto-import', 'import AutoImport from "unplugin-auto-import/vite";'],
-//   ['vue-components', 'import Components from "unplugin-vue-components/vite";'],
-//   ['inspect', 'import Inspect from "vite-plugin-inspect";'],
-//   ['pwa', 'import pwa from "vite-plugin-pwa";'],
-//   ['visualizer', 'import visualizer from "rollup-plugin-visualizer";'],
-//   [
-//     'icons',
-//     'import Icons from "unplugin-icons/vite"; import IconsResolver from "unplugin-icons/resolver";'
-//   ]
-// ])
-console.log(pluginImportStatement)
-
-const useThemeUiMap = ['element-plus', 'ant-design', 'naive-ui']
+const useThemeUiMap = ['elementPlus', 'antDesignVue', 'naiveUI']
 const notComponentResolverMap = ['vuetify', 'ant-design']
 
 export {

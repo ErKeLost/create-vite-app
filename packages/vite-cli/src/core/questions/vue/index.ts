@@ -25,7 +25,6 @@ async function getVueProperty() {
   const notComponentResolver = notComponentResolverMap.includes(
     options.components
   )
-  console.log(featureMap)
 
   options.ui = currentLibrary
   options.ComponentResolver = currentComponentResolver
