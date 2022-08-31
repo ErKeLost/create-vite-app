@@ -8,7 +8,7 @@ import vue from "@vitejs/plugin-vue"
 <% if (plugins.indexOf('vueComponents') !== -1) { -%>
   import {
     <%- ComponentResolver %>
-   } from "unplugin-vueComponents/resolvers"
+   } from "unplugin-vue-components/resolvers"
 <% } -%>
 export function createVitePlugins(viteEnv, isDev: boolean) {
   const vitePlugins: (Plugin | Plugin[]) = [
