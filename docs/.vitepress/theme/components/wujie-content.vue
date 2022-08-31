@@ -7,9 +7,9 @@
 
 <script setup lang="ts">
 const props = defineProps({
-  introduction: String,
-});
-const [title, subTitle] = props.introduction.split("|");
+  introduction: String
+})
+const [title, subTitle] = props.introduction.split('|')
 </script>
 <style scoped>
 .content-container {

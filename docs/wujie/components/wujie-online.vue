@@ -1,20 +1,20 @@
 <script setup>
-import { watch, ref } from "vue";
-import { wujieList } from "./data";
+import { watch, ref } from 'vue'
+import { wujieList } from './data'
 
 const props = defineProps({
-  url: String | Object,
-});
+  url: String | Object
+})
 
-const wujieUrl = ref("");
+const wujieUrl = ref('')
 watch(
   () => props.url,
   (newValue) => {
-    wujieUrl.value = newValue;
+    wujieUrl.value = newValue
   }
-);
+)
 function changeWujieUrl(item) {
-  wujieUrl.value = item.url;
+  wujieUrl.value = item.url
 }
 </script>
 
@@ -33,7 +33,11 @@ function changeWujieUrl(item) {
     </div>
     <div class="wujieList">
       <h1>快速前往</h1>
-      <div v-for="item in wujieList" class="wujieItem" @click="changeWujieUrl(item)">
+      <div
+        v-for="item in wujieList"
+        class="wujieItem"
+        @click="changeWujieUrl(item)"
+      >
         {{ item.name }}
       </div>
     </div>
