@@ -45,6 +45,9 @@ Create Vite App resolve Vite create starter template No need to configure Vite s
 
 ## 🦄 Usage
 
+
+![create-vite-app.gif](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/930462095a9e46978d4b7258f9411b20~tplv-k3u1fbpfcp-watermark.image?)
+
 - Step1 Select the package manager that needs to be created. It is recommended to use pnpm to create projects
 
 ```js
