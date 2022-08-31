@@ -1,6 +1,6 @@
 {
   "name": "vite-create-app",
-  "version": "0.18.9",
+  "version": "0.19.0",
   "description": "",
   "bin": {
     "vite": "./outfile.cjs",
