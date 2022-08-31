@@ -1,41 +1,50 @@
 ---
 layout: home
 
-title: Vite-CLI
-titleTemplate: Next Generation Frontend Tooling
+title: 无界
+titleTemplate: 极致的微前端框架
 
 hero:
-  name: Vite CLI
-  text: 开箱即用高度可定制化vite模板
-  tagline: Vite template out of the box.
+  name: 无界
+  text: 极致的微前端框架
+  tagline: 基于 WebComponent 容器 + iframe 沙箱
   image:
-    src: /cli.png
-    alt: Vite
+    src: /wujie.png
+    alt: Wu Jie
+  Introduction: 无界微前端方案基于 WebComponent 容器 + iframe
+    沙箱 | 能够完善的解决适配成本、样式隔离、运行性能、页面白屏、子应用通信、子应用保活、多应用激活、vite
+    框架支持、应用共享等
   actions:
     - theme: brand
-      text: Get Started
-      link: /guide/
+      text: 快速开始
+      link: /guide/start.html
+    - theme: alt
+      text: Vue示例
+      link: https://wujie-micro.github.io/demo-main-vue/home
+    - theme: alt
+      text: React示例
+      link: https://wujie-micro.github.io/demo-main-react/
     - theme: alt
       text: View on GitHub
-      link: https://github.com/ErKeLost/vite-cli
+      link: https://github.com/Tencent/wujie
 
 features:
+  - icon: 🚀
+    title: 极速
+    details: 极致预加载、预执行，页面秒开无白屏、丝滑般切换
+  - icon: 💪
+    title: 强大
+    details: 支持子应用保活、内嵌、去中心化通信、多应用激活
+  - icon: 🤞
+    title: 简单
+    details: 框架封装, 保持普通组件使用体验一致
+  - icon: 🔲
+    title: 原生隔离
+    details: 基于 WebComponent 和 iframe，原生物理隔离
+  - icon: ⚡️
+    title: 原生性能
+    details: 避免 with 语句运行代码，整体的运行性能接近原生
   - icon: 📦
-    title: Support multiple package managers
-    details: You can use pnpm, NPM, and yarn to manage your projects!
-  - icon: 👌
-    title: Support various component libraries
-    details: Customization supports loading of different component libraries.
-  - icon: ⚙️
-    title: Custom composition plugin with more setup
-    details: Plugin can plug in any custom.
-  - icon: 🎨
-    title: Built in themed international layout
-    details: Custom selection out of the box.
-  # - icon: 🔩
-  #   title: Universal Plugins
-  #   details: Rollup-superset plugin interface shared between dev and build.
-  # - icon: 🔑
-  #   title: Fully Typed APIs
-  #   details: Flexible programmatic APIs with full TypeScript typing.
+    title: 开箱即用
+    details: 主、子应用无需做任何适配，开箱即用
 ---
