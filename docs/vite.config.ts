@@ -7,10 +7,5 @@ export default defineConfig({
   // legacy: {
   //   buildSsrCjsExternalHeuristics: true
   // }
-  css: { preprocessorOptions: { scss: { charset: false } } },
-  build: {
-    rollupOptions: {
-      external: ['vue']
-    }
-  }
+  css: { preprocessorOptions: { scss: { charset: false } } }
 })

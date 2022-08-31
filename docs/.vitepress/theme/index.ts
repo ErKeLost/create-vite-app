@@ -1,20 +1,14 @@
 import Theme from 'vitepress/theme'
-import wujieHome from './components/wujie-home.vue'
 import { h } from 'vue'
+import AsideSponsors from './components/AsideSponsors.vue'
+import HomeSponsors from './components/HomeSponsors.vue'
 import './styles/vars.css'
-
-const inBrowser = typeof window !== 'undefined'
 export default {
   ...Theme,
   Layout() {
-    return h(wujieHome, null, {
-      'nav-bar-title-before': () => h(wujieHome)
+    return h(Theme.Layout, null, {
+      'home-features-after': () => h(HomeSponsors),
+      'aside-ads-before': () => h(AsideSponsors)
     })
-  },
-  enhanceApp({ app }) {
-    inBrowser &&
-      import('wujie-vue3').then((module) => {
-        app.use(module.default)
-      })
   }
 }

@@ -1,24 +1,21 @@
 {
-  "name": "wujie-docs",
-  "version": "1.0.0-rc.12",
+  "name": "docs",
+  "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "private": true,
   "scripts": {
     "docs": "vitepress dev",
     "build": "vitepress build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "yiludege,erkelost",
+  "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "vite": "3.0.9",
-    "vitepress": "1.0.0-alpha.9"
-  },
   "dependencies": {
-    "@vue/theme": "^1.2.2",
-    "vue": "^3.2.38",
-    "wujie-vue3": "^1.0.0-rc.12"
+    "vue": "^3.2.37"
+  },
+  "devDependencies": {
+    "vite": "2.9.13",
+    "vitepress": "1.0.0-alpha.4"
   }
 }

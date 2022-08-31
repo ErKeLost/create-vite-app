@@ -4,18 +4,21 @@ const ogDescription = 'Next Generation Frontend Tooling'
 const ogImage = 'https://main.vitejs.dev/og-image.png'
 const ogTitle = 'Vite'
 const ogUrl = 'https://main.vitejs.dev'
-const base = process.env.NODE_ENV === 'production' ? '/doc/' : ''
 
 export default defineConfig({
-  title: '无界',
+  title: 'ViteCLI',
   description: 'Next Generation Frontend Tooling',
-  base,
   head: [
-    ['link', { rel: 'icon', href: `${base}/favicon.ico` }],
+    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/logo.svg' }],
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:title', content: ogTitle }],
     ['meta', { property: 'og:image', content: ogImage }],
-    ['meta', { property: 'og:url', content: ogUrl }]
+    ['meta', { property: 'og:url', content: ogUrl }],
+    ['meta', { property: 'twitter:description', content: ogDescription }],
+    ['meta', { property: 'twitter:title', content: ogTitle }],
+    ['meta', { property: 'twitter:card', content: 'summary_large_image' }],
+    ['meta', { property: 'twitter:image', content: ogImage }],
+    ['meta', { property: 'twitter:url', content: ogUrl }]
   ],
 
   vue: {
@@ -23,187 +26,252 @@ export default defineConfig({
   },
 
   themeConfig: {
-    logo: '/wujie.svg',
+    logo: '/cli.png',
+
     editLink: {
-      pattern: 'https://github.com/Tencent/wujie/tree/master/docs/:path',
-      text: '编辑本页'
+      pattern: 'https://github.com/vitejs/vite/edit/main/docs/:path',
+      text: 'Suggest changes to this page'
     },
 
-    socialLinks: [{ icon: 'github', link: 'https://github.com/Tencent/wujie' }],
-    // algolia: {
-    //   appId: "",
-    //   apiKey: "",
-    //   indexName: "wujie",
-    //   searchParameters: {
-    //     facetFilters: ["tags:en"],
-    //   },
-    // },
+    socialLinks: [
+      { icon: 'discord', link: 'https://jzzx-docs.netlify.app/' },
+      { icon: 'github', link: 'https://github.com/ErKeLost/vite-cli' }
+    ],
+
+    algolia: {
+      apiKey: 'b573aa848fd57fb47d693b531297403c',
+      indexName: 'vitejs',
+      searchParameters: {
+        facetFilters: ['tags:en']
+      }
+    },
+
+    carbonAds: {
+      code: 'CEBIEK3N',
+      placement: 'vitejsdev'
+    },
+
+    localeLinks: {
+      text: 'English',
+      items: [
+        { text: '简体中文', link: 'https://cn.vitejs.dev' },
+        { text: '日本語', link: 'https://ja.vitejs.dev' },
+        { text: 'Español', link: 'https://es.vitejs.dev' }
+      ]
+    },
 
     footer: {
-      message: 'Released the MIT License.'
+      message: 'Released under the MIT License.',
+      copyright: 'Copyright © 2022-present ERKELOST & Vite CLI Contributors'
     },
 
     nav: [
-      { text: '指南', link: '/guide/', activeMatch: '/guide/' },
-      {
-        text: 'API',
-        link: '/api/bus',
-        activeMatch: '/api/'
-      },
-      { text: '常见问题', link: '/question/', activeMatch: '/question/' },
-      { text: '框架封装', link: '/pack/', activeMatch: '/pack/' },
+      { text: 'Guide', link: '/guide/', activeMatch: '/guide/' },
       {
         text: '示例',
         items: [
           {
-            text: 'Vue主应用',
-            link: 'https://wujie-micro.github.io/demo-main-vue/home'
+            text: 'Vue',
+            items: [
+              {
+                text: 'Naive-UI (主题化测试中)',
+                link: 'https://create-vite-app-naive-ui.netlify.app'
+              },
+              {
+                text: 'Element-plus (主题化测试中)',
+                link: 'https://create-vite-app-element-plus.netlify.app'
+              },
+              {
+                text: 'Ant-Design-Vue (主题化测试中)',
+                link: 'https://vite-cli-ant-design-vue.netlify.app'
+              },
+              {
+                text: 'DevUI',
+                link: 'https://vite-cli-element-plus.netlify.app'
+              },
+              {
+                text: 'T-Design-Vue',
+                link: 'https://vite-cli-element-plus.netlify.app'
+              },
+              {
+                text: 'Arco-Design-Vue',
+                link: 'https://vite-cli-element-plus.netlify.app'
+              }
+            ]
           },
           {
-            text: 'React主应用',
-            link: 'https://wujie-micro.github.io/demo-main-react/'
+            text: 'React',
+            items: [
+              {
+                text: 'Ant-Design',
+                link: 'https://twitter.com/vite_js'
+              }
+            ]
           }
         ]
-      },
-      { text: '在线体验无界', link: '/wujie/', activeMatch: '/wujie/' }
+      }
+      // { text: 'Config', link: '/config/', activeMatch: '/config/' },
+      // { text: 'Plugins', link: '/plugins/', activeMatch: '/plugins/' },
+      // {
+      //   text: '示例',
+      //   items: [
+      //     {
+      //       text: 'Twitter',
+      //       link: 'https://twitter.com/vite_js'
+      //     },
+      //     {
+      //       text: 'Discord Chat',
+      //       link: 'https://chat.vitejs.dev'
+      //     },
+      //     {
+      //       text: 'Awesome Vite',
+      //       link: 'https://github.com/vitejs/awesome-vite'
+      //     },
+      //     {
+      //       text: 'DEV Community',
+      //       link: 'https://dev.to/t/vite'
+      //     },
+      //     {
+      //       text: 'Rollup Plugins Compat',
+      //       link: 'https://vite-rollup-plugins.patak.dev/'
+      //     },
+      //     {
+      //       text: 'Changelog',
+      //       link: 'https://github.com/vitejs/vite/blob/main/packages/vite/CHANGELOG.md'
+      //     }
+      //   ]
+      // }
+      // {
+      //   text: 'v3 (next)',
+      //   items: [
+      //     {
+      //       text: 'v2.x (stable)',
+      //       link: 'https://v2.vitejs.dev'
+      //     }
+      //   ]
+      // }
     ],
 
     sidebar: {
       '/guide/': [
         {
-          text: '入门',
-          collapsible: true,
+          text: 'Guide',
           items: [
+            // {
+            //   text: 'Why Vite',
+            //   link: '/guide/why'
+            // },
             {
-              text: '介绍',
+              text: 'Getting Started',
               link: '/guide/'
-            },
-            {
-              text: '快速上手',
-              link: '/guide/start'
             }
-          ]
-        },
-        {
-          text: '指南',
-          collapsible: true,
-          items: [
-            {
-              text: '预加载',
-              link: '/guide/preload'
-            },
-            {
-              text: '运行模式',
-              link: '/guide/mode'
-            },
-            {
-              text: '路由同步',
-              link: '/guide/sync'
-            },
-            {
-              text: '路由跳转',
-              link: '/guide/jump'
-            },
-            {
-              text: '生命周期',
-              link: '/guide/lifecycle'
-            },
-            {
-              text: '通信系统',
-              link: '/guide/communication'
-            },
-            {
-              text: '插件系统',
-              link: '/guide/plugin'
-            },
-            {
-              text: '降级处理',
-              link: '/guide/degrade'
-            },
-            {
-              text: '应用嵌套',
-              link: '/guide/nest'
-            },
-            {
-              text: '应用共享',
-              link: '/guide/share'
-            },
-            {
-              text: '全局变量',
-              link: '/guide/variable'
-            }
-          ]
-        },
-        {
-          text: '项目实战',
-          collapsible: true,
-          items: [
-            {
-              text: 'vue主应用',
-              link: 'https://github.com/Tencent/wujie/tree/master/examples/main-vue'
-            },
-            {
-              text: 'react主应用',
-              link: 'https://github.com/Tencent/wujie/tree/master/examples/main-react'
-            }
+            // {
+            //   text: 'Features',
+            //   link: '/guide/features'
+            // },
+            // {
+            //   text: 'Using Plugins',
+            //   link: '/guide/using-plugins'
+            // },
+            // {
+            //   text: 'Dependency Pre-Bundling',
+            //   link: '/guide/dep-pre-bundling'
+            // },
+            // {
+            //   text: 'Static Asset Handling',
+            //   link: '/guide/assets'
+            // },
+            // {
+            //   text: 'Building for Production',
+            //   link: '/guide/build'
+            // },
+            // {
+            //   text: 'Deploying a Static Site',
+            //   link: '/guide/static-deploy'
+            // },
+            // {
+            //   text: 'Env Variables and Modes',
+            //   link: '/guide/env-and-mode'
+            // },
+            // {
+            //   text: 'Server-Side Rendering (SSR)',
+            //   link: '/guide/ssr'
+            // },
+            // {
+            //   text: 'Backend Integration',
+            //   link: '/guide/backend-integration'
+            // },
+            // {
+            //   text: 'Comparisons',
+            //   link: '/guide/comparisons'
+            // },
+            // {
+            //   text: 'Migration from v2',
+            //   link: '/guide/migration'
+            // }
           ]
         }
-      ],
-      '/api/': [
-        {
-          text: '主应用',
-          collapsible: true,
-          items: [
-            {
-              text: 'bus',
-              link: '/api/bus'
-            },
-            {
-              text: 'setupApp',
-              link: '/api/setupApp'
-            },
-            {
-              text: 'startApp',
-              link: '/api/startApp'
-            },
-            {
-              text: 'preloadApp',
-              link: '/api/preloadApp'
-            },
-            {
-              text: 'destroyApp',
-              link: '/api/destroyApp'
-            }
-          ]
-        },
-        {
-          text: '子应用',
-          collapsible: true,
-          items: [
-            {
-              text: '$wujie',
-              link: '/api/subApp'
-            }
-          ]
-        }
-      ],
-      '/question': [],
-      '/pack/': [
-        {
-          text: '框架封装',
-          collapsible: true,
-          items: [
-            {
-              text: 'Vue组件封装',
-              link: '/pack/'
-            },
-            {
-              text: 'React组件封装',
-              link: '/pack/react'
-            }
-          ]
-        }
+        // {
+        //   text: 'APIs',
+        //   items: [
+        //     {
+        //       text: 'Plugin API',
+        //       link: '/guide/api-plugin'
+        //     },
+        //     {
+        //       text: 'HMR API',
+        //       link: '/guide/api-hmr'
+        //     },
+        //     {
+        //       text: 'JavaScript API',
+        //       link: '/guide/api-javascript'
+        //     },
+        //     {
+        //       text: 'Config Reference',
+        //       link: '/config/'
+        //     }
+        //   ]
+        // }
       ]
+      // '/config/': [
+      //   {
+      //     text: 'Config',
+      //     items: [
+      //       {
+      //         text: 'Configuring Vite',
+      //         link: '/config/'
+      //       },
+      //       {
+      //         text: 'Shared Options',
+      //         link: '/config/shared-options'
+      //       },
+      //       {
+      //         text: 'Server Options',
+      //         link: '/config/server-options'
+      //       },
+      //       {
+      //         text: 'Build Options',
+      //         link: '/config/build-options'
+      //       },
+      //       {
+      //         text: 'Preview Options',
+      //         link: '/config/preview-options'
+      //       },
+      //       {
+      //         text: 'Dep Optimization Options',
+      //         link: '/config/dep-optimization-options'
+      //       },
+      //       {
+      //         text: 'SSR Options',
+      //         link: '/config/ssr-options'
+      //       },
+      //       {
+      //         text: 'Worker Options',
+      //         link: '/config/worker-options'
+      //       }
+      //     ]
+      //   }
+      // ]
     }
   }
 })
