@@ -8,7 +8,7 @@
   ],
   "scripts": {
     "build": "zx ./scripts/build.mjs",
-    "build:docs": "turbo run build --filter=docs",
+    "build:docs": "turbo run build --filter=wujie-docs",
     "build:cli": "pnpm build --filter vite-cli",
     "clear": "rimraf node_modules **/*/node_modules",
     "changeset": "changeset",

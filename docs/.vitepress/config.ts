@@ -1,5 +1,4 @@
 import { defineConfig } from 'vitepress'
-import { version } from '../../packages/wujie-core/package.json'
 import path from 'path'
 const ogDescription = 'Next Generation Frontend Tooling'
 const ogImage = 'https://main.vitejs.dev/og-image.png'
@@ -53,15 +52,6 @@ export default defineConfig({
       },
       { text: '常见问题', link: '/question/', activeMatch: '/question/' },
       { text: '框架封装', link: '/pack/', activeMatch: '/pack/' },
-      {
-        text: `v${version}`,
-        items: [
-          {
-            text: '更新日志',
-            link: 'https://github.com/Tencent/wujie/blob/master/packages/wujie-core/CHANGELOG.md'
-          }
-        ]
-      },
       {
         text: '示例',
         items: [
