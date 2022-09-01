@@ -16,141 +16,105 @@ Vite-CLI 帮助你快速搭建开箱即用模板 目前 alpha 版本 基于 Vite
 
 ![image.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ee03e671a0164f38b7617680f66b3475~tplv-k3u1fbpfcp-watermark.image?)
 
-```ts
- vite create template
-```
+# Create Vite App
 
-- Step1 输入您的项目名
+## ( Rapid iteration of the version ) 🚧🚧
 
-```js
-🎨🎨   VITE_CLI V-0.17.7   🎨🎨
+## 📖 Introduction
 
+Create Vite App resolve Vite create starter template No need to configure Vite scaffolding templates quickly build vite3 development templates highly customized
 
-🚀 Welcome To Create Template for Vite!
+## 🌈 Features
 
-? Project name: » project-name
-```
+- ⚛️ Support for multiple framework templates
 
-- Step2 选择需要创建项目模板的框架
+- 📦 Select the out-of-the-box package manager
 
-```ts
-? Choose your framework (选择您需要使用的框架) » - Use arrow-keys. Return to submit.
->   Vue
-    React🚧🚧
-    Nuxt🚧🚧
-```
+- 🚀 Various characteristics of the corresponding framework
 
-- Step3 选择包管理器
+- ✨ Selection of various Ui frameworks, Theming and layout
+
+- 🍰 A variety of out-of-the-box Vite plugin options
+
+## 📦 Installation
 
 ```ts
-? Which package manager do you want to use? (选择您的包管理器) » - Use arrow-keys. Return to submit.
->   Pnpm
-    Yarn
-    Npm
+  npx vite-create-app@latest
 ```
 
-:::tip
-推荐使用 Pnpm 创建项目
-:::
+## 🦄 Usage
 
-- Step4 选择框架预设全家桶
+![ripple-app.gif](https://user-images.githubusercontent.com/66500121/187821940-556aba41-30d4-4d34-9093-d911f6257a2a.gif)
 
-```ts
-√ Add Vue Router for Single Page Application development? ... No / Yes
-√ Add Pinia for state management? ... No / Yes
-√ Add ESLint for code quality? ... No / Yes
-√ Add Prettier for code formatting? ... No / Yes
-```
+![create-vite-app.gif](https://user-images.githubusercontent.com/66500121/187821940-556aba41-30d4-4d34-9093-d911f6257a2a.gif)
 
-- Step5 选择 UI 组件库
-
-```ts
-? choose UI frameWork (选择您的 UI 框架) » - Use arrow-keys. Return to submit.
->   Element Plus
-    Vuetify3 Beta
-    Naive UI
-    Ant Design Vue 3.x
-    DevUI
-    arco-design
-    TDesign
-    Varlet
-    Vant 3.x
-    tdesign-mobile-vue
-```
-
-- Step6 选择是否给项目添加主题化，布局化 （此项配置将默认选中一些配置项, 用来保证模板运行）
-
-```ts
-? Add theming && layout to your project? (给你的项目添加主题化, 布局化, 此项会覆盖部分默认配置) » No / Yes
-```
-
-- Step7 给你的项目添加 vite 预设插件
-
-```ts
-? Custorm Your Plugins (自定义您的插件) » - Space to select. Return to submit
-( )   @vitejs/plugin-vue-jsx 提供 Vue 3 JSX 支持
-( )   @vitejs/plugin-legacy 为打包后的文件提供传统浏览器兼容性支持
-( )   vite-plugin-html 构建您的index.html
-(*)   unplugin-vue-components 自动按需导入Vue组件
-(*)   unplugin-auto-import 自动引入Api
-( )   Unocss 即时的按需原子 CSS 引擎
-( )   vite-plugin-pwa 零配置 PWA
-( )   vite-plugin-inspect 模块运行时依赖可视化
-( )   rollup-plugin-visualizer 打包后包体积分析
-( )   unplugin-icons 按需加载图标库
-```
+## 🤖 Feature Comparison
 
 Currently, the template supports the following plugins
 The supported template presets are:
 
-| FrameWork     | finish |
-| ------------- | ------ |
-| Vite3 Vue3    | 🚧✅   |
-| Vite3 React18 | 🚧❌   |
-| Nuxt          | 🚧❌   |
+### FrameWork
 
-| Feature / Version | finish | UI Library         | finish |
-| ----------------- | ------ | ------------------ | ------ |
-| Vue-Router 4.x    | ✅     | Element-Plus       | ✅     |
-| Pinia 2.x         | ✅     | Naive-UI           | ✅     |
-|                   |        | Vuetify-beta5      | ✅     |
-| Eslint 8.x        | ✅     | DevUI              | ✅     |
-| Prettier 2.7.x    | ✅     | Ant-design-vue     | ✅     |
-| TypeScript 4.7.x  | ✅     | arco-design        | ✅     |
-| husky             | 🚧❌   | TDesign            | ✅     |
-|                   |        | Varlet             | 🚧❌   |
-|                   |        | tdesign-mobile-vue | 🚧❌   |
-|                   |        | Vant               | 🚧❌   |
+| FrameWork     | finish   |
+| ------------- | -------- |
+| Vite3 Vue3    | 🚧 ✅ 🆕 |
+| Vite3 React18 | 🚧 ❌ 🆕 |
+| Nuxt          | 🚧 ❌    |
 
-| Feature / Version        | finish     |
-| ------------------------ | ---------- |
-| Vue                      | v3.2.x     |
-| Vite                     | v3.0.0     |
-| @vitejs/plugin-vue-jsx   | ✅         |
-| @vitejs/plugin-legacy    | ✅         |
-| vite-plugin-inspect      | ✅         |
-| vite-plugin-pwa          | ✅         |
-| unplugin-vue-components  | ✅         |
-| unplugin-auto-import     | ✅         |
-| Unocss                   | ✅         |
-| rollup-plugin-visualizer | ✅         |
-| unplugin-icons           | ✅         |
-| Vite-plugin-html         | ✅ new add |
+### Feature
 
-目前模板支持插件如下，
-The supported template presets are:
+| Feature / Version | finish |
+| ----------------- | ------ |
+| Vue-Router 4.x    | ✅     |
+| Pinia 2.x         | ✅     |
+|                   |        |
+| Eslint 8.x        | ✅     |
+| Prettier 2.7.x    | ✅     |
+| TypeScript 4.7.x  | ✅     |
+| husky             | 🚧 ❌  |
+| PWA               | 🚧 ❌  |
+|                   |        |
+|                   |        |
 
-|        presets 包        |               vite 插件                |
-| :----------------------: | :------------------------------------: |
-|  @vitejs/plugin-vue-jsx  |          提供 Vue 3 JSX 支持           |
-|  @vitejs/plugin-legacy   | 为打包后的文件提供传统浏览器兼容性支持 |
-|   vite-plugin-inspect    |          模块运行时依赖可视化          |
-|     vite-plugin-pwa      |               零配置 PWA               |
-| unplugin-vue-components  |         自动按需导入 Vue 组件          |
-|   unplugin-auto-import   |            自动按需引入 Api            |
-|          Unocss          |        即时的按需原子 CSS 引擎         |
-| rollup-plugin-visualizer |            打包后包体积分析            |
-|      unplugin-icons      |             按需加载图标库             |
+### UI Library
+
+| UI Library         | finish |
+| ------------------ | ------ |
+| Element-Plus       | ✅ 🆕  |
+| Naive-UI           | ✅ 🆕  |
+| Vuetify-beta5      | ✅ 🆕  |
+| DevUI              | ✅ 🆕  |
+| Ant-design-vue     | ✅ 🆕  |
+| arco-design        | ✅ 🆕  |
+| TDesign            | ✅     |
+| Varlet             | ✅     |
+| tdesign-mobile-vue | 🚧 ❌  |
+| Vant               | 🚧 ❌  |
+
+### Plugins
+
+| Feature / Version        | finish    |
+| ------------------------ | --------- |
+| Vue                      | v3.2.x    |
+| Vite                     | v3.0.0 🆕 |
+| @vitejs/plugin-vue-jsx   | ✅        |
+| @vitejs/plugin-legacy    | ✅        |
+| vite-plugin-inspect      | ✅        |
+| vite-plugin-pwa          | ✅        |
+| unplugin-vue-components  | ✅        |
+| unplugin-auto-import     | ✅        |
+| Unocss                   | ✅        |
+| rollup-plugin-visualizer | ✅        |
+| unplugin-icons           | ✅        |
+| Vite-plugin-html         | ✅ 🆕     |
+
+## 🛫 Example With theming
+
+- [Element-Plus](https://create-vite-app-naive-ui.netlify.app/)
+
+- [Naive-UI](https://create-vite-app-element-plus.netlify.app/)
+
+- [Ant-Design-Vue](https://vite-cli-ant-design-vue.netlify.app/)
 
 ### An example of executing dev after successful installation is as follows
 
@@ -172,7 +136,7 @@ The supported template presets are:
 
 - DevUI
 
-![image.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/5b6b15040dcd4fcaaac326285d374a91~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9d0ed5a6340c4a62b35f72ac7b490077~tplv-k3u1fbpfcp-watermark.image?)
 
 - T-Design
 
@@ -185,3 +149,5 @@ The supported template presets are:
 - Varlet
 
 ![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f8f31a99cab645d4a5fb5cf0c4000ef6~tplv-k3u1fbpfcp-watermark.image?)
+
+🌸 Credits
