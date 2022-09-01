@@ -45,8 +45,9 @@ Create Vite App resolve Vite create starter template No need to configure Vite s
 
 ## 🦄 Usage
 
+![2](https://user-images.githubusercontent.com/66500121/187821940-556aba41-30d4-4d34-9093-d911f6257a2a.gif)
 
-![create-vite-app.gif](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/0d51da96175f4331b208afa96a4015ae~tplv-k3u1fbpfcp-watermark.image?)
+
 
 ## 🤖 Feature Comparison
 
