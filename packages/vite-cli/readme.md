@@ -1,4 +1,4 @@
-# ViteCLI 🚧🚧
+# Vite CLI 🚧🚧
 
 <p align="center">
   <a href="https://vitejs.dev" target="_blank" rel="noopener noreferrer">
@@ -37,7 +37,7 @@
 
 ## Start 📦📦
 
-- Recommended to use pnpm to install ViteCLI .
+- Recommended to use pnpm to install Vite CLI .
 
 ```ts
   npx vite-create-app@latest

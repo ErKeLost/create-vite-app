@@ -65,14 +65,11 @@ The supported template presets are:
 | ----------------- | ------ |
 | Vue-Router 4.x    | ✅     |
 | Pinia 2.x         | ✅     |
-|                   |        |
 | Eslint 8.x        | ✅     |
 | Prettier 2.7.x    | ✅     |
 | TypeScript 4.7.x  | ✅     |
 | husky             | 🚧 ❌  |
 | PWA               | 🚧 ❌  |
-|                   |        |
-|                   |        |
 
 ### UI Library
 
@@ -106,11 +103,11 @@ The supported template presets are:
 | unplugin-icons           | ✅        |
 | Vite-plugin-html         | ✅ 🆕     |
 
-## 🛫 Example With theming
+## 🛫 Example With Theming
 
-- [Element-Plus](https://create-vite-app-naive-ui.netlify.app/)
+- [Naive-UI](https://create-vite-app-naive-ui.netlify.app/)
 
-- [Naive-UI](https://create-vite-app-element-plus.netlify.app/)
+- [Element-Plus](https://create-vite-app-element-plus.netlify.app/)
 
 - [Ant-Design-Vue](https://vite-cli-ant-design-vue.netlify.app/)
 

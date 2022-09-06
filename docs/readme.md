@@ -1,4 +1,4 @@
-# ViteCLI (refactor 重构 核心逻辑中 🚧🚧🚧🚧🚧🚧🚧🚧 stop 0.15.0-alpha 可用)
+# Vite CLI (refactor 重构 核心逻辑中 🚧🚧🚧🚧🚧🚧🚧🚧 stop 0.15.0-alpha 可用)
 
 <p align="center">
   <a href="https://vitejs.dev" target="_blank" rel="noopener noreferrer">
@@ -18,7 +18,7 @@
 
 # 🚧🚧 Build highly customized scaffold out of the box based on vite3
 
-- Recommended to use pnpm to install ViteCLI .
+- Recommended to use pnpm to install Vite CLI .
 
 ```ts
   pnpm add vite-create-app@latest -g
