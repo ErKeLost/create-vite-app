@@ -8,7 +8,7 @@ export default {
   Layout() {
     return h(Theme.Layout, null, {
       'home-features-after': () => h(HomeSponsors),
-      'aside-ads-before': () => h(AsideSponsors)
+      'aside-ads-before': () => h()
     })
   }
 }

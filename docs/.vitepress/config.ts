@@ -6,7 +6,7 @@ const ogTitle = 'Vite'
 const ogUrl = 'https://main.vitejs.dev'
 
 export default defineConfig({
-  title: 'ViteCLI',
+  title: 'Vite CLI',
   description: 'Next Generation Frontend Tooling',
   head: [
     ['link', { rel: 'icon', type: 'image/svg+xml', href: '/logo.svg' }],
@@ -27,7 +27,6 @@ export default defineConfig({
 
   themeConfig: {
     logo: '/cli.png',
-
     editLink: {
       pattern: 'https://github.com/vitejs/vite/edit/main/docs/:path',
       text: 'Suggest changes to this page'
@@ -46,17 +45,11 @@ export default defineConfig({
       }
     },
 
-    carbonAds: {
-      code: 'CEBIEK3N',
-      placement: 'vitejsdev'
-    },
 
     localeLinks: {
       text: 'English',
       items: [
-        { text: '简体中文', link: 'https://cn.vitejs.dev' },
-        { text: '日本語', link: 'https://ja.vitejs.dev' },
-        { text: 'Español', link: 'https://es.vitejs.dev' }
+        { text: '简体中文', link: 'https://cn.vitejs.dev' }
       ]
     },
 

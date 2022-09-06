@@ -73,8 +73,6 @@ The supported template presets are:
 | TypeScript 4.7.x  | ✅     |
 | husky             | 🚧 ❌  |
 | PWA               | 🚧 ❌  |
-|                   |        |
-|                   |        |
 
 ### UI Library
 
@@ -110,9 +108,9 @@ The supported template presets are:
 
 ## 🛫 Example With theming
 
-- [Element-Plus](https://create-vite-app-naive-ui.netlify.app/)
+- [Naive-UI](https://create-vite-app-naive-ui.netlify.app/)
 
-- [Naive-UI](https://create-vite-app-element-plus.netlify.app/)
+- [Element-Plus](https://create-vite-app-element-plus.netlify.app/)
 
 - [Ant-Design-Vue](https://vite-cli-ant-design-vue.netlify.app/)
 
