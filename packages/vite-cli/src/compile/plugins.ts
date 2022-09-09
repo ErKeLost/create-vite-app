@@ -21,8 +21,8 @@ const html = {
 
 const unocss = {
   name: 'unocss',
-  version: '^0.44.5',
-  stableVersion: '^0.44.5',
+  version: '^0.45.18',
+  stableVersion: '^0.45.18',
   stateMent: 'import Unocss from "unocss/vite"'
 }
 
