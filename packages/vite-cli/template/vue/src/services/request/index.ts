@@ -2,22 +2,15 @@ import axios from 'axios'
 import type { AxiosInstance } from 'axios'
 import type { stockRequestInterceptors, stockRequestConfig } from './type'
 
-import { ElLoading } from 'element-plus'
-
-const DEFAULT_LOADING = false
-
 class stockRequest {
   instance: AxiosInstance
   interceptors?: stockRequestInterceptors
-  showLoading: boolean
-  loading?: any
 
   constructor(config: stockRequestConfig) {
     // 创建axios实例
     this.instance = axios.create(config)
 
     // 保存基本信息
-    this.showLoading = config.showLoading ?? DEFAULT_LOADING
     this.interceptors = config.interceptors
 
     // 使用拦截器
@@ -34,15 +27,6 @@ class stockRequest {
     // 2.添加所有的实例都有的拦截器
     this.instance.interceptors.request.use(
       (config) => {
-        if (this.showLoading) {
-          // console.log(this.showLoading, '我是loading')
-
-          this.loading = ElLoading.service({
-            lock: true,
-            text: '正在请求数据....',
-            background: 'rgba(255, 255, 255, 0.8)'
-          })
-        }
         return config
       },
       (err) => {
@@ -52,17 +36,6 @@ class stockRequest {
 
     this.instance.interceptors.response.use(
       (res) => {
-        // 将loading移除
-        // console.log(res)
-        if (!res.data?.success) {
-          ElMessage({
-            message: res.data?.errorMsg,
-            type: 'error',
-            grouping: true
-          })
-        }
-        this.loading?.close()
-
         const data = res
         // if (data.returnCode === '-1001') {
         //   console.log('请求失败~, 错误信息')
@@ -71,9 +44,6 @@ class stockRequest {
         // }
       },
       (err) => {
-        // 将loading移除
-        this.loading?.close()
-
         // 例子: 判断不同的HttpErrorCode显示不同的错误信息
         if (err.response.status === 404) {
           console.log('404的错误~')
@@ -89,12 +59,6 @@ class stockRequest {
       if (config.interceptors?.requestInterceptor) {
         config = config.interceptors.requestInterceptor(config)
       }
-
-      // 2.判断是否需要显示loading
-      if (config.showLoading === false) {
-        this.showLoading = config.showLoading
-      }
-
       this.instance
         .request<any, T>(config)
         .then((res) => {
@@ -102,15 +66,10 @@ class stockRequest {
           if (config.interceptors?.responseInterceptor) {
             res = config.interceptors.responseInterceptor(res)
           }
-          // 2.将showLoading设置true, 这样不会影响下一个请求
-          this.showLoading = DEFAULT_LOADING
-
           // 3.将结果resolve返回出去
           resolve(res)
         })
         .catch((err) => {
-          // 将showLoading设置true, 这样不会影响下一个请求
-          this.showLoading = DEFAULT_LOADING
           reject(err)
           return err
         })
