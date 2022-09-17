@@ -17,6 +17,10 @@
 </p>
 <br/>
 
+# 🌸 Credits
+
+### This project is inspired by [X-Build](https://github.com/code-device/x-build) !!!
+
 # Create Vite App
 
 ## ( Rapid iteration of the version ) 🚧🚧
@@ -148,6 +152,4 @@ The supported template presets are:
 
 ![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f8f31a99cab645d4a5fb5cf0c4000ef6~tplv-k3u1fbpfcp-watermark.image?)
 
-🌸 Credits
 
-### This project is inspired by [X-Build](https://github.com/code-device/x-build) !!!
