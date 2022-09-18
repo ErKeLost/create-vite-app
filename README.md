@@ -57,6 +57,14 @@ Create Vite App resolve Vite create starter template No need to configure Vite s
 Currently, the template supports the following plugins
 The supported template presets are:
 
+
+## 🍰 TODO
+
+- Customized layout 定制化布局
+- Thematic customization and optimization 完善主题化统一 减少体积
+- Customized options cli 做成定制化 options cli
+- Support for javascript
+
 ### FrameWork
 
 | FrameWork     | finish   |
