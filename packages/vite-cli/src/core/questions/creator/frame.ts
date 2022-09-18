@@ -1,20 +1,11 @@
-import {
-  blue,
-  cyan,
-  green,
-  lightRed,
-  magenta,
-  red,
-  reset,
-  yellow
-} from 'kolorist'
+import chalk from "chalk"
 export default {
   name: 'frame',
   type: 'select',
   message: 'Choose your framework',
   choices: [
-    { title: magenta('Vue'), value: 'vue' },
-    { title: blue('React') + '🚧🚧', value: 'react', disabled: true },
-    { title: cyan('Nuxt') + '🚧🚧', value: 'nuxt', disabled: true }
+    { title: chalk.magenta('Vue'), value: 'vue' },
+    { title: chalk.blue('React') + '🚧🚧', value: 'react', disabled: true },
+    { title: chalk.cyan('Nuxt') + '🚧🚧', value: 'nuxt', disabled: true }
   ]
 }
