@@ -1,11 +1,14 @@
 import fs from 'fs-extra'
 import path from 'node:path'
+import green from 'chalk'
 import options from '@/shared/options'
 import { ejsRender } from '@/utils/ejsRender'
+import { loadWithRocketGradient } from '@/utils/gradient'
 import { templateFilesMap } from '@/shared/templateFile'
 import { getFilterFile } from '@/shared/frameQuestions'
 
 async function copyTemplate() {
+  const spinner = await loadWithRocketGradient('copy template')
   // CLI 模板文件夹路径
   options.src = path.resolve(__dirname, `../template/${options.frame}`)
   console.log(options.src);
@@ -42,5 +45,7 @@ async function copyTemplate() {
       overwrite: true
     })
   }
+  spinner.text = green('Template copied!');
+	spinner.succeed();
 }
 export default copyTemplate

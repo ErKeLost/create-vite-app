@@ -15,7 +15,8 @@ const gradientColors = [
   `#c238bd`
 ]
 
-export const rocketAscii = '■■▶'
+// export const rocketAscii = '■■▶'
+export const rocketAscii = '▶'
 
 // get a reference to scroll through while loading
 // visual representation of what this generates:

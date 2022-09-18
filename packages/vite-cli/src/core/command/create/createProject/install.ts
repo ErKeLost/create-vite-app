@@ -6,6 +6,7 @@ import { VITE_CLI_VERSION } from '@/shared/constant'
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const gradient = require('gradient-string')
 async function installationDeps() {
+
   // 目录
   const cmdIgnore = createSpawnCmd(options.dest, 'ignore')
   const cmdInherit = createSpawnCmd(options.dest, 'inherit')
@@ -45,5 +46,6 @@ async function installationDeps() {
       ? `${options.package} run dev`
       : `${options.package} dev`
   )
+
 }
 export default installationDeps
