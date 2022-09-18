@@ -8,6 +8,8 @@ import { getFilterFile } from '@/shared/frameQuestions'
 async function copyTemplate() {
   // CLI 模板文件夹路径
   options.src = path.resolve(__dirname, `../template/${options.frame}`)
+  console.log(options.src);
+
   // 获取基础参数
   // options.name = name
   const dest = path.resolve(process.cwd(), options.name)

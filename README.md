@@ -52,10 +52,8 @@ Create Vite App resolve Vite create starter template No need to configure Vite s
 ![ripple-app.gif](https://user-images.githubusercontent.com/66500121/187821940-556aba41-30d4-4d34-9093-d911f6257a2a.gif)
 
 
-## 🤖 Feature Comparison
 
-Currently, the template supports the following plugins
-The supported template presets are:
+
 
 
 ## 🍰 TODO
@@ -64,6 +62,13 @@ The supported template presets are:
 - Thematic customization and optimization 完善主题化统一 减少体积
 - Customized options cli 做成定制化 options cli
 - Support for javascript
+
+
+
+## 🤖 Feature Comparison
+
+Currently, the template supports the following plugins
+The supported template presets are:
 
 ### FrameWork
 

@@ -8,8 +8,6 @@
     "vite-cli": "./outfile.cjs"
   },
   "scripts": {
-    "dev": "esno src/index.ts",
-    "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:out": "tsc src/index.ts -outDir dist"
   },
