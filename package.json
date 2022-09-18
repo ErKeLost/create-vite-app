@@ -9,9 +9,6 @@
   "scripts": {
     "build": "zx ./scripts/build.mjs",
     "build:docs": "turbo run build --filter=docs",
-    "clear": "rimraf node_modules **/*/node_modules",
-    "changeset": "changeset",
-    "version-packages": "changeset version",
     "serve": "turbo run docs --parallel",
     "lint": "turbo run lint",
     "lint:fix": "eslint --fix --ext .js .",
@@ -22,7 +19,8 @@
     "eslint": "eslint . --ext .ts,.vue,.js,.tsx",
     "prepare": "husky install",
     "commit": "git add . && cz",
-    "preinstall": "npx only-allow pnpm"
+    "preinstall": "npx only-allow pnpm",
+    "release": "bumpp packages/*/package.json && pnpm publish -r"
   },
   "devDependencies": {
     "@changesets/cli": "^2.23.0",
