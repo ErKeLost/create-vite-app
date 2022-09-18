@@ -4,7 +4,7 @@ import createSpawnCmd from '@/utils/createSpawnCmd'
 import clearConsole from '@/utils/clearConsole'
 import { VITE_CLI_VERSION } from '@/shared/constant'
 // eslint-disable-next-line @typescript-eslint/no-var-requires
-const gradient = require('gradient-string')
+import gradient from 'gradient-string'
 async function installationDeps() {
 
   // 目录

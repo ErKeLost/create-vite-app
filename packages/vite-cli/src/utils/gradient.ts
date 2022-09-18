@@ -13,7 +13,7 @@ const gradientColors = [
   `#9b88ff`,
   `#a564ff`,
   `#974cff`,
-  `#832aff`,
+  `#832aff`
 ]
 
 // export const rocketAscii = '■■▶'
@@ -44,7 +44,9 @@ function getGradientAnimFrames() {
     frames.push(
       referenceGradient
         .slice(start, end)
-        .map((g) => chalk.bgHex(g)(' '))
+        .map((g) => {
+          return chalk.bgHex(g)(' ')
+        })
         .join('')
     )
   }

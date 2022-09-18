@@ -1,9 +1,5 @@
-// import chalk from 'chalk'
-// import { bgCyan, cyan } from './log'
 import { cyan } from './log'
-// import readline from 'readline'
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const readline = require('readline')
+import readline from 'readline'
 import { VITE_CLI_VERSION } from '../shared/constant'
 export default function (color: string, str: string): void {
   if (process.stdout.isTTY) {

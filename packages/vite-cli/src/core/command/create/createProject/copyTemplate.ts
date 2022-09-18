@@ -1,6 +1,5 @@
 import fs from 'fs-extra'
 import path from 'node:path'
-import green from 'chalk'
 import options from '@/shared/options'
 import { ejsRender } from '@/utils/ejsRender'
 import { loadWithRocketGradient } from '@/utils/gradient'
@@ -11,7 +10,7 @@ async function copyTemplate() {
   const spinner = await loadWithRocketGradient('copy template')
   // CLI 模板文件夹路径
   options.src = path.resolve(__dirname, `../template/${options.frame}`)
-  console.log(options.src);
+  console.log(options.src)
 
   // 获取基础参数
   // options.name = name
@@ -45,7 +44,7 @@ async function copyTemplate() {
       overwrite: true
     })
   }
-  spinner.text = green('Template copied!');
-	spinner.succeed();
+  spinner.text = 'Template copied!'
+  spinner.succeed()
 }
 export default copyTemplate
