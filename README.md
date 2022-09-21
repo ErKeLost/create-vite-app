@@ -55,9 +55,9 @@ Create Vite App resolve Vite create starter template No need to configure Vite s
 
 ## 🍰 TODO
 
-- Customized layout 定制化布局
-- Thematic customization and optimization 完善主题化统一 减少体积
-- Customized options cli 做成定制化 options cli
+- Customized layout
+- Thematic customization and optimization
+- Customized options cli
 - Support for javascript
 
 
