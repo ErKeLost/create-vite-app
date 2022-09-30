@@ -14,7 +14,7 @@
 </p>
 <br/>
 
-# 🌸 Credits
+# 🌸  Credits
 
 ### This project is inspired by [X-Build](https://github.com/code-device/x-build) !!!
 
