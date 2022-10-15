@@ -6,7 +6,7 @@ export default {
     { title: 'Element Plus', value: 'elementPlus' },
     { title: 'Vuetify3 Beta', value: 'vuetify' },
     { title: 'Naive UI', value: 'naiveUI' },
-    { title: 'Varlet', value: 'varlet' },
+    { title: 'Varlet Pc', value: 'varlet' },
     { title: 'Ant Design Vue 3.x', value: 'antDesignVue' },
     { title: 'DevUI', value: 'devUI' },
     { title: 'arco-design', value: 'arco' },

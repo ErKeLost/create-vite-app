@@ -1,6 +1,9 @@
 <% if (plugins.indexOf('unocss') !== -1) { -%>
   import 'uno.css'
 <% } -%>
+<% if (components === 'varlet') { -%>
+import '@varlet/touch-emulator'
+<% } -%>
 import '@/styles/base.css'
 <% if (useTheme) { -%>
   import '@erkelost/colorpicker/dist/style.css'
