@@ -22,7 +22,7 @@ async function installationDeps() {
   await cmdIgnore('git', ['init'])
   await cmdIgnore('git', ['add .'])
   await cmdIgnore('git', ['commit -m "Initialize by VITE_CLI"'])
-  console.log(`> it repository initialized successfully`)
+  console.log(`> repository initialized successfully`)
 
   // 依赖安装
   console.log(

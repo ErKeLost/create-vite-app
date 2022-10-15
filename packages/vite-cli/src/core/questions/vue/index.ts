@@ -6,7 +6,6 @@ import theme from './theme'
 import options from '@/shared/options'
 import {
   componentsMap,
-  futureMap,
   lintMap,
   featureMap,
   pluginMap,
@@ -25,7 +24,6 @@ async function getVueProperty() {
   const notComponentResolver = notComponentResolverMap.includes(
     options.components
   )
-
   options.ui = currentLibrary
   options.ComponentResolver = currentComponentResolver
   options.notComponentResolver = notComponentResolver

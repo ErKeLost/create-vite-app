@@ -27,7 +27,7 @@ interface Options {
   frame?: string
   pluginImportStatement?: string
   // vue-components-import
-  ComponentResolver?: string
+  ComponentResolver?: any
   notComponentResolver?: boolean
 }
 

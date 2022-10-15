@@ -35,7 +35,7 @@ const autoImport = {
 
 const vueComponents = {
   name: 'unplugin-vue-components',
-  version: '^0.21.1',
+  version: '^0.22.8',
   stableVersion: '^0.21.1',
   stateMent: 'import Components from "unplugin-vue-components/vite"'
 }

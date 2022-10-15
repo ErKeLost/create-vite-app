@@ -40,7 +40,7 @@ const tencent = {
 }
 const vuetify = {
   name: 'vuetify',
-  version: '^3.0.0-beta.5',
+  version: '^3.0.0-beta.13',
   stableVersion: '^3.0.0-beta.5',
   theme: false,
   unpluginResolver: 'VuetifyResolver',
@@ -58,10 +58,10 @@ const arco = {
 // mobile
 const varlet = {
   name: '@varlet/ui',
-  version: '^1.27.17',
-  stableVersion: '^1.27.17',
+  version: '^2.0.2',
+  stableVersion: '^2.0.2',
   theme: false,
-  unpluginResolver: 'ElementPlusResolver'
+  unpluginResolver: 'VarletUIResolver'
 }
 
 const vant = {
@@ -69,7 +69,7 @@ const vant = {
   version: '^1.0.0',
   stableVersion: '^1.27.17',
   theme: false,
-  unpluginResolver: 'ElementPlusResolver'
+  unpluginResolver: 'VantUIResolver'
 }
 
 export {

@@ -69,11 +69,10 @@ export function createVitePlugins(viteEnv, isDev: boolean) {
           filepath: "./.eslintrc-auto-import.json", // Default `./.eslintrc-auto-import.json`
           globalsPropValue: true, // Default `true`, (true | false | 'readonly' | 'readable' | 'writable' | 'writeable')
         },
-        // Auto import functions from Element Plus, e.g. ElMessage, ElMessageBox... (with style)
-        // 自动导入 Element Plus 相关函数，如：ElMessage, ElMessageBox... (带样式)
+        // Auto import functions from UILibrary, e.g. Message, Spin, Loading, MessageBox... (with style)
         resolvers: [
           // Auto import icon components
-          <% if (components !== 'vuetify' && components === 'elementPlus') { -%>
+          <% if (components !== 'vuetify') { -%>
             <%- ComponentResolver %>()
           <% } -%>
         ]

@@ -31,6 +31,9 @@
     <%-  Router %>
     <% } -%>
     <%- ui %>
+    <% if (components === 'varlet') { -%>
+      "@varlet/touch-emulator": "^1.27.20",
+    <% } -%>
     "vue": "^3.2.27",
     <% if (usePinia || useTheme) { -%>
     <%- Pinia %>
