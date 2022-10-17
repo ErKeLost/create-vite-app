@@ -3,7 +3,7 @@
   "version": "0.19.8",
   "description": "",
   "bin": {
-    "vite": "./outfile.cjs",
+    "create-vite": "./outfile.cjs",
     "v": "./outfile.cjs",
     "vite-cli": "./outfile.cjs"
   },
