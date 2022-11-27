@@ -1,24 +1,24 @@
 const router = {
   name: 'vue-router',
-  version: '^4.1.1',
-  stableVersion: '4.1.1'
+  version: '^4.1.6',
+  stableVersion: '4.1.6'
 }
 const pinia = {
   name: ['pinia', 'pinia-plugin-persist'],
-  version: ['^2.0.14', '^1.0.0'],
+  version: ['^2.0.27', '^1.0.0'],
   stableVersion: ['2.0.14', '^1.0.0']
 }
 
 const prettier = {
   name: 'prettier',
-  version: '^2.7.1',
-  stableVersion: '^2.7.1'
+  version: '^2.8.0',
+  stableVersion: '^2.8.0'
 }
 
 const eslintVue = {
   name: 'eslint-plugin-vue',
-  version: '^9.1.1',
-  stableVersion: '^9.1.1'
+  version: '^9.8.0',
+  stableVersion: '^9.8.0'
 }
 
 const eslintPlugin = {
@@ -27,7 +27,7 @@ const eslintPlugin = {
     '@typescript-eslint/eslint-plugin',
     '@typescript-eslint/parser'
   ],
-  version: ['^8.18.0', '^5.30.5', '^5.30.5'],
+  version: ['^8.28.0', '^5.44.0', '^5.44.0'],
   stableVersion: ['^8.18.0', '^5.30.5', '^5.30.5']
 }
 
