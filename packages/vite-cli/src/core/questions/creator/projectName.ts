@@ -16,16 +16,15 @@ const packageName = [
   },
   {
     name: 'overwrite',
-    type: async () => ((await emptyDirName(options.name)) ? null : 'toggle'),
-    initial: false,
-    message: async () => {
+    type: () => (emptyDirName(options.name) ? null : 'confirm'),
+    message: () => {
       return `🚨🚨 files "${options.name}" is not empty. Remove existing files and continue?`
     }
   },
   {
     name: 'overwrite',
     type: (prev, values) => {
-      if (values.shouldOverwrite === false) {
+      if (values.overwrite === false) {
         throw new Error(' Operation cancelled')
       }
       return null

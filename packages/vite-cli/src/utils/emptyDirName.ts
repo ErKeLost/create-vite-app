@@ -1,18 +1,14 @@
-import { access } from 'fs/promises'
-import { constants } from 'fs'
-import { cyan } from '../utils/log'
+import fs from 'fs-extra'
+import path from 'node:path'
 
-export default async function (name: string): Promise<boolean> {
-  // access 操作文件异步执行所有操作 不会阻塞事件循环 完成或者 错误时调用回调函数
-  // name 为指定目录 或者 文件 没有 返回null
-  try {
-    await access(name, constants.R_OK | constants.W_OK)
-    // cyan(
-    //   ` ️🚨 Oops, "${name}" already exists. Please try again with a different directory.`
-    // )
-    // process.exit(1)
-    return false
-  } catch {
+export default function (name: string): boolean {
+  // 目标目录路径
+  const targetDir = path.resolve(process.cwd(), name)
+
+  if (!fs.existsSync(targetDir)) {
     return true
   }
+
+  const files = fs.readdirSync(targetDir)
+  return files.length === 0 || (files.length === 1 && files[0] === '.git')
 }
