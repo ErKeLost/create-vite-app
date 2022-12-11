@@ -9,6 +9,7 @@ await esbuild.build({
   target: 'node16',
   external: ['prettier'],
   treeShaking: true,
+  watch: true,
   // minify: true,
   plugins: [
     {

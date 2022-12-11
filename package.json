@@ -8,7 +8,7 @@
   ],
   "scripts": {
     "build": "zx ./scripts/build.mjs",
-    "aa": "pnpm run build --filter vite-create-app",
+    "dev": "pnpm run build --filter vite-create-app",
     "build:docs": "turbo run build --filter=docs",
     "serve": "turbo run docs --parallel",
     "lint": "turbo run lint",

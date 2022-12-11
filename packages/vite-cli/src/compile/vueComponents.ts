@@ -40,7 +40,7 @@ const tencent = {
 }
 const vuetify = {
   name: 'vuetify',
-  version: '^3.0.2',
+  version: '^3.0.4',
   stableVersion: '^3.0.0-beta.5',
   theme: false,
   unpluginResolver: 'VuetifyResolver',
