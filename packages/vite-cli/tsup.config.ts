@@ -7,7 +7,6 @@ export default defineConfig({
   splitting: false,
   sourcemap: true,
   clean: true,
-  watch: true,
   plugins: [
     // TODO tsup hook copy template with theme
   ]
