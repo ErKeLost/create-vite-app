@@ -3,7 +3,7 @@ import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { dirname } from 'node:path'
 // 获取 __filename 的 ESM 写法
-const __filename = fileURLToPath(import.meta.url)
+// const __filename = fileURLToPath(import.meta.url)
 // 获取 __dirname 的 ESM 写法
 const __dirname = dirname(fileURLToPath(import.meta.url))
 function copyFolder(copiedPath, resultPath, direct) {
@@ -58,9 +58,9 @@ console.log(await fs.existsSync('dist'))
 if (!(await fs.existsSync('dist'))) {
   await fs.mkdirSync('dist')
 }
-if (!(await fs.existsSync('dist'))) {
-  copyFolder("../template", "../dist/template")
+if (await fs.existsSync('dist')) {
+  copyFolder('../template', '../dist/template')
 }
-if (!(await fs.existsSync('dist'))) {
-  copyFolder("../theme", "../dist/theme")
+if (await fs.existsSync('dist')) {
+  copyFolder('../theme', '../dist/theme')
 }
