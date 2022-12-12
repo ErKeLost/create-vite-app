@@ -28,6 +28,9 @@ pnpm install
 pnpm dev
 ```
 
+![image](https://user-images.githubusercontent.com/66500121/207052692-22725ea0-e64a-46ac-ae3f-fe28a3ade2be.png)
+
+
 ```
 cd packages/vite-cli
 ```
@@ -36,7 +39,7 @@ cd packages/vite-cli
 npm link
 ```
 
-![image](https://user-images.githubusercontent.com/66500121/207052692-22725ea0-e64a-46ac-ae3f-fe28a3ade2be.png)
+Then you can enter instructions at will on the command line and update in real time when you modify the code.
 
 
 # Create Vite App
