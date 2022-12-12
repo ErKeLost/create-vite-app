@@ -18,6 +18,27 @@
 
 ### This project is inspired by [X-Build](https://github.com/code-device/x-build) !!!
 
+# 📦 Dev Mode
+
+```
+pnpm install
+```
+
+```
+pnpm dev
+```
+
+```
+cd packages/vite-cli
+```
+
+```
+npm link
+```
+
+![image](https://user-images.githubusercontent.com/66500121/207052692-22725ea0-e64a-46ac-ae3f-fe28a3ade2be.png)
+
+
 # Create Vite App
 
 ## ( Rapid iteration of the version ) 🚧🚧
@@ -25,6 +46,8 @@
 ## 📖 Introduction
 
 Create Vite App resolve Vite create starter template No need to configure Vite scaffolding templates quickly build vite3 development templates highly customized
+
+
 
 ## 🌈 Features
 
