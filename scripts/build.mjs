@@ -1,5 +1,5 @@
 import * as esbuild from 'esbuild'
-
+import chalk from 'chalk'
 await esbuild.build({
   bundle: true,
   entryPoints: ['packages/vite-cli/src/index.ts'],
@@ -12,6 +12,23 @@ await esbuild.build({
   watch: true,
   // minify: true,
   plugins: [
+    {
+      name: 'start',
+      setup(build) {
+        build.onEnd(() => {
+          console.log(
+            chalk.magenta('[create-vite-app]:'),
+            chalk.blue('Esbuild code refresh listener'),
+            chalk.yellow('...')
+          )
+          console.log(
+            chalk.magenta('[create-vite-app]:'),
+            chalk.blue('Refresh CreteViteApp Rebuild'),
+            chalk.yellow('')
+          )
+        })
+      }
+    },
     {
       name: 'alias',
       setup({ onResolve, resolve }) {

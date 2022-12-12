@@ -7,8 +7,7 @@
     "packages/*"
   ],
   "scripts": {
-    "build": "zx ./scripts/build.mjs",
-    "dev": "pnpm run build --filter vite-create-app",
+    "dev": "esno ./scripts/build.mjs",
     "build:docs": "turbo run build --filter=docs",
     "serve": "turbo run docs --parallel",
     "lint": "turbo run lint",
@@ -29,6 +28,7 @@
     "@typescript-eslint/eslint-plugin": "^5.46.0",
     "@typescript-eslint/parser": "^5.46.0",
     "bumpp": "^8.2.1",
+    "chalk": "^5.1.2",
     "commitizen": "^4.2.6",
     "commitlint": "^17.3.0",
     "commitlint-config-cz": "^0.13.3",
