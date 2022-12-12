@@ -11,7 +11,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "copy": "esno ./scripts/dev.mjs",
-    "dev": "pnpm copy && tsup --watch",
+    "build": "tsup",
+    "dev": "pnpm copy && pnpm build",
     "postdev": "esno ../../scripts/post.mjs"
   },
   "keywords": [],

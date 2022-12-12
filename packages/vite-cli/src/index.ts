@@ -5,5 +5,4 @@ async function createViteCliCommand() {
   await viteCliCoreCommand()
   program.parse(process.argv)
 }
-
 createViteCliCommand()
