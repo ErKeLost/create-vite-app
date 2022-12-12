@@ -39,7 +39,7 @@ cd packages/vite-cli
 npm link
 ```
 
-Then you can enter instructions at will on the command line and update in real time when you modify the code.
+###  Then you can enter instructions at will on the command line with ` create-vite | vite4 | vite-cli ` and update in real time when you modify the code.
 
 
 # Create Vite App
