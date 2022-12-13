@@ -10,6 +10,7 @@ importers:
       '@typescript-eslint/parser': ^5.46.0
       bumpp: ^8.2.1
       chalk: ^5.1.2
+      chokidar: ^3.5.3
       commitizen: ^4.2.6
       commitlint: ^17.3.0
       commitlint-config-cz: ^0.13.3
@@ -39,6 +40,7 @@ importers:
       '@typescript-eslint/parser': 5.46.0_ha6vam6werchizxrnqvarmz2zu
       bumpp: 8.2.1
       chalk: 5.2.0
+      chokidar: 3.5.3
       commitizen: 4.2.6
       commitlint: 17.3.0
       commitlint-config-cz: 0.13.3

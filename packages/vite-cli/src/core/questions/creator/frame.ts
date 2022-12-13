@@ -1,4 +1,4 @@
-import chalk from "chalk"
+import chalk from 'chalk'
 export default {
   name: 'frame',
   type: 'select',

@@ -29,6 +29,7 @@
     "@typescript-eslint/parser": "^5.46.0",
     "bumpp": "^8.2.1",
     "chalk": "^5.1.2",
+    "chokidar": "^3.5.3",
     "commitizen": "^4.2.6",
     "commitlint": "^17.3.0",
     "commitlint-config-cz": "^0.13.3",
