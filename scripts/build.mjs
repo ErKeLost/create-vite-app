@@ -18,12 +18,12 @@ await esbuild.build({
         build.onEnd(() => {
           console.log(
             chalk.magenta('[create-vite-app]:'),
-            chalk.blue('Esbuild code refresh listener'),
-            chalk.yellow('...')
+            chalk.blue('esbuild code refresh listener'),
+            chalk.yellow('')
           )
           console.log(
             chalk.magenta('[create-vite-app]:'),
-            chalk.blue('Refresh CreteViteApp Rebuild'),
+            chalk.blue('refresh rebuild success'),
             chalk.yellow('')
           )
         })
