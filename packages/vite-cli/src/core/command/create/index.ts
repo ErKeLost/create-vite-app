@@ -3,8 +3,9 @@ import createProjectQuestions from '@/core/questions/creator'
 import initialLog from './createProject/initialLog'
 import installationDeps from './createProject/install'
 import copyTemplate from './createProject/copyTemplate'
+import notInstallationDeps from './createProject/notInstall'
 
-async function createProject () {
+async function createProject() {
   // 初始化 log
   await initialLog() // 共通
   // 命令交互
@@ -12,7 +13,9 @@ async function createProject () {
   // 复制模板
   await copyTemplate() // 共通
   // 安装依赖
-  await installationDeps() // 共通
+  // await installationDeps() // 共通
+  // 不安装依赖
+  await notInstallationDeps()
 }
 
 export default async function createCommand() {

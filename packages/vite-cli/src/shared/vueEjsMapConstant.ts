@@ -51,6 +51,17 @@ const lintMap = new Map([
     '"prettier": "prettier --write ./**/*.{html,vue,ts,js,json,md}"'
   ]
 ])
+const componentSideEffect = new Map([
+  ['VarletEffect', '"@varlet/touch-emulator": "^1.27.20",'],
+  ['VuetifyEffect', '"vite-plugin-vuetify": "^1.0.0",']
+])
+const cssSideEffect = new Map([
+  ['SassEffect', '"sass": "^1.53.0",'],
+  ['LessEffect', '"less": "^4.1.3",']
+])
+const themeSideEffect = new Map([
+  ['ElementPlusThemeEffect', '"@pureadmin/theme": "^2.0.0",']
+])
 const pluginImportStatement = new Map()
 const pluginMap = new Map()
 Object.keys(plugins).forEach((item) => {
