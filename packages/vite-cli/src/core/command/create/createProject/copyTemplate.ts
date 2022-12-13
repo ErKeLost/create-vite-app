@@ -24,7 +24,6 @@ async function copyTemplate() {
   await fs.copy(`${__dirname}/template/${options.frame}`, dest, {
     filter: getFilterFile
   })
-  console.log('复制完毕')
 
   // 生成 gitignore
   await fs.move(
@@ -38,8 +37,6 @@ async function copyTemplate() {
       .get(options.frame)()
       .map((file) => ejsRender(file, options.name))
   )
-  console.log('模版渲染完毕')
-
   // 先编译后覆盖主题化文件
   if (options.useTheme) {
     await fs.copy(`${__dirname}/theme/${options.components}`, `${dest}/src`, {
