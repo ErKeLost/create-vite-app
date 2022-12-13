@@ -27,17 +27,17 @@ async function copyTemplate() {
   console.log('复制完毕')
 
   // 生成 gitignore
-  // await fs.move(
-  //   path.resolve(options.dest, '.gitignore.ejs'),
-  //   path.resolve(options.dest, '.gitignore'),
-  //   { overwrite: true }
-  // )
-  // // 编译 ejs 模板文件
-  // await Promise.all(
-  //   templateFilesMap
-  //     .get(options.frame)()
-  //     .map((file) => ejsRender(file, options.name))
-  // )
+  await fs.move(
+    path.resolve(options.dest, '.gitignore.ejs'),
+    path.resolve(options.dest, '.gitignore'),
+    { overwrite: true }
+  )
+  // 编译 ejs 模板文件
+  await Promise.all(
+    templateFilesMap
+      .get(options.frame)()
+      .map((file) => ejsRender(file, options.name))
+  )
   console.log('模版渲染完毕')
 
   // 先编译后覆盖主题化文件

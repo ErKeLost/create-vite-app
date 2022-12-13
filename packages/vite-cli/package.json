@@ -3,7 +3,7 @@
   "version": "0.19.11",
   "description": "",
   "bin": {
-    "vite4": "./dist/index.js",
+    "vite4": "./outfile.cjs",
     "create-vite": "./outfile.cjs",
     "v": "./outfile.cjs",
     "vite-cli": "./outfile.cjs"
