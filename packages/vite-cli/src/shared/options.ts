@@ -27,8 +27,11 @@ interface Options {
   frame?: string
   pluginImportStatement?: string
   // vue-components-import
-  ComponentResolver?: any
+  ComponentResolver?: unknown
   notComponentResolver?: boolean
+  vuetify?: boolean
+  varlet?: boolean
+  elementPlus?: boolean
 }
 
 const options: Options = {
