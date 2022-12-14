@@ -12,6 +12,13 @@ const legacy = {
   stateMent: 'import legacy from "@vitejs/plugin-legacy"'
 }
 
+const vuetifyPlugin = {
+  name: 'vite-plugin-vuetify',
+  version: '^1.0.0',
+  stableVersion: '^1.0.0',
+  stateMent: 'import vuetify from "vite-plugin-vuetify'
+}
+
 const html = {
   name: 'vite-plugin-html',
   version: '^3.2.0',
@@ -81,5 +88,6 @@ export {
   autoImport,
   unocss,
   pwa,
-  visualizer
+  visualizer,
+  vuetifyPlugin
 }

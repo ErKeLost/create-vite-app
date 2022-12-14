@@ -23,21 +23,21 @@ export default defineConfig({
     {
       name: 'copyTemplate',
       setup(build) {
-        build.onEnd(async () => {
-          if (!(await fs.existsSync('dist'))) {
-            await fs.mkdirSync('dist')
-          }
-          if (await fs.existsSync('dist')) {
-            copyDir('template', 'dist/template', (err) => {
-              console.log(err)
-            })
-          }
-          if (await fs.existsSync('dist')) {
-            copyDir('theme', 'dist/theme', (err) => {
-              console.log(err)
-            })
-          }
-        })
+        // build.onEnd(async () => {
+        //   if (!(await fs.existsSync('dist'))) {
+        //     await fs.mkdirSync('dist')
+        //   }
+        //   if (await fs.existsSync('dist')) {
+        //     copyDir('template', 'dist/template', (err) => {
+        //       console.log(err)
+        //     })
+        //   }
+        //   if (await fs.existsSync('dist')) {
+        //     copyDir('theme', 'dist/theme', (err) => {
+        //       console.log(err)
+        //     })
+        //   }
+        // })
       }
     }
   ]

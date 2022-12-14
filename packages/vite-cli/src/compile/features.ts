@@ -37,4 +37,38 @@ const eslintWithPrettier = {
   stableVersion: ['^8.5.0', '^4.2.1']
 }
 
-export { eslintWithPrettier, eslintPlugin, eslintVue, prettier, pinia, router }
+const elementPlugThemeEffect = {
+  name: '@pureadmin/theme',
+  version: '^2.0.0',
+  stableVersion: '^2.0.0'
+}
+const varletEffect = {
+  name: '@varlet/touch-emulator',
+  version: '^1.27.20',
+  stableVersion: '^1.27.20'
+}
+
+const sassEffect = {
+  name: 'sass',
+  version: '^1.53.0',
+  stableVersion: '^1.53.0'
+}
+
+const lessEffect = {
+  name: 'less',
+  version: '^4.1.3',
+  stableVersion: '^4.1.3'
+}
+
+export {
+  eslintWithPrettier,
+  lessEffect,
+  sassEffect,
+  varletEffect,
+  elementPlugThemeEffect,
+  eslintPlugin,
+  eslintVue,
+  prettier,
+  pinia,
+  router
+}
