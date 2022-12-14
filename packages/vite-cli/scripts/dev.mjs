@@ -60,7 +60,7 @@ function copyFolder(copiedPath, resultPath, direct) {
  * @param {string} dest 目标目录
  * @param {function} callback 回调
  */
-const copyDir = async (src, dest, callback) => {
+export const copyDir = async (src, dest, callback) => {
   const copy = (copySrc, copyDest) => {
     fs.readdir(copySrc, (err, list) => {
       if (err) {
