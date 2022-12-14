@@ -24,13 +24,9 @@ async function getVueProperty() {
   const notComponentResolver = notComponentResolverMap.includes(
     options.components
   )
-  const vuetify = options.components === 'vuetify'
-  const varlet = options.components === 'varlet'
-  const elementPlus = options.components === 'elementPlus'
-  options.ui = currentLibrary
-  options.vuetify = vuetify
-  options.varlet = varlet
-  options.elementPlus = elementPlus
+  Array.from(componentsMap.keys()).forEach((item) => {
+    options[item] = options.components === item
+  })
   options.ui = currentLibrary
   options.ComponentResolver = currentComponentResolver
   options.notComponentResolver = notComponentResolver
