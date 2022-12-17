@@ -75,17 +75,6 @@ npm link
 
 ###  Then you can enter instructions at will on the command line with ` create-vite | vite4 | vite-cli ` and update in real time when you modify the code.
 
-
-
-## 🍰 TODO
-
-- Customized layout
-- Thematic customization and optimization
-- Customized options cli
-- Support for javascript
-
-
-
 ## 🤖 Feature Comparison
 
 Currently, the template supports the following plugins
