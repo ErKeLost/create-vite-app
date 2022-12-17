@@ -12,44 +12,38 @@ async function installationDeps() {
   const cmdInherit = createSpawnCmd(options.dest, 'inherit')
   // 开始记录用时
   const startTime: number = new Date().getTime()
-  console.log(
-    gradient(
-      'cyan',
-      'purple'
-    )(`> The project template is generated in the directory： ${options.dest}`)
+  logger(
+    `> The project template is generated in the directory： ${options.dest}`
   )
   // Git 初始化
   await cmdIgnore('git', ['init'])
   await cmdIgnore('git', ['add .'])
   await cmdIgnore('git', ['commit -m "Initialize by VITE_CLI"'])
-  console.log(`> repository initialized successfully`)
+  gradient('cyan', 'purple')(`> repository initialized successfully`)
   if (options.package !== 'none') {
     // 依赖安装
-    console.log(
+    logger(
       `> Dependencies are being installed automatically, please wait a moment...`
     )
-    console.log('')
     await cmdInherit(options.package, ['install'])
   }
 
   const endTime: number = new Date().getTime()
   const usageTime: number = (endTime - startTime) / 1000
-  cyan(
+  logger(
     `> 📦📦 Usage time ${usageTime}s , Please enter the following command to continue...`
   )
-  console.log('')
-  cyan('Project created successfully')
+  logger('Project created successfully')
   if (options.package !== 'none') {
-    console.log('')
-    cyan(`cd ${options.name}`)
-    cyan(
+    logger(`cd ${options.name}`)
+    logger(
       options.package === 'npm'
         ? `${options.package} run dev`
         : `${options.package} dev`
     )
   } else {
-    cyan(`npm run install`)
-    cyan('npm run dev')
+    logger(`npm run install`)
+    logger('npm run dev')
   }
 }
 export default installationDeps
@@ -62,4 +56,9 @@ function pkgFromUserAgent(userAgent: string | undefined) {
     name: pkgSpecArr[0],
     version: pkgSpecArr[1]
   }
+}
+
+function logger(string: string) {
+  console.log(gradient('cyan', 'purple')(string))
+  console.log('')
 }
