@@ -34,8 +34,8 @@ async function installationDeps() {
     `> 📦📦 Usage time ${usageTime}s , Please enter the following command to continue...`
   )
   logger('Project created successfully')
+  logger(`cd ${options.name}`)
   if (options.package !== 'none') {
-    logger(`cd ${options.name}`)
     logger(
       options.package === 'npm'
         ? `${options.package} run dev`
