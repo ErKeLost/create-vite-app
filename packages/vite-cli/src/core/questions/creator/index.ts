@@ -13,9 +13,9 @@ async function createProjectQuestions(): Promise<void> {
     // 选择框架
     await createQuestion(frame)
     // 包管理器版本
-    await createQuestion(PackageDevice)
+    // await createQuestion(PackageDevice)
     // Use NpmMirror
-    await createQuestion(npmMirror)
+    // await createQuestion(npmMirror)
     // pc or mobile
     // await createQuestion(prompts, device)
     // 根据不同框架继续走不同任务

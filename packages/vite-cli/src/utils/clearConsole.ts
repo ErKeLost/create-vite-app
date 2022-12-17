@@ -1,7 +1,7 @@
 import { cyan } from './log'
 import readline from 'readline'
 import { VITE_CLI_VERSION } from '../shared/constant'
-export default function (color: string, str: string): void {
+export default function (str: string): void {
   if (process.stdout.isTTY) {
     console.log('')
     const cutLine = ` VITE_CLI ${VITE_CLI_VERSION} `
@@ -14,7 +14,7 @@ export default function (color: string, str: string): void {
     console.log(blank)
     readline.cursorTo(process.stdout, 0, 0)
     readline.clearScreenDown(process.stdout)
-    cyan(str)
+    // cyan(str)
     console.log('')
   }
 }

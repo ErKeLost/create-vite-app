@@ -14,7 +14,7 @@ export function vueFetchTemplateFiles(): string[] {
     'src/plugins/assets.ts',
     'src/store/modules/counter.ts',
     '.eslintrc.js',
-    '.npmrc',
+    // '.npmrc',
     'index.html'
   ]
 }

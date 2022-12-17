@@ -6,6 +6,9 @@ import { VITE_CLI_VERSION } from '@/shared/constant'
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 import gradient from 'gradient-string'
 async function installationDeps() {
+  const pkgInfo = pkgFromUserAgent(process.env.npm_config_user_agent)
+
+  console.log(pkgInfo)
 
   // 目录
   const cmdIgnore = createSpawnCmd(options.dest, 'ignore')
@@ -31,7 +34,7 @@ async function installationDeps() {
   console.log('')
   await cmdInherit(options.package, ['install'])
 
-  clearConsole('cyan', `VITE_CLI v${VITE_CLI_VERSION}`)
+  clearConsole(`VITE_CLI v${VITE_CLI_VERSION}`)
   const endTime: number = new Date().getTime()
   const usageTime: number = (endTime - startTime) / 1000
   cyan(
@@ -46,6 +49,15 @@ async function installationDeps() {
       ? `${options.package} run dev`
       : `${options.package} dev`
   )
-
 }
 export default installationDeps
+
+function pkgFromUserAgent(userAgent: string | undefined) {
+  if (!userAgent) return undefined
+  const pkgSpec = userAgent.split(' ')[0]
+  const pkgSpecArr = pkgSpec.split('/')
+  return {
+    name: pkgSpecArr[0],
+    version: pkgSpecArr[1]
+  }
+}
