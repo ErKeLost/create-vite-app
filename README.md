@@ -31,6 +31,8 @@ Create Vite App resolve Vite create starter template No need to configure Vite s
 
 - ⚛️ Support for multiple framework templates
 
+- 🌸 One-click deployment of netlify
+
 - 📦 Select the out-of-the-box package manager
 
 - 🚀 Various characteristics of the corresponding framework
