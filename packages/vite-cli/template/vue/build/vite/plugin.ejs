@@ -42,7 +42,7 @@ export function createVitePlugins(viteEnv, isDev: boolean) {
           }
         ]
       }
-    })
+    }),
     <% if (plugins.indexOf('jsx') !== -1) { -%>
       VueJsx(),
     <% } -%>
