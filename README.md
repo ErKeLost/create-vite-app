@@ -19,8 +19,6 @@
 
 # Create Vite App
 
-## ( Rapid iteration of the version ) 🚧🚧
-
 ## 📖 Introduction
 
 Create Vite App resolve Vite create starter template No need to configure Vite scaffolding templates quickly build vite3 development templates highly customized
