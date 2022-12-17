@@ -18,29 +18,6 @@
 
 ### This project is inspired by [X-Build](https://github.com/code-device/x-build) !!!
 
-# 📦 Dev Mode
-
-```
-pnpm install
-```
-
-```
-pnpm dev
-```
-
-![image](https://user-images.githubusercontent.com/66500121/207052692-22725ea0-e64a-46ac-ae3f-fe28a3ade2be.png)
-
-
-```
-cd packages/vite-cli
-```
-
-```
-npm link
-```
-
-###  Then you can enter instructions at will on the command line with ` create-vite | vite4 | vite-cli ` and update in real time when you modify the code.
-
 
 # Create Vite App
 
@@ -76,6 +53,29 @@ Create Vite App resolve Vite create starter template No need to configure Vite s
 
 
 
+
+# 📦 Dev Mode
+
+```
+pnpm install
+```
+
+```
+pnpm dev
+```
+
+![image](https://user-images.githubusercontent.com/66500121/207052692-22725ea0-e64a-46ac-ae3f-fe28a3ade2be.png)
+
+
+```
+cd packages/vite-cli
+```
+
+```
+npm link
+```
+
+###  Then you can enter instructions at will on the command line with ` create-vite | vite4 | vite-cli ` and update in real time when you modify the code.
 
 
 
