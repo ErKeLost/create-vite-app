@@ -112,7 +112,7 @@ The supported template presets are:
 | Prettier 2.7.x    | ✅     |
 | TypeScript 4.7.x  | ✅     |
 | husky             | 🚧 ❌  |
-| PWA               | 🚧 ❌  |
+| PWA               | ✅  |
 
 ### UI Library
 
