@@ -1,6 +1,6 @@
 {
   "name": "create-vite-template",
-  "version": "0.19.15",
+  "version": "0.19.16",
   "description": "",
   "bin": {
     "vite4": "./dist/index.js",
