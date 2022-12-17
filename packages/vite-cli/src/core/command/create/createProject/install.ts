@@ -48,16 +48,8 @@ async function installationDeps() {
         : `${options.package} dev`
     )
   } else {
-    cyan(
-      options.package === 'npm'
-        ? `${options.package} run install`
-        : `${options.package} install`
-    )
-    cyan(
-      options.package === 'npm'
-        ? `${options.package} run dev`
-        : `${options.package} dev`
-    )
+    cyan(`npm run install`)
+    cyan('npm run dev')
   }
 }
 export default installationDeps
