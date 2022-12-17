@@ -2,9 +2,9 @@ import type { Plugin } from 'vite'
 import vue from "@vitejs/plugin-vue"
 import { VitePWA } from 'vite-plugin-pwa'
 <%- pluginImportStatement %>
-<!-- <% if (components === 'vuetify') { -%>
+<% if (components === 'vuetify') { -%>
   import vuetify from 'vite-plugin-vuetify'
-<% } -%> -->
+<% } -%>
 
 <% if (plugins.indexOf('vueComponents') !== -1) { -%>
   import {
@@ -106,9 +106,9 @@ export function createVitePlugins(viteEnv, isDev: boolean) {
         ]
       }),
     <% } -%>
-    <!-- <% if (components === 'vuetify') { -%>
+    <% if (components === 'vuetify') { -%>
       vuetify({ autoImport: true }),
-    <% } -%> -->
+    <% } -%>
     <% if (plugins.indexOf('icons') !== -1) { -%>
       Icons({
         compiler: 'vue3',
