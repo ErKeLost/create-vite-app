@@ -9,6 +9,7 @@ async function notInstallationDeps() {
   // 目录
   const pkgInfo = pkgFromUserAgent(process.env.npm_config_user_agent)
   console.log(process.env)
+  console.log(process.env.npm_config_user_agent)
   console.log(pkgInfo)
   const cmdIgnore = createSpawnCmd(options.dest, 'ignore')
   // 开始记录用时

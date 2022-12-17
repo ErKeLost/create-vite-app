@@ -3,8 +3,9 @@
   "version": "0.19.16",
   "description": "",
   "bin": {
-    "vite4": "./dist/index.js",
-    "create-vite": "./outfile.cjs",
+    "vite-app": "./outfile.cjs",
+    "create-vite-template": "./dist/index.js",
+    "create-vite-app": "./outfile.cjs",
     "v": "./outfile.cjs",
     "vite-cli": "./outfile.cjs"
   },
