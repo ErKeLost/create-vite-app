@@ -85,7 +85,7 @@ The supported template presets are:
 | FrameWork     | finish   |
 | ------------- | -------- |
 | Vite3 Vue3    | 🚧 ✅ 🆕 |
-| Vite3 React18 | 🚧 ❌ 🆕 |
+| Vite3 React18 | 🚧  🆕 |
 | Nuxt          | 🚧 ❌    |
 
 ### Feature
@@ -99,7 +99,7 @@ The supported template presets are:
 | Prettier 2.7.x    | ✅     |
 | TypeScript 4.7.x  | ✅     |
 | husky             | 🚧 ❌  |
-| PWA               | ✅  |
+| PWA               | ✅ 🆕 |
 
 ### UI Library
 
