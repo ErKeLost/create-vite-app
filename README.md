@@ -19,8 +19,6 @@
 
 # Create Vite App
 
-## ( Rapid iteration of the version ) 🚧🚧
-
 ## 📖 Introduction
 
 Create Vite App resolve Vite create starter template No need to configure Vite scaffolding templates quickly build vite3 development templates highly customized
@@ -77,17 +75,6 @@ npm link
 
 ###  Then you can enter instructions at will on the command line with ` create-vite | vite4 | vite-cli ` and update in real time when you modify the code.
 
-
-
-## 🍰 TODO
-
-- Customized layout
-- Thematic customization and optimization
-- Customized options cli
-- Support for javascript
-
-
-
 ## 🤖 Feature Comparison
 
 Currently, the template supports the following plugins
@@ -97,9 +84,10 @@ The supported template presets are:
 
 | FrameWork     | finish   |
 | ------------- | -------- |
-| Vite3 Vue3    | 🚧 ✅ 🆕 |
-| Vite3 React18 | 🚧 ❌ 🆕 |
+| Vite3 Vue3    | ✅ 🆕 |
+| Vite3 React18 | 🚧  🆕 |
 | Nuxt          | 🚧 ❌    |
+| Next          | 🚧 ❌    |
 
 ### Feature
 
@@ -112,7 +100,7 @@ The supported template presets are:
 | Prettier 2.7.x    | ✅     |
 | TypeScript 4.7.x  | ✅     |
 | husky             | 🚧 ❌  |
-| PWA               | ✅  |
+| PWA               | ✅ 🆕 |
 
 ### UI Library
 
