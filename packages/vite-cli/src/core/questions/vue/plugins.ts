@@ -36,7 +36,7 @@ export default {
       value: 'unocss',
       selected: false
     },
-    { title: 'vite-plugin-pwa', value: 'pwa', disabled: true },
+    { title: 'vite-plugin-pwa', value: 'pwa' },
     {
       title: 'vite-plugin-inspect',
       value: 'inspect'
