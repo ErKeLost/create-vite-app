@@ -13,9 +13,9 @@ async function createProject() {
   // 复制模板
   await copyTemplate() // 共通
   // 安装依赖
-  // await installationDeps() // 共通
+  await installationDeps() // 共通
   // 不安装依赖
-  await notInstallationDeps()
+  // await notInstallationDeps()
 }
 
 export default async function createCommand() {

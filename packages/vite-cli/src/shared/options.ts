@@ -14,7 +14,7 @@ interface Options {
   plugins?: string[]
   allPackages?: any[]
   precss?: 'less' | 'scss' | ''
-  package?: 'pnpm' | 'npm' | 'yarn'
+  package?: 'pnpm' | 'npm' | 'yarn' | 'none'
   ui?: any
   useEslint?: boolean
   usePrettier?: boolean

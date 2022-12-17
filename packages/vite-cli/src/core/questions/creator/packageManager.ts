@@ -5,8 +5,9 @@ const isPnpmInstalled = shouldUsePnpm()
 export default {
   name: 'package',
   type: 'select',
-  message: 'Which package manager do you want to use?',
+  message: 'Which package manager do you want to use ?',
   choices: [
+    { title: 'Not Install (Manual installation)', value: 'none' },
     {
       title: isPnpmInstalled ? 'Pnpm' : 'Pnpm (pnpm not install)',
       value: 'pnpm'

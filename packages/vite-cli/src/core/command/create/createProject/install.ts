@@ -7,9 +7,6 @@ import { VITE_CLI_VERSION } from '@/shared/constant'
 import gradient from 'gradient-string'
 async function installationDeps() {
   const pkgInfo = pkgFromUserAgent(process.env.npm_config_user_agent)
-
-  console.log(pkgInfo)
-
   // 目录
   const cmdIgnore = createSpawnCmd(options.dest, 'ignore')
   const cmdInherit = createSpawnCmd(options.dest, 'inherit')
@@ -26,15 +23,15 @@ async function installationDeps() {
   await cmdIgnore('git', ['add .'])
   await cmdIgnore('git', ['commit -m "Initialize by VITE_CLI"'])
   console.log(`> repository initialized successfully`)
+  if (options.package !== 'none') {
+    // 依赖安装
+    console.log(
+      `> Dependencies are being installed automatically, please wait a moment...`
+    )
+    console.log('')
+    await cmdInherit(options.package, ['install'])
+  }
 
-  // 依赖安装
-  console.log(
-    `> Dependencies are being installed automatically, please wait a moment...`
-  )
-  console.log('')
-  await cmdInherit(options.package, ['install'])
-
-  clearConsole(`VITE_CLI v${VITE_CLI_VERSION}`)
   const endTime: number = new Date().getTime()
   const usageTime: number = (endTime - startTime) / 1000
   cyan(
@@ -42,13 +39,26 @@ async function installationDeps() {
   )
   console.log('')
   cyan('Project created successfully')
-  console.log('')
-  cyan(`cd ${options.name}`)
-  cyan(
-    options.package === 'npm'
-      ? `${options.package} run dev`
-      : `${options.package} dev`
-  )
+  if (options.package !== 'none') {
+    console.log('')
+    cyan(`cd ${options.name}`)
+    cyan(
+      options.package === 'npm'
+        ? `${options.package} run dev`
+        : `${options.package} dev`
+    )
+  } else {
+    cyan(
+      options.package === 'npm'
+        ? `${options.package} run install`
+        : `${options.package} install`
+    )
+    cyan(
+      options.package === 'npm'
+        ? `${options.package} run dev`
+        : `${options.package} dev`
+    )
+  }
 }
 export default installationDeps
 
