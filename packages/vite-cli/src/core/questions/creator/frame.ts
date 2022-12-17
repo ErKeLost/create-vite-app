@@ -6,6 +6,7 @@ export default {
   choices: [
     { title: chalk.magenta('Vue'), value: 'vue' },
     { title: chalk.blue('React') + '🚧🚧', value: 'react', disabled: true },
-    { title: chalk.cyan('Nuxt') + '🚧🚧', value: 'nuxt', disabled: true }
+    { title: chalk.cyan('Nuxt') + '🚧🚧', value: 'nuxt', disabled: true },
+    { title: chalk.cyan('Next') + '🚧🚧', value: 'next', disabled: true }
   ]
 }
