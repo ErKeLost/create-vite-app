@@ -18,23 +18,20 @@
   "dependencies": {
     "@vueuse/core": "^8.9.1",
     "@vueuse/head": "^0.7.6",
-    "@types/node": "^16.11.43",
+    "@types/node": "latest",
     "axios": "^0.27.2",
     <% if (useTheme) { -%>
-    "@erkelost/colorpicker": "^1.0.8",
-    "@erkelost/layout": "2.9.3",
-    "@erkelost/utils": "^1.0.2",
-    <% if (elementPlus) { -%>
-    "css-color-function": "^1.3.3",
-    "colord": "^2.9.2",
+    <%- themeEffect %>
+    <% if (elementPlus && useTheme) { -%>
+    <%- elementPlusProThemeEffect %>
     <% } -%>
     <% } -%>
     <% if (useRouter) { -%>
-    <%-  Router %>
+    <%- Router %>
     <% } -%>
     <%- ui %>
     <% if (varlet) { -%>
-      "@varlet/touch-emulator": "^1.27.20",
+    <%- varletEffect %>
     <% } -%>
     "vue": "^3.2.27",
     <% if (usePinia || useTheme) { -%>
@@ -42,18 +39,18 @@
     <% } -%>
   },
   "devDependencies": {
-    <% if (useTheme) { -%>
-      "@pureadmin/theme": "^2.0.0",
+    <% if (useTheme && elementPlus) { -%>
+    <%- elementPlugThemeEffect %>
     <% } -%>
-    "vite": "^4.0.1",
+    "vite": "^4.0.2",
     <% if (precss === 'scss' || useTheme && components !== 'antDesignVue' ) { -%>
-      "sass": "^1.53.0",
+    <%- sassEffect %>
     <% } -%>
     <% if (precss === 'less' || useTheme && components === 'antDesignVue') { -%>
-      "less": "^4.1.3",
+    <%- lessEffect %>
     <% } -%>
     <% if (vuetify) { -%>
-      "vite-plugin-vuetify": "^1.0.0-alpha.12",
+    <%- vuetifyEffect %>
     <% } -%>
     <% if (Eslint) { -%>
       <%- Eslint %>
@@ -65,7 +62,6 @@
       <%- EslintWithPrettierScript %>
     <% } -%>
     "@vitejs/plugin-vue": "^3.2.0",
-    "vite-plugin-pwa": "^0.14.0",
     <% if (pluginList.length > 0) { -%>
       <%- pluginList %>
     <% } -%>

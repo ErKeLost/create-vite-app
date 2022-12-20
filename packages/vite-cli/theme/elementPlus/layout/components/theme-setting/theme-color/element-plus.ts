@@ -1,7 +1,7 @@
 /* 动态改变element-plus主题色 */
 import epCss from './element.scss'
 import { convert } from 'css-color-function'
-import { HexToRGBA, RGBAtoHex } from '@erkelost/utils'
+import { HexToRGBA, RGBAtoHex } from '@relaxed/utils'
 // 色值表
 const formula: any = {
   'shade-1': 'color(primary shade(10%))',

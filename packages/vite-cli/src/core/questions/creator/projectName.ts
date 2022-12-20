@@ -6,7 +6,7 @@ const packageName = [
   {
     name: 'projectName',
     type: 'text',
-    message: 'Where would you like to create your new project?',
+    message: 'Project Name ?',
     initial: defaultProjectName,
     onState: (state) => {
       options.name = state.value

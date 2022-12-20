@@ -40,6 +40,13 @@ const autoImport = {
   stateMent: 'import AutoImport from "unplugin-auto-import/vite"'
 }
 
+const pwa = {
+  name: 'vite-plugin-pwa',
+  version: '^0.14.0',
+  stableVersion: '^0.14.0',
+  stateMent: 'import pwa from "vite-plugin-pwa"'
+}
+
 const vueComponents = {
   name: 'unplugin-vue-components',
   version: '^0.22.11',
@@ -52,13 +59,6 @@ const visualizer = {
   version: '^5.8.3',
   stableVersion: '^5.7.1',
   stateMent: 'import AutoImport from "unplugin-auto-import/vite"'
-}
-
-const pwa = {
-  name: 'vite-plugin-pwa',
-  version: '^0.13.3',
-  stableVersion: '^0.6.0',
-  stateMent: 'import pwa from "vite-plugin-pwa"'
 }
 
 const icons = {

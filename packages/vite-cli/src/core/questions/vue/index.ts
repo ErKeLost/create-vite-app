@@ -27,6 +27,12 @@ async function getVueProperty() {
   Array.from(componentsMap.keys()).forEach((item) => {
     options[item] = options.components === item
   })
+  Array.from(featureMap.keys()).forEach((item) => {
+    options[item] = featureMap.get(item)
+  })
+  Array.from(pluginMap.keys()).forEach((item) => {
+    options[item] = pluginMap.get(item)
+  })
   options.ui = currentLibrary
   options.ComponentResolver = currentComponentResolver
   options.notComponentResolver = notComponentResolver

@@ -3,7 +3,6 @@ import createProjectQuestions from '@/core/questions/creator'
 import initialLog from './createProject/initialLog'
 import installationDeps from './createProject/install'
 import copyTemplate from './createProject/copyTemplate'
-import notInstallationDeps from './createProject/notInstall'
 
 async function createProject() {
   // 初始化 log

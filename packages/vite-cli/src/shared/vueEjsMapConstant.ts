@@ -1,6 +1,6 @@
-import * as components from '@/compile/vueComponents'
-import * as features from '@/compile/features'
-import * as plugins from '@/compile/plugins'
+import * as components from '@/compile/vue/components'
+import * as features from '@/compile/vue/features'
+import * as plugins from '@/compile/vue/plugins'
 // 核心逻辑还是拼接 package.json中的字符串 模板还是写死
 function removeBlock(str: string) {
   if (str) {
@@ -48,7 +48,7 @@ const lintMap = new Map([
   ],
   [
     'PrettierScript',
-    '"prettier": "prettier --write ./**/*.{html,vue,ts,js,json,md}"'
+    '"prettier": "prettier --write ./**/*.{html,vue,ts,js,json,md}",'
   ]
 ])
 

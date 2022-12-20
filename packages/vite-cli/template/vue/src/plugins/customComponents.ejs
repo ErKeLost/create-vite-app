@@ -1,7 +1,7 @@
 import { App } from 'vue'
 
 <% if (useTheme) { -%>
-  import AdnyLayout from '@erkelost/layout'
+  import RelaxedLayout from '@relaxed/layout'
   import { ColorPicker } from '@erkelost/colorpicker'
 <% } -%>
 /**
@@ -9,7 +9,7 @@ import { App } from 'vue'
  * @param app
  */
 <% if (useTheme) { -%>
-  const registerComponents = [AdnyLayout, ColorPicker]
+  const registerComponents = [RelaxedLayout, ColorPicker]
 <% } -%>
 <% if (!useTheme) { -%>
   const registerComponents = []

@@ -1,6 +1,5 @@
 import type { Plugin } from 'vite'
 import vue from "@vitejs/plugin-vue"
-import { VitePWA } from 'vite-plugin-pwa'
 <%- pluginImportStatement %>
 <% if (components === 'vuetify') { -%>
   import vuetify from 'vite-plugin-vuetify'
@@ -16,33 +15,35 @@ export function createVitePlugins(viteEnv, isDev: boolean) {
     vue({
       reactivityTransform: true
     }),
-    VitePWA({
-      registerType: 'autoUpdate',
-      includeAssets: ['favicon.svg', 'safari-pinned-tab.svg'],
-      manifest: {
-        name: 'ViteTemplate',
-        short_name: 'ViteTemplate',
-        theme_color: '#ffffff',
-        icons: [
-          {
-            src: '/pwa-192x192.png',
-            sizes: '192x192',
-            type: 'image/png'
-          },
-          {
-            src: '/pwa-512x512.png',
-            sizes: '512x512',
-            type: 'image/png'
-          },
-          {
-            src: '/pwa-512x512.png',
-            sizes: '512x512',
-            type: 'image/png',
-            purpose: 'any maskable'
-          }
-        ]
-      }
-    }),
+    <% if (plugins.indexOf('pwa') !== -1) { -%>
+      VitePWA({
+        registerType: 'autoUpdate',
+        includeAssets: ['favicon.svg', 'safari-pinned-tab.svg'],
+        manifest: {
+          name: 'ViteTemplate',
+          short_name: 'ViteTemplate',
+          theme_color: '#ffffff',
+          icons: [
+            {
+              src: '/pwa-192x192.png',
+              sizes: '192x192',
+              type: 'image/png'
+            },
+            {
+              src: '/pwa-512x512.png',
+              sizes: '512x512',
+              type: 'image/png'
+            },
+            {
+              src: '/pwa-512x512.png',
+              sizes: '512x512',
+              type: 'image/png',
+              purpose: 'any maskable'
+            }
+          ]
+        }
+      }),
+    <% } -%>
     <% if (plugins.indexOf('jsx') !== -1) { -%>
       VueJsx(),
     <% } -%>
