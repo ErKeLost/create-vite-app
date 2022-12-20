@@ -1,4 +1,6 @@
 import chalk from 'chalk'
+import gradient from 'gradient-string'
+
 export const red = (args: string | number) => console.log(chalk.red(args))
 export const green = (res: string | number) => console.log(chalk.green(res))
 export const gray = (res: string | number) => console.log(chalk.gray(res))
@@ -19,4 +21,8 @@ export const complete = (name, dest, type, description) => {
   green(`\n ${description}`)
   cyan(`\n To get started with into "${name}.${type}"`)
   console.log(`\n cd ${dest} \n`)
+}
+export function logger(string: string) {
+  console.log(gradient('#9CECFB', '#65C7F7', '#0052D4')(string))
+  console.log('')
 }

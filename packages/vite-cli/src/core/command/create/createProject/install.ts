@@ -1,10 +1,9 @@
 import options from '@/shared/options'
-import { cyan } from '@/utils/log'
+import { cyan, logger } from '@/utils/log'
 import createSpawnCmd from '@/utils/createSpawnCmd'
 import clearConsole from '@/utils/clearConsole'
 import { VITE_CLI_VERSION } from '@/shared/constant'
 // eslint-disable-next-line @typescript-eslint/no-var-requires
-import gradient from 'gradient-string'
 async function installationDeps() {
   const pkgInfo = pkgFromUserAgent(process.env.npm_config_user_agent)
   // 目录
@@ -19,7 +18,7 @@ async function installationDeps() {
   await cmdIgnore('git', ['init'])
   await cmdIgnore('git', ['add .'])
   await cmdIgnore('git', ['commit -m "Initialize by VITE_CLI"'])
-  gradient('cyan', 'purple')(`> repository initialized successfully`)
+  logger(`> repository initialized successfully`)
   if (options.package !== 'none') {
     // 依赖安装
     logger(
@@ -56,9 +55,4 @@ function pkgFromUserAgent(userAgent: string | undefined) {
     name: pkgSpecArr[0],
     version: pkgSpecArr[1]
   }
-}
-
-function logger(string: string) {
-  console.log(gradient('cyan', 'purple')(string))
-  console.log('')
 }
