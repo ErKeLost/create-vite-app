@@ -5,12 +5,6 @@ import { createApp } from 'vue'
 <% if (usePinia || useTheme) { -%>
   import { setupStore } from '@/store'
 <% } -%>
-<!-- <% if (components === 'vuetify') { -%>
-  import { createVuetify } from 'vuetify'
-  import * as components from 'vuetify/components'
-  import * as directives from 'vuetify/directives'
-  import 'vuetify/styles' // Global CSS has to be imported
-<% } -%> -->
 <% if (components === 'antDesignVue') { -%>
   import Antd from 'ant-design-vue'
   <% if (useTheme) { -%>
@@ -55,13 +49,8 @@ import App from './App.vue'
 async function bootStrap() {
   // 设置样式加载
   setupAssets()
-
   // 创建vue
   const app = createApp(App)
-  <!-- <% if (components === 'vuetify') { -%>
-    const vuetify = createVuetify({ components, directives })  // Replaces new Vuetify(...)
-    app.use(vuetify)
-  <% } -%> -->
   <% if (components === 'antDesignVue') { -%>
     app.use(Antd)
   <% } -%>

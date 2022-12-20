@@ -4,7 +4,7 @@
   "description": "",
   "bin": {
     "vite-app": "./outfile.cjs",
-    "create-vite-template": "./dist/index.js",
+    "create-vite-template": "./outfile.cjs",
     "create-vite-app": "./outfile.cjs",
     "v": "./outfile.cjs",
     "vite-cli": "./outfile.cjs"
