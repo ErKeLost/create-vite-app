@@ -11,7 +11,7 @@ export default {
     { title: 'DevUI', value: 'devUI' },
     { title: 'arco-design', value: 'arco' },
     { title: 'TDesign', value: 'tencent' },
-    { title: 'Vant 3.x', value: 'vant' },
+    { title: 'Vant 4.x', value: 'vant' },
     { title: 'tdesign-mobile-vue', value: 'tencent-mobile' }
   ]
 }

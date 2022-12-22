@@ -27,17 +27,13 @@ async function getVueProperty() {
   Array.from(componentsMap.keys()).forEach((item) => {
     options[item] = options.components === item
   })
-  Array.from(featureMap.keys()).forEach((item) => {
-    options[item] = featureMap.get(item)
-  })
-  Array.from(pluginMap.keys()).forEach((item) => {
-    options[item] = pluginMap.get(item)
-  })
+  resolveOptions(options, featureMap)
+  resolveOptions(options, pluginMap)
+  resolveOptions(options, lintMap)
+
   options.ui = currentLibrary
   options.ComponentResolver = currentComponentResolver
   options.notComponentResolver = notComponentResolver
-  options.EslintScript = lintMap.get('EslintScript')
-  options.PrettierScript = lintMap.get('PrettierScript')
   options.EslintWithPrettierScript = featureMap.get('eslintWithPrettier')
   options.Eslint = Eslint
   options.Prettier = Prettier
@@ -54,6 +50,8 @@ async function getVueProperty() {
       return pluginImportStatement.get(item)
     })
     .reduce((total, next) => total + next, '')
+
+  console.log(options)
   return Promise.resolve(true)
 }
 export async function runVueQuestions() {
@@ -75,4 +73,10 @@ export async function runVueQuestions() {
   !options.useTheme && (await createQuestion(precss))
   // options assign
   await getVueProperty()
+}
+
+function resolveOptions(originOptions, configMap) {
+  Array.from(configMap.keys()).forEach((item) => {
+    originOptions[item] = configMap.get(item)
+  })
 }
