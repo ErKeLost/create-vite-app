@@ -1,14 +1,14 @@
 const elementPlus = {
   name: 'element-plus',
   version: '^2.2.25',
-  stableVersion: '2.2.5',
+  stableVersion: '2.2.27',
   theme: true,
   unpluginResolver: 'ElementPlusResolver',
   useUnpluginResolver: true
 }
 const antDesignVue = {
   name: 'ant-design-vue',
-  version: '^3.2.15',
+  version: '^3.2.13',
   stableVersion: '3.2.1',
   theme: true,
   unpluginResolver: 'AntDesignVueResolver',
@@ -24,7 +24,7 @@ const naiveUI = {
 }
 const devUI = {
   name: 'vue-devui',
-  version: '^1.3.3-alpha.2',
+  version: '^1.4.0',
   stableVersion: '^1.0.0-rc.14',
   theme: false,
   unpluginResolver: 'DevUiResolver',

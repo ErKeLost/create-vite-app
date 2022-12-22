@@ -2,7 +2,6 @@
 import { zhCN, dateZhCN } from 'naive-ui'
 import { useThemeStore } from '@/store'
 const theme = useThemeStore()
-console.log(theme)
 </script>
 
 <template>
@@ -14,11 +13,9 @@ console.log(theme)
     w-1280px
     flex
   >
-    <!-- <naive-provider> -->
     <Welcome />
     <RouterView />
     <ThemeSetting />
-    <!-- </naive-provider> -->
   </n-config-provider>
 </template>
 
