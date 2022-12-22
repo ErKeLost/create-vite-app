@@ -8,7 +8,7 @@ const filterQuestions = new Map()
 frameQuestions.set('vue', runVueQuestions)
 frameQuestions.set('react', runReactQuestions)
 // filterQuestions.set('vue', runFilterQuestions)
-export async function getFilterFile() {
+export function getFilterFile() {
   // 修复 frame work bug
   const assets = readdirSync(
     `${__dirname}/template/${options.frame}/src/assets`
@@ -45,6 +45,8 @@ export async function getFilterFile() {
     ['react', reactFilterQuestion]
   ])
   const res = obj.get(options.frame)
+  console.log(res)
+
   return res
 }
 export { frameQuestions, filterQuestions }

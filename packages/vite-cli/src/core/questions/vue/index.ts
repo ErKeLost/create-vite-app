@@ -51,7 +51,6 @@ async function getVueProperty() {
     })
     .reduce((total, next) => total + next, '')
 
-  console.log(options)
   return Promise.resolve(true)
 }
 export async function runVueQuestions() {
