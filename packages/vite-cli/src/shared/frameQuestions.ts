@@ -20,14 +20,16 @@ export function getFilterFile() {
     res.forEach((item) => {
       fs.remove(`${options.dest}/src/assets/${item}`)
     })
-    if (!options.Router) {
+    if (!options.useRouter) {
       fs.remove(`${options.dest}/src/router`)
     }
-    if (!options.Eslint) {
+    if (!options.usePrettier) {
       fs.remove(`${options.dest}/.prettierrc.js`)
     }
-    if (!options.Prettier) {
+
+    if (!options.useEslint) {
       fs.remove(`${options.dest}/.eslintrc.js`)
+      fs.remove(`${options.dest}/.eslintrc.ejs`)
     }
     if (!options.plugins.includes('html')) {
       fs.remove(`${options.dest}/build/vite/html.ts`)
@@ -45,8 +47,6 @@ export function getFilterFile() {
     ['react', reactFilterQuestion]
   ])
   const res = obj.get(options.frame)
-  console.log(res)
-
   return res
 }
 export { frameQuestions, filterQuestions }

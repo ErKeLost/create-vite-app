@@ -11,7 +11,6 @@ async function copyTemplate() {
   // CLI 模板文件夹路径
   options.src = path.resolve(__dirname, `../template/${options.frame}`)
   // 获取基础参数
-  // options.name = name
   const dest = path.resolve(process.cwd(), options.name)
   options.dest = dest
   // 模板路径
@@ -22,11 +21,14 @@ async function copyTemplate() {
   options.templatePath = templatePath
   // 拷贝基础模板文件
   const filterFileFn = getFilterFile()
-  console.log(filterFileFn)
 
-  await fs.copy(`${__dirname}/template/${options.frame}`, dest, {
-    filter: filterFileFn
-  })
+  async function copy() {
+    await fs.copy(`${__dirname}/template/${options.frame}`, dest, {
+      filter: filterFileFn
+    })
+  }
+  await copy()
+
   // 生成 gitignore
   await fs.move(
     path.resolve(options.dest, '.gitignore.ejs'),
