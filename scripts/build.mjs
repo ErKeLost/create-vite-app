@@ -10,7 +10,7 @@ const watcher = chokidar.watch('file, dir, glob, or array', {
 await esbuild.build({
   bundle: true,
   entryPoints: ['vite-cli/src/index.ts'],
-  outfile: 'packages/vite-cli/outfile.cjs',
+  outfile: 'vite-cli/outfile.cjs',
   format: 'cjs',
   platform: 'node',
   target: 'node16',
