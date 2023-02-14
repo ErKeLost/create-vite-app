@@ -41,7 +41,7 @@ async function installationDeps() {
         : `${options.package} dev`
     )
   } else {
-    logger(`npm run install`)
+    logger(`npm install`)
     logger('npm run dev')
   }
 }
