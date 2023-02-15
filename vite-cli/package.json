@@ -1,6 +1,6 @@
 {
   "name": "create-vite-template",
-  "version": "0.23.6",
+  "version": "0.23.7",
   "description": "",
   "bin": {
     "vite-app": "./outfile.cjs",
