@@ -23,6 +23,8 @@ interface Options {
   EslintScript?: string
   PrettierScript?: string
   EslintWithPrettierScript?: string
+  constantDevDeps?: string
+  constantProDeps?: string
   pluginList?: string
   frame?: string
   pluginImportStatement?: string

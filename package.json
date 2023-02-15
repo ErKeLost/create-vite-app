@@ -20,7 +20,7 @@
     "prepare": "husky install",
     "commit": "git add . && cz",
     "preinstall": "npx only-allow pnpm",
-    "release": "bumpp packages/*/package.json && pnpm publish -r"
+    "release": "bumpp vite-cli/package.json && pnpm publish -r"
   },
   "devDependencies": {
     "@commitlint/config-conventional": "^17.3.0",

@@ -16,10 +16,7 @@
     "type-check": "vue-tsc --noEmit"
   },
   "dependencies": {
-    "@vueuse/core": "^9.8.1",
-    "@vueuse/head": "^1.0.22",
-    "@types/node": "latest",
-    "axios": "^1.2.1",
+    <%- constantProDeps %>
     <% if (useTheme) { -%>
     <%- themeEffect %>
     <% if (elementPlus && useTheme) { -%>
@@ -33,7 +30,6 @@
     <% if (varlet) { -%>
     <%- varletEffect %>
     <% } -%>
-    "vue": "^3.2.45",
     <% if (usePinia || useTheme) { -%>
     <%- Pinia %>
     <% } -%>
@@ -42,7 +38,6 @@
     <% if (useTheme && elementPlus) { -%>
     <%- elementPlugThemeEffect %>
     <% } -%>
-    "vite": "^4.1.0",
     <% if (precss === 'scss' || useTheme && components !== 'antDesignVue' ) { -%>
     <%- sassEffect %>
     <% } -%>
@@ -65,7 +60,6 @@
     <% if (pluginList.length > 0) { -%>
       <%- pluginList %>
     <% } -%>
-    "typescript": "^4.9.3",
-    "vue-tsc": "^1.0.24"
+    <%- constantDevDeps %>
   }
 }

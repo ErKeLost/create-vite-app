@@ -30,8 +30,9 @@ async function getVueProperty() {
   resolveOptions(options, featureMap)
   resolveOptions(options, pluginMap)
   resolveOptions(options, lintMap)
-
   options.ui = currentLibrary
+  options.constantDevDeps = featureMap.get('constantDevDeps')
+  options.constantProDeps = featureMap.get('constantProDeps')
   options.ComponentResolver = currentComponentResolver
   options.notComponentResolver = notComponentResolver
   options.EslintWithPrettierScript = featureMap.get('eslintWithPrettier')

@@ -75,8 +75,19 @@ const elementPlusProThemeEffect = {
   name: ['css-color-function', 'colord'],
   version: ['^1.3.3', '^2.9.2']
 }
-
+const constantDevDeps = {
+  name: ['vite', 'typescript', 'vue-tsc'],
+  version: ['^4.1.0', '^4.9.3', '^1.0.24'],
+  stableVersion: ['^4.1.0', '^4.9.3', '^1.0.24']
+}
+const constantProDeps = {
+  name: ['@vueuse/core', '@vueuse/head', '@types/node', 'vue'],
+  version: ['latest', 'latest', 'latest', '^3.2.45'],
+  stableVersion: ['latest', 'latest', 'latest', '^3.2.45']
+}
 export {
+  constantDevDeps,
+  constantProDeps,
   eslintWithPrettier,
   elementPlusProThemeEffect,
   lessEffect,
