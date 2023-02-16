@@ -28,9 +28,6 @@ components/style/color/*.less
 .gitattributes
 .stylelintrc
 .vcmrc
-.png
 .npmrc.template
 .huskyrc
 .gitmodules
-*.png
-v2-doc/

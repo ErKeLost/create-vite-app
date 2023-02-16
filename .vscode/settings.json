@@ -8,6 +8,7 @@
     "esno",
     "iife",
     "linebreak",
+    "OSCS",
     "outfile",
     "Pinia",
     "pnpm",
@@ -20,6 +21,7 @@
     "tsup",
     "unocss",
     "Vant",
+    "vite",
     "vitepress",
     "vuetify",
     "vueuse"

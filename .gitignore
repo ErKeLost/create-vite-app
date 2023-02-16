@@ -6,7 +6,6 @@ node_modules
 .pnp.js
 package-lock.json
 # testing
-coverage
 
 # next.js
 .next/
