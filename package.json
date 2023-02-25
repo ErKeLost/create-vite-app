@@ -27,7 +27,7 @@
     "@types/fs-extra": "^9.0.13",
     "@typescript-eslint/eslint-plugin": "^5.46.0",
     "@typescript-eslint/parser": "^5.46.0",
-    "bumpp": "^8.2.1",
+    "bumpp": "^9.0.0",
     "chalk": "^5.1.2",
     "chokidar": "^3.5.3",
     "commitizen": "^4.2.6",
