@@ -16,7 +16,7 @@
     "vue": "^3.2.37"
   },
   "devDependencies": {
-    "vite": "2.9.13",
+    "vite": "2.9.15",
     "vitepress": "1.0.0-alpha.13"
   }
 }
