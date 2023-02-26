@@ -32,19 +32,11 @@ export function handleModuleRoutes(modules: any) {
 import buildFile from '@/settings'
 const arr = handleModuleRoutes(buildFile)
 const buildSetting = arr.filter((item: any) => {
-  // console.log(item.name)
-  // console.log(import.meta.env.VITE_BUILD_NAME)
-
   return item.name === import.meta.env.VITE_BUILD_NAME
 })
-// console.log(buildSetting)
-// console.log(themeSetting)
 
 /** 获取主题配置 */
 export function getThemeSettings() {
   const setting = { ...themeSetting[0] }
-  console.log(setting)
-  console.log(themeSetting)
-
   return themeSetting
 }

@@ -35,7 +35,6 @@ import { useThemeStore } from '@/store'
 // import sunIcon from '@/assets/svg/sun.svg?component'
 // import moonIcon from '@/assets/svg/moon.svg?component'
 const theme = useThemeStore()
-console.log(theme)
 </script>
 <style scoped lang="less">
 :deep(.el-switch__core) {

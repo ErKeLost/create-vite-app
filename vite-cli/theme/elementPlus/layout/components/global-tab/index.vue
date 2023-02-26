@@ -13,7 +13,6 @@
 import { useAppStore } from '@/store'
 const app = useAppStore()
 function changehambuger() {
-  // console.log(app.siderCollapse)
 }
 </script>
 <style scoped></style>

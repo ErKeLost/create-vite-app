@@ -25,7 +25,6 @@ import { useThemeStore } from '@/store'
 // } from '../../theme-color/element-plus'
 const body = document.documentElement as HTMLElement
 const theme = useThemeStore()
-console.log(theme)
 
 // const setThemeColor = (color: string) => {
 //   setEpThemeColor(color)
