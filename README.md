@@ -87,8 +87,8 @@ The supported template presets are:
 | ------------- | -------- |
 | Vite3 Vue3    | ✅ 🆕 |
 | Vite3 React18 | 🚧  🆕 |
-| Nuxt          | 🚧 ❌    |
-| Next          | 🚧 ❌    |
+| Nuxt3          | 🚧 ❌    |
+| Next13          | 🚧 ❌    |
 
 ### Feature
 
