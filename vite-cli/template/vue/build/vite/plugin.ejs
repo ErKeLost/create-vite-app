@@ -16,7 +16,7 @@ export function createVitePlugins(viteEnv, isDev: boolean) {
       reactivityTransform: true
     }),
     <% if (plugins.indexOf('pwa') !== -1) { -%>
-      pwa({
+      VitePWA({
         registerType: 'autoUpdate',
         includeAssets: ['favicon.svg', 'safari-pinned-tab.svg'],
         manifest: {

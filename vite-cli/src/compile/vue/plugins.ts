@@ -44,7 +44,7 @@ const pwa = {
   name: 'vite-plugin-pwa',
   version: '^0.14.0',
   stableVersion: '^0.14.0',
-  stateMent: 'import pwa from "vite-plugin-pwa"'
+  stateMent: 'import { VitePWA } from "vite-plugin-pwa"'
 }
 
 const vueComponents = {
