@@ -62,9 +62,9 @@ const visualizer = {
 }
 
 const icons = {
-  name: ['unplugin-icons', '@iconify/json'],
-  version: ['^0.14.14', '^2.1.144'],
-  stableVersion: ['^0.14.7', '^2.1.74'],
+  name: ['unplugin-icons', '@iconify-json/carbon'],
+  version: ['^0.14.14', '^1.1.13'],
+  stableVersion: ['^0.14.7', '^1.1.13'],
   stateMent: [
     'import Icons from "unplugin-icons/vite"',
     'import IconsResolver from "unplugin-icons/resolver"'
