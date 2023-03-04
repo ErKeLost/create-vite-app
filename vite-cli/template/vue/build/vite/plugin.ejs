@@ -41,6 +41,17 @@ export function createVitePlugins(viteEnv, isDev: boolean) {
               purpose: 'any maskable'
             }
           ]
+        },
+        workbox: {
+          navigateFallback: '/'
+        },
+        // client: {
+        //   installPrompt: true,
+        //   periodicSyncForUpdates: 20
+        // },
+        devOptions: {
+          enabled: true,
+          type: 'module'
         }
       }),
     <% } -%>
