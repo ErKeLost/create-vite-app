@@ -43,7 +43,8 @@ export function createVitePlugins(viteEnv, isDev: boolean) {
           ]
         },
         workbox: {
-          navigateFallback: '/'
+          navigateFallback: '/',
+          cleanupOutdatedCaches: false
         },
         // client: {
         //   installPrompt: true,
