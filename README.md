@@ -87,8 +87,8 @@ The supported template presets are:
 | ------------- | -------- |
 | Vite3 Vue3    | ✅ 🆕 |
 | Vite3 React18 | 🚧  🆕 |
-| Nuxt          | 🚧 ❌    |
-| Next          | 🚧 ❌    |
+| Nuxt3          | 🚧 ❌    |
+| Next13          | 🚧 ❌    |
 
 ### Feature
 
@@ -180,3 +180,5 @@ The supported template presets are:
 # 🌸  Credits
 
 ### This project is inspired by [X-Build](https://github.com/code-device/x-build) !!!
+
+prepare all in

@@ -1,11 +1,8 @@
 import {
   defineConfig,
   presetAttributify,
-  presetIcons,
   presetUno,
-  presetWebFonts
-  // transformerDirectives,
-  // transformerVariantGroup,
+  transformerDirectives
 } from 'unocss'
 
 export default defineConfig({
@@ -43,27 +40,9 @@ export default defineConfig({
     'fixed-br': 'fixed-rb',
     'fixed-center': 'fixed-lt flex-center wh-full',
     'nowrap-hidden': 'whitespace-nowrap overflow-hidden',
-    'ellipsis-text': 'nowrap-hidden overflow-ellipsis',
+    'ellipsis-text': 'nowrap-hidden text-ellipsis',
     'transition-base': 'transition-all duration-300 ease-in-out'
   },
-  presets: [
-    presetUno(),
-    presetAttributify(),
-    presetIcons({
-      scale: 1.2,
-      warn: true
-    }),
-    presetWebFonts({
-      provider: 'bunny',
-      fonts: {
-        sans: 'DM Sans',
-        serif: 'DM Serif Display',
-        mono: 'DM Mono'
-      }
-    })
-  ]
-  // transformers: [
-  //   transformerDirectives(),
-  //   transformerVariantGroup(),
-  // ],
+  presets: [presetUno(), presetAttributify()],
+  transformers: [transformerDirectives()]
 })

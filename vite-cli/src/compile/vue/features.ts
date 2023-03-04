@@ -68,9 +68,10 @@ const vuetifyEffect = {
 
 const themeEffect = {
   name: ['@erkelost/colorpicker', '@relaxed/layout', '@relaxed/utils'],
-  version: ['^1.0.8', '^2.0.5', '^2.0.5'],
-  stableVersion: ['^1.0.8', '^2.0.5', '^2.0.5']
+  version: ['^1.0.8', '^2.0.17', '^2.0.17'],
+  stableVersion: ['^1.0.8', '^2.0.17', '^2.0.17']
 }
+
 const elementPlusProThemeEffect = {
   name: ['css-color-function', 'colord'],
   version: ['^1.3.3', '^2.9.2']

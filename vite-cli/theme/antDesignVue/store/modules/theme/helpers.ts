@@ -3,8 +3,6 @@ import { getColorPalette, addColorAlpha } from '@/utils'
 /** 初始化主题配置 */
 export function initThemeSettings() {
   const themeColor = themeSetting.themeColor
-  console.log(themeColor)
-
   const info = themeSetting.isCustomizeInfoColor
     ? themeSetting.otherColor.info
     : getColorPalette(themeColor, 7)
@@ -77,8 +75,5 @@ export function getNaiveThemeOverrides(colors: Record<ColorType, string>) {
 /** 获取主题配置 */
 export function getThemeSettings() {
   const setting = { ...themeSetting[0] }
-  console.log(setting)
-  console.log(themeSetting)
-
   return themeSetting
 }

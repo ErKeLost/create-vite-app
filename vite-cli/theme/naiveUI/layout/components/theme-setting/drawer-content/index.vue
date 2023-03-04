@@ -24,7 +24,6 @@
 import { useAppStore } from '@/store'
 
 const app = useAppStore()
-console.log(app.settingDrawerVisible)
 
 const handleClose = (done: () => void) => {
   done()

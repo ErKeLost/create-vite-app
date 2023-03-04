@@ -8,21 +8,21 @@ importers:
       '@types/fs-extra': ^9.0.13
       '@typescript-eslint/eslint-plugin': ^5.46.0
       '@typescript-eslint/parser': ^5.46.0
-      bumpp: ^8.2.1
+      bumpp: ^9.0.0
       chalk: ^5.1.2
       chokidar: ^3.5.3
       commitizen: ^4.2.6
       commitlint: ^17.3.0
       commitlint-config-cz: ^0.13.3
       cz-conventional-changelog: ^3.3.0
-      cz-customizable: ^6.9.2
       esbuild: ^0.17.0
+      cz-customizable: ^7.0.0
       eslint: ^8.29.0
       eslint-config-relaxed-ts: ^2.0.2
       esno: ^0.16.3
       husky: ^8.0.2
       lint-staged: ^13.1.0
-      pnpm: 7.3.0
+      pnpm: 7.28.0
       prettier: latest
       rimraf: ^3.0.2
       ts-node-dev: ^2.0.0
@@ -35,21 +35,23 @@ importers:
       '@types/fs-extra': 9.0.13
       '@typescript-eslint/eslint-plugin': 5.52.0_6cfvjsbua5ptj65675bqcn6oza
       '@typescript-eslint/parser': 5.52.0_7kw3g6rralp5ps6mg3uyzz6azm
-      bumpp: 8.2.1
+      bumpp: 9.0.0
       chalk: 5.2.0
       chokidar: 3.5.3
       commitizen: 4.3.0
       commitlint: 17.4.3
       commitlint-config-cz: 0.13.3
       cz-conventional-changelog: 3.3.0
-      cz-customizable: 6.9.2
       esbuild: 0.17.8
+
+      cz-customizable: 7.0.0
+
       eslint: 8.34.0
       eslint-config-relaxed-ts: 2.0.13_7kw3g6rralp5ps6mg3uyzz6azm
       esno: 0.16.3
       husky: 8.0.3
       lint-staged: 13.1.2
-      pnpm: 7.3.0
+      pnpm: 7.28.0
       prettier: 2.8.4
       rimraf: 3.0.2
       ts-node-dev: 2.0.0_typescript@4.9.5
@@ -73,7 +75,7 @@ importers:
     specifiers:
       '@types/node': ^18.11.9
       chalk: ^5.1.2
-      commander: ^9.4.1
+      commander: ^10.0.0
       ejs: ^3.1.8
       esbuild: ^0.17.0
       esbuild-plugin-alias: ^0.2.1
@@ -92,7 +94,7 @@ importers:
     devDependencies:
       '@types/node': 18.13.0
       chalk: 5.2.0
-      commander: 9.5.0
+      commander: 10.0.0
       ejs: 3.1.8
       esbuild: 0.17.8
       esbuild-plugin-alias: 0.2.1
@@ -1443,15 +1445,14 @@ packages:
       semver: 7.3.8
     dev: true
 
-  /bumpp/8.2.1:
-    resolution: {integrity: sha512-4tHKsWC2mqHQvdjZ4AXgVhS2xMsz8qQ4zYt87vGRXW5tqAjrYa/UJqy7s/dGYI2OIe9ghBdiFhKpyKEX9SXffg==}
+  /bumpp/9.0.0:
+    resolution: {integrity: sha512-I2+JLFQin46NioHg6wi23hYQMVExiJyGblARp5fIHUzLv3rRz9me38eUe2xlQCAl7Ys9X+SlhTaIkttTxiL6cQ==}
     engines: {node: '>=10'}
     hasBin: true
     dependencies:
       '@jsdevtools/ez-spawn': 3.0.4
       cac: 6.7.14
       fast-glob: 3.2.12
-      kleur: 4.1.5
       prompts: 2.4.2
       semver: 7.3.8
     dev: true
@@ -1670,6 +1671,11 @@ packages:
     resolution: {integrity: sha512-3tlv/dIP7FWvj3BsbHrGLJ6l/oKh1O3TcgBqMn+yyCagOxc23fyzDS6HypQbgxWbkpDnf52p1LuR4eWDQ/K9WQ==}
     dev: true
 
+  /commander/10.0.0:
+    resolution: {integrity: sha512-zS5PnTI22FIRM6ylNW8G4Ap0IEOyk62fhLSD0+uHRT9McRCLGpkVNvao4bjimpK/GShynyQkFFxHhwMcETmduA==}
+    engines: {node: '>=14'}
+    dev: true
+
   /commander/4.1.1:
     resolution: {integrity: sha512-NOKm8xhkzAjzFx8B2v5OAHT+u5pRQc2UCa2Vq9jYL/31o2wi9mxBA7LIFs3sV5VSC49z6pEhfbMULvShKj26WA==}
     engines: {node: '>= 6'}
@@ -1837,8 +1843,8 @@ packages:
       - '@swc/wasm'
     dev: true
 
-  /cz-customizable/6.9.2:
-    resolution: {integrity: sha512-33Y0eHAp40sb7K346Shm07X+ZIckPKV8pBHUH5Lh2tI4fi0mjHkrYDrwQyJMS8095Ri+H+xkxOmblzQ64wT/Fg==}
+  /cz-customizable/7.0.0:
+    resolution: {integrity: sha512-pQKkGSm+8SY9VY/yeJqDOla1MjrGaG7WG4EYLLEV4VNctGO7WdzdGtWEr2ydKSkrpmTs7f8fmBksg/FaTrUAyw==}
     hasBin: true
     dependencies:
       editor: 1.0.0
@@ -4080,11 +4086,6 @@ packages:
     engines: {node: '>=6'}
     dev: true
 
-  /kleur/4.1.5:
-    resolution: {integrity: sha512-o+NO+8WrRiQEE4/7nwRJhN1HWpVmJm511pBHUxPLtp0BUISzlBplORYSmTclCnJvQq2tKu/sgl3xVpkc7ZWuQQ==}
-    engines: {node: '>=6'}
-    dev: true
-
   /levn/0.3.0:
     resolution: {integrity: sha512-0OO4y2iOHix2W6ujICbKIaEQXvFQHue65vUG3pb5EUomzPI90z9hsA1VsO/dbIIpC53J8gxM9Q4Oho0jrCM/yA==}
     engines: {node: '>= 0.8.0'}
@@ -4795,8 +4796,8 @@ packages:
       irregular-plurals: 2.0.0
     dev: true
 
-  /pnpm/7.3.0:
-    resolution: {integrity: sha512-HOXT6V+AznAyjL2Ay3TuuJQucsEguUiKjqyQq4WPPwOpaaILhkKvu8Nn1/OQWGi9V6T7OciyrctAKeYyCha6Ow==}
+  /pnpm/7.28.0:
+    resolution: {integrity: sha512-nbuY07S2519jEjaV9KLjSFmOwh0b6KIViIdc/RCJkgco8SZa2+ikQQe4N3CfNn5By5BH0dKVbZ8Ox1Mw8wItSA==}
     engines: {node: '>=14.6'}
     hasBin: true
     dev: true

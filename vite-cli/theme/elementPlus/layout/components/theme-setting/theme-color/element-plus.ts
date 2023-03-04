@@ -1,5 +1,5 @@
 /* 动态改变element-plus主题色 */
-import epCss from './element.scss'
+import epCss from './element.scss?inline'
 import { convert } from 'css-color-function'
 import { HexToRGBA, RGBAtoHex } from '@relaxed/utils'
 // 色值表

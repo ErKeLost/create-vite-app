@@ -27,7 +27,7 @@
     "@types/fs-extra": "^9.0.13",
     "@typescript-eslint/eslint-plugin": "^5.46.0",
     "@typescript-eslint/parser": "^5.46.0",
-    "bumpp": "^8.2.1",
+    "bumpp": "^9.0.0",
     "chalk": "^5.1.2",
     "chokidar": "^3.5.3",
     "commitizen": "^4.2.6",
@@ -41,7 +41,7 @@
     "esno": "^0.16.3",
     "husky": "^8.0.2",
     "lint-staged": "^13.1.0",
-    "pnpm": "7.3.0",
+    "pnpm": "7.28.0",
     "prettier": "latest",
     "rimraf": "^3.0.2",
     "ts-node-dev": "^2.0.0",
@@ -54,7 +54,7 @@
     "npm": ">=7.0.0",
     "node": ">=14.0.0"
   },
-  "packageManager": "pnpm@7.2.1",
+  "packageManager": "pnpm@7.28.0",
   "config": {
     "commitizen": {
       "path": "node_modules/cz-customizable"
