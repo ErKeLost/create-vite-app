@@ -43,7 +43,7 @@
     "lint-staged": "^13.1.0",
     "pnpm": "7.28.0",
     "prettier": "latest",
-    "rimraf": "^3.0.2",
+    "rimraf": "^4.0.0",
     "ts-node-dev": "^2.0.0",
     "tsup": "^6.5.0",
     "turbo": "latest",
