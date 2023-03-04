@@ -34,7 +34,7 @@
     "esbuild-plugin-alias": "^0.2.1",
     "esbuild-plugin-path-alias": "^1.0.6",
     "esbuild-ts-paths": "^1.1.3",
-    "fs-extra": "^10.1.0",
+    "fs-extra": "^11.0.0",
     "gradient-string": "^2.0.2",
     "ora": "^6.1.2",
     "prompts": "^2.4.2",
