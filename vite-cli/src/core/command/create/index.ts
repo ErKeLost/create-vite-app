@@ -3,7 +3,7 @@ import createProjectQuestions from '@/core/questions/creator'
 import initialLog from './createProject/initialLog'
 import installationDeps from './createProject/install'
 import copyTemplate from './createProject/copyTemplate'
-
+import '@/compile/vue/devDeps'
 async function createProject() {
   // 初始化 log
   await initialLog() // 共通
