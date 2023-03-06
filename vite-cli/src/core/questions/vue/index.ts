@@ -41,15 +41,11 @@ async function getVueProperty() {
   options.Router = Router
   options.Pinia = Pinia
   options.pluginList = options.plugins
-    .map((item) => {
-      return pluginMap.get(item)
-    })
+    .map((item) => pluginMap.get(item))
     .reduce((total, next) => total + next, '')
 
   options.pluginImportStatement = options.plugins
-    .map((item) => {
-      return pluginImportStatement.get(item)
-    })
+    .map((item) => pluginImportStatement.get(item))
     .reduce((total, next) => total + next, '')
 
   return Promise.resolve(true)
@@ -61,7 +57,9 @@ export async function runVueQuestions() {
   await createQuestion(components)
   // theme
   const res = await createQuestion(theme)
+  // eslint-disable-next-line no-unused-expressions
   res.useTheme &&
+    // eslint-disable-next-line array-callback-return
     Plugins.choices.map((item) => {
       if (item.selected === false) {
         item.selected = true
@@ -70,13 +68,14 @@ export async function runVueQuestions() {
   // vite plugins
   await createQuestion(Plugins)
   // 主题化默认暂时scss
+  // eslint-disable-next-line no-unused-expressions
   !options.useTheme && (await createQuestion(precss))
   // options assign
   await getVueProperty()
 }
 
 function resolveOptions(originOptions, configMap) {
-  Array.from(configMap.keys()).forEach((item) => {
+  Array.from(configMap.keys()).forEach((item: any) => {
     originOptions[item] = configMap.get(item)
   })
 }

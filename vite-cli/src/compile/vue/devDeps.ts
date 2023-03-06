@@ -1,4 +1,4 @@
-import * as DevDeps from '@/shared/vueEjsMapConstant'
+export * from '@/shared/vueEjsMapConstant'
 // {
 //   componentsMap,
 //   lintMap,
@@ -9,4 +9,3 @@ import * as DevDeps from '@/shared/vueEjsMapConstant'
 //   pluginImportStatement,
 //   useThemeUiMap
 // }
-console.log(DevDeps)

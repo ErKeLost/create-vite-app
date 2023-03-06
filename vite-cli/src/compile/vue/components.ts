@@ -4,7 +4,8 @@ const elementPlus = {
   stableVersion: '2.2.27',
   theme: true,
   unpluginResolver: 'ElementPlusResolver',
-  useUnpluginResolver: true
+  useUnpluginResolver: true,
+  dev: 'pro'
 }
 const antDesignVue = {
   name: 'ant-design-vue',
@@ -12,7 +13,8 @@ const antDesignVue = {
   stableVersion: '3.2.1',
   theme: true,
   unpluginResolver: 'AntDesignVueResolver',
-  useUnpluginResolver: false
+  useUnpluginResolver: false,
+  dev: 'pro'
 }
 const naiveUI = {
   name: 'naive-ui',
@@ -20,7 +22,8 @@ const naiveUI = {
   stableVersion: '2.31.0',
   theme: true,
   unpluginResolver: 'NaiveUiResolver',
-  useUnpluginResolver: true
+  useUnpluginResolver: true,
+  dev: 'pro'
 }
 const devUI = {
   name: 'vue-devui',
@@ -28,7 +31,8 @@ const devUI = {
   stableVersion: '^1.0.0-rc.14',
   theme: false,
   unpluginResolver: 'DevUiResolver',
-  useUnpluginResolver: true
+  useUnpluginResolver: true,
+  dev: 'pro'
 }
 const tencent = {
   name: 'tdesign-vue-next',
@@ -36,7 +40,8 @@ const tencent = {
   stableVersion: '^0.18.0',
   theme: false,
   unpluginResolver: 'TDesignResolver',
-  useUnpluginResolver: true
+  useUnpluginResolver: true,
+  dev: 'pro'
 }
 const vuetify = {
   name: 'vuetify',
@@ -44,7 +49,8 @@ const vuetify = {
   stableVersion: '^3.0.5',
   theme: false,
   unpluginResolver: 'VuetifyResolver',
-  useUnpluginResolver: false
+  useUnpluginResolver: false,
+  dev: 'pro'
 }
 const arco = {
   name: '@arco-design/web-vue',
@@ -52,7 +58,8 @@ const arco = {
   stableVersion: '^2.33.0',
   theme: false,
   unpluginResolver: 'ArcoResolver',
-  useUnpluginResolver: true
+  useUnpluginResolver: true,
+  dev: 'pro'
 }
 
 // mobile
@@ -61,7 +68,8 @@ const varlet = {
   version: '^2.2.1',
   stableVersion: '^2.0.2',
   theme: false,
-  unpluginResolver: 'VarletUIResolver'
+  unpluginResolver: 'VarletUIResolver',
+  dev: 'pro'
 }
 
 const vant = {
@@ -69,7 +77,8 @@ const vant = {
   version: '^4.0.0',
   stableVersion: '^1.27.17',
   theme: false,
-  unpluginResolver: 'VantUIResolver'
+  unpluginResolver: 'VantUIResolver',
+  dev: 'pro'
 }
 
 export {
