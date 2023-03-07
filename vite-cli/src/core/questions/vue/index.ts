@@ -3,7 +3,7 @@ import components from './components'
 import Plugins from './plugins'
 import future from './feature'
 import theme from './theme'
-import options from '@/shared/options'
+import options from '@/compile/vue/options'
 import {
   componentsMap,
   lintMap,
@@ -12,7 +12,7 @@ import {
   pluginImportStatement,
   componentResolverMap,
   notComponentResolverMap
-} from '@/shared/vueEjsMapConstant'
+} from '@/compile/vue/vueEjsMapConstant'
 import createQuestion from '@/utils/question'
 async function getVueProperty() {
   const currentLibrary = componentsMap.get(options.components)

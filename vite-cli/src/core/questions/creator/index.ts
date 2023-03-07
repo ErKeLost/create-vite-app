@@ -2,8 +2,8 @@
 import PackageDevice from './packageManager'
 import frame from './frame'
 import projectName from './projectName'
-import { frameQuestions } from '@/shared/frameQuestions'
-import options from '@/shared/options'
+import { frameQuestions } from '@/compile/common/frameQuestions'
+import options from '@/compile/vue/options'
 import createQuestion from '@/utils/question'
 import npmMirror from './npmMirror'
 async function createProjectQuestions(): Promise<void> {

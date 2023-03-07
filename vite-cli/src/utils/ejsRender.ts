@@ -2,7 +2,7 @@ import ejs = require('ejs')
 import fs = require('fs-extra')
 import path = require('path')
 import prettier = require('prettier')
-import options from '../shared/options'
+import options from '../compile/vue/options'
 export async function ejsRender(filePath: string, name): Promise<void> {
   try {
     let prettierCode: string

@@ -1,6 +1,6 @@
 import { cyan } from './log'
 import readline from 'readline'
-import { VITE_CLI_VERSION } from '../shared/constant'
+import { VITE_CLI_VERSION } from './shared/constant'
 export default function (str: string): void {
   if (process.stdout.isTTY) {
     console.log('')

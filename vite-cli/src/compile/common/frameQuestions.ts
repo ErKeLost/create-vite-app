@@ -1,7 +1,7 @@
 import { runVueQuestions } from '@/core/questions/vue'
 import { runReactQuestions } from '@/core/questions/react'
 import { readdirSync } from 'fs'
-import options from '@/shared/options'
+import options from '@/compile/vue/options'
 import fs = require('fs-extra')
 const frameQuestions = new Map()
 const filterQuestions = new Map()

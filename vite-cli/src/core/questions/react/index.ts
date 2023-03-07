@@ -1,5 +1,5 @@
 import prompts from 'prompts'
-import options from '../../../shared/options'
+import options from '../../../compile/vue/options'
 import createQuestion from '@/utils/question'
 // TODO get react options
 async function getReactProperty() {

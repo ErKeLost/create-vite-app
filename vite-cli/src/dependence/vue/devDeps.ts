@@ -1,4 +1,4 @@
-export * from '@/shared/vueEjsMapConstant'
+export * from '@/compile/vue/vueEjsMapConstant'
 // {
 //   componentsMap,
 //   lintMap,

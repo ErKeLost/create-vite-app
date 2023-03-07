@@ -1,4 +1,4 @@
-import options from '@/shared/options'
+import options from '@/compile/vue/options'
 import emptyDirName from '@/utils/emptyDirName'
 const defaultProjectName = 'project-name'
 

@@ -1,4 +1,4 @@
-import options from '@/shared/options'
+import options from '@/compile/vue/options'
 import prompts from 'prompts'
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const prompts = require('prompts')

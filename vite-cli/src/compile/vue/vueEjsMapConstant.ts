@@ -1,7 +1,7 @@
 /* eslint-disable no-param-reassign */
-import * as components from '@/compile/vue/components'
-import * as features from '@/compile/vue/features'
-import * as plugins from '@/compile/vue/plugins'
+import * as components from '@/dependence/vue/components'
+import * as features from '@/dependence/vue/features'
+import * as plugins from '@/dependence/vue/plugins'
 // 核心逻辑还是拼接 package.json中的字符串 模板还是写死
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 function removeBlock(str: string) {

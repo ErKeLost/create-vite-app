@@ -4,7 +4,7 @@ import {
   VERSION,
   VITE_CLI_VERSION,
   BUILD_DATE
-} from '../../../shared/constant'
+} from '../../../utils/shared/constant'
 function getVersionView() {
   magenta(VITE_CLI_VERSION)
   magenta(VERSION)
