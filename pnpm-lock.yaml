@@ -22,7 +22,7 @@ importers:
       esno: ^0.16.3
       husky: ^8.0.2
       lint-staged: ^13.1.0
-      pnpm: 7.29.0
+      pnpm: 7.29.1
       prettier: latest
       rimraf: ^4.0.0
       ts-node-dev: ^2.0.0
@@ -49,7 +49,7 @@ importers:
       esno: 0.16.3
       husky: 8.0.3
       lint-staged: 13.1.2
-      pnpm: 7.29.0
+      pnpm: 7.29.1
       prettier: 2.8.4
       rimraf: 4.3.0
       ts-node-dev: 2.0.0_typescript@4.9.5
@@ -4628,8 +4628,8 @@ packages:
       irregular-plurals: 2.0.0
     dev: true
 
-  /pnpm/7.29.0:
-    resolution: {integrity: sha512-SyJGcUK7gmLSJYjspL6iVOR9CS7ARYA7K0JmJkjn+MMxEJBUwzc0XdPBNwh5q8dxs+iR2ZQBalmI1lI24GRVOA==}
+  /pnpm/7.29.1:
+    resolution: {integrity: sha512-dn+65B2XpMIin7sQZvBIJ2Zyx8Z7LK95qyAvgEPE8qXkWYL/LuwpfMfK9Muc7+zNnpPwiQgtGEsxgOtuabFibQ==}
     engines: {node: '>=14.6'}
     hasBin: true
     dev: true
