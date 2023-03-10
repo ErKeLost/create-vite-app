@@ -61,13 +61,13 @@ importers:
   docs:
     specifiers:
       vite: 4.1.4
-      vitepress: 1.0.0-alpha.49
+      vitepress: 1.0.0-alpha.51
       vue: ^3.2.37
     dependencies:
       vue: 3.2.47
     devDependencies:
       vite: 4.1.4
-      vitepress: 1.0.0-alpha.49
+      vitepress: 1.0.0-alpha.51
 
   vite-cli:
     specifiers:
@@ -6436,8 +6436,8 @@ packages:
       fsevents: 2.3.2
     dev: true
 
-  /vitepress/1.0.0-alpha.49:
-    resolution: {integrity: sha512-3nUZJow4qL8NHRWYatqqVj45AJDxWst/TuOj+IbQRhxesEswa+Fpwayj9/FxzRzBl665fuiG5y+QeVhOeUm0OA==}
+  /vitepress/1.0.0-alpha.51:
+    resolution: {integrity: sha512-euZpjXeIaNUadLAQtd7NYbKhJJoDyZ6z8YK77qlM2c6NvUB5wmLPU6moP4rfcKUqpBDrsrxjJS6fdPk6azS5qQ==}
     hasBin: true
     dependencies:
       '@docsearch/css': 3.3.3
