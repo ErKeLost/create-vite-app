@@ -38,7 +38,7 @@ export function getFilterFile() {
       fs.remove(`${options.dest}/build/vite/html.ts`)
     }
     if (!options.plugins.includes('unocss')) {
-      fs.remove(`${options.dest}/unocss.config.ts`)
+      fs.remove(`${options.dest}/uno.config.ts`)
     }
     return true
   }
