@@ -13,7 +13,7 @@ export function getFilterFile() {
   const assets = readdirSync(
     `${__dirname}/template/${options.frame}/src/assets`
   ).filter((item) => !item.includes('logo'))
-  function vueFilterFileActions() {
+  async function vueFilterFileActions() {
     const res = assets.filter(
       (item) => item.split('.')[0] !== options.components
     )
@@ -23,13 +23,16 @@ export function getFilterFile() {
     if (!options.useRouter) {
       fs.remove(`${options.dest}/src/router`)
     }
+    if (!options.usePinia) {
+      fs.remove(`${options.dest}/src/store`)
+    }
     if (!options.usePrettier) {
       fs.remove(`${options.dest}/.prettierrc.js`)
     }
 
     if (!options.useEslint) {
       fs.remove(`${options.dest}/.eslintrc.js`)
-      fs.remove(`${options.dest}/.eslintrc.ejs`)
+      // fs.remove(`${options.dest}/.eslintrc.ejs`)
     }
     if (!options.plugins.includes('html')) {
       fs.remove(`${options.dest}/build/vite/html.ts`)

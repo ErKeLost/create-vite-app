@@ -24,11 +24,11 @@ async function copyTemplate() {
 
   async function copy() {
     await fs.copy(`${__dirname}/template/${options.frame}`, dest, {
-      filter: filterFileFn
+      // filter: filterFileFn
     })
   }
   await copy()
-
+  await filterFileFn()
   // 生成 gitignore
   await fs.move(
     path.resolve(options.dest, '.gitignore.ejs'),
