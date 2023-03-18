@@ -18,6 +18,7 @@ module.exports = {
   plugins: ['@typescript-eslint', 'prettier'],
   rules: {
     'linebreak-style': ['off', 'windows'],
+    'no-unresolved': 'off',
     'no-mixed-spaces-and-tabs': ['off', 'windows'],
     'no-consol': 'off',
     'no-var': 'error', // 不能使用var声明变量

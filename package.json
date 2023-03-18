@@ -1,6 +1,6 @@
 {
   "name": "vite-cli",
-  "version": "0.0.9-alpha",
+  "version": "0.23.12",
   "private": true,
   "workspaces": [
     "apps/*",
