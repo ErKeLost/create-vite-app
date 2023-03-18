@@ -36,10 +36,10 @@ async function getVueProperty() {
   options.ComponentResolver = currentComponentResolver
   options.notComponentResolver = notComponentResolver
   options.EslintWithPrettierScript = featureMap.get('eslintWithPrettier')
-  options.Eslint = filterOptions(Eslint, options.useEslint)
-  options.Prettier = filterOptions(Prettier, options.usePrettier)
-  options.Router = filterOptions(Router, options.useRouter)
-  options.Pinia = filterOptions(Pinia, options.usePinia)
+  options.Eslint = Eslint
+  options.Prettier = Prettier
+  options.Router = Router
+  options.Pinia = Pinia
   options.pluginList = options.plugins
     .map((item) => pluginMap.get(item))
     .reduce((total, next) => total + next, '')
@@ -47,6 +47,7 @@ async function getVueProperty() {
   options.pluginImportStatement = options.plugins
     .map((item) => pluginImportStatement.get(item))
     .reduce((total, next) => total + next, '')
+
   return Promise.resolve(true)
 }
 export async function runVueQuestions() {
@@ -73,12 +74,8 @@ export async function runVueQuestions() {
   await getVueProperty()
 }
 
-export function resolveOptions(originOptions, configMap) {
+function resolveOptions(originOptions, configMap) {
   Array.from(configMap.keys()).forEach((item: any) => {
     originOptions[item] = configMap.get(item)
   })
-}
-
-export function filterOptions(optionsFilter: any, use) {
-  return use ? optionsFilter : ''
 }
