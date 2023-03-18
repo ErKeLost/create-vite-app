@@ -1,6 +1,6 @@
 const elementPlus = {
   name: 'element-plus',
-  version: '^2.2.25',
+  version: '^2.3.0',
   stableVersion: '2.2.27',
   theme: true,
   unpluginResolver: 'ElementPlusResolver',
@@ -9,7 +9,7 @@ const elementPlus = {
 }
 const antDesignVue = {
   name: 'ant-design-vue',
-  version: '^3.2.13',
+  version: '^3.2.14',
   stableVersion: '3.2.1',
   theme: true,
   unpluginResolver: 'AntDesignVueResolver',
@@ -18,7 +18,7 @@ const antDesignVue = {
 }
 const naiveUI = {
   name: 'naive-ui',
-  version: '^2.34.2',
+  version: '^2.34.3',
   stableVersion: '2.31.0',
   theme: true,
   unpluginResolver: 'NaiveUiResolver',
@@ -27,7 +27,7 @@ const naiveUI = {
 }
 const devUI = {
   name: 'vue-devui',
-  version: '^1.4.0',
+  version: '^1.5.2',
   stableVersion: '^1.0.0-rc.14',
   theme: false,
   unpluginResolver: 'DevUiResolver',
@@ -36,7 +36,7 @@ const devUI = {
 }
 const tencent = {
   name: 'tdesign-vue-next',
-  version: '^0.24.9',
+  version: '^1.2.1',
   stableVersion: '^0.18.0',
   theme: false,
   unpluginResolver: 'TDesignResolver',
@@ -45,7 +45,7 @@ const tencent = {
 }
 const vuetify = {
   name: 'vuetify',
-  version: '^3.0.5',
+  version: '^3.1.10',
   stableVersion: '^3.0.5',
   theme: false,
   unpluginResolver: 'VuetifyResolver',
@@ -54,7 +54,7 @@ const vuetify = {
 }
 const arco = {
   name: '@arco-design/web-vue',
-  version: '^2.39.1',
+  version: '^2.44.2',
   stableVersion: '^2.33.0',
   theme: false,
   unpluginResolver: 'ArcoResolver',
@@ -65,7 +65,7 @@ const arco = {
 // mobile
 const varlet = {
   name: '@varlet/ui',
-  version: '^2.2.1',
+  version: '^2.9.1',
   stableVersion: '^2.0.2',
   theme: false,
   unpluginResolver: 'VarletUIResolver',
@@ -74,7 +74,7 @@ const varlet = {
 
 const vant = {
   name: 'vant',
-  version: '^4.0.0',
+  version: '^4.1.0',
   stableVersion: '^1.27.17',
   theme: false,
   unpluginResolver: 'VantUIResolver',
