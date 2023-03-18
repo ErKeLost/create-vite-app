@@ -27,6 +27,11 @@ export default {
       selected: false
     },
     {
+      title: 'unplugin-imagemin',
+      value: 'imagemin',
+      selected: false
+    },
+    {
       title: 'unplugin-icons',
       value: 'icons',
       selected: false

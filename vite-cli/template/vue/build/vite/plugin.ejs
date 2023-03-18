@@ -68,6 +68,9 @@ export function createVitePlugins(viteEnv, isDev: boolean) {
     <% if (plugins.indexOf('inspect') !== -1) { -%>
       Inspect(),
     <% } -%>
+    <% if (plugins.indexOf('imagemin') !== -1) { -%>
+      imagemin(),
+    <% } -%>
     <% if (plugins.indexOf('vueComponents') !== -1) { -%>
       Components({
         // allow auto load markdown components under `./src/components/`
