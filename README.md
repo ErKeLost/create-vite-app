@@ -99,7 +99,7 @@ The supported template presets are:
 |                   |        |
 | Eslint 8.x        | ✅     |
 | Prettier 2.7.x    | ✅     |
-| TypeScript 4.7.x  | ✅     |
+| TypeScript 5.x  | ✅     |
 | husky             | 🚧 ❌  |
 | PWA               | ✅ 🆕 |
 
