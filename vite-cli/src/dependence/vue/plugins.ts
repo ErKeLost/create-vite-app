@@ -14,6 +14,14 @@ const legacy = {
   dev: 'dev'
 }
 
+const autoImport = {
+  name: 'unplugin-auto-import',
+  version: '^0.15.1',
+  stableVersion: '^0.10.0',
+  stateMent: 'import AutoImport from "unplugin-auto-import/vite"',
+  dev: 'dev'
+}
+
 const vuetifyPlugin = {
   name: 'vite-plugin-vuetify',
   version: '^1.0.2',
@@ -35,14 +43,6 @@ const unocss = {
   version: '^0.50.6',
   stableVersion: '^0.45.18',
   stateMent: 'import Unocss from "unocss/vite"',
-  dev: 'dev'
-}
-
-const autoImport = {
-  name: 'unplugin-auto-import',
-  version: '^0.15.1',
-  stableVersion: '^0.10.0',
-  stateMent: 'import AutoImport from "unplugin-auto-import/vite"',
   dev: 'dev'
 }
 

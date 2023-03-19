@@ -45,12 +45,9 @@ export default defineConfig({
       }
     },
 
-
     localeLinks: {
       text: 'English',
-      items: [
-        { text: '简体中文', link: 'https://cn.vitejs.dev' }
-      ]
+      items: [{ text: '简体中文', link: 'https://cn.vitejs.dev' }]
     },
 
     footer: {
@@ -77,28 +74,16 @@ export default defineConfig({
               {
                 text: 'Ant-Design-Vue (主题化测试中)',
                 link: 'https://vite-cli-ant-design-vue.netlify.app'
-              },
-              {
-                text: 'DevUI',
-                link: 'https://vite-cli-element-plus.netlify.app'
-              },
-              {
-                text: 'T-Design-Vue',
-                link: 'https://vite-cli-element-plus.netlify.app'
-              },
-              {
-                text: 'Arco-Design-Vue',
-                link: 'https://vite-cli-element-plus.netlify.app'
               }
             ]
           },
           {
             text: 'React',
             items: [
-              {
-                text: 'Ant-Design',
-                link: 'https://twitter.com/vite_js'
-              }
+              // {
+              //   text: 'Ant-Design',
+              //   link: 'https://twitter.com/vite_js'
+              // }
             ]
           }
         ]

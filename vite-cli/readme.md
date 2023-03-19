@@ -40,7 +40,7 @@
 - Recommended to use pnpm to install Vite CLI .
 
 ```ts
-  npx vite-create-app@latest
+  npx create-vite-template@latest
 ```
 
 - Enter 'vite' on the command line to check whether the installation is successful
