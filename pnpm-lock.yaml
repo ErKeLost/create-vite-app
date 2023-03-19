@@ -74,6 +74,7 @@ importers:
       '@types/node': ^18.11.9
       chalk: ^5.1.2
       commander: ^10.0.0
+      debug: ^4.3.4
       ejs: ^3.1.8
       esbuild: ^0.17.11
       esbuild-plugin-alias: ^0.2.1
@@ -93,6 +94,7 @@ importers:
       '@types/node': 18.13.0
       chalk: 5.2.0
       commander: 10.0.0
+      debug: 4.3.4
       ejs: 3.1.8
       esbuild: 0.17.11
       esbuild-plugin-alias: 0.2.1
