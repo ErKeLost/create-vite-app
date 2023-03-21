@@ -97,7 +97,7 @@ const constantDevDeps = {
 }
 const constantProDeps = {
   name: ['@vueuse/core', '@vueuse/head', 'vue'],
-  version: ['9.1.3', '1.1.23', '^3.2.47'],
+  version: ['9.13.0', '1.1.23', '^3.2.47'],
   stableVersion: ['latest', 'latest', 'latest', '^3.2.45'],
   dev: ['pro', 'pro', 'dev', 'pro']
 }
