@@ -1,10 +1,10 @@
 {
-  "name": "create-vite-template@latest",
-  "version": "0.23.15",
+  "name": "create-vite-template",
+  "version": "0.23.16",
   "description": "",
   "bin": {
     "vite-app": "./outfile.cjs",
-    "create-vite-template@latest": "./outfile.cjs",
+    "create-vite-template": "./outfile.cjs",
     "create-vite-app": "./outfile.cjs",
     "v": "./outfile.cjs",
     "vite-cli": "./outfile.cjs"
