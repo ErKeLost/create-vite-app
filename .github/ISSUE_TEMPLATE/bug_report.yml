@@ -3,6 +3,7 @@ description: Create a report to help us improve
 body:
   - type:
     attributes:markdown
+    attributes:
       value: |
         **Before You Start...**
 
