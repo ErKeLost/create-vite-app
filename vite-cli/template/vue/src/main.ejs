@@ -14,6 +14,9 @@ import { createApp } from 'vue'
     import 'ant-design-vue/dist/antd.css'
   <% } -%>
 <% } -%>
+<% if (components === 'vuetify') { -%>
+  import createVuetify from "@/plugins/vuetify";
+<% } -%>
 <% if (plugins.indexOf('vueComponents') === -1) { -%>
   <% if (components === 'naiveUI') { -%>
     import naive from 'naive-ui'
@@ -53,6 +56,9 @@ async function bootStrap() {
   const app = createApp(App)
   <% if (components === 'antDesignVue') { -%>
     app.use(Antd)
+  <% } -%>
+  <% if (components === 'vuetify') { -%>
+    app.use(createVuetify);
   <% } -%>
   // 全局加载
   <% if (plugins.indexOf('vueComponents') === -1) { -%>
