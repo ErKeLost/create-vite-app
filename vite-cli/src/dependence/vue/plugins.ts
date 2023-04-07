@@ -62,13 +62,13 @@ const vueComponents = {
   dev: 'dev'
 }
 
-const imagemin = {
-  name: 'unplugin-imagemin',
-  version: '^0.3.11',
-  stableVersion: '^0.3.11',
-  stateMent: 'import imagemin from "unplugin-imagemin/vite"',
-  dev: 'dev'
-}
+// const imagemin = {
+//   name: 'unplugin-imagemin',
+//   version: '^0.3.11',
+//   stableVersion: '^0.3.11',
+//   stateMent: 'import imagemin from "unplugin-imagemin/vite"',
+//   dev: 'dev'
+// }
 
 const visualizer = {
   name: 'rollup-plugin-visualizer',
@@ -108,6 +108,6 @@ export {
   unocss,
   pwa,
   visualizer,
-  vuetifyPlugin,
-  imagemin
+  vuetifyPlugin
+  // imagemin
 }
