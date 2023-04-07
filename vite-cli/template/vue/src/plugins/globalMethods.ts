@@ -1,6 +1,5 @@
 import { App } from 'vue'
 /**
- * 注册全局方法 待完善
  * @param app
  */
 function getDictData(code: string) {

@@ -40,6 +40,9 @@ export function getFilterFile() {
     if (!options.plugins.includes('unocss')) {
       fs.remove(`${options.dest}/uno.config.ts`)
     }
+    if (!options.plugins.includes('pwa')) {
+      fs.remove(`${options.dest}/src/components/Pwa.vue`)
+    }
     return true
   }
   function reactFilterQuestion() {
