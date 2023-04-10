@@ -22,13 +22,13 @@
 
 ## 📖 Introduction
 
-Create Vite App resolve Vite create starter template No need to configure Vite scaffolding templates quickly build vite3 development templates highly customized
+Create Vite App resolve Vite create starter template, No need to configure Vite scaffolding templates quickly build vite4 development templates highly customized
 
 
 
 ## 🌈 Features
 
-- ⚛️ Support for multiple framework templates
+- ⚛️ Support tons of framework templates
 
 - 🌸 One-click deployment of netlify
 
