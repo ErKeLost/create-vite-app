@@ -56,6 +56,13 @@ const varletEffect = {
   dev: 'pro'
 }
 
+const tinyVueEffect = {
+  name: '@opentiny/vue-vite-import',
+  version: '^1.0.0',
+  stableVersion: '^1.0.0',
+  dev: 'dev'
+}
+
 const sassEffect = {
   name: 'sass',
   version: '^1.59.3',
@@ -116,5 +123,6 @@ export {
   eslintVue,
   prettier,
   pinia,
-  router
+  router,
+  tinyVueEffect
 }

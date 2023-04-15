@@ -37,6 +37,11 @@ export default ({ command, mode }: ConfigEnv): UserConfig => {
       postcss: {
       }
     },
-    plugins: createVitePlugins(viteEnv, isBuild)
+    plugins: createVitePlugins(viteEnv, isBuild),
+    <% if (tinyVue) { -%>
+    define: {
+      'process.env': { ...process.env }
+    }
+    <% } -%>
   }
 }

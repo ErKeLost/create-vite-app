@@ -5,6 +5,9 @@ import { createApp } from 'vue'
 <% if (usePinia || useTheme) { -%>
   import { setupStore } from '@/store'
 <% } -%>
+<% if (tinyVue) { -%>
+  import TinyVue from '@opentiny/vue'
+<% } -%>
 <% if (components === 'antDesignVue') { -%>
   import Antd from 'ant-design-vue'
   <% if (useTheme) { -%>
@@ -59,6 +62,9 @@ async function bootStrap() {
   <% } -%>
   <% if (components === 'vuetify') { -%>
     app.use(createVuetify);
+  <% } -%>
+  <% if (components === 'tinyVue') { -%>
+    app.use(TinyVue);
   <% } -%>
   // 全局加载
   <% if (plugins.indexOf('vueComponents') === -1) { -%>

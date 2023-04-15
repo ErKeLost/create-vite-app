@@ -2,6 +2,9 @@
   "name": "vite-template",
   "private": true,
   "version": "1.0.0",
+  <% if (tinyVue) { -%>
+  "type": "module",
+  <% } -%>
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -43,6 +46,9 @@
     <% } -%>
     <% if (precss === 'less' || useTheme && components === 'antDesignVue') { -%>
     <%- lessEffect %>
+    <% } -%>
+    <% if (tinyVue) { -%>
+    <%- tinyVueEffect %>
     <% } -%>
     <% if (vuetify) { -%>
     <%- vuetifyEffect %>

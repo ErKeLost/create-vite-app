@@ -4,10 +4,11 @@ export default {
   message: 'choose UI frameWork',
   choices: [
     { title: 'Element Plus', value: 'elementPlus' },
+    { title: 'Tiny Vue', value: 'tinyVue' },
+    { title: 'Ant Design Vue', value: 'antDesignVue' },
     { title: 'Vuetify3', value: 'vuetify' },
     { title: 'Naive UI', value: 'naiveUI' },
     { title: 'Varlet Pc', value: 'varlet' },
-    { title: 'Ant Design Vue 3.x', value: 'antDesignVue' },
     { title: 'DevUI', value: 'devUI' },
     { title: 'arco-design', value: 'arco' },
     { title: 'TDesign', value: 'tencent' },

@@ -1,3 +1,10 @@
+const tinyVue = {
+  name: '@opentiny/vue',
+  version: '^3.6.1',
+  stableVersion: '3.6.1',
+  dev: 'pro'
+}
+
 const elementPlus = {
   name: 'element-plus',
   version: '^2.3.0',
@@ -7,6 +14,7 @@ const elementPlus = {
   useUnpluginResolver: true,
   dev: 'pro'
 }
+
 const antDesignVue = {
   name: 'ant-design-vue',
   version: '^3.2.14',
@@ -16,6 +24,7 @@ const antDesignVue = {
   useUnpluginResolver: false,
   dev: 'pro'
 }
+
 const naiveUI = {
   name: 'naive-ui',
   version: '^2.34.3',
@@ -25,6 +34,7 @@ const naiveUI = {
   useUnpluginResolver: true,
   dev: 'pro'
 }
+
 const devUI = {
   name: 'vue-devui',
   version: '^1.5.2',
@@ -34,6 +44,7 @@ const devUI = {
   useUnpluginResolver: true,
   dev: 'pro'
 }
+
 const tencent = {
   name: 'tdesign-vue-next',
   version: '^1.2.1',
@@ -43,6 +54,7 @@ const tencent = {
   useUnpluginResolver: true,
   dev: 'pro'
 }
+
 const vuetify = {
   name: 'vuetify',
   version: '^3.1.10',
@@ -52,6 +64,7 @@ const vuetify = {
   useUnpluginResolver: false,
   dev: 'pro'
 }
+
 const arco = {
   name: '@arco-design/web-vue',
   version: '^2.44.2',
@@ -83,6 +96,7 @@ const vant = {
 
 export {
   varlet,
+  tinyVue,
   arco,
   vuetify,
   tencent,

@@ -35,6 +35,9 @@ const { count } = storeToRefs(counterStore);
           <% if (components === 'elementPlus') { -%>
             <el-button type="primary">Home</el-button>
           <% } -%>
+          <% if (components === 'tinyVue') { -%>
+            <TinyButton type="primary">Home</TinyButton>
+          <% } -%>
           <% if (components === 'naiveUI') { -%>
             <n-button type="primary">Home</n-button>
           <% } -%>
@@ -66,6 +69,9 @@ const { count } = storeToRefs(counterStore);
           <% } -%>
           <% if (components === 'elementPlus') { -%>
             <el-button  type="primary">About</el-button>
+          <% } -%>
+          <% if (components === 'tinyVue') { -%>
+            <TinyButton type="primary">About</TinyButton>
           <% } -%>
           <% if (components === 'naiveUI') { -%>
             <n-button type="primary">About</n-button>
