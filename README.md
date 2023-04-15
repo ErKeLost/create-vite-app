@@ -137,6 +137,8 @@ The supported template presets are:
 
 ## 🛫 Example With theming
 
+- [Tiny-Vue](https://tiny-vue.netlify.app/)
+
 - [Naive-UI](https://create-vite-app-naive-ui.netlify.app/)
 
 - [Element-Plus](https://create-vite-app-element-plus.netlify.app/)
