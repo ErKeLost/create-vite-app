@@ -145,6 +145,10 @@ The supported template presets are:
 
 ### An example of executing dev after successful installation is as follows
 
+- Tiny Vue
+
+![c68a80e2533333a05c2eb429c930cd6](https://user-images.githubusercontent.com/66500121/232227793-179585c4-3a2f-42c0-8210-2e561ce5f3bb.png)
+
 - Naive UI
 
 ![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/84463b72894c4df2862c20d006ab240c~tplv-k3u1fbpfcp-watermark.image?)
