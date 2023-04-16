@@ -43,7 +43,7 @@ Create Vite App resolve Vite create starter template, No need to configure Vite 
 ## 📦 Installation
 
 ```ts
-  npx create-vite-template@latest@latest
+  npx create-vite-template@latest
 ```
 
 ## 🦄 Usage
