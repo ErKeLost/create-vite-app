@@ -41,7 +41,7 @@
     "esno": "^0.16.3",
     "husky": "^8.0.2",
     "lint-staged": "^13.1.0",
-    "pnpm": "7.29.1",
+    "pnpm": "8.5.0",
     "prettier": "latest",
     "rimraf": "^4.0.0",
     "ts-node-dev": "^2.0.0",
@@ -54,7 +54,7 @@
     "npm": ">=7.0.0",
     "node": ">=14.0.0"
   },
-  "packageManager": "pnpm@7.29.1",
+  "packageManager": "pnpm@8.5.0",
   "config": {
     "commitizen": {
       "path": "node_modules/cz-customizable"
