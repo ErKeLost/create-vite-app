@@ -1,8 +1,8 @@
-import options from '@/compile/vue/options'
-import { cyan, logger } from '@/utils/log'
-import createSpawnCmd from '@/utils/createSpawnCmd'
-import clearConsole from '@/utils/clearConsole'
-import { VITE_CLI_VERSION } from '@/utils/shared/constant'
+import options from '../../../../compile/vue/options'
+import { cyan, logger } from '../../../../utils/log'
+import createSpawnCmd from '../../../../utils/createSpawnCmd'
+import clearConsole from '../../../../utils/clearConsole'
+import { VITE_CLI_VERSION } from '../../../../utils/shared/constant'
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 async function installationDeps() {
   const pkgInfo = pkgFromUserAgent(process.env.npm_config_user_agent)

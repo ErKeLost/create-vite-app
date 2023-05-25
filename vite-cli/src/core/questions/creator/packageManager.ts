@@ -1,5 +1,5 @@
-import { shouldUseYarn } from '@/utils/shouldUseYarn'
-import { shouldUsePnpm } from '@/utils/shouldUsePnpm'
+import { shouldUseYarn } from '../../../utils/shouldUseYarn'
+import { shouldUsePnpm } from '../../../utils/shouldUsePnpm'
 const isYarnInstalled = shouldUseYarn()
 const isPnpmInstalled = shouldUsePnpm()
 export default {

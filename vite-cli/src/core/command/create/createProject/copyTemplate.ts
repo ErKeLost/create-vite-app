@@ -1,10 +1,10 @@
 import fs from 'fs-extra'
 import path from 'node:path'
-import options from '@/compile/vue/options'
-import { ejsRender } from '@/utils/ejsRender'
-import { loadWithRocketGradient } from '@/utils/gradient'
-import { templateFilesMap } from '@/compile/vue/templateFile'
-import { getFilterFile } from '@/compile/common/frameQuestions'
+import options from '../../../../compile/vue/options'
+import { ejsRender } from '../../../../utils/ejsRender'
+import { loadWithRocketGradient } from '../../../../utils/gradient'
+import { templateFilesMap } from '../../../../compile/vue/templateFile'
+import { getFilterFile } from '../../../../compile/common/frameQuestions'
 
 async function copyTemplate() {
   const spinner = await loadWithRocketGradient('copy template')

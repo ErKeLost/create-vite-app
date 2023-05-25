@@ -1,5 +1,5 @@
 import program from '../../program'
-import createProjectQuestions from '@/core/questions/creator'
+import createProjectQuestions from '../../../core/questions/creator'
 import initialLog from './createProject/initialLog'
 import installationDeps from './createProject/install'
 import copyTemplate from './createProject/copyTemplate'

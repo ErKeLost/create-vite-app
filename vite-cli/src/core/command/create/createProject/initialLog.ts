@@ -1,6 +1,6 @@
-import clearConsole from '@/utils/clearConsole'
-import { logger } from '@/utils/log'
-import { VITE_CLI_VERSION } from '@/utils/shared/constant'
+import clearConsole from '../../../../utils/clearConsole'
+import { logger } from '../../../../utils/log'
+import { VITE_CLI_VERSION } from '../../../../utils/shared/constant'
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 async function initialLog() {

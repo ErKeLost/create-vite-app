@@ -1,5 +1,5 @@
-import { useThemeUiMap } from '@/compile/vue/vueEjsMapConstant'
-import options from '@/compile/vue/options'
+import { useThemeUiMap } from '../../../compile/vue/vueEjsMapConstant'
+import options from '../../../compile/vue/options'
 export default {
   name: 'useTheme',
   type: () => (useThemeUiMap.includes(options.components) ? 'toggle' : null),

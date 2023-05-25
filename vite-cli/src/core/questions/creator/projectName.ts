@@ -1,5 +1,5 @@
-import options from '@/compile/vue/options'
-import emptyDirName from '@/utils/emptyDirName'
+import options from '../../../compile/vue/options'
+import emptyDirName from '../../../utils/emptyDirName'
 const defaultProjectName = 'project-name'
 
 const packageName = [

@@ -1,4 +1,4 @@
-import options from '@/compile/vue/options'
+import options from '../../compile/vue/options'
 
 const templateFilesMap = new Map()
 templateFilesMap.set('vue', vueFetchTemplateFiles)
