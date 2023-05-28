@@ -9,7 +9,7 @@ export default {
       index: './src/index.ts'
     },
     output: {
-      path: 'dist',
+      path: 'bundle',
       filename: 'index.[ext]',
       targetEnv: 'node',
       format: 'cjs'
