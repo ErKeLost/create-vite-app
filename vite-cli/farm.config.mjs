@@ -11,16 +11,18 @@ export default {
     output: {
       path: 'dist',
       filename: 'index.[ext]',
-      targetEnv: 'node'
+      targetEnv: 'node',
+      format: 'cjs'
     },
     resolve: {
       alias: {
-        '@': path.resolve(process.cwd(), 'vite-cli/src')
+        '@': path.resolve(process.cwd(), 'src')
       }
     },
     external: [
       ...builtinModules.map((m) => `^${m}$`),
-      ...builtinModules.map((m) => `^node:${m}$`)
+      ...builtinModules.map((m) => `^node:${m}$`),
+      'prettier'
     ],
     partialBundling: {
       moduleBuckets: [

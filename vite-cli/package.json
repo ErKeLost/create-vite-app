@@ -13,8 +13,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "copy": "esno ./scripts/dev.mjs",
     "build": "farm build",
-    "dev": "pnpm build",
-    "postdev": "esno ../../scripts/post.mjs"
+    "build:tsup": "tsup",
+    "dev": "farm watch",
+    "prepublishOnly": "npm run build"
   },
   "keywords": [],
   "author": "",
