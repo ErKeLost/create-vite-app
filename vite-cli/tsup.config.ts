@@ -17,6 +17,7 @@ export default defineConfig({
   platform: 'node',
   target: 'node16',
   external: ['prettier'],
+  watch: true,
   // treeShaking: true,
   esbuildPlugins: [
     {
