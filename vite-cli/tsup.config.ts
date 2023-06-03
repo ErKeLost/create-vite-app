@@ -17,8 +17,8 @@ export default defineConfig({
   platform: 'node',
   target: 'node16',
   external: ['prettier'],
-  // treeShaking: true,
   watch: true,
+  // treeShaking: true,
   esbuildPlugins: [
     {
       name: 'copyTemplate',
