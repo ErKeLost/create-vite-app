@@ -108,6 +108,7 @@ if (await fs.existsSync('dist')) {
     console.log(err)
   })
 }
+
 if (await fs.existsSync('dist')) {
   copyDir('theme', 'dist/theme', (err) => {
     console.log(err)
