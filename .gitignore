@@ -33,4 +33,6 @@ yarn-error.log*
 
 dist
 
+bundle
+
 outfile.cjs
