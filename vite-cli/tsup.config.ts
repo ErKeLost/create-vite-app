@@ -15,9 +15,8 @@ export default defineConfig({
   // output: './outfileTsup.cjs',
   format: ['cjs'],
   platform: 'node',
-  target: 'node16',
+  target: 'node18',
   external: ['prettier'],
-  watch: true,
   // treeShaking: true,
   esbuildPlugins: [
     {
