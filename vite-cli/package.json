@@ -1,9 +1,8 @@
 {
   "name": "create-vite-template",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "",
   "bin": {
-    "vite-app": "./dist/index.js",
     "create-vite-template": "./dist/index.js",
     "create-vite-app": "./dist/index.js",
     "v": "./dist/index.js",
