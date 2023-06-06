@@ -3,11 +3,11 @@
   "version": "0.23.22",
   "description": "",
   "bin": {
-    "vite-app": "./outfile.cjs",
-    "create-vite-template": "./outfile.cjs",
-    "create-vite-app": "./outfile.cjs",
-    "v": "./outfile.cjs",
-    "vite-cli": "./outfile.cjs"
+    "vite-app": "./dist/index.js",
+    "create-vite-template": "./dist/index.js",
+    "create-vite-app": "./dist/index.js",
+    "v": "./dist/index.js",
+    "vite-cli": "./dist/index.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -49,7 +49,7 @@
     "registry": "https://registry.npmjs.org/"
   },
   "files": [
-    "outfile.cjs",
+    "dist",
     "template",
     "theme"
   ]
