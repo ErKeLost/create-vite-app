@@ -31,7 +31,7 @@
     "commander": "^10.0.0",
     "debug": "^4.3.4",
     "ejs": "^3.1.8",
-    "esbuild": "^0.17.11",
+    "esbuild": "^0.18.0",
     "esbuild-plugin-alias": "^0.2.1",
     "esbuild-plugin-path-alias": "^1.0.6",
     "esbuild-ts-paths": "^1.1.3",
