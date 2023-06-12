@@ -1,6 +1,7 @@
 import { runVueQuestions } from '../../core/questions/vue'
 import { runReactQuestions } from '../../core/questions/react'
 import { readdirSync } from 'fs'
+import { resolve } from 'path'
 import options from '../../compile/vue/options'
 import fs = require('fs-extra')
 const frameQuestions = new Map()
@@ -11,7 +12,7 @@ frameQuestions.set('react', runReactQuestions)
 export function getFilterFile() {
   // 修复 frame work bug
   const assets = readdirSync(
-    `${__dirname}/template/${options.frame}/src/assets`
+    resolve(__dirname, 'template', options.frame, 'src/assets')
   ).filter((item) => !item.includes('logo'))
   async function vueFilterFileActions() {
     const res = assets.filter(
