@@ -13,8 +13,7 @@
     "copy": "esno ./scripts/dev.mjs",
     "build": "farm build",
     "build:tsup": "tsup",
-    "dev": "farm watch",
-    "prepublishOnly": "npm run build:tsup"
+    "dev": "farm watch"
   },
   "keywords": [],
   "author": "",
@@ -48,7 +47,7 @@
     "registry": "https://registry.npmjs.org/"
   },
   "files": [
-    "dist",
+    "outfile.cjs",
     "template",
     "theme"
   ]
