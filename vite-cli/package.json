@@ -3,10 +3,11 @@
   "version": "0.3.6",
   "description": "",
   "bin": {
-    "create-vite-template": "./dist/index.js",
-    "create-vite-app": "./dist/index.js",
-    "v": "./dist/index.js",
-    "vite-cli": "./dist/index.js"
+    "vite-app": "./outfile.cjs",
+    "create-vite-template": "./outfile.cjs",
+    "create-vite-app": "./outfile.cjs",
+    "v": "./outfile.cjs",
+    "vite-cli": "./outfile.cjs"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
