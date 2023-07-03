@@ -69,8 +69,8 @@ importers:
         specifier: ^13.1.0
         version: 13.1.2
       pnpm:
-        specifier: 8.6.2
-        version: 8.6.2
+        specifier: 8.6.6
+        version: 8.6.6
       prettier:
         specifier: latest
         version: 2.8.8
@@ -5793,8 +5793,8 @@ packages:
       irregular-plurals: 2.0.0
     dev: true
 
-  /pnpm@8.6.2:
-    resolution: {integrity: sha512-Dmgwe+T34Xr6UYaTLXSphPS7ok4h2EPkaHQEH6j7USoAk21CzueAdD1nQLkWJwDnZkJucho0LbKntJ+9B5xlUQ==}
+  /pnpm@8.6.6:
+    resolution: {integrity: sha512-a51bIJyCmvstgCvsWf6SgZnsXfWmwAW1pHWEaH2gN3vqQGC58yLFL/oKBwcZWH0mjpMzBWRXdS9dLdN6GAK2Rw==}
     engines: {node: '>=16.14'}
     hasBin: true
     dev: true
