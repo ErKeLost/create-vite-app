@@ -53,7 +53,7 @@ export async function ejsRender(filePath: string, name): Promise<void> {
           prettierCode = code
           break
         default:
-          prettierCode = prettier.format(code, { parser: extname })
+          prettierCode = await prettier.format(code, { parser: extname })
           break
       }
     } catch (err) {
