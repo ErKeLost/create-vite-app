@@ -48,7 +48,7 @@
     "prettier": "latest",
     "rimraf": "^5.0.0",
     "ts-node-dev": "^2.0.0",
-    "tsup": "^6.5.0",
+    "tsup": "^7.0.0",
     "turbo": "latest",
     "typescript": "^5.0.0",
     "zx": "^7.1.1"
