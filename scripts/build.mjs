@@ -7,7 +7,7 @@ const watcher = chokidar.watch('file, dir, glob, or array', {
   persistent: true
 })
 
-await esbuild.build({
+ await esbuild.build({
   bundle: true,
   entryPoints: ['vite-cli/src/index.ts'],
   outfile: 'vite-cli/outfile.cjs',
@@ -77,6 +77,8 @@ await esbuild.build({
     }
   ]
 })
+
+
 
 // await esbuild.build({
 //   bundle: true,

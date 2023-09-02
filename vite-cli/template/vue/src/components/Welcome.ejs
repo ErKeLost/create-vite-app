@@ -41,6 +41,9 @@ const { count } = storeToRefs(counterStore);
           <% if (components === 'naiveUI') { -%>
             <n-button type="primary">Home</n-button>
           <% } -%>
+          <% if (components === 'shuimo') { -%>
+            <m-button type="primary">Home</m-button>
+          <% } -%>
           <% if (components === 'arco') { -%>
             <a-button type="primary">Home</a-button>
           <% } -%>
@@ -72,6 +75,9 @@ const { count } = storeToRefs(counterStore);
           <% } -%>
           <% if (components === 'tinyVue') { -%>
             <TinyButton type="primary">About</TinyButton>
+          <% } -%>
+          <% if (components === 'shuimo') { -%>
+            <m-button type="primary">About</m-button>
           <% } -%>
           <% if (components === 'naiveUI') { -%>
             <n-button type="primary">About</n-button>

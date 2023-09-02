@@ -23,6 +23,7 @@ export async function ejsRender(filePath: string, name): Promise<void> {
     // 获取后缀
     const extname = path.extname(filePath).replace(/[.]/g, '')
     const opts = await prettier.resolveConfig(templatePath)
+
     try {
       switch (extname) {
         case 'ts':

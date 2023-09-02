@@ -7,7 +7,8 @@
     "packages/*"
   ],
   "scripts": {
-    "dev": "esno ./scripts/build.mjs",
+    "build": "esno ./scripts/build.mjs",
+    "dev": "cd vite-cli && farm build --watch",
     "build:docs": "turbo run build --filter=docs",
     "serve": "turbo run docs --parallel",
     "lint": "turbo run lint",

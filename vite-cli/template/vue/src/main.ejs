@@ -8,6 +8,10 @@ import { createApp } from 'vue'
 <% if (tinyVue) { -%>
   import TinyVue from '@opentiny/vue'
 <% } -%>
+<% if (components === 'shuimo') { -%>
+  import { createMUI } from 'shuimo-ui';
+  import 'shuimo-ui/dist/style.css';
+<% } -%>
 <% if (components === 'antDesignVue') { -%>
   import Antd from 'ant-design-vue'
   <% if (useTheme) { -%>
@@ -59,6 +63,9 @@ async function bootStrap() {
   const app = createApp(App)
   <% if (components === 'antDesignVue') { -%>
     app.use(Antd)
+  <% } -%>
+  <% if (components === 'shuimo') { -%>
+    app.use(createMUI())
   <% } -%>
   <% if (components === 'vuetify') { -%>
     app.use(createVuetify);

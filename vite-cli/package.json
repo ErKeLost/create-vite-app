@@ -1,6 +1,6 @@
 {
   "name": "create-vite-template",
-  "version": "0.5.3",
+  "version": "0.5.4",
   "description": "",
   "bin": {
     "vite-app": "./outfile.cjs",
@@ -13,7 +13,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "copy": "esno ./scripts/dev.mjs",
     "build": "farm build",
-    "build:tsup": "tsup",
+    "build:tsup": "tsup --watch",
     "dev": "farm watch"
   },
   "keywords": [],
@@ -23,7 +23,7 @@
   "repository": "https://github.com/ErKeLost/vite-cli",
   "bugs": "https://github.com/ErKeLost/vite-cli/issues",
   "dependencies": {
-    "prettier": "latest"
+    "prettier": "2.8.0"
   },
   "devDependencies": {
     "@types/node": "^18.11.9",

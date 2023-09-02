@@ -94,6 +94,13 @@ const vant = {
   dev: 'pro'
 }
 
+const shuimo = {
+  name: 'shuimo-ui',
+  version: '^0.3.0-alpha.7',
+  stableVersion: '^0.3.0-alpha.7',
+  theme: false,
+  dev: 'pro'
+}
 export {
   varlet,
   tinyVue,
@@ -104,5 +111,6 @@ export {
   naiveUI,
   antDesignVue,
   elementPlus,
-  vant
+  vant,
+  shuimo
 }
