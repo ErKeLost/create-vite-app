@@ -13,7 +13,7 @@ export default {
     { title: 'Tiny Vue', value: 'tinyVue' },
     { title: 'DevUI', value: 'devUI' },
     { title: 'TDesign', value: 'tencent' },
-    { title: 'Shuimo', value: 'shuimo' },
+    { title: 'Shuimo UI', value: 'shuimo' },
     { title: 'Vant 4.x', value: 'vant' },
     { title: 'tdesign-mobile-vue', value: 'tencent-mobile' }
   ]
