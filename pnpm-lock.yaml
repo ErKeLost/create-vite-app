@@ -109,8 +109,8 @@ importers:
   vite-cli:
     dependencies:
       prettier:
-        specifier: 2.8.0
-        version: 2.8.0
+        specifier: 2.8.8
+        version: 2.8.8
     devDependencies:
       '@types/node':
         specifier: ^18.11.9
@@ -3368,11 +3368,11 @@ packages:
       eslint-plugin-jsonc: 2.6.0(eslint@8.34.0)
       eslint-plugin-md: 1.0.19
       eslint-plugin-n: 15.6.1(eslint@8.34.0)
-      eslint-plugin-prettier: 4.2.1(eslint-config-prettier@8.6.0)(eslint@8.34.0)(prettier@2.8.0)
+      eslint-plugin-prettier: 4.2.1(eslint-config-prettier@8.6.0)(eslint@8.34.0)(prettier@2.8.8)
       eslint-plugin-promise: 6.1.1(eslint@8.34.0)
       eslint-plugin-yml: 1.5.0(eslint@8.34.0)
       markdown-eslint-parser: 1.2.1
-      prettier: 2.8.0
+      prettier: 2.8.8
       yaml-eslint-parser: 1.1.0
     transitivePeerDependencies:
       - '@typescript-eslint/parser'
@@ -3544,7 +3544,7 @@ packages:
       semver: 7.3.8
     dev: true
 
-  /eslint-plugin-prettier@4.2.1(eslint-config-prettier@8.6.0)(eslint@8.34.0)(prettier@2.8.0):
+  /eslint-plugin-prettier@4.2.1(eslint-config-prettier@8.6.0)(eslint@8.34.0)(prettier@2.8.8):
     resolution: {integrity: sha512-f/0rXLXUt0oFYs8ra4w49wYZBG5GKZpAYsJSm6rnYL5uVDjd+zowwMwVZHnAjf4edNrKpCDYfXDgmRE/Ak7QyQ==}
     engines: {node: '>=12.0.0'}
     peerDependencies:
@@ -3557,7 +3557,7 @@ packages:
     dependencies:
       eslint: 8.34.0
       eslint-config-prettier: 8.6.0(eslint@8.34.0)
-      prettier: 2.8.0
+      prettier: 2.8.8
       prettier-linter-helpers: 1.0.0
     dev: true
 
@@ -6182,8 +6182,8 @@ packages:
       fast-diff: 1.2.0
     dev: true
 
-  /prettier@2.8.0:
-    resolution: {integrity: sha512-9Lmg8hTFZKG0Asr/kW9Bp8tJjRVluO8EJQVfY2T7FMw9T5jy4I/Uvx0Rca/XWf50QQ1/SS48+6IJWnrb+2yemA==}
+  /prettier@2.8.8:
+    resolution: {integrity: sha512-tdN8qQGvNjw4CHbY+XXk0JgCXn9QiF21a55rBe5LJAU+kDyC4WQn4+awm2Xfk2lQMk5fKup9XgzTZtGkjBdP9Q==}
     engines: {node: '>=10.13.0'}
     hasBin: true
 

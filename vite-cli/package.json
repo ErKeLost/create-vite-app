@@ -23,7 +23,7 @@
   "repository": "https://github.com/ErKeLost/vite-cli",
   "bugs": "https://github.com/ErKeLost/vite-cli/issues",
   "dependencies": {
-    "prettier": "2.8.0"
+    "prettier": "2.8.8"
   },
   "devDependencies": {
     "@types/node": "^18.11.9",
