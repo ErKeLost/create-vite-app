@@ -1,14 +1,14 @@
 const tinyVue = {
   name: '@opentiny/vue',
-  version: '^3.10.0',
-  stableVersion: '3.10.0',
+  version: '^3.12.1',
+  stableVersion: '3.12.1',
   dev: 'pro'
 }
 
 const elementPlus = {
   name: 'element-plus',
-  version: '^2.3.10',
-  stableVersion: '2.3.10',
+  version: '^2.4.4',
+  stableVersion: '2.4.4',
   theme: true,
   unpluginResolver: 'ElementPlusResolver',
   useUnpluginResolver: true,
@@ -17,8 +17,8 @@ const elementPlus = {
 
 const antDesignVue = {
   name: 'ant-design-vue',
-  version: '^4.0.2',
-  stableVersion: '4.0.2',
+  version: '^4.0.7',
+  stableVersion: '4.0.7',
   theme: true,
   unpluginResolver: 'AntDesignVueResolver',
   useUnpluginResolver: false,
@@ -27,8 +27,8 @@ const antDesignVue = {
 
 const naiveUI = {
   name: 'naive-ui',
-  version: '^2.34.4',
-  stableVersion: '2.34.4',
+  version: '^2.35.0',
+  stableVersion: '2.35.0',
   theme: true,
   unpluginResolver: 'NaiveUiResolver',
   useUnpluginResolver: true,
@@ -37,8 +37,8 @@ const naiveUI = {
 
 const devUI = {
   name: 'vue-devui',
-  version: '^1.5.13',
-  stableVersion: '^1.5.13',
+  version: '^1.6.0',
+  stableVersion: '^1.6.0',
   theme: false,
   unpluginResolver: 'DevUiResolver',
   useUnpluginResolver: true,
@@ -47,8 +47,8 @@ const devUI = {
 
 const tencent = {
   name: 'tdesign-vue-next',
-  version: '^1.5.3',
-  stableVersion: '^1.5.3',
+  version: '^1.7.1',
+  stableVersion: '^1.7.1',
   theme: false,
   unpluginResolver: 'TDesignResolver',
   useUnpluginResolver: true,
@@ -57,8 +57,8 @@ const tencent = {
 
 const vuetify = {
   name: 'vuetify',
-  version: '^3.3.15',
-  stableVersion: '^3.3.15',
+  version: '^3.4.7',
+  stableVersion: '^3.4.7',
   theme: false,
   unpluginResolver: 'VuetifyResolver',
   useUnpluginResolver: false,
@@ -67,8 +67,8 @@ const vuetify = {
 
 const arco = {
   name: '@arco-design/web-vue',
-  version: '^2.50.2',
-  stableVersion: '^2.50.2',
+  version: '^2.53.3',
+  stableVersion: '^2.53.3',
   theme: false,
   unpluginResolver: 'ArcoResolver',
   useUnpluginResolver: true,
@@ -78,8 +78,8 @@ const arco = {
 // mobile
 const varlet = {
   name: '@varlet/ui',
-  version: '^2.15.1',
-  stableVersion: '^2.15.1',
+  version: '^2.20.1',
+  stableVersion: '^2.20.1',
   theme: false,
   unpluginResolver: 'VarletUIResolver',
   dev: 'pro'
@@ -87,8 +87,8 @@ const varlet = {
 
 const vant = {
   name: 'vant',
-  version: '^4.6.6',
-  stableVersion: '^4.6.6',
+  version: '^4.8.0',
+  stableVersion: '^4.8.0',
   theme: false,
   unpluginResolver: 'VantUIResolver',
   dev: 'pro'
@@ -96,8 +96,8 @@ const vant = {
 
 const shuimo = {
   name: 'shuimo-ui',
-  version: '^0.3.0-alpha.7',
-  stableVersion: '^0.3.0-alpha.7',
+  version: '^0.3.0-alpha.8',
+  stableVersion: '^0.3.0-alpha.8',
   theme: false,
   dev: 'pro'
 }
