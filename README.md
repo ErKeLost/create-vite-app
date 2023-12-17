@@ -115,8 +115,8 @@ The supported template presets are:
 | arco-design        | ✅ 🆕  |
 | TDesign            | ✅     |
 | Varlet             | ✅     |
-| tdesign-mobile-vue | 🚧 ❌  |
-| Vant               | 🚧 ❌  |
+| tdesign-mobile-vue | ✅ 🆕  |
+| Vant               | ✅ 🆕  |
 
 ### Plugins
 
