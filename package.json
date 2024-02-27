@@ -24,7 +24,7 @@
     "release": "bumpp vite-cli/package.json && pnpm publish -r"
   },
   "devDependencies": {
-    "@commitlint/config-conventional": "^17.3.0",
+    "@commitlint/config-conventional": "^19.0.0",
     "@farmfe/cli": "^0.5.2",
     "@farmfe/core": "^0.14.0",
     "@types/fs-extra": "^11.0.0",
@@ -34,7 +34,7 @@
     "chalk": "^5.1.2",
     "chokidar": "^3.5.3",
     "commitizen": "^4.2.6",
-    "commitlint": "^17.3.0",
+    "commitlint": "^19.0.0",
     "commitlint-config-cz": "^0.13.3",
     "cz-conventional-changelog": "^3.3.0",
     "cz-customizable": "^6.9.2",
